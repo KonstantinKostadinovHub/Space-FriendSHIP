@@ -7,12 +7,12 @@ using namespace std;
 int main (int argc, char* argv[])
 {
     World world;
-    world.init("config\\world.txt");
+    world.init("world.txt");
+    world.addEnemy("rock.txt", 50, 50);
     while(true)
     {
         world.update();
         world.draw();
-        SDL_Delay(200);
     }
     world.destroy();
     return 0;

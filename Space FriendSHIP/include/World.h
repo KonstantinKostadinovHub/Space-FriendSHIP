@@ -5,12 +5,16 @@
 #include <fstream>
 #include <vector>
 #include <string>
+#include <cstring>
+#include <cmath>
 #include<SDL2/SDL.h>
 
 #include "Player.h"
 #include "Enemy.h"
 #include "Projectile.h"
 #include "Artefact.h"
+
+#include "Rock.h"
 
 using namespace std;
 
@@ -38,6 +42,9 @@ class World
         void destroy();
         void update();
         void draw();
+        void addEnemy(string configFile, int x, int y);
+        void cleaner();
+        bool checkForCollisionBetweenObjects(SDL_Rect rect1, SDL_Rect rect2);
     protected:
 
     private:
