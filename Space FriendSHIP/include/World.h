@@ -14,7 +14,10 @@
 #include "Projectile.h"
 #include "Artefact.h"
 
+#include "Spawner.h"
+
 #include "Rock.h"
+
 
 using namespace std;
 
@@ -37,14 +40,17 @@ class World
         vector<Projectile*> m_projectiles;
         vector<Artefact*> m_artefacts;
         SDL_Texture* m_backgroundTexture;
+        Spawner* m_spawnManager;
 
         void init(string configFile);
         void destroy();
         void update();
         void draw();
-        void addEnemy(string configFile, int x, int y);
+        void addEnemy(string configFile, int x, int y, float directionX, float directionY);
         void cleaner();
+        void spawn();
         bool checkForCollisionBetweenObjects(SDL_Rect rect1, SDL_Rect rect2);
+        bool checkIfOffBounds(SDL_Rect rect);
     protected:
 
     private:

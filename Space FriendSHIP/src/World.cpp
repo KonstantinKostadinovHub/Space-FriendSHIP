@@ -2,7 +2,7 @@
 
 World::World()
 {
-    //ctor
+    m_spawnManager = new Spawner;
 }
 
 World::~World()
@@ -12,6 +12,7 @@ World::~World()
 
 void World::init(string configFile)
 {
+        srand(time(NULL));
         m_configFile = "config\\" + configFile;
         fstream stream;
         stream.open(m_configFile.c_str());
@@ -31,6 +32,10 @@ void World::init(string configFile)
 
 void World::update()
 {
+    if(rand()% 100 == 0){
+        spawn();
+    }
+
     for(vector<Player*>::iterator it = m_players.begin(); it != m_players.end(); it++){
         (*it)->update();
     }
@@ -73,12 +78,13 @@ void World::destroy()
         SDL_DestroyWindow(m_main_window);
 }
 
-void World::addEnemy(string configFile, int x, int y)
+void World::addEnemy(string configFile, int x, int y, float directionX, float directionY)
 {
     if(configFile == "rock.txt")
     {
         Enemy* rock = new Rock();
-        rock->init(configFile, x, y);
+        cout << x << ", " << y << ", " << directionX << ", " << directionY << endl;
+        rock->init(configFile, x, y, directionX, directionY);
         m_enemies.push_back(rock);
     }
 }
@@ -100,17 +106,26 @@ bool World::checkForCollisionBetweenObjects(SDL_Rect rect1, SDL_Rect rect2)
     }
 }
 
+bool World::checkIfOffBounds(SDL_Rect rect)
+{
+    if (rect.x + rect.w > m_SCREEN_WIDTH) return true;
+    if (rect.x < 0) return true;
+    if (rect.y + rect.h > m_SCREEN_HEIGHT) return true;
+    if (rect.y < 0) return true;
+    return false;
+}
+
 void World::cleaner()
 {
     for(vector<Player*>::iterator it = m_players.begin(); it != m_players.end(); it++){
         // Чакам да се добавя health на играчът
     }
-    for(vector<Enemy*>::iterator it = m_enemies.begin(); it != m_enemies.end(); it++){
-        if((*it)->m_health <= 0)
+    for(int i = 0; i < m_enemies.size(); i++){
+        if(m_enemies[i]->m_health <= 0 || checkIfOffBounds(m_enemies[i]->m_objectRect))
         {
-            cout << "dead";
-            m_enemies.erase(it);
-            it--;
+            cout << "DEAD" << endl;
+            m_enemies.erase(m_enemies.begin() + i);
+            i--;
         }
     }
     for(vector<Projectile*>::iterator it = m_projectiles.begin(); it != m_projectiles.end(); it++){
@@ -119,4 +134,10 @@ void World::cleaner()
     for(vector<Artefact*>::iterator it = m_artefacts.begin(); it != m_artefacts.end(); it++){
         // проверка дали артефактът е взет
     }
+}
+
+void World::spawn()
+{
+    m_spawnManager->spawn(m_SCREEN_WIDTH, m_SCREEN_HEIGHT);
+    addEnemy(m_spawnManager->m_type, m_spawnManager->m_x, m_spawnManager->m_y, m_spawnManager->m_directionX, m_spawnManager->m_directionY);
 }
