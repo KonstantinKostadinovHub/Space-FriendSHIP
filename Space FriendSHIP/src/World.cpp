@@ -13,11 +13,13 @@ World::~World()
 void World::init(string configFile)
 {
         srand(time(NULL));
+        m_startSpawnCooldown = time(NULL);
         m_configFile = "config\\" + configFile;
         fstream stream;
         stream.open(m_configFile.c_str());
-        stream >> m_SCREEN_WIDTH >> m_SCREEN_HEIGHT >> m_backgroundImg;
+        stream >> m_SCREEN_WIDTH >> m_SCREEN_HEIGHT >> m_backgroundImg >> m_spawnCooldown;
         stream.close();
+        m_spawnManager->init("spawner.txt");
 
         SDL_Init(SDL_INIT_EVERYTHING);
 
@@ -32,8 +34,15 @@ void World::init(string configFile)
 
 void World::update()
 {
-    if(rand()% 100 == 0){
+    if(!m_spawn)
+    {
+        m_spawn = true;
+        m_startSpawnCooldown = time(NULL);
         spawn();
+    }
+    else if(m_startSpawnCooldown + m_spawnCooldown < time(NULL))
+    {
+        m_spawn = false;
     }
 
     for(vector<Player*>::iterator it = m_players.begin(); it != m_players.end(); it++){

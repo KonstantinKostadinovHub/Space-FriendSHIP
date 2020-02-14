@@ -777,7 +777,7 @@
 	<SDL2/SDL.h>
 	"World.h"
 
-1581540030 source:c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\main.cpp
+1581711339 source:c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\main.cpp
 	<SDL2/SDL.h>
 	"World.h"
 
@@ -1128,13 +1128,14 @@
 	"begin_code.h"
 	"close_code.h"
 
-1581494114 c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\include\world.h
+1581712132 c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\include\world.h
 	<iostream>
 	<fstream>
 	<vector>
 	<string>
 	<cstring>
 	<cmath>
+	<ctime>
 	<SDL2/SDL.h>
 	"Player.h"
 	"Enemy.h"
@@ -1168,7 +1169,7 @@
 1581328998 source:c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\src\projectile.cpp
 	"Projectile.h"
 
-1581540382 source:c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\src\world.cpp
+1581712473 source:c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\src\world.cpp
 	"World.h"
 
 1581540372 source:c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\src\enemy.cpp
@@ -1180,13 +1181,14 @@
 1581407571 c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\include\rock.h
 	"Enemy.h"
 
-1581492293 c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\include\spawner.h
+1581711826 c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\include\spawner.h
 	<stdlib.h>
 	<time.h>
 	<iostream>
 	<fstream>
 	<string>
+	<vector>
 
-1581539958 source:c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\src\spawner.cpp
+1581711955 source:c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\src\spawner.cpp
 	"Spawner.h"
 

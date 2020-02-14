@@ -16,6 +16,10 @@ void Spawner::init(string configName)
     fstream stream;
     stream.open(m_configName.c_str());
     stream >> m_rockProb;
+    for(int i = 0; i < m_rockProb ; i++)
+    {
+        m_probabilities.push_back("rock.txt");
+    }
     stream.close();
 }
 
@@ -56,11 +60,7 @@ void Spawner::spawn(int SCREEN_WIDTH, int SCREEN_HEIGHT)
         directionY = (float(rand() % 9) * 0.1 + 0.1) * multiplayer;
         break;
     }
-    switch(rand() % 1)
-    {
-    case 0:
-        m_type = "rock.txt";
-    }
+    m_type = m_probabilities[rand() % m_probabilities.size()];
     m_x = spawnX;
     m_y = spawnY;
     m_directionX = directionX;

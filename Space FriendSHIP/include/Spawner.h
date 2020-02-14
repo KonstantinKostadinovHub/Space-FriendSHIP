@@ -6,6 +6,7 @@
 #include <iostream>
 #include <fstream>
 #include <string>
+#include <vector>
 
 using namespace std;
 
@@ -18,6 +19,7 @@ class Spawner
         string m_configName;
         int m_rockProb;
         string m_type;
+        vector<string> m_probabilities;
 
         int m_x;
         int m_y;

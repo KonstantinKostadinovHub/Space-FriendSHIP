@@ -7,6 +7,7 @@
 #include <string>
 #include <cstring>
 #include <cmath>
+#include <ctime>
 #include<SDL2/SDL.h>
 
 #include "Player.h"
@@ -17,7 +18,6 @@
 #include "Spawner.h"
 
 #include "Rock.h"
-
 
 using namespace std;
 
@@ -41,6 +41,9 @@ class World
         vector<Artefact*> m_artefacts;
         SDL_Texture* m_backgroundTexture;
         Spawner* m_spawnManager;
+        time_t m_startSpawnCooldown;
+        time_t m_spawnCooldown;
+        bool m_spawn;
 
         void init(string configFile);
         void destroy();
