@@ -16,47 +16,56 @@
 #include "Artefact.h"
 
 #include "Spawner.h"
+#include "Engine.h"
 
 #include "Rock.h"
+#include "Bullet.h"
 
 using namespace std;
 
 class World
 {
-    public:
-        World();
-        virtual ~World();
+public:
+    World();
+    virtual ~World();
 
-        SDL_Window* m_main_window = NULL;
-        SDL_Renderer* m_main_renderer = NULL;
+    SDL_Window* m_main_window = NULL;
+    SDL_Renderer* m_main_renderer = NULL;
+    SDL_Rect m_ScreenR;
+    SDL_Rect m_ScreenMenu;
 
-        string m_configFile;
+    bool endgame = false;
+    string m_configFile;
+    string m_endScreenImg="img\\EndGameScreen.bmp";
+    string m_MenuImg="img\\MENU_unfinished1.bmp";
+    int m_SCREEN_WIDTH;
+    int m_SCREEN_HEIGHT;
+    string m_backgroundImg;
+    vector<Player*> m_players;
+    vector<Enemy*> m_enemies;
+    vector<Projectile*> m_projectiles;
+    vector<Artefact*> m_artefacts;
+    SDL_Texture* m_backgroundTexture;
+    Spawner* m_spawnManager;
+    time_t m_startSpawnCooldown;
+    time_t m_spawnCooldown;
+    bool m_spawn;
 
-        int m_SCREEN_WIDTH;
-        int m_SCREEN_HEIGHT;
-        string m_backgroundImg;
-        vector<Player*> m_players;
-        vector<Enemy*> m_enemies;
-        vector<Projectile*> m_projectiles;
-        vector<Artefact*> m_artefacts;
-        SDL_Texture* m_backgroundTexture;
-        Spawner* m_spawnManager;
-        time_t m_startSpawnCooldown;
-        time_t m_spawnCooldown;
-        bool m_spawn;
+    void init(string configFile);
+    void destroy();
+    void update();
+    void draw();
+    void addEnemy(string configFile, coordinates coor, coordinates direction);
+    void addBullet(string configFile, coordinates coor, coordinates direction);
+    void cleaner();
+    void spawn();
+    bool checkForCollisionBetweenObjects(SDL_Rect rect1, SDL_Rect rect2);
+    bool checkIfOffBounds(SDL_Rect rect);
+    void endgameScreen();
+    void menu();
+protected:
 
-        void init(string configFile);
-        void destroy();
-        void update();
-        void draw();
-        void addEnemy(string configFile, int x, int y, float directionX, float directionY);
-        void cleaner();
-        void spawn();
-        bool checkForCollisionBetweenObjects(SDL_Rect rect1, SDL_Rect rect2);
-        bool checkIfOffBounds(SDL_Rect rect);
-    protected:
-
-    private:
+private:
 };
 
 #endif // WORLD_H

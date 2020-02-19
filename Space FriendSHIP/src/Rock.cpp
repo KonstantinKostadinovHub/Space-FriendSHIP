@@ -12,16 +12,18 @@ Rock::~Rock()
 
 void Rock::update()
 {
-    m_objectRect.x += (int)(m_directionX * m_speed);
-    m_objectRect.y += (int)(m_directionY * m_speed);
-    m_buffX += (float)(m_directionX * m_speed) - (int)(m_directionX * m_speed);
-    m_buffY += (float)(m_directionY * m_speed) - (int)(m_directionY * m_speed);
-    if(abs(m_buffX) > 1){
-        m_objectRect.x += (int)m_buffX;
-        m_buffX -= (int)m_buffX;
+    m_objectRect.x += (int)(m_direction.x * m_speed);
+    m_objectRect.y += (int)(m_direction.y * m_speed);
+    m_buff.x += (float)(m_direction.x * m_speed) - (int)(m_direction.x * m_speed);
+    m_buff.y += (float)(m_direction.y * m_speed) - (int)(m_direction.y * m_speed);
+    if(abs(m_buff.x) > 1)
+    {
+        m_objectRect.x += (int)m_buff.x;
+        m_buff.x -= (int)m_buff.x;
     }
-    if(abs (m_buffY) > 1){
-        m_objectRect.y += (int)m_buffY;
-        m_buffY -= (int)m_buffY;
+    if(abs (m_buff.y) > 1)
+    {
+        m_objectRect.y += (int)m_buff.y;
+        m_buff.y -= (int)m_buff.y;
     }
 }

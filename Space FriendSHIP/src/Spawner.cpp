@@ -25,44 +25,47 @@ void Spawner::init(string configName)
 
 void Spawner::spawn(int SCREEN_WIDTH, int SCREEN_HEIGHT)
 {
-    int spawnX, spawnY;
+    coordinates spawn;
     int multiplayer;
     if(rand() % 2 == 0)
     {
         multiplayer = 1;
-    }else{
+    }
+    else
+    {
         multiplayer = -1;
     }
-    float directionX, directionY;
-    switch(rand() % 4){
+    coordinates direction;
+    switch(rand() % 4)
+    {
     case 0:
-        spawnX = rand() % (SCREEN_WIDTH - 64);
-        spawnY = 0;
-        directionX = (float(rand() % 9) * 0.1 + 0.1) * multiplayer;
-        directionY = 1;
+        spawn.x = rand() % (SCREEN_WIDTH - 64);
+        spawn.y = 0;
+        direction.x = (float(rand() % 9) * 0.1 + 0.1) * multiplayer;
+        direction.y = 1;
         break;
     case 1:
-        spawnX = rand() % (SCREEN_WIDTH - 64);
-        spawnY = SCREEN_HEIGHT - 64;
-        directionX = (float(rand() % 9) * 0.1 + 0.1) * multiplayer;
-        directionY = -1;
+        spawn.x = rand() % (SCREEN_WIDTH - 64);
+        spawn.y = SCREEN_HEIGHT - 64;
+        direction.x = (float(rand() % 9) * 0.1 + 0.1) * multiplayer;
+        direction.y = -1;
         break;
     case 2:
-        spawnX = 0;
-        spawnY = rand() % (SCREEN_HEIGHT - 64);
-        directionX = 1;
-        directionY = (float(rand() % 9) * 0.1 + 0.1) * multiplayer;
+        spawn.x = 0;
+        spawn.y = rand() % (SCREEN_HEIGHT - 64);
+        direction.x = 1;
+        direction.y = (float(rand() % 9) * 0.1 + 0.1) * multiplayer;
         break;
     case 3:
-        spawnX = SCREEN_WIDTH - 64;
-        spawnY = rand() % (SCREEN_HEIGHT - 64);
-        directionX = -1;
-        directionY = (float(rand() % 9) * 0.1 + 0.1) * multiplayer;
+        spawn.x = SCREEN_WIDTH - 64;
+        spawn.y = rand() % (SCREEN_HEIGHT - 64);
+        direction.x = -1;
+        direction.y = (float(rand() % 9) * 0.1 + 0.1) * multiplayer;
         break;
     }
     m_type = m_probabilities[rand() % m_probabilities.size()];
-    m_x = spawnX;
-    m_y = spawnY;
-    m_directionX = directionX;
-    m_directionY = directionY;
+    m_coor.x = spawn.x;
+    m_coor.y = spawn.y;
+    m_direction.x = direction.x;
+    m_direction.y = direction.y;
 }

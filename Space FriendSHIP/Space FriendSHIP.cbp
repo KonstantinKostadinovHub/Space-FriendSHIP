@@ -40,7 +40,10 @@
 			<Add directory="dep_sdl/lib" />
 		</Linker>
 		<Unit filename="include/Artefact.h" />
+		<Unit filename="include/Bullet.h" />
 		<Unit filename="include/Enemy.h" />
+		<Unit filename="include/Engine.h" />
+		<Unit filename="include/Gun.h" />
 		<Unit filename="include/Player.h" />
 		<Unit filename="include/Projectile.h" />
 		<Unit filename="include/Rock.h" />
@@ -48,7 +51,10 @@
 		<Unit filename="include/World.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="src/Artefact.cpp" />
+		<Unit filename="src/Bullet.cpp" />
 		<Unit filename="src/Enemy.cpp" />
+		<Unit filename="src/Engine.cpp" />
+		<Unit filename="src/Gun.cpp" />
 		<Unit filename="src/Player.cpp" />
 		<Unit filename="src/Projectile.cpp" />
 		<Unit filename="src/Rock.cpp" />

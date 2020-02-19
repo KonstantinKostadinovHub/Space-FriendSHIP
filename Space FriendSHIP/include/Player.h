@@ -4,15 +4,15 @@
 
 class Player
 {
-    public:
-        Player();
-        virtual ~Player();
+public:
+    Player();
+    virtual ~Player();
+    int m_health = 0;
+    virtual void update();
+    virtual void draw(SDL_Renderer* renderer);
+protected:
 
-        virtual void update();
-        virtual void draw(SDL_Renderer* renderer);
-    protected:
-
-    private:
+private:
 };
 
 #endif // PLAYER_H

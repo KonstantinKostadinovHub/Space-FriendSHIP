@@ -1192,3 +1192,1292 @@
 1581711955 source:c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\src\spawner.cpp
 	"Spawner.h"
 
+1581922380 source:c:\users\my\documents\konstantin_kostadinov\space-friendship-master.01-01\space-friendship-master\space friendship\main.cpp
+	<SDL2/SDL.h>
+	"World.h"
+
+1581922380 c:\users\my\documents\konstantin_kostadinov\space-friendship-master.01-01\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl.h
+	"SDL_main.h"
+	"SDL_stdinc.h"
+	"SDL_assert.h"
+	"SDL_atomic.h"
+	"SDL_audio.h"
+	"SDL_clipboard.h"
+	"SDL_cpuinfo.h"
+	"SDL_endian.h"
+	"SDL_error.h"
+	"SDL_events.h"
+	"SDL_filesystem.h"
+	"SDL_gamecontroller.h"
+	"SDL_haptic.h"
+	"SDL_hints.h"
+	"SDL_joystick.h"
+	"SDL_loadso.h"
+	"SDL_log.h"
+	"SDL_messagebox.h"
+	"SDL_mutex.h"
+	"SDL_power.h"
+	"SDL_render.h"
+	"SDL_rwops.h"
+	"SDL_sensor.h"
+	"SDL_shape.h"
+	"SDL_system.h"
+	"SDL_thread.h"
+	"SDL_timer.h"
+	"SDL_version.h"
+	"SDL_video.h"
+	"begin_code.h"
+	"close_code.h"
+
+1581922380 c:\users\my\documents\konstantin_kostadinov\space-friendship-master.01-01\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_main.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+
+1581922382 c:\users\my\documents\konstantin_kostadinov\space-friendship-master.01-01\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_stdinc.h
+	"SDL_config.h"
+	<sys/types.h>
+	<stdio.h>
+	<stdlib.h>
+	<stddef.h>
+	<stdarg.h>
+	<stdlib.h>
+	<malloc.h>
+	<stddef.h>
+	<stdarg.h>
+	<memory.h>
+	<string.h>
+	<strings.h>
+	<wchar.h>
+	<inttypes.h>
+	<stdint.h>
+	<ctype.h>
+	<math.h>
+	<float.h>
+	<alloca.h>
+	<malloc.h>
+	<malloc.h>
+	<malloc.h>
+	<stdlib.h>
+	<sal.h>
+	"begin_code.h"
+	"close_code.h"
+
+1581922380 c:\users\my\documents\konstantin_kostadinov\space-friendship-master.01-01\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_config.h
+	"SDL_platform.h"
+
+1581922380 c:\users\my\documents\konstantin_kostadinov\space-friendship-master.01-01\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_platform.h
+	"AvailabilityMacros.h"
+	"TargetConditionals.h"
+	<winapifamily.h>
+	"begin_code.h"
+	"close_code.h"
+
+1581922382 c:\users\my\documents\konstantin_kostadinov\space-friendship-master.01-01\space-friendship-master\space friendship\dep_sdl\include\sdl2\begin_code.h
+
+1581922382 c:\users\my\documents\konstantin_kostadinov\space-friendship-master.01-01\space-friendship-master\space friendship\dep_sdl\include\sdl2\close_code.h
+
+1581922380 c:\users\my\documents\konstantin_kostadinov\space-friendship-master.01-01\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_assert.h
+	"SDL_config.h"
+	"begin_code.h"
+	<signal.h>
+	"close_code.h"
+
+1581922380 c:\users\my\documents\konstantin_kostadinov\space-friendship-master.01-01\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_atomic.h
+	"SDL_stdinc.h"
+	"SDL_platform.h"
+	"begin_code.h"
+	<sys/cpuinline.h>
+	<mbarrier.h>
+	"close_code.h"
+
+1581922380 c:\users\my\documents\konstantin_kostadinov\space-friendship-master.01-01\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_audio.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_endian.h"
+	"SDL_mutex.h"
+	"SDL_thread.h"
+	"SDL_rwops.h"
+	"begin_code.h"
+	"close_code.h"
+
+1581922380 c:\users\my\documents\konstantin_kostadinov\space-friendship-master.01-01\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_error.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+
+1581922380 c:\users\my\documents\konstantin_kostadinov\space-friendship-master.01-01\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_endian.h
+	"SDL_stdinc.h"
+	<endian.h>
+	"begin_code.h"
+	"close_code.h"
+
+1581922380 c:\users\my\documents\konstantin_kostadinov\space-friendship-master.01-01\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_mutex.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1581922382 c:\users\my\documents\konstantin_kostadinov\space-friendship-master.01-01\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_thread.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_atomic.h"
+	"SDL_mutex.h"
+	"begin_code.h"
+	<process.h>
+	<process.h>
+	<stdlib.h>
+	"close_code.h"
+
+1581922380 c:\users\my\documents\konstantin_kostadinov\space-friendship-master.01-01\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_rwops.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1581922380 c:\users\my\documents\konstantin_kostadinov\space-friendship-master.01-01\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_clipboard.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+
+1581922380 c:\users\my\documents\konstantin_kostadinov\space-friendship-master.01-01\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_cpuinfo.h
+	"SDL_stdinc.h"
+	<intrin.h>
+	<intrin.h>
+	<altivec.h>
+	<arm_neon.h>
+	<armintr.h>
+	<arm_neon.h>
+	<armintr.h>
+	<arm_neon.h>
+	<mm3dnow.h>
+	<immintrin.h>
+	<mmintrin.h>
+	<xmmintrin.h>
+	<emmintrin.h>
+	<pmmintrin.h>
+	"begin_code.h"
+	"close_code.h"
+
+1581922380 c:\users\my\documents\konstantin_kostadinov\space-friendship-master.01-01\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_events.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_video.h"
+	"SDL_keyboard.h"
+	"SDL_mouse.h"
+	"SDL_joystick.h"
+	"SDL_gamecontroller.h"
+	"SDL_quit.h"
+	"SDL_gesture.h"
+	"SDL_touch.h"
+	"begin_code.h"
+	"close_code.h"
+
+1581922382 c:\users\my\documents\konstantin_kostadinov\space-friendship-master.01-01\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_video.h
+	"SDL_stdinc.h"
+	"SDL_pixels.h"
+	"SDL_rect.h"
+	"SDL_surface.h"
+	"begin_code.h"
+	"close_code.h"
+
+1581922380 c:\users\my\documents\konstantin_kostadinov\space-friendship-master.01-01\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_pixels.h
+	"SDL_stdinc.h"
+	"SDL_endian.h"
+	"begin_code.h"
+	"close_code.h"
+
+1581922380 c:\users\my\documents\konstantin_kostadinov\space-friendship-master.01-01\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_rect.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_pixels.h"
+	"SDL_rwops.h"
+	"begin_code.h"
+	"close_code.h"
+
+1581922382 c:\users\my\documents\konstantin_kostadinov\space-friendship-master.01-01\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_surface.h
+	"SDL_stdinc.h"
+	"SDL_pixels.h"
+	"SDL_rect.h"
+	"SDL_blendmode.h"
+	"SDL_rwops.h"
+	"begin_code.h"
+	"close_code.h"
+
+1581922380 c:\users\my\documents\konstantin_kostadinov\space-friendship-master.01-01\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_blendmode.h
+	"begin_code.h"
+	"close_code.h"
+
+1581922380 c:\users\my\documents\konstantin_kostadinov\space-friendship-master.01-01\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_keyboard.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_keycode.h"
+	"SDL_video.h"
+	"begin_code.h"
+	"close_code.h"
+
+1581922380 c:\users\my\documents\konstantin_kostadinov\space-friendship-master.01-01\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_keycode.h
+	"SDL_stdinc.h"
+	"SDL_scancode.h"
+
+1581922380 c:\users\my\documents\konstantin_kostadinov\space-friendship-master.01-01\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_scancode.h
+	"SDL_stdinc.h"
+
+1581922380 c:\users\my\documents\konstantin_kostadinov\space-friendship-master.01-01\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_mouse.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_video.h"
+	"begin_code.h"
+	"close_code.h"
+
+1581922380 c:\users\my\documents\konstantin_kostadinov\space-friendship-master.01-01\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_joystick.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1581922380 c:\users\my\documents\konstantin_kostadinov\space-friendship-master.01-01\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_gamecontroller.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_rwops.h"
+	"SDL_joystick.h"
+	"begin_code.h"
+	"close_code.h"
+
+1581922380 c:\users\my\documents\konstantin_kostadinov\space-friendship-master.01-01\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_quit.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+
+1581922380 c:\users\my\documents\konstantin_kostadinov\space-friendship-master.01-01\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_gesture.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_video.h"
+	"SDL_touch.h"
+	"begin_code.h"
+	"close_code.h"
+
+1581922382 c:\users\my\documents\konstantin_kostadinov\space-friendship-master.01-01\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_touch.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_video.h"
+	"begin_code.h"
+	"close_code.h"
+
+1581922380 c:\users\my\documents\konstantin_kostadinov\space-friendship-master.01-01\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_filesystem.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+
+1581922380 c:\users\my\documents\konstantin_kostadinov\space-friendship-master.01-01\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_haptic.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_joystick.h"
+	"begin_code.h"
+	"close_code.h"
+
+1581922380 c:\users\my\documents\konstantin_kostadinov\space-friendship-master.01-01\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_hints.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+
+1581922380 c:\users\my\documents\konstantin_kostadinov\space-friendship-master.01-01\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_loadso.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1581922380 c:\users\my\documents\konstantin_kostadinov\space-friendship-master.01-01\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_log.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+
+1581922380 c:\users\my\documents\konstantin_kostadinov\space-friendship-master.01-01\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_messagebox.h
+	"SDL_stdinc.h"
+	"SDL_video.h"
+	"begin_code.h"
+	"close_code.h"
+
+1581922380 c:\users\my\documents\konstantin_kostadinov\space-friendship-master.01-01\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_power.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+
+1581922380 c:\users\my\documents\konstantin_kostadinov\space-friendship-master.01-01\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_render.h
+	"SDL_stdinc.h"
+	"SDL_rect.h"
+	"SDL_video.h"
+	"begin_code.h"
+	"close_code.h"
+
+1581922380 c:\users\my\documents\konstantin_kostadinov\space-friendship-master.01-01\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_sensor.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1581922380 c:\users\my\documents\konstantin_kostadinov\space-friendship-master.01-01\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_shape.h
+	"SDL_stdinc.h"
+	"SDL_pixels.h"
+	"SDL_rect.h"
+	"SDL_surface.h"
+	"SDL_video.h"
+	"begin_code.h"
+	"close_code.h"
+
+1581922382 c:\users\my\documents\konstantin_kostadinov\space-friendship-master.01-01\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_system.h
+	"SDL_stdinc.h"
+	"SDL_keyboard.h"
+	"SDL_render.h"
+	"SDL_video.h"
+	"begin_code.h"
+	"close_code.h"
+
+1581922382 c:\users\my\documents\konstantin_kostadinov\space-friendship-master.01-01\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_timer.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1581922382 c:\users\my\documents\konstantin_kostadinov\space-friendship-master.01-01\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_version.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+
+1581875168 c:\users\my\documents\konstantin_kostadinov\space-friendship-master.01-01\space-friendship-master\space friendship\include\world.h
+	<iostream>
+	<fstream>
+	<vector>
+	<string>
+	<cstring>
+	<cmath>
+	<ctime>
+	<SDL2/SDL.h>
+	"Player.h"
+	"Enemy.h"
+	"Projectile.h"
+	"Artefact.h"
+	"Spawner.h"
+	"Engine.h"
+	"Rock.h"
+
+1581922382 c:\users\my\documents\konstantin_kostadinov\space-friendship-master.01-01\space-friendship-master\space friendship\include\player.h
+	<SDL2/SDL.h>
+
+1581925380 c:\users\my\documents\konstantin_kostadinov\space-friendship-master.01-01\space-friendship-master\space friendship\include\enemy.h
+	<iostream>
+	<fstream>
+	<cstring>
+	<cmath>
+	<vector>
+	<SDL2/SDL.h>
+	<Engine.h>
+
+1581922382 c:\users\my\documents\konstantin_kostadinov\space-friendship-master.01-01\space-friendship-master\space friendship\include\projectile.h
+	<SDL2/SDL.h>
+
+1581922382 c:\users\my\documents\konstantin_kostadinov\space-friendship-master.01-01\space-friendship-master\space friendship\include\artefact.h
+	<SDL2/SDL.h>
+
+1581874416 c:\users\my\documents\konstantin_kostadinov\space-friendship-master.01-01\space-friendship-master\space friendship\include\spawner.h
+	<stdlib.h>
+	<time.h>
+	<iostream>
+	<fstream>
+	<string>
+	<vector>
+	"Engine.h"
+
+1581407572 c:\users\my\documents\konstantin_kostadinov\space-friendship-master.01-01\space-friendship-master\space friendship\include\rock.h
+	"Enemy.h"
+
+1581922382 source:c:\users\my\documents\konstantin_kostadinov\space-friendship-master.01-01\space-friendship-master\space friendship\src\artefact.cpp
+	"Artefact.h"
+
+1581874628 source:c:\users\my\documents\konstantin_kostadinov\space-friendship-master.01-01\space-friendship-master\space friendship\src\enemy.cpp
+	"Enemy.h"
+
+1581328972 source:c:\users\my\documents\konstantin_kostadinov\space-friendship-master.01-01\space-friendship-master\space friendship\src\player.cpp
+	"Player.h"
+
+1581922384 source:c:\users\my\documents\konstantin_kostadinov\space-friendship-master.01-01\space-friendship-master\space friendship\src\projectile.cpp
+	"Projectile.h"
+
+1581873846 source:c:\users\my\documents\konstantin_kostadinov\space-friendship-master.01-01\space-friendship-master\space friendship\src\rock.cpp
+	"Rock.h"
+
+1581874568 source:c:\users\my\documents\konstantin_kostadinov\space-friendship-master.01-01\space-friendship-master\space friendship\src\spawner.cpp
+	"Spawner.h"
+
+1581924468 source:c:\users\my\documents\konstantin_kostadinov\space-friendship-master.01-01\space-friendship-master\space friendship\src\world.cpp
+	"World.h"
+
+1581873734 c:\users\my\documents\konstantin_kostadinov\space-friendship-master.01-01\space-friendship-master\space friendship\include\engine.h
+	<iostream>
+	<windows.h>
+	<winuser.h>
+
+1581922382 source:c:\users\user\documents\h.gadzhev\space-friendship v0.1.1\space-friendship-master\space friendship\src\artefact.cpp
+	"Artefact.h"
+
+1581922382 c:\users\user\documents\h.gadzhev\space-friendship v0.1.1\space-friendship-master\space friendship\include\artefact.h
+	<SDL2/SDL.h>
+
+1581922380 c:\users\user\documents\h.gadzhev\space-friendship v0.1.1\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl.h
+	"SDL_main.h"
+	"SDL_stdinc.h"
+	"SDL_assert.h"
+	"SDL_atomic.h"
+	"SDL_audio.h"
+	"SDL_clipboard.h"
+	"SDL_cpuinfo.h"
+	"SDL_endian.h"
+	"SDL_error.h"
+	"SDL_events.h"
+	"SDL_filesystem.h"
+	"SDL_gamecontroller.h"
+	"SDL_haptic.h"
+	"SDL_hints.h"
+	"SDL_joystick.h"
+	"SDL_loadso.h"
+	"SDL_log.h"
+	"SDL_messagebox.h"
+	"SDL_mutex.h"
+	"SDL_power.h"
+	"SDL_render.h"
+	"SDL_rwops.h"
+	"SDL_sensor.h"
+	"SDL_shape.h"
+	"SDL_system.h"
+	"SDL_thread.h"
+	"SDL_timer.h"
+	"SDL_version.h"
+	"SDL_video.h"
+	"begin_code.h"
+	"close_code.h"
+
+1581922380 c:\users\user\documents\h.gadzhev\space-friendship v0.1.1\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_main.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+
+1581922382 c:\users\user\documents\h.gadzhev\space-friendship v0.1.1\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_stdinc.h
+	"SDL_config.h"
+	<sys/types.h>
+	<stdio.h>
+	<stdlib.h>
+	<stddef.h>
+	<stdarg.h>
+	<stdlib.h>
+	<malloc.h>
+	<stddef.h>
+	<stdarg.h>
+	<memory.h>
+	<string.h>
+	<strings.h>
+	<wchar.h>
+	<inttypes.h>
+	<stdint.h>
+	<ctype.h>
+	<math.h>
+	<float.h>
+	<alloca.h>
+	<malloc.h>
+	<malloc.h>
+	<malloc.h>
+	<stdlib.h>
+	<sal.h>
+	"begin_code.h"
+	"close_code.h"
+
+1581922380 c:\users\user\documents\h.gadzhev\space-friendship v0.1.1\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_config.h
+	"SDL_platform.h"
+
+1581922380 c:\users\user\documents\h.gadzhev\space-friendship v0.1.1\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_platform.h
+	"AvailabilityMacros.h"
+	"TargetConditionals.h"
+	<winapifamily.h>
+	"begin_code.h"
+	"close_code.h"
+
+1581922382 c:\users\user\documents\h.gadzhev\space-friendship v0.1.1\space-friendship-master\space friendship\dep_sdl\include\sdl2\begin_code.h
+
+1581922382 c:\users\user\documents\h.gadzhev\space-friendship v0.1.1\space-friendship-master\space friendship\dep_sdl\include\sdl2\close_code.h
+
+1581922380 c:\users\user\documents\h.gadzhev\space-friendship v0.1.1\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_assert.h
+	"SDL_config.h"
+	"begin_code.h"
+	<signal.h>
+	"close_code.h"
+
+1581922380 c:\users\user\documents\h.gadzhev\space-friendship v0.1.1\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_atomic.h
+	"SDL_stdinc.h"
+	"SDL_platform.h"
+	"begin_code.h"
+	<sys/cpuinline.h>
+	<mbarrier.h>
+	"close_code.h"
+
+1581922380 c:\users\user\documents\h.gadzhev\space-friendship v0.1.1\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_audio.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_endian.h"
+	"SDL_mutex.h"
+	"SDL_thread.h"
+	"SDL_rwops.h"
+	"begin_code.h"
+	"close_code.h"
+
+1581922380 c:\users\user\documents\h.gadzhev\space-friendship v0.1.1\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_error.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+
+1581922380 c:\users\user\documents\h.gadzhev\space-friendship v0.1.1\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_endian.h
+	"SDL_stdinc.h"
+	<endian.h>
+	"begin_code.h"
+	"close_code.h"
+
+1581922380 c:\users\user\documents\h.gadzhev\space-friendship v0.1.1\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_mutex.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1581922382 c:\users\user\documents\h.gadzhev\space-friendship v0.1.1\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_thread.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_atomic.h"
+	"SDL_mutex.h"
+	"begin_code.h"
+	<process.h>
+	<process.h>
+	<stdlib.h>
+	"close_code.h"
+
+1581922380 c:\users\user\documents\h.gadzhev\space-friendship v0.1.1\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_rwops.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1581922380 c:\users\user\documents\h.gadzhev\space-friendship v0.1.1\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_clipboard.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+
+1581922380 c:\users\user\documents\h.gadzhev\space-friendship v0.1.1\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_cpuinfo.h
+	"SDL_stdinc.h"
+	<intrin.h>
+	<intrin.h>
+	<altivec.h>
+	<arm_neon.h>
+	<armintr.h>
+	<arm_neon.h>
+	<armintr.h>
+	<arm_neon.h>
+	<mm3dnow.h>
+	<immintrin.h>
+	<mmintrin.h>
+	<xmmintrin.h>
+	<emmintrin.h>
+	<pmmintrin.h>
+	"begin_code.h"
+	"close_code.h"
+
+1581922380 c:\users\user\documents\h.gadzhev\space-friendship v0.1.1\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_events.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_video.h"
+	"SDL_keyboard.h"
+	"SDL_mouse.h"
+	"SDL_joystick.h"
+	"SDL_gamecontroller.h"
+	"SDL_quit.h"
+	"SDL_gesture.h"
+	"SDL_touch.h"
+	"begin_code.h"
+	"close_code.h"
+
+1581922382 c:\users\user\documents\h.gadzhev\space-friendship v0.1.1\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_video.h
+	"SDL_stdinc.h"
+	"SDL_pixels.h"
+	"SDL_rect.h"
+	"SDL_surface.h"
+	"begin_code.h"
+	"close_code.h"
+
+1581922380 c:\users\user\documents\h.gadzhev\space-friendship v0.1.1\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_pixels.h
+	"SDL_stdinc.h"
+	"SDL_endian.h"
+	"begin_code.h"
+	"close_code.h"
+
+1581922380 c:\users\user\documents\h.gadzhev\space-friendship v0.1.1\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_rect.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_pixels.h"
+	"SDL_rwops.h"
+	"begin_code.h"
+	"close_code.h"
+
+1581922382 c:\users\user\documents\h.gadzhev\space-friendship v0.1.1\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_surface.h
+	"SDL_stdinc.h"
+	"SDL_pixels.h"
+	"SDL_rect.h"
+	"SDL_blendmode.h"
+	"SDL_rwops.h"
+	"begin_code.h"
+	"close_code.h"
+
+1581922380 c:\users\user\documents\h.gadzhev\space-friendship v0.1.1\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_blendmode.h
+	"begin_code.h"
+	"close_code.h"
+
+1581922380 c:\users\user\documents\h.gadzhev\space-friendship v0.1.1\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_keyboard.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_keycode.h"
+	"SDL_video.h"
+	"begin_code.h"
+	"close_code.h"
+
+1581922380 c:\users\user\documents\h.gadzhev\space-friendship v0.1.1\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_keycode.h
+	"SDL_stdinc.h"
+	"SDL_scancode.h"
+
+1581922380 c:\users\user\documents\h.gadzhev\space-friendship v0.1.1\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_scancode.h
+	"SDL_stdinc.h"
+
+1581922380 c:\users\user\documents\h.gadzhev\space-friendship v0.1.1\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_mouse.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_video.h"
+	"begin_code.h"
+	"close_code.h"
+
+1581922380 c:\users\user\documents\h.gadzhev\space-friendship v0.1.1\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_joystick.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1581922380 c:\users\user\documents\h.gadzhev\space-friendship v0.1.1\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_gamecontroller.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_rwops.h"
+	"SDL_joystick.h"
+	"begin_code.h"
+	"close_code.h"
+
+1581922380 c:\users\user\documents\h.gadzhev\space-friendship v0.1.1\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_quit.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+
+1581922380 c:\users\user\documents\h.gadzhev\space-friendship v0.1.1\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_gesture.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_video.h"
+	"SDL_touch.h"
+	"begin_code.h"
+	"close_code.h"
+
+1581922382 c:\users\user\documents\h.gadzhev\space-friendship v0.1.1\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_touch.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_video.h"
+	"begin_code.h"
+	"close_code.h"
+
+1581922380 c:\users\user\documents\h.gadzhev\space-friendship v0.1.1\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_filesystem.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+
+1581922380 c:\users\user\documents\h.gadzhev\space-friendship v0.1.1\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_haptic.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_joystick.h"
+	"begin_code.h"
+	"close_code.h"
+
+1581922380 c:\users\user\documents\h.gadzhev\space-friendship v0.1.1\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_hints.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+
+1581922380 c:\users\user\documents\h.gadzhev\space-friendship v0.1.1\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_loadso.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1581922380 c:\users\user\documents\h.gadzhev\space-friendship v0.1.1\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_log.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+
+1581922380 c:\users\user\documents\h.gadzhev\space-friendship v0.1.1\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_messagebox.h
+	"SDL_stdinc.h"
+	"SDL_video.h"
+	"begin_code.h"
+	"close_code.h"
+
+1581922380 c:\users\user\documents\h.gadzhev\space-friendship v0.1.1\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_power.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+
+1581922380 c:\users\user\documents\h.gadzhev\space-friendship v0.1.1\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_render.h
+	"SDL_stdinc.h"
+	"SDL_rect.h"
+	"SDL_video.h"
+	"begin_code.h"
+	"close_code.h"
+
+1581922380 c:\users\user\documents\h.gadzhev\space-friendship v0.1.1\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_sensor.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1581922380 c:\users\user\documents\h.gadzhev\space-friendship v0.1.1\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_shape.h
+	"SDL_stdinc.h"
+	"SDL_pixels.h"
+	"SDL_rect.h"
+	"SDL_surface.h"
+	"SDL_video.h"
+	"begin_code.h"
+	"close_code.h"
+
+1581922382 c:\users\user\documents\h.gadzhev\space-friendship v0.1.1\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_system.h
+	"SDL_stdinc.h"
+	"SDL_keyboard.h"
+	"SDL_render.h"
+	"SDL_video.h"
+	"begin_code.h"
+	"close_code.h"
+
+1581922382 c:\users\user\documents\h.gadzhev\space-friendship v0.1.1\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_timer.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1581922382 c:\users\user\documents\h.gadzhev\space-friendship v0.1.1\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_version.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+
+1581874628 source:c:\users\user\documents\h.gadzhev\space-friendship v0.1.1\space-friendship-master\space friendship\src\enemy.cpp
+	"Enemy.h"
+
+1581925382 c:\users\user\documents\h.gadzhev\space-friendship v0.1.1\space-friendship-master\space friendship\include\enemy.h
+	<iostream>
+	<fstream>
+	<cstring>
+	<cmath>
+	<vector>
+	<SDL2/SDL.h>
+	<Engine.h>
+
+1581873734 c:\users\user\documents\h.gadzhev\space-friendship v0.1.1\space-friendship-master\space friendship\include\engine.h
+	<iostream>
+	<windows.h>
+	<winuser.h>
+
+1581328972 source:c:\users\user\documents\h.gadzhev\space-friendship v0.1.1\space-friendship-master\space friendship\src\player.cpp
+	"Player.h"
+
+1581929806 c:\users\user\documents\h.gadzhev\space-friendship v0.1.1\space-friendship-master\space friendship\include\player.h
+	<SDL2/SDL.h>
+
+1581922384 source:c:\users\user\documents\h.gadzhev\space-friendship v0.1.1\space-friendship-master\space friendship\src\projectile.cpp
+	"Projectile.h"
+
+1581922382 c:\users\user\documents\h.gadzhev\space-friendship v0.1.1\space-friendship-master\space friendship\include\projectile.h
+	<SDL2/SDL.h>
+
+1581873846 source:c:\users\user\documents\h.gadzhev\space-friendship v0.1.1\space-friendship-master\space friendship\src\rock.cpp
+	"Rock.h"
+
+1581407572 c:\users\user\documents\h.gadzhev\space-friendship v0.1.1\space-friendship-master\space friendship\include\rock.h
+	"Enemy.h"
+
+1581874568 source:c:\users\user\documents\h.gadzhev\space-friendship v0.1.1\space-friendship-master\space friendship\src\spawner.cpp
+	"Spawner.h"
+
+1581874416 c:\users\user\documents\h.gadzhev\space-friendship v0.1.1\space-friendship-master\space friendship\include\spawner.h
+	<stdlib.h>
+	<time.h>
+	<iostream>
+	<fstream>
+	<string>
+	<vector>
+	"Engine.h"
+
+1581936107 source:c:\users\user\documents\h.gadzhev\space-friendship v0.1.1\space-friendship-master\space friendship\main.cpp
+	<SDL2/SDL.h>
+	"World.h"
+
+1581936015 c:\users\user\documents\h.gadzhev\space-friendship v0.1.1\space-friendship-master\space friendship\include\world.h
+	<iostream>
+	<fstream>
+	<vector>
+	<string>
+	<cstring>
+	<cmath>
+	<ctime>
+	<SDL2/SDL.h>
+	"Player.h"
+	"Enemy.h"
+	"Projectile.h"
+	"Artefact.h"
+	"Spawner.h"
+	"Engine.h"
+	"Rock.h"
+
+1581936015 source:c:\users\user\documents\h.gadzhev\space-friendship v0.1.1\space-friendship-master\space friendship\src\world.cpp
+	"World.h"
+
+1581873004 source:c:\users\user\documents\h.gadzhev\space-friendship v0.1.1\space-friendship-master\space friendship\src\engine.cpp
+	"Engine.h"
+
+1582090450 source:c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space-friendship v0.1.2(menu and endgame)\space-friendship-master\space friendship\main.cpp
+	<SDL2/SDL.h>
+	"World.h"
+
+1581922380 c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space-friendship v0.1.2(menu and endgame)\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl.h
+	"SDL_main.h"
+	"SDL_stdinc.h"
+	"SDL_assert.h"
+	"SDL_atomic.h"
+	"SDL_audio.h"
+	"SDL_clipboard.h"
+	"SDL_cpuinfo.h"
+	"SDL_endian.h"
+	"SDL_error.h"
+	"SDL_events.h"
+	"SDL_filesystem.h"
+	"SDL_gamecontroller.h"
+	"SDL_haptic.h"
+	"SDL_hints.h"
+	"SDL_joystick.h"
+	"SDL_loadso.h"
+	"SDL_log.h"
+	"SDL_messagebox.h"
+	"SDL_mutex.h"
+	"SDL_power.h"
+	"SDL_render.h"
+	"SDL_rwops.h"
+	"SDL_sensor.h"
+	"SDL_shape.h"
+	"SDL_system.h"
+	"SDL_thread.h"
+	"SDL_timer.h"
+	"SDL_version.h"
+	"SDL_video.h"
+	"begin_code.h"
+	"close_code.h"
+
+1581922380 c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space-friendship v0.1.2(menu and endgame)\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_main.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+
+1581922382 c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space-friendship v0.1.2(menu and endgame)\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_stdinc.h
+	"SDL_config.h"
+	<sys/types.h>
+	<stdio.h>
+	<stdlib.h>
+	<stddef.h>
+	<stdarg.h>
+	<stdlib.h>
+	<malloc.h>
+	<stddef.h>
+	<stdarg.h>
+	<memory.h>
+	<string.h>
+	<strings.h>
+	<wchar.h>
+	<inttypes.h>
+	<stdint.h>
+	<ctype.h>
+	<math.h>
+	<float.h>
+	<alloca.h>
+	<malloc.h>
+	<malloc.h>
+	<malloc.h>
+	<stdlib.h>
+	<sal.h>
+	"begin_code.h"
+	"close_code.h"
+
+1581922380 c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space-friendship v0.1.2(menu and endgame)\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_config.h
+	"SDL_platform.h"
+
+1581922380 c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space-friendship v0.1.2(menu and endgame)\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_platform.h
+	"AvailabilityMacros.h"
+	"TargetConditionals.h"
+	<winapifamily.h>
+	"begin_code.h"
+	"close_code.h"
+
+1581922382 c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space-friendship v0.1.2(menu and endgame)\space-friendship-master\space friendship\dep_sdl\include\sdl2\begin_code.h
+
+1581922382 c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space-friendship v0.1.2(menu and endgame)\space-friendship-master\space friendship\dep_sdl\include\sdl2\close_code.h
+
+1581922380 c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space-friendship v0.1.2(menu and endgame)\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_assert.h
+	"SDL_config.h"
+	"begin_code.h"
+	<signal.h>
+	"close_code.h"
+
+1581922380 c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space-friendship v0.1.2(menu and endgame)\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_atomic.h
+	"SDL_stdinc.h"
+	"SDL_platform.h"
+	"begin_code.h"
+	<sys/cpuinline.h>
+	<mbarrier.h>
+	"close_code.h"
+
+1581922380 c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space-friendship v0.1.2(menu and endgame)\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_audio.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_endian.h"
+	"SDL_mutex.h"
+	"SDL_thread.h"
+	"SDL_rwops.h"
+	"begin_code.h"
+	"close_code.h"
+
+1581922380 c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space-friendship v0.1.2(menu and endgame)\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_error.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+
+1581922380 c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space-friendship v0.1.2(menu and endgame)\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_endian.h
+	"SDL_stdinc.h"
+	<endian.h>
+	"begin_code.h"
+	"close_code.h"
+
+1581922380 c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space-friendship v0.1.2(menu and endgame)\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_mutex.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1581922382 c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space-friendship v0.1.2(menu and endgame)\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_thread.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_atomic.h"
+	"SDL_mutex.h"
+	"begin_code.h"
+	<process.h>
+	<process.h>
+	<stdlib.h>
+	"close_code.h"
+
+1581922380 c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space-friendship v0.1.2(menu and endgame)\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_rwops.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1581922380 c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space-friendship v0.1.2(menu and endgame)\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_clipboard.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+
+1581922380 c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space-friendship v0.1.2(menu and endgame)\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_cpuinfo.h
+	"SDL_stdinc.h"
+	<intrin.h>
+	<intrin.h>
+	<altivec.h>
+	<arm_neon.h>
+	<armintr.h>
+	<arm_neon.h>
+	<armintr.h>
+	<arm_neon.h>
+	<mm3dnow.h>
+	<immintrin.h>
+	<mmintrin.h>
+	<xmmintrin.h>
+	<emmintrin.h>
+	<pmmintrin.h>
+	"begin_code.h"
+	"close_code.h"
+
+1581922380 c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space-friendship v0.1.2(menu and endgame)\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_events.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_video.h"
+	"SDL_keyboard.h"
+	"SDL_mouse.h"
+	"SDL_joystick.h"
+	"SDL_gamecontroller.h"
+	"SDL_quit.h"
+	"SDL_gesture.h"
+	"SDL_touch.h"
+	"begin_code.h"
+	"close_code.h"
+
+1581922382 c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space-friendship v0.1.2(menu and endgame)\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_video.h
+	"SDL_stdinc.h"
+	"SDL_pixels.h"
+	"SDL_rect.h"
+	"SDL_surface.h"
+	"begin_code.h"
+	"close_code.h"
+
+1581922380 c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space-friendship v0.1.2(menu and endgame)\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_pixels.h
+	"SDL_stdinc.h"
+	"SDL_endian.h"
+	"begin_code.h"
+	"close_code.h"
+
+1581922380 c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space-friendship v0.1.2(menu and endgame)\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_rect.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_pixels.h"
+	"SDL_rwops.h"
+	"begin_code.h"
+	"close_code.h"
+
+1581922382 c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space-friendship v0.1.2(menu and endgame)\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_surface.h
+	"SDL_stdinc.h"
+	"SDL_pixels.h"
+	"SDL_rect.h"
+	"SDL_blendmode.h"
+	"SDL_rwops.h"
+	"begin_code.h"
+	"close_code.h"
+
+1581922380 c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space-friendship v0.1.2(menu and endgame)\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_blendmode.h
+	"begin_code.h"
+	"close_code.h"
+
+1581922380 c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space-friendship v0.1.2(menu and endgame)\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_keyboard.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_keycode.h"
+	"SDL_video.h"
+	"begin_code.h"
+	"close_code.h"
+
+1581922380 c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space-friendship v0.1.2(menu and endgame)\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_keycode.h
+	"SDL_stdinc.h"
+	"SDL_scancode.h"
+
+1581922380 c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space-friendship v0.1.2(menu and endgame)\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_scancode.h
+	"SDL_stdinc.h"
+
+1581922380 c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space-friendship v0.1.2(menu and endgame)\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_mouse.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_video.h"
+	"begin_code.h"
+	"close_code.h"
+
+1581922380 c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space-friendship v0.1.2(menu and endgame)\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_joystick.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1581922380 c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space-friendship v0.1.2(menu and endgame)\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_gamecontroller.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_rwops.h"
+	"SDL_joystick.h"
+	"begin_code.h"
+	"close_code.h"
+
+1581922380 c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space-friendship v0.1.2(menu and endgame)\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_quit.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+
+1581922380 c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space-friendship v0.1.2(menu and endgame)\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_gesture.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_video.h"
+	"SDL_touch.h"
+	"begin_code.h"
+	"close_code.h"
+
+1581922382 c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space-friendship v0.1.2(menu and endgame)\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_touch.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_video.h"
+	"begin_code.h"
+	"close_code.h"
+
+1581922380 c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space-friendship v0.1.2(menu and endgame)\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_filesystem.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+
+1581922380 c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space-friendship v0.1.2(menu and endgame)\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_haptic.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_joystick.h"
+	"begin_code.h"
+	"close_code.h"
+
+1581922380 c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space-friendship v0.1.2(menu and endgame)\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_hints.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+
+1581922380 c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space-friendship v0.1.2(menu and endgame)\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_loadso.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1581922380 c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space-friendship v0.1.2(menu and endgame)\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_log.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+
+1581922380 c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space-friendship v0.1.2(menu and endgame)\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_messagebox.h
+	"SDL_stdinc.h"
+	"SDL_video.h"
+	"begin_code.h"
+	"close_code.h"
+
+1581922380 c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space-friendship v0.1.2(menu and endgame)\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_power.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+
+1581922380 c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space-friendship v0.1.2(menu and endgame)\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_render.h
+	"SDL_stdinc.h"
+	"SDL_rect.h"
+	"SDL_video.h"
+	"begin_code.h"
+	"close_code.h"
+
+1581922380 c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space-friendship v0.1.2(menu and endgame)\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_sensor.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1581922380 c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space-friendship v0.1.2(menu and endgame)\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_shape.h
+	"SDL_stdinc.h"
+	"SDL_pixels.h"
+	"SDL_rect.h"
+	"SDL_surface.h"
+	"SDL_video.h"
+	"begin_code.h"
+	"close_code.h"
+
+1581922382 c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space-friendship v0.1.2(menu and endgame)\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_system.h
+	"SDL_stdinc.h"
+	"SDL_keyboard.h"
+	"SDL_render.h"
+	"SDL_video.h"
+	"begin_code.h"
+	"close_code.h"
+
+1581922382 c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space-friendship v0.1.2(menu and endgame)\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_timer.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1581922382 c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space-friendship v0.1.2(menu and endgame)\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_version.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+
+1582090170 c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space-friendship v0.1.2(menu and endgame)\space-friendship-master\space friendship\include\world.h
+	<iostream>
+	<fstream>
+	<vector>
+	<string>
+	<cstring>
+	<cmath>
+	<ctime>
+	<SDL2/SDL.h>
+	"Player.h"
+	"Enemy.h"
+	"Projectile.h"
+	"Artefact.h"
+	"Spawner.h"
+	"Engine.h"
+	"Rock.h"
+	"Bullet.h"
+
+1582090166 c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space-friendship v0.1.2(menu and endgame)\space-friendship-master\space friendship\include\player.h
+	<SDL2/SDL.h>
+
+1582090169 c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space-friendship v0.1.2(menu and endgame)\space-friendship-master\space friendship\include\enemy.h
+	<iostream>
+	<fstream>
+	<cstring>
+	<cmath>
+	<vector>
+	<SDL2/SDL.h>
+	<Engine.h>
+
+1582090170 c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space-friendship v0.1.2(menu and endgame)\space-friendship-master\space friendship\include\engine.h
+	<iostream>
+	<windows.h>
+	<winuser.h>
+
+1582090170 c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space-friendship v0.1.2(menu and endgame)\space-friendship-master\space friendship\include\projectile.h
+	<iostream>
+	<fstream>
+	<cstring>
+	<SDL2/SDL.h>
+	"Engine.h"
+
+1582090170 c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space-friendship v0.1.2(menu and endgame)\space-friendship-master\space friendship\include\artefact.h
+	<SDL2/SDL.h>
+
+1582090170 c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space-friendship v0.1.2(menu and endgame)\space-friendship-master\space friendship\include\spawner.h
+	<stdlib.h>
+	<time.h>
+	<iostream>
+	<fstream>
+	<string>
+	<vector>
+	"Engine.h"
+
+1582090170 c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space-friendship v0.1.2(menu and endgame)\space-friendship-master\space friendship\include\rock.h
+	"Enemy.h"
+
+1582090170 c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space-friendship v0.1.2(menu and endgame)\space-friendship-master\space friendship\include\bullet.h
+	"Projectile.h"
+
+1582090162 source:c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space-friendship v0.1.2(menu and endgame)\space-friendship-master\space friendship\src\artefact.cpp
+	"Artefact.h"
+
+1582090170 source:c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space-friendship v0.1.2(menu and endgame)\space-friendship-master\space friendship\src\enemy.cpp
+	"Enemy.h"
+
+1581873004 source:c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space-friendship v0.1.2(menu and endgame)\space-friendship-master\space friendship\src\engine.cpp
+	"Engine.h"
+
+1581328972 source:c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space-friendship v0.1.2(menu and endgame)\space-friendship-master\space friendship\src\player.cpp
+	"Player.h"
+
+1582090170 source:c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space-friendship v0.1.2(menu and endgame)\space-friendship-master\space friendship\src\rock.cpp
+	"Rock.h"
+
+1582090170 source:c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space-friendship v0.1.2(menu and endgame)\space-friendship-master\space friendship\src\spawner.cpp
+	"Spawner.h"
+
+1581927458 source:c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space-friendship v0.1.2(menu and endgame)\space-friendship-master\space friendship\src\bullet.cpp
+	"Bullet.h"
+
+1582090170 source:c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space-friendship v0.1.2(menu and endgame)\space-friendship-master\space friendship\src\projectile.cpp
+	"Projectile.h"
+
+1582090586 source:c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space-friendship v0.1.2(menu and endgame)\space-friendship-master\space friendship\src\world.cpp
+	"World.h"
+

@@ -5,14 +5,14 @@
 
 class Rock : public Enemy
 {
-    public:
-        Rock();
-        virtual ~Rock();
+public:
+    Rock();
+    virtual ~Rock();
 
-        virtual void update();
-    protected:
+    virtual void update();
+protected:
 
-    private:
+private:
 };
 
 #endif // ROCK_H

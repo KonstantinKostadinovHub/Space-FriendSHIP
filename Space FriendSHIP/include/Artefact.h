@@ -4,15 +4,15 @@
 
 class Artefact
 {
-    public:
-        Artefact();
-        virtual ~Artefact();
+public:
+    Artefact();
+    virtual ~Artefact();
 
-        virtual void update();
-        virtual void draw(SDL_Renderer* renderer);
-    protected:
+    virtual void update();
+    virtual void draw(SDL_Renderer* renderer);
+protected:
 
-    private:
+private:
 };
 
 #endif // ARTEFACT_H
