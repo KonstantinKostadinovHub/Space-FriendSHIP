@@ -63,6 +63,7 @@ public:
     bool checkIfOffBounds(SDL_Rect rect);
     void endgameScreen();
     void menu();
+    void shootProjectiles();
 protected:
 
 private:

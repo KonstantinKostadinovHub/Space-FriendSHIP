@@ -1,6 +1,8 @@
 #ifndef GUN_H
 #define GUN_H
 
+#include <time.h>
+
 #include <SDL2/Sdl.h>
 
 #include "Engine.h"
@@ -16,7 +18,12 @@ class Gun
         struct coordinates m_direction;
         float m_rotationAngle;
 
-        virtual void update(struct coordinates playerCoor, struct coordinates playerDirection, float playerAng);
+        time_t m_startShootCooldown;
+        time_t m_shootCooldown;
+        bool m_cantShoot;
+
+        virtual void init(coordinates coor);
+        virtual void update(coordinates playerCoor, coordinates playerDirection, float playerAng);
 
     protected:
 

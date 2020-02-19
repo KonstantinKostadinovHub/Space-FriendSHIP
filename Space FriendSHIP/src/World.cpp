@@ -5,12 +5,12 @@ World::World()
     m_spawnManager = new Spawner;
     m_ScreenR.x =300; //m_SCREEN_WIDTH/2-700;
     m_ScreenR.y = 100;//m_SCREEN_HEIGHT/2-700;
-    m_ScreenR.w=700;
-    m_ScreenR.h=700;
-    m_ScreenMenu.x=0;
-    m_ScreenMenu.y=0;
-    m_ScreenMenu.w=m_SCREEN_WIDTH;
-    m_ScreenMenu.h=m_SCREEN_HEIGHT;
+    m_ScreenR.w = 700;
+    m_ScreenR.h = 700;
+    m_ScreenMenu.x = 0;
+    m_ScreenMenu.y = 0;
+    m_ScreenMenu.w = m_SCREEN_WIDTH;
+    m_ScreenMenu.h = m_SCREEN_HEIGHT;
 }
 
 World::~World()
@@ -53,9 +53,12 @@ void World::update()
         m_spawn = false;
     }
 
+    shootProjectiles();
+
     for(vector<Player*>::iterator it = m_players.begin(); it != m_players.end(); it++)
     {
         (*it)->update();
+
     }
     for(vector<Enemy*>::iterator it = m_enemies.begin(); it != m_enemies.end(); it++)
     {
@@ -108,7 +111,6 @@ void World::addEnemy(string configFile, coordinates coor, coordinates direction)
     if(configFile == "rock.txt")
     {
         Enemy* rock = new Rock();
-        //cout << x << ", " << y << ", " << directionX << ", " << directionY << endl;
         rock->init(configFile, coor, direction);
         m_enemies.push_back(rock);
     }
@@ -219,5 +221,22 @@ void World::menu()
     {
         m_MenuImg="img\\MENU_unfinished2.bmp";
 
+    }
+}
+
+void World::shootProjectiles()
+{
+    for(int i = 0; i < m_enemies.size(); i++)
+    {
+        for(int j = 0; j < m_enemies[i]->m_guns.size(); j++)
+        {
+            if(!m_enemies[i]->m_guns[j]->m_cantShoot){
+                struct coordinates buff;
+                buff.x = m_enemies[i]->m_guns[j]->m_objectRect.x;
+                buff.y = m_enemies[i]->m_guns[j]->m_objectRect.y;
+                cout << buff.x << " " << buff.y << endl;
+                addBullet(m_enemies[i]->m_bulletName, buff, m_enemies[i]->m_guns[j]->m_direction);
+            }
+        }
     }
 }

@@ -2,8 +2,7 @@
 
 Enemy::Enemy()
 {
-    m_buff.x = 0;
-    m_buff.y = 0;
+
 }
 
 Enemy::~Enemy()
@@ -24,11 +23,16 @@ void Enemy::init(string configFile, coordinates coor, coordinates direction)
     m_objectRect.x = coor.x;
     m_objectRect.y = coor.y;
     m_img = "img\\" + m_img;
+    m_coor.x = m_objectRect.x;
+    m_coor.y = m_objectRect.y;
 }
 
 void Enemy::update()
 {
-
+    m_coor.x += (m_direction.x * m_speed);
+    m_coor.y += (m_direction.y * m_speed);
+    m_objectRect.x = (int)m_coor.x;
+    m_objectRect.y = (int)m_coor.y;
 }
 
 void Enemy::draw(SDL_Renderer* renderer)
@@ -52,7 +56,6 @@ void Enemy::draw(SDL_Renderer* renderer)
     {
         tanges = m_direction.y / m_direction.x;
         tanges = abs(tanges);
-        //cout << tan(tanges) * 180 / PI << " " << endl;
         if(m_direction.y > 0)
         {
             result = tan(tanges) * 180 /PI + 90;
@@ -66,12 +69,19 @@ void Enemy::draw(SDL_Renderer* renderer)
     {
         result *= -1;
     }
-    //cout << "result: " << result << endl;
-    //result += 180;
     SDL_Surface* loadingSurface = SDL_LoadBMP(m_img.c_str());
     m_objectTexture = SDL_CreateTextureFromSurface(renderer, loadingSurface);
     SDL_RenderCopyEx(renderer, m_objectTexture, NULL, &m_objectRect, result, NULL, SDL_FLIP_NONE);
     SDL_FreeSurface(loadingSurface);
+
+    for(int i = 0; i < m_guns.size() ; i++)
+    {
+        struct coordinates buff;
+        buff.x = m_objectRect.x;
+        buff.y = m_objectRect.y;
+        // TO - DO hardcoded
+        m_guns[i]->update(buff, m_direction, 0);
+    }
 }
 
 void Enemy::dealDamage(int damage)

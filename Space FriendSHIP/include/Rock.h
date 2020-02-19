@@ -9,7 +9,7 @@ public:
     Rock();
     virtual ~Rock();
 
-    virtual void update();
+    virtual void init(string configFile, coordinates coor, coordinates direction);
 protected:
 
 private:

@@ -19,6 +19,8 @@ void Projectile::update()
 
 void Projectile::draw(SDL_Renderer* renderer)
 {
+    float m_rotationAngle = returnAngleByCoordinates(m_coor, m_direction);
+
     SDL_Surface* loadingSurface = SDL_LoadBMP(m_img.c_str());
     m_objectTexture = SDL_CreateTextureFromSurface(renderer, loadingSurface);
     SDL_RenderCopyEx(renderer, m_objectTexture, NULL, &m_objectRect, m_rotationAngle, NULL, SDL_FLIP_NONE);

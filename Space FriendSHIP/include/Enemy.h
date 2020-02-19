@@ -9,6 +9,7 @@
 #include<SDL2/SDL.h>
 
 #include <Engine.h>
+#include <Gun.h>
 
 using namespace std;
 
@@ -26,12 +27,12 @@ public:
 
     string m_img;
     SDL_Rect m_objectRect;
-    struct coordinates m_buff;
+    struct coordinates m_coor;
     struct coordinates m_direction;
     float m_rotationAngle;
     SDL_Texture* m_objectTexture;
-    vector<coordinates> shootingPositions;
-    vector<coordinates> shootingDirections;
+    vector<Gun*> m_guns;
+    string m_bulletName;
 
     virtual void init(string configFile, coordinates coor, coordinates direction);
     virtual void update();

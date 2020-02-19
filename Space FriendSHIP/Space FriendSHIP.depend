@@ -2043,7 +2043,7 @@
 1581873004 source:c:\users\user\documents\h.gadzhev\space-friendship v0.1.1\space-friendship-master\space friendship\src\engine.cpp
 	"Engine.h"
 
-1582090450 source:c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space-friendship v0.1.2(menu and endgame)\space-friendship-master\space friendship\main.cpp
+1582144657 source:c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space-friendship v0.1.2(menu and endgame)\space-friendship-master\space friendship\main.cpp
 	<SDL2/SDL.h>
 	"World.h"
 
@@ -2394,7 +2394,7 @@
 	"begin_code.h"
 	"close_code.h"
 
-1582090170 c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space-friendship v0.1.2(menu and endgame)\space-friendship-master\space friendship\include\world.h
+1582141304 c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space-friendship v0.1.2(menu and endgame)\space-friendship-master\space friendship\include\world.h
 	<iostream>
 	<fstream>
 	<vector>
@@ -2415,7 +2415,7 @@
 1582090166 c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space-friendship v0.1.2(menu and endgame)\space-friendship-master\space friendship\include\player.h
 	<SDL2/SDL.h>
 
-1582090169 c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space-friendship v0.1.2(menu and endgame)\space-friendship-master\space friendship\include\enemy.h
+1582146523 c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space-friendship v0.1.2(menu and endgame)\space-friendship-master\space friendship\include\enemy.h
 	<iostream>
 	<fstream>
 	<cstring>
@@ -2423,9 +2423,11 @@
 	<vector>
 	<SDL2/SDL.h>
 	<Engine.h>
+	<Gun.h>
 
-1582090170 c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space-friendship v0.1.2(menu and endgame)\space-friendship-master\space friendship\include\engine.h
+1582140804 c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space-friendship v0.1.2(menu and endgame)\space-friendship-master\space friendship\include\engine.h
 	<iostream>
+	<cmath>
 	<windows.h>
 	<winuser.h>
 
@@ -2448,7 +2450,7 @@
 	<vector>
 	"Engine.h"
 
-1582090170 c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space-friendship v0.1.2(menu and endgame)\space-friendship-master\space friendship\include\rock.h
+1582146790 c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space-friendship v0.1.2(menu and endgame)\space-friendship-master\space friendship\include\rock.h
 	"Enemy.h"
 
 1582090170 c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space-friendship v0.1.2(menu and endgame)\space-friendship-master\space friendship\include\bullet.h
@@ -2457,16 +2459,16 @@
 1582090162 source:c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space-friendship v0.1.2(menu and endgame)\space-friendship-master\space friendship\src\artefact.cpp
 	"Artefact.h"
 
-1582090170 source:c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space-friendship v0.1.2(menu and endgame)\space-friendship-master\space friendship\src\enemy.cpp
+1582147068 source:c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space-friendship v0.1.2(menu and endgame)\space-friendship-master\space friendship\src\enemy.cpp
 	"Enemy.h"
 
-1581873004 source:c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space-friendship v0.1.2(menu and endgame)\space-friendship-master\space friendship\src\engine.cpp
+1582140790 source:c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space-friendship v0.1.2(menu and endgame)\space-friendship-master\space friendship\src\engine.cpp
 	"Engine.h"
 
 1581328972 source:c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space-friendship v0.1.2(menu and endgame)\space-friendship-master\space friendship\src\player.cpp
 	"Player.h"
 
-1582090170 source:c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space-friendship v0.1.2(menu and endgame)\space-friendship-master\space friendship\src\rock.cpp
+1582146769 source:c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space-friendship v0.1.2(menu and endgame)\space-friendship-master\space friendship\src\rock.cpp
 	"Rock.h"
 
 1582090170 source:c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space-friendship v0.1.2(menu and endgame)\space-friendship-master\space friendship\src\spawner.cpp
@@ -2475,9 +2477,17 @@
 1581927458 source:c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space-friendship v0.1.2(menu and endgame)\space-friendship-master\space friendship\src\bullet.cpp
 	"Bullet.h"
 
-1582090170 source:c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space-friendship v0.1.2(menu and endgame)\space-friendship-master\space friendship\src\projectile.cpp
+1582144919 source:c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space-friendship v0.1.2(menu and endgame)\space-friendship-master\space friendship\src\projectile.cpp
 	"Projectile.h"
 
-1582090586 source:c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space-friendship v0.1.2(menu and endgame)\space-friendship-master\space friendship\src\world.cpp
+1582146423 source:c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space-friendship v0.1.2(menu and endgame)\space-friendship-master\space friendship\src\world.cpp
 	"World.h"
+
+1582146423 c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space-friendship v0.1.2(menu and endgame)\space-friendship-master\space friendship\include\gun.h
+	<time.h>
+	<SDL2/Sdl.h>
+	"Engine.h"
+
+1582146423 source:c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space-friendship v0.1.2(menu and endgame)\space-friendship-master\space friendship\src\gun.cpp
+	"Gun.h"
 
