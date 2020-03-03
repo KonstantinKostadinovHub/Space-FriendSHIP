@@ -1,3 +1,7 @@
-1366 768
-background.bmp
-0.2
+Screen_Size: 1366 768
+
+Image: background.bmp
+
+SpawnCooldown: 0.2
+
+DropCooldown: 0.00005

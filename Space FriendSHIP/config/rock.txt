@@ -1,8 +1,13 @@
-32 50
-rock.bmp
-10
-80
-0
-1
+size: 32 50
+
+image: rock.bmp
+
+health: 10
+
+collision_damage: 80
+
+attack_speed: 0
+
+speed: 1
 
 

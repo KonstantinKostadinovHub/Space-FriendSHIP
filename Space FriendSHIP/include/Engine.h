@@ -7,6 +7,7 @@
 #include <winuser.h>
 
 #define PI 3.14
+#define SPEED_FACTOR 1.7
 
 using namespace std;
 
@@ -16,7 +17,7 @@ struct coordinates
     float y;
 };
 
-struct coordinates returnCoordinatesByAngle(struct coordinates direction, float angle);
-float returnAngleByCoordinates(struct coordinates coor1, struct coordinates coor2);
+struct coordinates returnCoordinatesByAngle(float angle);
+float returnAngleByCoordinates(struct coordinates direction);
 
 #endif // ENGINE_H

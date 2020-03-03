@@ -15,15 +15,14 @@ class Gun
 
         SDL_Rect m_objectRect;
         struct coordinates m_coor;
-        struct coordinates m_direction;
         float m_rotationAngle;
 
         time_t m_startShootCooldown;
         time_t m_shootCooldown;
         bool m_cantShoot;
 
-        virtual void init(coordinates coor);
-        virtual void update(coordinates playerCoor, coordinates playerDirection, float playerAng);
+        virtual void init(float playerAng, float attackSpeed);
+        virtual void update(coordinates playerCoor);
 
     protected:
 

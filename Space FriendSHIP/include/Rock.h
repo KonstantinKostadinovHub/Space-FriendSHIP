@@ -2,17 +2,19 @@
 #define ROCK_H
 
 #include "Enemy.h"
+#include <fstream>
+#include <cstring>
 
-class Rock : public Enemy
+class Rock: public Enemy
 {
-public:
-    Rock();
-    virtual ~Rock();
+    public:
+        Rock();
+        virtual ~Rock();
+        string tmp;
 
-    virtual void init(string configFile, coordinates coor, coordinates direction);
-protected:
+    protected:
 
-private:
+    private:
 };
 
 #endif // ROCK_H

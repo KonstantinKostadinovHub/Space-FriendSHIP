@@ -10,28 +10,31 @@
 
 #include "Engine.h"
 
-using namespace std;
-
 class Spawner
 {
-public:
-    Spawner();
-    virtual ~Spawner();
+    public:
+        Spawner();
+        virtual ~Spawner();
 
-    string m_configName;
-    int m_rockProb;
-    string m_type;
-    vector<string> m_probabilities;
+        string m_type;
+        string m_configName;
+        string tmp;
 
-    coordinates m_coor;
-    coordinates m_direction;
+        int m_rockProb;
+        int m_shooterProb;
 
-    void init(string configName);
-    void spawn(int SCREEN_WIDTH, int SCREEN_HEIGHT);
+        vector <string> m_probabilities;
 
-protected:
+        coordinates m_coor;
+        coordinates m_direction;
 
-private:
+        void init(string configName);
+        void spawn(int SCREEN_WIDTH, int SCREEN_HEIGHT);
+
+    protected:
+
+    private:
 };
 
 #endif // SPAWNER_H
+

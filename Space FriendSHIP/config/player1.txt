@@ -1,0 +1,23 @@
+Player_Size: 96 96
+
+Image: Player1.bmp
+
+Health: 100
+
+Spawn_Point: 500 500
+
+Speed: 3
+
+Max_Speed: 10
+
+Min_Speed: 1
+
+Spawn_Angle: 90
+
+Move_Left: A
+
+Move_Right: D
+
+Gas: W
+
+Brake: S

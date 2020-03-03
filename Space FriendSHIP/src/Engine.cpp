@@ -1,17 +1,19 @@
 #include "Engine.h"
 
 
-struct coordinates returnCoordinatesByAngle(struct coordinates direction, float angle)
+struct coordinates returnCoordinatesByAngle(float angle)
 {
-    direction.x += sin(angle) * PI / 180;
-    direction.y += cos(angle) * PI / 180;
+    coordinates direction;
+    direction.x = sin(angle * PI / 180);
+    direction.y = cos(angle * PI / 180);
     return direction;
 }
 
-float returnAngleByCoordinates(struct coordinates coor1, struct coordinates direction)
+float returnAngleByCoordinates(struct coordinates direction)
 {
     float tanges = direction.y / direction.x;
     float result = 0;
+
     if (direction.y < 0 && abs(direction.y) > abs(direction.x))
     {
         tanges =  direction.x / direction.y;

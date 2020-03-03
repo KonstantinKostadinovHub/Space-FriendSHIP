@@ -5,21 +5,24 @@
 #include <fstream>
 #include <vector>
 #include <string>
-#include <cstring>
-#include <cmath>
-#include <ctime>
-#include<SDL2/SDL.h>
+#include <SDL2/SDL.h>
 
 #include "Player.h"
 #include "Enemy.h"
 #include "Projectile.h"
 #include "Artefact.h"
 
-#include "Spawner.h"
 #include "Engine.h"
+#include "Spawner.h"
+#include "Dropper.h"
 
 #include "Rock.h"
+#include "Shooter.h"
+
 #include "Bullet.h"
+
+#include "HealthBooster.h"
+#include "SpeedBooster.h"
 
 using namespace std;
 
@@ -31,42 +34,56 @@ public:
 
     SDL_Window* m_main_window = NULL;
     SDL_Renderer* m_main_renderer = NULL;
+    SDL_Texture* m_backgroundTexture;
     SDL_Rect m_ScreenR;
     SDL_Rect m_ScreenMenu;
+    Spawner* m_spawnManager;
+    Dropper* m_dropper;
 
-    bool endgame = false;
     string m_configFile;
-    string m_endScreenImg="img\\EndGameScreen.bmp";
-    string m_MenuImg="img\\MENU_unfinished1.bmp";
+    string tmp;
+    string m_backgroundImg;
+    string m_endScreenImg = "img\\EndGameScreen.bmp";
+    string m_MenuImg = "img\\MenuScreen1Game.bmp";
+
     int m_SCREEN_WIDTH;
     int m_SCREEN_HEIGHT;
-    string m_backgroundImg;
-    vector<Player*> m_players;
-    vector<Enemy*> m_enemies;
-    vector<Projectile*> m_projectiles;
-    vector<Artefact*> m_artefacts;
-    SDL_Texture* m_backgroundTexture;
-    Spawner* m_spawnManager;
+
+    vector <Player*> m_players;
+    vector <Enemy*> m_enemies;
+    vector <Projectile*> m_projectiles;
+    vector <Artefact*> m_artefacts;
+
     time_t m_startSpawnCooldown;
     time_t m_spawnCooldown;
+    time_t m_startDropCooldown;
+    time_t m_dropCooldown;
+
     bool m_spawn;
+    bool endgame = false;
+    bool m_drop;
+    bool checkForCollisionBetweenObjects(SDL_Rect rect1, SDL_Rect rect2);
+    bool checkIfOffBounds(SDL_Rect rect);
 
     void init(string configFile);
     void destroy();
     void update();
     void draw();
-    void addEnemy(string configFile, coordinates coor, coordinates direction);
-    void addBullet(string configFile, coordinates coor, coordinates direction);
+    void addPlayer(SDL_Renderer* renderer, string configFile);
+    void collisionDamage();
+    void addEnemy(string configFile, coordinates coor, float rotation);
+    void addBullet(string configFile, coordinates coor, float rotation);
     void cleaner();
     void spawn();
-    bool checkForCollisionBetweenObjects(SDL_Rect rect1, SDL_Rect rect2);
-    bool checkIfOffBounds(SDL_Rect rect);
     void endgameScreen();
     void menu();
     void shootProjectiles();
+    void addArtefact(string configFile,coordinates coor, coordinates direction);
+    void drop();
+
 protected:
 
 private:
 };
 
-#endif // WORLD_H
+#endif

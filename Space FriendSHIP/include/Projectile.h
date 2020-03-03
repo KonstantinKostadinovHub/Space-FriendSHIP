@@ -6,6 +6,7 @@
 #include <cstring>
 #include <SDL2/SDL.h>
 #include "Engine.h"
+
 class Projectile
 {
 public:
@@ -14,6 +15,7 @@ public:
     SDL_Rect m_objectRect;
     string m_configFile;
     string m_img;
+    string tmp;
     SDL_Texture* m_objectTexture;
     struct coordinates m_coor;
     struct coordinates m_direction;
@@ -24,7 +26,8 @@ public:
 
     virtual void update();
     virtual void draw(SDL_Renderer* renderer);
-    virtual void init(string configFile, struct coordinates coor, struct coordinates direction);
+    virtual void init(string configFile, struct coordinates coor, float rotation, SDL_Renderer* renderer);
+
 protected:
 
 private:

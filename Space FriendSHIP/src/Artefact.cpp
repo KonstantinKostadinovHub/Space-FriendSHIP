@@ -2,7 +2,8 @@
 
 Artefact::Artefact()
 {
-    //ctor
+    m_frameCounter = 0;
+    m_startCounter = time(NULL);
 }
 
 Artefact::~Artefact()
@@ -12,10 +13,52 @@ Artefact::~Artefact()
 
 void Artefact::update()
 {
-
+    m_coor.x += (m_direction.x * m_speed * SPEED_FACTOR);
+    m_coor.y += (m_direction.y * m_speed * SPEED_FACTOR);
+    m_objectRect.x = (int)m_coor.x;
+    m_objectRect.y = (int)m_coor.y;
 }
 
-void Artefact::draw(SDL_Renderer* renderer)
-{
+void Artefact::init(string configFile, coordinates coor, coordinates direction){
+    m_configFile = "config\\" + configFile;
+    fstream stream;
+    stream.open(m_configFile.c_str());
+    stream >> m_objectRect.w >> m_objectRect.h >> m_img >> m_speed >> m_FrameCount;
+    stream.close();
+
+    m_direction.x = direction.x;
+    m_direction.y = direction.y;
+    m_objectRect.x = coor.x;
+    m_objectRect.y = coor.y;
+    m_img = "img\\" + m_img;
+    m_coor.x = m_objectRect.x;
+    m_coor.y = m_objectRect.y;
+
+
+
+}
+void Artefact::draw( SDL_Renderer* renderer){
+
+        SDL_Rect pictureRect;
+        pictureRect.x = 0;
+        pictureRect.y = m_objectRect.h * m_frameCounter;
+        pictureRect.w = m_objectRect.w;
+        pictureRect.h = m_objectRect.h;
+        m_frameCounter++;
+
+        if(m_startCounter + m_FrameCooldown < time(NULL))
+        {
+
+        m_startCounter = time(NULL);
+         m_frameCounter ++;
+        }
+        if(m_frameCounter > 3)
+        {
+            m_frameCounter = 0;
+        }
+        SDL_Surface* loadingSurface = SDL_LoadBMP(m_img.c_str());
+        m_objectTexture = SDL_CreateTextureFromSurface(renderer, loadingSurface);
+        SDL_RenderCopy(renderer, m_objectTexture, &pictureRect, &m_objectRect);
+        SDL_FreeSurface(loadingSurface);
 
 }

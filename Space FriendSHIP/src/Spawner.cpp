@@ -15,10 +15,17 @@ void Spawner::init(string configName)
     m_configName = "config\\" + configName;
     fstream stream;
     stream.open(m_configName.c_str());
-    stream >> m_rockProb;
+
+    stream >> tmp >> m_rockProb;
+    stream >> tmp >> m_shooterProb;
+
     for(int i = 0; i < m_rockProb ; i++)
     {
         m_probabilities.push_back("rock.txt");
+    }
+    for(int i = 0; i < m_shooterProb ; i++)
+    {
+        m_probabilities.push_back("shooter.txt");
     }
     stream.close();
 }
@@ -69,3 +76,4 @@ void Spawner::spawn(int SCREEN_WIDTH, int SCREEN_HEIGHT)
     m_direction.x = direction.x;
     m_direction.y = direction.y;
 }
+

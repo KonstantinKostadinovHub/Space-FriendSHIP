@@ -1,0 +1,5 @@
+size: 64 64
+
+image: Health-Booster.bmp
+
+speed: 1

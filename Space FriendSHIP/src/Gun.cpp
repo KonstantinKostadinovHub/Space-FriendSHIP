@@ -10,21 +10,18 @@ Gun::~Gun()
     //dtor
 }
 
-void Gun::init(coordinates coor)
+void Gun::init(float rotation, float attackSpeed)
 {
-    m_coor = coor;
+    m_coor = returnCoordinatesByAngle(rotation);
+    m_rotationAngle = rotation;
+    m_shootCooldown = attackSpeed;
 }
 
-void Gun::update(coordinates playerCoor, coordinates playerDirection, float rotation)
+void Gun::update(coordinates playerCoor)
 {
+    m_objectRect.x = playerCoor.x + (m_coor.x * 19);
+    m_objectRect.y = playerCoor.y - (m_coor.y * 49);
 
-    m_objectRect.x = playerCoor.x + m_coor.x;
-    m_objectRect.y = playerCoor.y + m_coor.y;
-    struct coordinates buff;
-    buff.x = 0;
-    buff.y = 0;
-    m_direction.x = playerDirection.x + buff.x;
-    m_direction.y = playerDirection.y + buff.y;
     if(!m_cantShoot)
     {
         m_cantShoot = true;

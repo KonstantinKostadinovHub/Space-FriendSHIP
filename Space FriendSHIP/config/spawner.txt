@@ -1,1 +1,3 @@
-5
+Rock_Probability: 5
+
+Shooter_Probability: 3
