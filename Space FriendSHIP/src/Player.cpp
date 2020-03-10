@@ -85,7 +85,7 @@ void Player::update()
 
         if (state[gas])
         {
-            m_speed ++;
+            m_speed += 0.7;
 
             if(m_speed > m_max_speed)
             {
@@ -94,7 +94,7 @@ void Player::update()
         }
         else if(state[brake])
         {
-            m_speed --;
+            m_speed -=0.5;
 
             if(m_speed < m_min_speed)
             {
@@ -119,7 +119,7 @@ void Player::draw(SDL_Renderer* renderer)
 {
     SDL_Point center;
     center.x = 40;
-    center.y = 0;
+    center.y = 10;
 
     SDL_RenderCopyEx(renderer, m_objectTexture, NULL, &m_objectRect, m_rotationAngle, &center, SDL_FLIP_NONE);
 }

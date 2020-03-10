@@ -18,6 +18,7 @@
 
 #include "Rock.h"
 #include "Shooter.h"
+#include "ZigZag.h"
 
 #include "Bullet.h"
 

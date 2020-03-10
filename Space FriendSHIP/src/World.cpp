@@ -92,7 +92,7 @@ void World::update()
 
     shootProjectiles();
 
-    collisionDamage();
+    //collisionDamage();
 }
 
 void World::draw()
@@ -183,6 +183,11 @@ void World::addEnemy(string configFile, coordinates coor, float rotation)
     }else if (configFile == "shooter.txt")
     {
         Enemy* enemy = new Shooter();
+        enemy -> init(configFile, coor, rotation, m_main_renderer);
+        m_enemies.push_back(enemy);
+    }else if (configFile == "zigzag.txt")
+    {
+        Enemy* enemy = new ZigZag();
         enemy -> init(configFile, coor, rotation, m_main_renderer);
         m_enemies.push_back(enemy);
     }

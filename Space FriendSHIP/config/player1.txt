@@ -6,7 +6,7 @@ Health: 100
 
 Spawn_Point: 500 500
 
-Speed: 3
+Speed: 5
 
 Max_Speed: 10
 

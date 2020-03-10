@@ -24,7 +24,7 @@ public:
 
     int m_spawn_x;
     int m_spawn_y;
-    int m_speed;
+    float m_speed;
     float m_screen_speed;
     int m_min_speed;
     int m_max_speed;

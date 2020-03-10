@@ -32,7 +32,7 @@ void Shooter::init(string configFile, coordinates coor, float rotation, SDL_Rend
     m_coor.y = m_objectRect.y;
 
     Gun* gun = new Gun;
-    gun->init(m_rotationAngle, m_attackSpeed);
+    gun->init(m_attackSpeed);
     m_guns.push_back(gun);
     m_bulletName = "bullet.txt";
 

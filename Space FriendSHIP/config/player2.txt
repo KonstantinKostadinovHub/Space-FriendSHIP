@@ -6,7 +6,7 @@ Health: 100
 
 Spawn_Point: 500 500
 
-Speed: 3
+Speed: 5
 
 Max_Speed: 10
 
@@ -20,4 +20,4 @@ Move_Right: Right
 
 Gas: Up
 
-Brake:Down 
+Brake: Down 

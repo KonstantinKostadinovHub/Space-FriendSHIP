@@ -21,8 +21,8 @@ class Gun
         time_t m_shootCooldown;
         bool m_cantShoot;
 
-        virtual void init(float playerAng, float attackSpeed);
-        virtual void update(coordinates playerCoor);
+        virtual void init(float attackSpeed);
+        virtual void update(float playerAng, coordinates playerCoor);
 
     protected:
 

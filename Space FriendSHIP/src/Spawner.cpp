@@ -18,6 +18,7 @@ void Spawner::init(string configName)
 
     stream >> tmp >> m_rockProb;
     stream >> tmp >> m_shooterProb;
+    stream >> tmp >> m_zigZagProb;
 
     for(int i = 0; i < m_rockProb ; i++)
     {
@@ -26,6 +27,10 @@ void Spawner::init(string configName)
     for(int i = 0; i < m_shooterProb ; i++)
     {
         m_probabilities.push_back("shooter.txt");
+    }
+    for(int i = 0; i < m_zigZagProb ; i++)
+    {
+        m_probabilities.push_back("zigzag.txt");
     }
     stream.close();
 }

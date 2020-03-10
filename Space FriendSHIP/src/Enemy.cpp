@@ -48,7 +48,7 @@ void Enemy::update()
         struct coordinates playerCoor;
         playerCoor.x = m_objectRect.x;
         playerCoor.y = m_objectRect.y;
-        m_guns[i] -> update(playerCoor);
+        m_guns[i] -> update(m_rotationAngle, playerCoor);
     }
 }
 

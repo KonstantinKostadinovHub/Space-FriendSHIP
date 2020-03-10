@@ -1,0 +1,15 @@
+size: 19 49
+
+image: shooter.bmp
+
+health: 100
+
+collision_damage: 20
+
+attack_speed: 0.5
+
+speed: 2
+
+maxRotation: 60
+
+rotationFactor: 3

@@ -1,3 +1,5 @@
-Rock_Probability: 5
+Rock_Probability: 0
 
-Shooter_Probability: 3
+Shooter_Probability: 0
+
+ZigZag_Probabiblity: 1
