@@ -1,4 +1,4 @@
-Rock_Probability: 1
+Rock_Probability: 5
 
 Shooter_Default_Probability: 3
 

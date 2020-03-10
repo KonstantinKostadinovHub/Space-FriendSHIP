@@ -1866,7 +1866,7 @@
 1583269465 source:c:\users\konstantin\downloads\space friendship-20200303t174048z-001\space friendship\src\shooter.cpp
 	"Shooter.h"
 
-1583837836 source:c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\main.cpp
+1583854549 source:c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\main.cpp
 	<SDL2/SDL.h>
 	"World.h"
 
@@ -2217,7 +2217,7 @@
 	"begin_code.h"
 	"close_code.h"
 
-1583838960 c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\include\world.h
+1583854283 c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\include\world.h
 	<iostream>
 	<fstream>
 	<vector>
@@ -2227,6 +2227,7 @@
 	"Enemy.h"
 	"Projectile.h"
 	"Artefact.h"
+	"Player_AI.h"
 	"Engine.h"
 	"Spawner.h"
 	"Dropper.h"
@@ -2353,7 +2354,7 @@
 1583258150 source:c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\src\speedbooster.cpp
 	"SpeedBooster.h"
 
-1583851959 source:c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\src\world.cpp
+1583855645 source:c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\src\world.cpp
 	"World.h"
 
 1583836288 source:c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\src\gun.cpp
@@ -2364,4 +2365,12 @@
 
 1583842919 c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\include\zigzag.h
 	"Shooter.h"
+
+1583855690 source:c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\src\player_ai.cpp
+	"Player_AI.h"
+	"World.h"
+
+1583855170 c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\include\player_ai.h
+	"Player.h"
+	<chrono>
 

@@ -38,7 +38,7 @@ m_configFile = "config\\" + configFile;
     Gun* gun = new Gun;
     gun->init(m_attackSpeed);
     m_guns.push_back(gun);
-    m_bulletName = "bullet.txt";
+    m_bulletName = "bullet_default.txt";
 
     SDL_Surface* loadingSurface = SDL_LoadBMP(m_img.c_str());
     m_objectTexture = SDL_CreateTextureFromSurface(renderer, loadingSurface);

@@ -1,0 +1,9 @@
+Player_Size: 96 96
+
+Image: Player1.bmp
+
+Health: 100
+
+Spawn_Point: 250 500
+
+Speed: 4

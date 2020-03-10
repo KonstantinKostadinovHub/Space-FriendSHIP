@@ -4,14 +4,15 @@
 
 using namespace std;
 
+World world;
+
 int main (int argc, char* argv[])
 {
-    World world;
     world.init("world.txt");
     bool quit = false;
 
      //world.addPlayer(world.m_main_renderer, "player1.txt");
-     world.addPlayer(world.m_main_renderer, "player2.txt");
+     //world.addPlayer(world.m_main_renderer, "player2.txt");
 
     SDL_Event e;
     while(quit!=true)

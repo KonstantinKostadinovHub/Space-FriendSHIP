@@ -41,8 +41,15 @@ void World::init(string configFile)
 
     SDL_Init(SDL_INIT_EVERYTHING);
 
+    //addPlayer(world.m_main_renderer, "player1.txt");
+
+
     m_main_window = SDL_CreateWindow("Space FriendSHIP", SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, m_SCREEN_WIDTH, m_SCREEN_HEIGHT, 0);
     m_main_renderer = SDL_CreateRenderer(m_main_window, -1, SDL_RENDERER_ACCELERATED);
+
+    Player_AI* bot_AI = new Player_AI();
+    bot_AI->init("PlayerAI.txt", m_main_renderer);
+    m_players.push_back(bot_AI);
 
     SDL_Surface* loadingSurface = SDL_LoadBMP("img\\background.bmp");
     m_backgroundTexture = SDL_CreateTextureFromSurface(m_main_renderer, loadingSurface);

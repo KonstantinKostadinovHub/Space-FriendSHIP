@@ -11,6 +11,7 @@
 #include "Enemy.h"
 #include "Projectile.h"
 #include "Artefact.h"
+#include "Player_AI.h"
 
 #include "Engine.h"
 #include "Spawner.h"
