@@ -1,0 +1,13 @@
+size: 19 49
+
+image: shooter.bmp
+
+health: 25
+
+collision_damage: 10
+
+attack_speed: 0.005
+
+speed: 2
+
+bulletConfig: bullet_smg.txt

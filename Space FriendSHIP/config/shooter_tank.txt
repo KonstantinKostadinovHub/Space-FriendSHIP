@@ -1,0 +1,13 @@
+size: 19 49
+
+image: shooter.bmp
+
+health: 200
+
+collision_damage: 40
+
+attack_speed: 1
+
+speed: 1
+
+bulletConfig: bullet_tank.txt

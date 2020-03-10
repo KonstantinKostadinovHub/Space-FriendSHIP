@@ -22,6 +22,7 @@ void Shooter::init(string configFile, coordinates coor, float rotation, SDL_Rend
     stream >> tmp >> m_collisonDamage;
     stream >> tmp >> m_attackSpeed;
     stream >> tmp >> m_speed;
+    stream >> tmp >> m_bulletName;
     stream.close();
 
     m_rotationAngle = rotation;
@@ -34,7 +35,6 @@ void Shooter::init(string configFile, coordinates coor, float rotation, SDL_Rend
     Gun* gun = new Gun;
     gun->init(m_attackSpeed);
     m_guns.push_back(gun);
-    m_bulletName = "bullet.txt";
 
     SDL_Surface* loadingSurface = SDL_LoadBMP(m_img.c_str());
     m_objectTexture = SDL_CreateTextureFromSurface(renderer, loadingSurface);

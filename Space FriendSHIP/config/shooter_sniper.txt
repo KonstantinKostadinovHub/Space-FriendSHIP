@@ -1,0 +1,13 @@
+size: 19 49
+
+image: shooter.bmp
+
+health: 50
+
+collision_damage: 20
+
+attack_speed: 2
+
+speed: 2
+
+bulletConfig: bullet_sniper.txt

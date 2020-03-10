@@ -1,6 +1,6 @@
-size: 19 49
+size: 40 61
 
-image: shooter.bmp
+image: ZigZag.bmp
 
 health: 100
 

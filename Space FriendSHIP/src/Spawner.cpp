@@ -17,16 +17,31 @@ void Spawner::init(string configName)
     stream.open(m_configName.c_str());
 
     stream >> tmp >> m_rockProb;
-    stream >> tmp >> m_shooterProb;
+    stream >> tmp >> m_shooterDefaultProb;
+    stream >> tmp >> m_shooterSniperProb;
+    stream >> tmp >> m_shooterSMGProb;
+    stream >> tmp >> m_shooterTankProb;
     stream >> tmp >> m_zigZagProb;
 
     for(int i = 0; i < m_rockProb ; i++)
     {
         m_probabilities.push_back("rock.txt");
     }
-    for(int i = 0; i < m_shooterProb ; i++)
+    for(int i = 0; i < m_shooterDefaultProb ; i++)
     {
-        m_probabilities.push_back("shooter.txt");
+        m_probabilities.push_back("shooter_default.txt");
+    }
+    for(int i = 0; i < m_shooterSniperProb ; i++)
+    {
+        m_probabilities.push_back("shooter_sniper.txt");
+    }
+    for(int i = 0; i < m_shooterSMGProb ; i++)
+    {
+        m_probabilities.push_back("shooter_smg.txt");
+    }
+    for(int i = 0; i < m_shooterTankProb ; i++)
+    {
+        m_probabilities.push_back("shooter_tank.txt");
     }
     for(int i = 0; i < m_zigZagProb ; i++)
     {

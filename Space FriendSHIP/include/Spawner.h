@@ -21,7 +21,10 @@ class Spawner
         string tmp;
 
         int m_rockProb;
-        int m_shooterProb;
+        int m_shooterDefaultProb;
+        int m_shooterSniperProb;
+        int m_shooterTankProb;
+        int m_shooterSMGProb;
         int m_zigZagProb;
 
         vector <string> m_probabilities;

@@ -180,7 +180,7 @@ void World::addEnemy(string configFile, coordinates coor, float rotation)
         Enemy* enemy = new Rock();
         enemy -> init(configFile, coor, rotation, m_main_renderer);
         m_enemies.push_back(enemy);
-    }else if (configFile == "shooter.txt")
+    }else if (configFile == "shooter_default.txt" || configFile == "shooter_sniper.txt" || configFile == "shooter_smg.txt" || configFile == "shooter_tank.txt")
     {
         Enemy* enemy = new Shooter();
         enemy -> init(configFile, coor, rotation, m_main_renderer);
@@ -195,7 +195,7 @@ void World::addEnemy(string configFile, coordinates coor, float rotation)
 
 void World::addBullet(string configFile, coordinates coor, float rotation)
 {
-    if(configFile == "bullet.txt")
+    if(configFile == "bullet_default.txt" || configFile == "bullet_sniper.txt" || configFile == "bullet_smg.txt" || configFile == "bullet_tank.txt")
     {
         Projectile* proj = new Bullet();
         proj -> init(configFile, coor, rotation, m_main_renderer);

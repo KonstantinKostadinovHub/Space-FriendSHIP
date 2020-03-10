@@ -4,6 +4,6 @@ health: 1
 
 speed: 6
 
-collision_damage: 100
+collision_damage: 15
 
 image: bullet.bmp
