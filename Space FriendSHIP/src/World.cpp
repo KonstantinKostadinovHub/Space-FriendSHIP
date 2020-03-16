@@ -50,11 +50,11 @@ void World::init(string configFile)
     SDL_Surface* loadingSurface = SDL_LoadBMP("img\\background.bmp");
     m_backgroundTexture = SDL_CreateTextureFromSurface(m_main_renderer, loadingSurface);
     SDL_FreeSurface(loadingSurface);
-    /*
+
     Player_AI* bot_AI = new Player_AI();
     bot_AI->init("PlayerAI.txt", m_main_renderer);
     m_players.push_back(bot_AI);
-    */
+
 }
 
 void World::update()

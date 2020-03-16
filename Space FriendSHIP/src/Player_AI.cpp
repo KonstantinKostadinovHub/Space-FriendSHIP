@@ -19,21 +19,21 @@ Player_AI::~Player_AI()
 }
 
 void Player_AI::init(string config, SDL_Renderer* renderer){
+    m_healthBar = new HealthBar;
+
     m_configFile = "config\\" + config;
     fstream stream;
     string tmp;
     stream.open(m_configFile.c_str());
     stream >> tmp >> m_objectRect.w >> m_objectRect.h;
     stream >> tmp >> m_img;
-    stream >> tmp >> m_health;
+    stream >> tmp >> m_maxhealth;
     stream >> tmp >> m_objectRect.x >> m_objectRect.y;
     stream >> tmp >> m_speed;
     stream >> tmp >> HPBar;
     stream.close();
 
     m_img = "img\\" + m_img;
-
-    cout << m_img << endl;
 
     m_health = m_maxhealth;
     m_healthBar->init(HPBar);
