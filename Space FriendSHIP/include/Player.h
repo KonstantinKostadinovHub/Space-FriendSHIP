@@ -8,6 +8,7 @@
 #include <SDL2/SDL.h>
 #include <cmath>
 #include "Engine.h"
+#include "HealthBar.h"
 
 using namespace std;
 
@@ -17,6 +18,8 @@ public:
     Player();
     virtual ~Player();
 
+    HealthBar* m_healthBar;
+    string HPBar;
     string m_playerImage;
     string m_configFile;
     string m_img;
@@ -28,6 +31,7 @@ public:
     float m_screen_speed;
     int m_min_speed;
     int m_max_speed;
+    int m_maxhealth;
     int m_health;
 
     string s_move_up;

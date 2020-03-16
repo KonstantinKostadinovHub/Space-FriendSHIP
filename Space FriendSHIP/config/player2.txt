@@ -6,9 +6,9 @@ Health: 100
 
 Spawn_Point: 500 500
 
-Speed: 5
+Speed: 2
 
-Max_Speed: 10
+Max_Speed: 5
 
 Min_Speed: 1
 
@@ -20,4 +20,6 @@ Move_Right: Right
 
 Gas: Up
 
-Brake: Down 
+Brake: Down
+
+HPBar: healthBar2.txt 

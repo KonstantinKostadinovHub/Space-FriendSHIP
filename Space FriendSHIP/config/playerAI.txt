@@ -7,3 +7,5 @@ Health: 100
 Spawn_Point: 250 500
 
 Speed: 4
+
+HPBar: healthBar2.txt

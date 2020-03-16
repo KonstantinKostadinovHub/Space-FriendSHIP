@@ -47,12 +47,14 @@
 		<Unit filename="include/Gun.h" />
 		<Unit filename="include/HealthBooster.h" />
 		<Unit filename="include/Player.h" />
+		<Unit filename="include/Player_AI.h" />
 		<Unit filename="include/Projectile.h" />
 		<Unit filename="include/Rock.h" />
 		<Unit filename="include/Shooter.h" />
 		<Unit filename="include/Spawner.h" />
 		<Unit filename="include/SpeedBooster.h" />
 		<Unit filename="include/World.h" />
+		<Unit filename="include/ZigZag.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="src/Artefact.cpp" />
 		<Unit filename="src/Bullet.cpp" />
@@ -62,12 +64,14 @@
 		<Unit filename="src/Gun.cpp" />
 		<Unit filename="src/HealthBooster.cpp" />
 		<Unit filename="src/Player.cpp" />
+		<Unit filename="src/Player_AI.cpp" />
 		<Unit filename="src/Projectile.cpp" />
 		<Unit filename="src/Rock.cpp" />
 		<Unit filename="src/Shooter.cpp" />
 		<Unit filename="src/Spawner.cpp" />
 		<Unit filename="src/SpeedBooster.cpp" />
 		<Unit filename="src/World.cpp" />
+		<Unit filename="src/ZigZag.cpp" />
 		<Extensions>
 			<code_completion />
 			<envvars />

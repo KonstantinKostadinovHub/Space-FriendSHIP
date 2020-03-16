@@ -28,11 +28,15 @@ void Player_AI::init(string config, SDL_Renderer* renderer){
     stream >> tmp >> m_health;
     stream >> tmp >> m_objectRect.x >> m_objectRect.y;
     stream >> tmp >> m_speed;
+    stream >> tmp >> HPBar;
     stream.close();
 
     m_img = "img\\" + m_img;
 
     cout << m_img << endl;
+
+    m_health = m_maxhealth;
+    m_healthBar->init(HPBar);
 
     SDL_Surface* loadingSurface = SDL_LoadBMP(m_img.c_str());
     m_objectTexture = SDL_CreateTextureFromSurface(renderer, loadingSurface);
@@ -99,6 +103,7 @@ void Player_AI::shoot(){
 
 void Player_AI::update()
 {
+    m_healthBar -> update(m_health, m_maxhealth);
     engage();
     moveToTarget();
     shoot();
@@ -107,4 +112,5 @@ void Player_AI::update()
 void Player_AI::draw(SDL_Renderer* renderer)
 {
     SDL_RenderCopyEx(renderer, m_objectTexture, NULL, &m_objectRect, m_rotationAngle, NULL, SDL_FLIP_NONE);
+    m_healthBar->draw(renderer);
 }

@@ -1,0 +1,5 @@
+500 35
+800
+700
+health_border.bmp
+health_bar2.bmp

@@ -12,6 +12,8 @@ Player::~Player()
 
 void Player::init(SDL_Renderer* renderer, string configFile)
 {
+    m_healthBar = new HealthBar;
+
     m_configFile = "config\\" + configFile;
     fstream stream;
 
@@ -19,7 +21,7 @@ void Player::init(SDL_Renderer* renderer, string configFile)
 
     stream >> tmp >> m_objectRect.w >> m_objectRect.h;
     stream >> tmp >> m_img;
-    stream >> tmp >> m_health;
+    stream >> tmp >> m_maxhealth;
     stream >> tmp >> m_spawn_x >> m_spawn_y;
     stream >> tmp >> m_speed;
     stream >> tmp >> m_max_speed;
@@ -29,6 +31,7 @@ void Player::init(SDL_Renderer* renderer, string configFile)
     stream >> tmp >> s_move_right;
     stream >> tmp >> s_gas;
     stream >> tmp >> s_brake;
+    stream >> tmp >> HPBar;
 
     stream.close();
 
@@ -70,6 +73,9 @@ void Player::init(SDL_Renderer* renderer, string configFile)
     m_objectRect.x = m_spawn_x;
     m_objectRect.y = m_spawn_y;
 
+    m_health = m_maxhealth;
+    m_healthBar->init(HPBar);
+
     SDL_Surface* loadingSurface = SDL_LoadBMP(m_img.c_str());
     m_objectTexture = SDL_CreateTextureFromSurface(renderer, loadingSurface);
     SDL_FreeSurface(loadingSurface);
@@ -78,6 +84,7 @@ void Player::init(SDL_Renderer* renderer, string configFile)
 
 void Player::update()
 {
+    m_healthBar -> update(m_health, m_maxhealth);
     const Uint8 *state = SDL_GetKeyboardState(NULL);
     m_screen_speed = m_speed  * SPEED_FACTOR;
 
@@ -122,4 +129,5 @@ void Player::draw(SDL_Renderer* renderer)
     center.y = 10;
 
     SDL_RenderCopyEx(renderer, m_objectTexture, NULL, &m_objectRect, m_rotationAngle, &center, SDL_FLIP_NONE);
+    m_healthBar->draw(renderer);
 }

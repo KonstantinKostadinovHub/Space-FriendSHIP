@@ -47,13 +47,14 @@ void World::init(string configFile)
     m_main_window = SDL_CreateWindow("Space FriendSHIP", SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, m_SCREEN_WIDTH, m_SCREEN_HEIGHT, 0);
     m_main_renderer = SDL_CreateRenderer(m_main_window, -1, SDL_RENDERER_ACCELERATED);
 
-    Player_AI* bot_AI = new Player_AI();
-    bot_AI->init("PlayerAI.txt", m_main_renderer);
-    m_players.push_back(bot_AI);
-
     SDL_Surface* loadingSurface = SDL_LoadBMP("img\\background.bmp");
     m_backgroundTexture = SDL_CreateTextureFromSurface(m_main_renderer, loadingSurface);
     SDL_FreeSurface(loadingSurface);
+    /*
+    Player_AI* bot_AI = new Player_AI();
+    bot_AI->init("PlayerAI.txt", m_main_renderer);
+    m_players.push_back(bot_AI);
+    */
 }
 
 void World::update()
@@ -106,11 +107,6 @@ void World::draw()
 {
     SDL_RenderCopy(m_main_renderer, m_backgroundTexture, NULL, NULL);
 
-    for(vector <Player*> :: iterator it = m_players.begin(); it != m_players.end(); it++)
-    {
-        (*it) -> draw(m_main_renderer);
-    }
-
     for(vector <Enemy*> :: iterator it = m_enemies.begin(); it != m_enemies.end(); it++)
     {
         (*it) -> draw(m_main_renderer);
@@ -122,6 +118,11 @@ void World::draw()
     }
 
     for(vector <Artefact*> :: iterator it = m_artefacts.begin(); it != m_artefacts.end(); it++)
+    {
+        (*it) -> draw(m_main_renderer);
+    }
+
+    for(vector <Player*> :: iterator it = m_players.begin(); it != m_players.end(); it++)
     {
         (*it) -> draw(m_main_renderer);
     }
