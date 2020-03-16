@@ -3,3 +3,7 @@ size: 64 64
 image: Speed-Booster.bmp
 
 speed: 1
+
+frameCounter: 4
+
+actionFX: 1

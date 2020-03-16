@@ -23,9 +23,6 @@
 
 #include "Bullet.h"
 
-#include "HealthBooster.h"
-#include "SpeedBooster.h"
-
 using namespace std;
 
 class World
@@ -45,8 +42,11 @@ public:
     string m_configFile;
     string tmp;
     string m_backgroundImg;
-    string m_endScreenImg = "img\\EndGameScreen.bmp";
-    string m_MenuImg = "img\\MenuScreen1Game.bmp";
+    string m_endScreenImg;
+    string m_menuImg;
+    string m_menuImg1;
+    string m_menuImg2;
+    string m_menuImg3;
 
     int m_SCREEN_WIDTH;
     int m_SCREEN_HEIGHT;

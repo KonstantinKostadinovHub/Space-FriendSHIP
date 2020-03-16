@@ -15,6 +15,9 @@ public:
     SDL_Texture* m_objectTexture;
     SDL_Rect m_Artefact;
     string m_img;
+    string m_type;
+    string tmp;
+    float m_actionEffect;
     float m_speed ;
     int m_health = 2;
     int m_frameCounter;
@@ -25,7 +28,7 @@ public:
     Artefact();
     virtual ~Artefact();
     string m_configFile;
-    virtual void init(string configFile, coordinates coor, coordinates direction);
+    virtual void init(string configFile, coordinates coor, coordinates direction,SDL_Renderer* renderer);
     virtual void update();
     virtual void draw(SDL_Renderer* renderer);
 protected:

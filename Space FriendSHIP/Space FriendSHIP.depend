@@ -1866,7 +1866,7 @@
 1583269465 source:c:\users\konstantin\downloads\space friendship-20200303t174048z-001\space friendship\src\shooter.cpp
 	"Shooter.h"
 
-1584346992 source:c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\main.cpp
+1584349704 source:c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\main.cpp
 	<SDL2/SDL.h>
 	"World.h"
 
@@ -2217,7 +2217,7 @@
 	"begin_code.h"
 	"close_code.h"
 
-1583854283 c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\include\world.h
+1584350241 c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\include\world.h
 	<iostream>
 	<fstream>
 	<vector>
@@ -2235,8 +2235,6 @@
 	"Shooter.h"
 	"ZigZag.h"
 	"Bullet.h"
-	"HealthBooster.h"
-	"SpeedBooster.h"
 
 1584346473 c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\include\player.h
 	<iostream>
@@ -2276,7 +2274,7 @@
 	<SDL2/SDL.h>
 	"Engine.h"
 
-1583258154 c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\include\artefact.h
+1584348556 c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\include\artefact.h
 	<SDL2/SDL.h>
 	<fstream>
 	<ctime>
@@ -2319,7 +2317,7 @@
 	"Artefact.h"
 	<fstream>
 
-1583258151 source:c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\src\artefact.cpp
+1584349324 source:c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\src\artefact.cpp
 	"Artefact.h"
 
 1583258151 source:c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\src\bullet.cpp
@@ -2355,7 +2353,7 @@
 1583258150 source:c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\src\speedbooster.cpp
 	"SpeedBooster.h"
 
-1584346992 source:c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\src\world.cpp
+1584350195 source:c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\src\world.cpp
 	"World.h"
 
 1583836288 source:c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\src\gun.cpp
@@ -2367,7 +2365,7 @@
 1583842919 c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\include\zigzag.h
 	"Shooter.h"
 
-1584347013 source:c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\src\player_ai.cpp
+1584347272 source:c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\src\player_ai.cpp
 	"Player_AI.h"
 	"World.h"
 

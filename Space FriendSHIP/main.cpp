@@ -8,41 +8,47 @@ World world;
 
 int main (int argc, char* argv[])
 {
-    world.init("world.txt");
-    bool quit = false;
+    const Uint8 *state = SDL_GetKeyboardState(NULL);
+    const Uint8 *state2 = SDL_GetKeyboardState(NULL);
+    while(1){
+        world.init("world.txt");
+        world.endgame = false;
+        bool quit = false;
 
-     world.addPlayer(world.m_main_renderer, "player1.txt");
-     //world.addPlayer(world.m_main_renderer, "player2.txt");
+        //world.addPlayer(world.m_main_renderer, "player1.txt");
+        world.addPlayer(world.m_main_renderer, "player2.txt");
 
-    SDL_Event e;
-    while(quit!=true)
-    {
+        SDL_Event e;
 
-        while(SDL_PollEvent(&e) == 0)
+        while(quit!=true)
         {
-            const Uint8 *state = SDL_GetKeyboardState(NULL);
-            world.menu();
-            SDL_Delay(5);
-            if (state[SDL_SCANCODE_RETURN])
+
+            while(SDL_PollEvent(&e) == 0)
             {
-                quit = true;
+                world.menu();
+                SDL_Delay(5);
+                if (state[SDL_SCANCODE_RETURN])
+                {
+                    quit = true;
+                }
             }
         }
-    }
 
-    while(world.endgame == false)
-    {
-        while(SDL_PollEvent(&e) == 0){
-            world.update();
-            world.draw();
-            world.cleaner();
-            SDL_Delay(20);
+        while(world.endgame == false)
+        {
+            while(SDL_PollEvent(&e) == 0)
+            {
+                world.update();
+                world.draw();
+                world.cleaner();
+                SDL_Delay(20);
+            }
         }
+        SDL_Delay(500);
+        world.endgameScreen();
+        SDL_Delay(8000);
+        world.destroy();
     }
-
-    world.endgameScreen();
-    SDL_Delay(5000);
-    world.destroy();
 
     return 0;
 }

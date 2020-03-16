@@ -19,11 +19,15 @@ void Artefact::update()
     m_objectRect.y = (int)m_coor.y;
 }
 
-void Artefact::init(string configFile, coordinates coor, coordinates direction){
+void Artefact::init(string configFile, coordinates coor, coordinates direction,SDL_Renderer* renderer){
     m_configFile = "config\\" + configFile;
     fstream stream;
     stream.open(m_configFile.c_str());
-    stream >> m_objectRect.w >> m_objectRect.h >> m_img >> m_speed >> m_FrameCount;
+    stream >> tmp >> m_objectRect.w >> m_objectRect.h;
+    stream >> tmp >> m_img;
+    stream >> tmp >> m_speed;
+    stream >> tmp >> m_FrameCount;
+    stream >> tmp >> m_actionEffect;
     stream.close();
 
     m_direction.x = direction.x;
@@ -34,7 +38,9 @@ void Artefact::init(string configFile, coordinates coor, coordinates direction){
     m_coor.x = m_objectRect.x;
     m_coor.y = m_objectRect.y;
 
-
+    SDL_Surface* loadingSurface = SDL_LoadBMP(m_img.c_str());
+    m_objectTexture = SDL_CreateTextureFromSurface(renderer, loadingSurface);
+    SDL_FreeSurface(loadingSurface);
 
 }
 void Artefact::draw( SDL_Renderer* renderer){
@@ -48,17 +54,13 @@ void Artefact::draw( SDL_Renderer* renderer){
 
         if(m_startCounter + m_FrameCooldown < time(NULL))
         {
-
-        m_startCounter = time(NULL);
-         m_frameCounter ++;
+            m_startCounter = time(NULL);
+            m_frameCounter ++;
         }
         if(m_frameCounter > 3)
         {
             m_frameCounter = 0;
         }
-        SDL_Surface* loadingSurface = SDL_LoadBMP(m_img.c_str());
-        m_objectTexture = SDL_CreateTextureFromSurface(renderer, loadingSurface);
         SDL_RenderCopy(renderer, m_objectTexture, &pictureRect, &m_objectRect);
-        SDL_FreeSurface(loadingSurface);
 
 }

@@ -4,14 +4,6 @@ World::World()
 {
     m_dropper = new Dropper;
     m_spawnManager = new Spawner;
-    m_ScreenR.x = 300; //m_SCREEN_WIDTH/2-700;
-    m_ScreenR.y = 100;//m_SCREEN_HEIGHT/2-700;
-    m_ScreenR.w = 700;
-    m_ScreenR.h = 700;
-    m_ScreenMenu.x = 0;
-    m_ScreenMenu.y = 0;
-    m_ScreenMenu.w = m_SCREEN_WIDTH;
-    m_ScreenMenu.h = m_SCREEN_HEIGHT;
 }
 
 World::~World()
@@ -31,6 +23,10 @@ void World::init(string configFile)
     stream >> tmp >> m_backgroundImg;
     stream >> tmp >> m_spawnCooldown;
     stream >> tmp >> m_dropCooldown;
+    stream >> tmp >> m_endScreenImg;
+    stream >> tmp >> m_menuImg1;
+    stream >> tmp >> m_menuImg2;
+    stream >> tmp >> m_menuImg3;
     stream.close();
 
     m_spawnManager -> init("spawner.txt");
@@ -41,9 +37,6 @@ void World::init(string configFile)
 
     SDL_Init(SDL_INIT_EVERYTHING);
 
-    //addPlayer(world.m_main_renderer, "player1.txt");
-
-
     m_main_window = SDL_CreateWindow("Space FriendSHIP", SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, m_SCREEN_WIDTH, m_SCREEN_HEIGHT, 0);
     m_main_renderer = SDL_CreateRenderer(m_main_window, -1, SDL_RENDERER_ACCELERATED);
 
@@ -51,10 +44,27 @@ void World::init(string configFile)
     m_backgroundTexture = SDL_CreateTextureFromSurface(m_main_renderer, loadingSurface);
     SDL_FreeSurface(loadingSurface);
 
+    m_ScreenR.x = 0;
+    m_ScreenR.y = 0;
+    m_ScreenR.w = m_SCREEN_WIDTH;
+    m_ScreenR.h = m_SCREEN_HEIGHT;
+    m_ScreenMenu.x = 0;
+    m_ScreenMenu.y = 0;
+    m_ScreenMenu.w = m_SCREEN_WIDTH;
+    m_ScreenMenu.h = m_SCREEN_HEIGHT;
+
+    m_endScreenImg = "img\\" + m_endScreenImg;
+    m_menuImg1 = "img\\" + m_menuImg1;
+    m_menuImg2 = "img\\" + m_menuImg2;
+    m_menuImg3 = "img\\" + m_menuImg3;
+
+    m_menuImg = m_menuImg1;
+
+/*
     Player_AI* bot_AI = new Player_AI();
     bot_AI->init("PlayerAI.txt", m_main_renderer);
     m_players.push_back(bot_AI);
-
+*/
 }
 
 void World::update()
@@ -74,7 +84,7 @@ void World::update()
     {
         m_drop = false;
         m_startDropCooldown = time(NULL);
-        //drop();
+        drop();
     }
     else if(m_startDropCooldown + m_dropCooldown < time(NULL))
     {
@@ -100,7 +110,7 @@ void World::update()
 
     shootProjectiles();
 
-    //collisionDamage();
+    collisionDamage();
 }
 
 void World::draw()
@@ -153,18 +163,33 @@ void World::addPlayer(SDL_Renderer* renderer, string configFile)
     }
 }
 
-void World::collisionDamage(){
+void World::collisionDamage()
+{
     for(int i = 0; i < m_players.size(); i++)
         {
             for(int j = 0; j < m_enemies.size(); j++){
                 if(checkForCollisionBetweenObjects(m_players[i] -> m_objectRect, m_enemies[j] -> m_objectRect)){
                     m_players[i] -> m_health -= m_enemies[j] -> m_collisonDamage;
+                    m_enemies[j]-> m_health = 0;
                 }
             }
             for(int k = 0; k < m_projectiles.size(); k++){
-                if(checkForCollisionBetweenObjects(m_players[i] -> m_objectRect, m_projectiles[k]->m_objectRect)==true){
+                if(checkForCollisionBetweenObjects(m_players[i] -> m_objectRect, m_projectiles[k]->m_objectRect)){
                     m_players[i] -> m_health -= m_projectiles[k] -> m_collisonDamage;
                     m_projectiles[k] -> m_health = 0;
+                }
+            }
+            for(int p = 0; p < m_artefacts.size(); p++){
+                if(checkForCollisionBetweenObjects(m_players[i] -> m_objectRect, m_artefacts[p]->m_objectRect)==true){
+                    if(m_artefacts[p] -> m_type == "healthbooster"){
+                        m_players[i] -> m_health += m_artefacts[p] -> m_actionEffect;
+                        m_artefacts[p] -> m_health = 0;
+
+                    }
+                    if(m_artefacts[p] -> m_type == "speedbooster"){
+                        m_players[i] -> m_speed += m_artefacts[p] -> m_actionEffect;
+                        m_artefacts[p] -> m_health = 0;
+                    }
                 }
             }
         }
@@ -254,7 +279,7 @@ void World::endgameScreen()
     SDL_Texture* m_EndTx;
     SDL_Surface* loadingEndGame = SDL_LoadBMP(m_endScreenImg.c_str());
     m_EndTx = SDL_CreateTextureFromSurface(m_main_renderer, loadingEndGame);
-    SDL_RenderCopy(m_main_renderer, m_EndTx, NULL, &m_ScreenR);
+    SDL_RenderCopy(m_main_renderer, m_EndTx, &m_ScreenR, NULL);
     SDL_FreeSurface(loadingEndGame);
     SDL_RenderPresent(m_main_renderer);
 }
@@ -262,21 +287,20 @@ void World::endgameScreen()
 void World::menu()
 {
     SDL_Texture* m_MenuTx;
-    SDL_Surface* loadingMenu = SDL_LoadBMP(m_MenuImg.c_str());
+    SDL_Surface* loadingMenu = SDL_LoadBMP(m_menuImg.c_str());
     m_MenuTx = SDL_CreateTextureFromSurface(m_main_renderer, loadingMenu);
     SDL_RenderCopy(m_main_renderer, m_MenuTx, NULL, NULL);
     SDL_FreeSurface(loadingMenu);
     SDL_RenderPresent(m_main_renderer);
 
     const Uint8 *state = SDL_GetKeyboardState(NULL);
-    if (state[SDL_SCANCODE_DOWN])
+    if (state[SDL_SCANCODE_RIGHT])
     {
-        m_MenuImg = "img\\MENU_unfinished3.bmp";
+        m_menuImg = m_menuImg3;
     }
-    else if(state[SDL_SCANCODE_UP])
+    else if(state[SDL_SCANCODE_LEFT])
     {
-        m_MenuImg = "img\\MENU_unfinished2.bmp";
-
+        m_menuImg = m_menuImg2;
     }
 }
 
@@ -300,14 +324,17 @@ void World::addArtefact(string configFile,coordinates coor, coordinates directio
 {
     if(configFile == "healthbooster.txt")
     {
-        HealthBooster* Hboost = new HealthBooster();
-        Hboost -> init(configFile, coor, direction);
+        Artefact* Hboost = new Artefact();
+        Hboost -> init(configFile, coor, direction,m_main_renderer);
+        Hboost -> m_type = "healthbooster";
         m_artefacts.push_back(Hboost);
+
     }
     if(configFile == "speedbooster.txt")
     {
-        SpeedBooster* Sboost = new SpeedBooster();
-        Sboost -> init(configFile, coor, direction);
+        Artefact* Sboost = new Artefact();
+        Sboost -> init(configFile, coor, direction,m_main_renderer);
+        Sboost -> m_type = "speedbooster";
         m_artefacts.push_back(Sboost);
     }
 }
@@ -320,12 +347,15 @@ void World::drop()
 
 void World::cleaner()
 {
-    for(int i = 0; i < m_players.size(); i++)
+for(int i = 0; i < m_players.size(); i++)
     {
-        if(m_players[i] -> m_health == 0)
+        if(m_players[i] -> m_health <= 0)
         {
-            break;
+
+            m_players.erase(m_players.begin() + i);
+            i--;
             endgame = true;
+            break;
         }
     }
     for(int i = 0; i < m_enemies.size(); i++)
@@ -346,10 +376,10 @@ void World::cleaner()
     }
     for(int i = 0; i < m_artefacts.size(); i++)
         {
-        if(checkIfOffBounds(m_artefacts[i] -> m_objectRect))
+        if(checkIfOffBounds(m_artefacts[i] -> m_objectRect) || m_artefacts[i]->m_health <= 0 )
         {
             m_artefacts.erase(m_artefacts.begin() + i);
             i--;
         }
-    }
+   }
 }

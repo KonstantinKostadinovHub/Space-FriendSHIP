@@ -4,4 +4,12 @@ Image: background.bmp
 
 SpawnCooldown: 0.2
 
-DropCooldown: 0.00005
+DropCooldown: 2
+
+EndgameScreen: EndGameScreen.bmp
+
+menuScreen1: MenuScreen1Game.bmp
+
+menuScreen2: MenuScreen2Game.bmp
+
+menuScreen3: MenuScreen3Game.bmp
