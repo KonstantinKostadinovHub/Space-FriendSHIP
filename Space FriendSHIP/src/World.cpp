@@ -168,19 +168,21 @@ void World::collisionDamage()
     for(int i = 0; i < m_players.size(); i++)
         {
             for(int j = 0; j < m_enemies.size(); j++){
-                if(checkForCollisionBetweenObjects(m_players[i] -> m_objectRect, m_enemies[j] -> m_objectRect)){
-                    m_players[i] -> m_health -= m_enemies[j] -> m_collisonDamage;
-                    m_enemies[j]-> m_health = 0;
+                if(checkForCollisionBetweenObjects(m_players[i]->m_objectRect, m_players[i]->m_rotationAngle,
+                                                   m_enemies[j]->m_objectRect, m_enemies[j]->m_rotationAngle)){
+                    m_players[i]->m_health -= m_enemies[j]->m_collisonDamage;
                 }
             }
             for(int k = 0; k < m_projectiles.size(); k++){
-                if(checkForCollisionBetweenObjects(m_players[i] -> m_objectRect, m_projectiles[k]->m_objectRect)){
-                    m_players[i] -> m_health -= m_projectiles[k] -> m_collisonDamage;
-                    m_projectiles[k] -> m_health = 0;
+                if(checkForCollisionBetweenObjects(m_players[i]->m_objectRect, m_players[i]->m_rotationAngle,
+                                                   m_projectiles[k]->m_objectRect,m_projectiles[k]->m_rotationAngle)==true){
+                    m_players[i]->m_health -= m_projectiles[k]->m_collisonDamage;
+                    m_projectiles[k]->m_health = 0;
                 }
             }
             for(int p = 0; p < m_artefacts.size(); p++){
-                if(checkForCollisionBetweenObjects(m_players[i] -> m_objectRect, m_artefacts[p]->m_objectRect)==true){
+                if(checkForCollisionBetweenObjects(m_players[i] -> m_objectRect, m_players[i]->m_rotationAngle,
+                                                   m_artefacts[p]->m_objectRect, 0)==true){
                     if(m_artefacts[p] -> m_type == "healthbooster"){
                         m_players[i] -> m_health += m_artefacts[p] -> m_actionEffect;
                         m_artefacts[p] -> m_health = 0;
@@ -196,9 +198,10 @@ void World::collisionDamage()
 
     for(int m = 0; m < m_enemies.size(); m++){
         for(int n = 0; n < m_projectiles.size(); n++){
-            if(checkForCollisionBetweenObjects(m_enemies[m] -> m_objectRect, m_projectiles[n] -> m_objectRect)==true){
-                m_enemies[m] -> m_health -= m_projectiles[n] -> m_collisonDamage;
-                m_projectiles[n] -> m_health=0;
+            if(checkForCollisionBetweenObjects(m_enemies[m]->m_objectRect, m_enemies[m]->m_rotationAngle,
+                                               m_projectiles[n]->m_objectRect, m_projectiles[n]->m_rotationAngle)==true){
+                m_enemies[m]->m_health -= m_projectiles[n]->m_collisonDamage;
+                m_projectiles[n]->m_health=0;
 
                }
         }
@@ -236,22 +239,19 @@ void World::addBullet(string configFile, coordinates coor, float rotation)
     }
 }
 
-bool World::checkForCollisionBetweenObjects(SDL_Rect rect1, SDL_Rect rect2)
+bool World::checkForCollisionBetweenObjects(SDL_Rect rect_no_rotation1, float angle1, SDL_Rect rect_no_rotation2, float angle2)
 {
-    int minX = min(rect1.x, rect2.x);
-    int maxX = max(rect1.x + rect1.w, rect2.x + rect2.w);
+    bool colide = false;
+    coordinates c1, c2;
 
-    int minY = min(rect1.y, rect2.y);
-    int maxY = max(rect1.y + rect1.h, rect2.y + rect2.h);
+    c1 = findCenter(rect_no_rotation1, angle1, NULL);
+    c2 = findCenter(rect_no_rotation2, angle2, NULL);
 
-    if ((maxX - minX < rect1.w + rect2.w) && (maxY - minY < rect1.h + rect2.h))
-    {
-        return true;
-    }
-    else
-    {
-        return false;
-    }
+    float a_2 = (c1.x - c2.x)*(c1.x - c2.x);
+    float b_2 = (c1.y - c2.y)*(c1.y - c2.y);
+    float c_2 = 6*6;
+
+    return (a_2 + b_2 <= c_2);
 }
 
 bool World::checkIfOffBounds(SDL_Rect rect)

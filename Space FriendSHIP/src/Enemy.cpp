@@ -45,7 +45,7 @@ void Enemy::update()
 
     for(int i = 0; i < m_guns.size() ; i++)
     {
-        struct coordinates playerCoor;
+        coordinates playerCoor;
         playerCoor.x = m_objectRect.x;
         playerCoor.y = m_objectRect.y;
         m_guns[i] -> update(m_rotationAngle, playerCoor);
@@ -54,7 +54,13 @@ void Enemy::update()
 
 void Enemy::draw(SDL_Renderer* renderer)
 {
-    SDL_RenderCopyEx(renderer, m_objectTexture, NULL, &m_objectRect, m_rotationAngle, NULL, SDL_FLIP_NONE);
+    SDL_Point center;
+    center.x = m_objectRect.w/2;
+    center.y = 0;
+
+    SDL_RenderCopyEx(renderer, m_objectTexture, NULL, &m_objectRect, m_rotationAngle, &center, SDL_FLIP_NONE);
+    //SDL_RenderCopyEx(renderer, m_objectTexture, NULL, &m_objectRect, NULL, NULL, SDL_FLIP_NONE);
+
 }
 
 void Enemy::dealDamage(int damage)

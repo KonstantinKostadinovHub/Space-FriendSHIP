@@ -17,11 +17,13 @@ void Gun::init(float attackSpeed)
 
 void Gun::update(float rotation, coordinates playerCoor)
 {
-    m_objectRect.x = playerCoor.x + (m_coor.x * 19);
-    m_objectRect.y = playerCoor.y - (m_coor.y * 49);
-
-    m_coor = returnCoordinatesByAngle(rotation);
+    coordinates bulletCoor = returnCoordinatesByAngle(rotation);
     m_rotationAngle = rotation;
+
+    int sign = (bulletCoor.y > 0 ? 1: -1);
+
+    m_objectRect.x = playerCoor.x;
+    m_objectRect.y = playerCoor.y - sign*(bulletCoor.y*6);
 
     if(!m_cantShoot)
     {

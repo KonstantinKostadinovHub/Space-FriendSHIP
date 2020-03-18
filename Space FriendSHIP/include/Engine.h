@@ -6,6 +6,8 @@
 #include <windows.h>
 #include <winuser.h>
 
+#include <SDL2/SDL.h>
+
 #define PI 3.14
 #define SPEED_FACTOR 1.7
 
@@ -19,5 +21,6 @@ struct coordinates
 
 struct coordinates returnCoordinatesByAngle(float angle);
 float returnAngleByCoordinates(struct coordinates direction);
+coordinates findCenter(SDL_Rect rct, float angle, coordinates* rotation_center);
 
 #endif // ENGINE_H

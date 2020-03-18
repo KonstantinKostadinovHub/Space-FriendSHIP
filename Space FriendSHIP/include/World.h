@@ -64,7 +64,7 @@ public:
     bool m_spawn;
     bool endgame = false;
     bool m_drop;
-    bool checkForCollisionBetweenObjects(SDL_Rect rect1, SDL_Rect rect2);
+    bool checkForCollisionBetweenObjects(SDL_Rect rect1, float angle1, SDL_Rect rect2, float angle2);
     bool checkIfOffBounds(SDL_Rect rect);
 
     void init(string configFile);

@@ -4,7 +4,7 @@ Image: background.bmp
 
 SpawnCooldown: 0.2
 
-DropCooldown: 2
+DropCooldown: 10
 
 EndgameScreen: EndGameScreen.bmp
 
