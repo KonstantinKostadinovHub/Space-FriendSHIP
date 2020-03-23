@@ -33,7 +33,7 @@ int main (int argc, char* argv[])
                 }
             }
         }
-
+        world.loadProgress();
         while(world.endgame == false)
         {
             while(SDL_PollEvent(&e) == 0)
@@ -44,6 +44,7 @@ int main (int argc, char* argv[])
                 SDL_Delay(20);
             }
         }
+        world.saveProgress();
         SDL_Delay(500);
         world.endgameScreen();
         SDL_Delay(8000);

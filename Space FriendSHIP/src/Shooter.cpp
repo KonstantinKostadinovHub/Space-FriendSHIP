@@ -23,6 +23,7 @@ void Shooter::init(string configFile, coordinates coor, float rotation, SDL_Rend
     stream >> tmp >> m_attackSpeed;
     stream >> tmp >> m_speed;
     stream >> tmp >> m_bulletName;
+    stream >> tmp >> m_pointsGiven;
     stream.close();
 
     m_rotationAngle = rotation;

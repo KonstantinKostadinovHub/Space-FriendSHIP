@@ -2,10 +2,6 @@ Screen_Size: 1366 768
 
 Image: background.bmp
 
-SpawnCooldown: 0.2
-
-DropCooldown: 10
-
 EndgameScreen: EndGameScreen.bmp
 
 menuScreen1: MenuScreen1Game.bmp
@@ -13,3 +9,7 @@ menuScreen1: MenuScreen1Game.bmp
 menuScreen2: MenuScreen2Game.bmp
 
 menuScreen3: MenuScreen3Game.bmp
+
+SpawnCooldown: 0.2
+
+DropCooldown: 2

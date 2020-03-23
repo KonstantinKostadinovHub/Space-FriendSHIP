@@ -16,6 +16,7 @@
 #include "Engine.h"
 #include "Spawner.h"
 #include "Dropper.h"
+#include "UpgradeManager.h"
 
 #include "Rock.h"
 #include "Shooter.h"
@@ -38,6 +39,7 @@ public:
     SDL_Rect m_ScreenMenu;
     Spawner* m_spawnManager;
     Dropper* m_dropper;
+    UpgradeManager* m_upgradeManager;
 
     string m_configFile;
     string tmp;
@@ -50,6 +52,10 @@ public:
 
     int m_SCREEN_WIDTH;
     int m_SCREEN_HEIGHT;
+
+    int m_points;
+    int m_highScore;
+    int m_coins;
 
     vector <Player*> m_players;
     vector <Enemy*> m_enemies;
@@ -67,6 +73,8 @@ public:
     bool checkForCollisionBetweenObjects(SDL_Rect rect1, float angle1, SDL_Rect rect2, float angle2);
     bool checkIfOffBounds(SDL_Rect rect);
 
+    int m_wallet = 10;
+
     void init(string configFile);
     void destroy();
     void update();
@@ -82,6 +90,10 @@ public:
     void shootProjectiles();
     void addArtefact(string configFile,coordinates coor, coordinates direction);
     void drop();
+    void saveProgress();
+    void loadProgress();
+    void AddPoints(Enemy* enemy);
+    void AddCoins (Enemy* enemy);
 
 protected:
 

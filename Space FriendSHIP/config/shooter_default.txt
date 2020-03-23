@@ -11,3 +11,5 @@ attack_speed: 0.5
 speed: 4
 
 bulletConfig: bullet_default.txt
+
+Give_Points: 10

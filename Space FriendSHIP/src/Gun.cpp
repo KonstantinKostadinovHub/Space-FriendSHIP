@@ -23,7 +23,7 @@ void Gun::update(float rotation, coordinates playerCoor)
     int sign = (bulletCoor.y > 0 ? 1: -1);
 
     m_objectRect.x = playerCoor.x;
-    m_objectRect.y = playerCoor.y - sign*(bulletCoor.y*6);
+    m_objectRect.y = playerCoor.y - sign*(bulletCoor.y);
 
     if(!m_cantShoot)
     {

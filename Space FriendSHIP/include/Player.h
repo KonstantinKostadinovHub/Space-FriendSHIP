@@ -5,10 +5,13 @@
 #include <fstream>
 #include <vector>
 #include <string>
-#include <SDL2/SDL.h>
 #include <cmath>
+#include <SDL2/SDL.h>
+
 #include "Engine.h"
+#include "UpgradeManager.h"
 #include "HealthBar.h"
+#include "Gun.h"
 
 using namespace std;
 
@@ -34,6 +37,8 @@ public:
     int m_maxhealth;
     int m_health;
 
+    vector<Gun*> m_guns;
+
     string s_move_up;
     string s_move_down;
     string s_move_left;
@@ -48,7 +53,7 @@ public:
     SDL_Scancode gas;
     SDL_Scancode brake;
 
-    virtual void init(SDL_Renderer* renderer, string configFile);
+    virtual void init(SDL_Renderer* renderer, string configFile, UpgradeManager* upgradeManager);
     virtual void update();
     virtual void draw(SDL_Renderer* renderer);
 

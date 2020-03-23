@@ -4,6 +4,7 @@ World::World()
 {
     m_dropper = new Dropper;
     m_spawnManager = new Spawner;
+    m_upgradeManager = new UpgradeManager;
 }
 
 World::~World()
@@ -21,16 +22,17 @@ void World::init(string configFile)
     stream.open(m_configFile.c_str());
     stream >> tmp >> m_SCREEN_WIDTH >> m_SCREEN_HEIGHT;
     stream >> tmp >> m_backgroundImg;
-    stream >> tmp >> m_spawnCooldown;
-    stream >> tmp >> m_dropCooldown;
     stream >> tmp >> m_endScreenImg;
     stream >> tmp >> m_menuImg1;
     stream >> tmp >> m_menuImg2;
     stream >> tmp >> m_menuImg3;
+    stream >> tmp >> m_spawnCooldown;
+    stream >> tmp >> m_dropCooldown;
     stream.close();
 
     m_spawnManager -> init("spawner.txt");
     m_dropper -> init("dropper.txt");
+    m_upgradeManager -> init("upgrade_manager.txt");
 
     m_startDropCooldown = time(NULL);
     m_startSpawnCooldown = time(NULL);
@@ -151,14 +153,14 @@ void World::addPlayer(SDL_Renderer* renderer, string configFile)
     if(configFile == "player1.txt")
     {
         Player* player = new Player();
-        player -> init(renderer, configFile);
+        player -> init(renderer, configFile, m_upgradeManager);
         m_players.push_back(player);
 
     }
     else if(configFile == "player2.txt")
     {
         Player* player= new Player();
-        player -> init(renderer, configFile);
+        player -> init(renderer, configFile, m_upgradeManager);
         m_players.push_back(player);
     }
 }
@@ -171,6 +173,7 @@ void World::collisionDamage()
                 if(checkForCollisionBetweenObjects(m_players[i]->m_objectRect, m_players[i]->m_rotationAngle,
                                                    m_enemies[j]->m_objectRect, m_enemies[j]->m_rotationAngle)){
                     m_players[i]->m_health -= m_enemies[j]->m_collisonDamage;
+
                 }
             }
             for(int k = 0; k < m_projectiles.size(); k++){
@@ -184,7 +187,7 @@ void World::collisionDamage()
                 if(checkForCollisionBetweenObjects(m_players[i] -> m_objectRect, m_players[i]->m_rotationAngle,
                                                    m_artefacts[p]->m_objectRect, 0)==true){
                     if(m_artefacts[p] -> m_type == "healthbooster"){
-                        m_players[i] -> m_health += m_artefacts[p] -> m_actionEffect;
+                        m_players[i] -> m_health += (m_artefacts[p] -> m_actionEffect) + m_upgradeManager->m_CurrentHealthBoosterUpgrade;
                         m_artefacts[p] -> m_health = 0;
 
                     }
@@ -286,13 +289,6 @@ void World::endgameScreen()
 
 void World::menu()
 {
-    SDL_Texture* m_MenuTx;
-    SDL_Surface* loadingMenu = SDL_LoadBMP(m_menuImg.c_str());
-    m_MenuTx = SDL_CreateTextureFromSurface(m_main_renderer, loadingMenu);
-    SDL_RenderCopy(m_main_renderer, m_MenuTx, NULL, NULL);
-    SDL_FreeSurface(loadingMenu);
-    SDL_RenderPresent(m_main_renderer);
-
     const Uint8 *state = SDL_GetKeyboardState(NULL);
     if (state[SDL_SCANCODE_RIGHT])
     {
@@ -302,6 +298,15 @@ void World::menu()
     {
         m_menuImg = m_menuImg2;
     }
+
+    SDL_Texture* m_MenuTx;
+    SDL_Surface* loadingMenu = SDL_LoadBMP(m_menuImg.c_str());
+    m_MenuTx = SDL_CreateTextureFromSurface(m_main_renderer, loadingMenu);
+    SDL_RenderCopy(m_main_renderer, m_MenuTx, NULL, NULL);
+    SDL_FreeSurface(loadingMenu);
+    SDL_RenderPresent(m_main_renderer);
+
+
 }
 
 void World::shootProjectiles()
@@ -362,6 +367,15 @@ for(int i = 0; i < m_players.size(); i++)
     {
         if(m_enemies[i] -> m_health <= 0 || checkIfOffBounds(m_enemies[i] -> m_objectRect))
         {
+            if(m_enemies[i] -> m_health <= 0)
+            {
+                AddPoints(m_enemies[i]);
+            }
+
+            if(m_enemies[i] -> m_health <= 0)
+            {
+                AddCoins(m_enemies[i]);
+            }
             m_enemies.erase(m_enemies.begin() + i);
             i--;
         }
@@ -382,4 +396,25 @@ for(int i = 0; i < m_players.size(); i++)
             i--;
         }
    }
+}
+
+void World::saveProgress()
+{
+    SaveInFile("wallet.txt", "Money_in_wallet:", m_wallet);
+}
+
+void World::loadProgress()
+{
+    m_upgradeManager->loadManager();
+    m_wallet = LoadFromFile("wallet.txt");
+}
+
+void World::AddPoints(Enemy* enemy)
+{
+    m_points += enemy -> m_pointsGiven;
+}
+
+void World::AddCoins(Enemy* enemy)
+{
+    m_coins += enemy -> m_pointsGiven;
 }

@@ -13,3 +13,5 @@ speed: 2
 maxRotation: 60
 
 rotationFactor: 3
+
+Give_Points: 50

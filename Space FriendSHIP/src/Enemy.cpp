@@ -22,6 +22,7 @@ void Enemy::init(string configFile, coordinates coor, float rotation, SDL_Render
     stream >> tmp >> m_collisonDamage;
     stream >> tmp >> m_attackSpeed;
     stream >> tmp >> m_speed;
+    stream >> tmp >> m_pointsGiven;
     stream.close();
 
     m_rotationAngle = rotation;

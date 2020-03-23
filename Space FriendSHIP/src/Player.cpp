@@ -10,7 +10,7 @@ Player::~Player()
 
 }
 
-void Player::init(SDL_Renderer* renderer, string configFile)
+void Player::init(SDL_Renderer* renderer, string configFile, UpgradeManager* upgradeManager)
 {
     m_healthBar = new HealthBar;
 
@@ -34,6 +34,8 @@ void Player::init(SDL_Renderer* renderer, string configFile)
     stream >> tmp >> HPBar;
 
     stream.close();
+
+    m_maxhealth += upgradeManager->m_CurrentHealthUpgrade;
 
     if(s_gas == "W")
     {

@@ -26,10 +26,12 @@ public:
 
     int m_health;
     int m_collisonDamage;
+    int m_pointsGiven;
 
     float m_attackSpeed;
     float m_speed;
     float m_rotationAngle;
+
 
     SDL_Rect m_objectRect;
     SDL_Texture* m_objectTexture;

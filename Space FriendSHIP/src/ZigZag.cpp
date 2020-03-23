@@ -25,6 +25,7 @@ m_configFile = "config\\" + configFile;
     stream >> tmp >> m_speed;
     stream >> tmp >> m_maxRotation;
     stream >> tmp >> m_rotationFactor;
+    stream >> tmp >> m_pointsGiven;
     stream.close();
 
     m_rotationAngle = rotation;

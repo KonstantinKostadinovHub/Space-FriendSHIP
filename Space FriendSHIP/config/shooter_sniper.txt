@@ -11,3 +11,5 @@ attack_speed: 2
 speed: 2
 
 bulletConfig: bullet_sniper.txt
+
+Give_Points: 50

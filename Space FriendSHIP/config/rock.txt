@@ -10,4 +10,9 @@ attack_speed: 0
 
 speed: 1
 
+Give_Points: 10
+
+
+
+
 
