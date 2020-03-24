@@ -165,6 +165,13 @@ void World::addPlayer(SDL_Renderer* renderer, string configFile)
     }
 }
 
+void World::addPlayerAI(SDL_Renderer* renderer, string configFile)
+{
+    Player_AI* playerAI = new Player_AI();
+    playerAI -> init( configFile,renderer);
+    m_players.push_back(playerAI);
+}
+
 void World::collisionDamage()
 {
     for(int i = 0; i < m_players.size(); i++)
@@ -416,5 +423,17 @@ void World::AddPoints(Enemy* enemy)
 
 void World::AddCoins(Enemy* enemy)
 {
-    m_coins += enemy -> m_pointsGiven;
+    m_coins += enemy -> m_pointsGiven + m_upgradeManager->m_CurrentCoinsMultiplierUpgrade;
+}
+
+void World::chooseGameMode(){
+    if(m_menuImg == m_menuImg2)
+    {
+        addPlayer (m_main_renderer, "player2.txt");
+        addPlayerAI (m_main_renderer,"playerAI.txt");
+    }else if(m_menuImg == m_menuImg3)
+    {
+        addPlayer (m_main_renderer, "player2.txt");
+        addPlayer (m_main_renderer, "player1.txt");
+    }
 }

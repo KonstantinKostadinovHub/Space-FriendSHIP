@@ -80,6 +80,7 @@ public:
     void update();
     void draw();
     void addPlayer(SDL_Renderer* renderer, string configFile);
+    void addPlayerAI(SDL_Renderer* renderer, string configFile);
     void collisionDamage();
     void addEnemy(string configFile, coordinates coor, float rotation);
     void addBullet(string configFile, coordinates coor, float rotation);
@@ -94,6 +95,7 @@ public:
     void loadProgress();
     void AddPoints(Enemy* enemy);
     void AddCoins (Enemy* enemy);
+    void chooseGameMode();
 
 protected:
 

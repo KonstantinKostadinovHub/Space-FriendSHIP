@@ -15,9 +15,6 @@ int main (int argc, char* argv[])
         world.endgame = false;
         bool quit = false;
 
-        //world.addPlayer(world.m_main_renderer, "player1.txt");
-        world.addPlayer(world.m_main_renderer, "player2.txt");
-
         SDL_Event e;
 
         while(quit!=true)
@@ -27,12 +24,13 @@ int main (int argc, char* argv[])
             {
                 world.menu();
                 SDL_Delay(5);
-                if (state[SDL_SCANCODE_RETURN])
+                if ((world.m_menuImg != world.m_menuImg1) && (state[SDL_SCANCODE_RETURN]))
                 {
                     quit = true;
                 }
             }
         }
+        world.chooseGameMode();
         world.loadProgress();
         while(world.endgame == false)
         {
