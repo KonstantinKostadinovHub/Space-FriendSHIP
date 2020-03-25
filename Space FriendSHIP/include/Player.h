@@ -56,7 +56,7 @@ public:
     string s_brake;
     string s_dash;
 
-    string m_bulletName = "bullet_smg.txt";
+    string m_bulletName = "bullet_player.txt";
 
     SDL_Scancode move_up;
     SDL_Scancode move_down;

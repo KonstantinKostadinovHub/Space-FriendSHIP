@@ -58,11 +58,7 @@ void Enemy::update()
 
 void Enemy::draw(SDL_Renderer* renderer)
 {
-    SDL_Point center;
-    center.x = m_objectRect.w / 2;
-    center.y = 0;
-
-    SDL_RenderCopyEx(renderer, m_objectTexture, NULL, &m_objectRect, m_rotationAngle, &center, SDL_FLIP_NONE);
+    SDL_RenderCopyEx(renderer, m_objectTexture, NULL, &m_objectRect, m_rotationAngle, &m_center, SDL_FLIP_NONE);
 }
 
 void Enemy::dealDamage(int damage)

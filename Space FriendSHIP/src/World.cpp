@@ -106,7 +106,7 @@ void World::update()
 
     shootProjectiles();
 
-    collisionDamage();
+    //collisionDamage();
 }
 
 void World::draw()
@@ -235,7 +235,7 @@ void World::addEnemy(string configFile, coordinates coor, float rotation)
 
 void World::addBullet(string configFile, coordinates coor, float rotation)
 {
-    if(configFile == "bullet_default.txt" || configFile == "bullet_sniper.txt" || configFile == "bullet_smg.txt" || configFile == "bullet_tank.txt")
+    if(configFile == "bullet_default.txt" || configFile == "bullet_sniper.txt" || configFile == "bullet_smg.txt" || configFile == "bullet_tank.txt" || configFile == "bullet_player.txt")
     {
         Projectile* proj = new Bullet();
         proj -> init(configFile, coor, rotation, m_main_renderer);

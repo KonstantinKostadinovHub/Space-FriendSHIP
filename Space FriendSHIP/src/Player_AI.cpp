@@ -95,14 +95,13 @@ void Player_AI::moveToTarget(){
 }
 
 void Player_AI::shoot(){
-    /*
-    if(chrono::duration_cast<chrono::milliseconds>(chrono::high_resolution_clock::now() - m_elapsed_shoot) >= m_shootingRate){
-        Projectile* fireball = new Projectile();
-        fireball->init("config\\Fireball_AI.txt", world.m_main_renderer);
-        world.m_projectiles.push_back(fireball);
-        m_elapsed_shoot = chrono::high_resolution_clock::now();
+    for(int i = 0; i < m_guns.size() ; i++)
+    {
+        coordinates playerCoor;
+        playerCoor.x = m_objectRect.x;
+        playerCoor.y = m_objectRect.y;
+        m_guns[i] -> update(m_rotationAngle, playerCoor);
     }
-    */
 }
 
 void Player_AI::update()
@@ -111,6 +110,7 @@ void Player_AI::update()
     engage();
     moveToTarget();
     shoot();
+
 }
 
 void Player_AI::draw(SDL_Renderer* renderer)

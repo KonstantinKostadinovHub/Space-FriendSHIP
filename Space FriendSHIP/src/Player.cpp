@@ -157,11 +157,7 @@ void Player::update()
 
 void Player::draw(SDL_Renderer* renderer)
 {
-    SDL_Point center;
-    center.x = 40;
-    center.y = 10;
-
-    SDL_RenderCopyEx(renderer, m_objectTexture, NULL, &m_objectRect, m_rotationAngle, &center, SDL_FLIP_NONE);
+    SDL_RenderCopyEx(renderer, m_objectTexture, NULL, &m_objectRect, m_rotationAngle, &m_center, SDL_FLIP_NONE);
     m_healthBar->draw(renderer);
 }
 
