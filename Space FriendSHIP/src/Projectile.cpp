@@ -24,8 +24,8 @@ void Projectile::init(string configFile, struct coordinates coor, float rotation
 
     stream.close();
     m_rotationAngle = rotation;
-    m_coor.x = coor.x + 25*(sin(m_rotationAngle * PI / 180) * m_speed * SPEED_FACTOR);
-    m_coor.y = coor.y - 25*(cos(m_rotationAngle * PI / 180) * m_speed * SPEED_FACTOR);
+    m_coor.x = coor.x + (sin(m_rotationAngle * PI / 180) * m_speed * SPEED_FACTOR);
+    m_coor.y = coor.y - (cos(m_rotationAngle * PI / 180) * m_speed * SPEED_FACTOR);
     m_img = "img\\" + m_img;
 
     SDL_Surface* loadingSurface = SDL_LoadBMP(m_img.c_str());
