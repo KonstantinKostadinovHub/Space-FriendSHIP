@@ -38,12 +38,13 @@ public:
     int m_maxhealth;
     int m_health;
 
+    float m_collisionDamage;
+
     int m_dashLenght;
     bool m_canDash;
     bool m_hasCooldown;
     time_t m_startDashCooldown;
     time_t m_dashCooldown = 5;
-
 
     vector<Gun*> m_guns;
 
@@ -54,6 +55,8 @@ public:
     string s_gas;
     string s_brake;
     string s_dash;
+
+    string m_bulletName = "bullet_smg.txt";
 
     SDL_Scancode move_up;
     SDL_Scancode move_down;

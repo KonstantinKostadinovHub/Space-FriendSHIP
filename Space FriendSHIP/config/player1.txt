@@ -26,4 +26,6 @@ Brake: S
 
 Dash: E
 
+CollisionDamage: 80
+
 HPBar: healthBar1.txt

@@ -1,6 +1,6 @@
-size: 19 49
+size: 32 46
 
-image: shooter.bmp
+image: shooter_tank.bmp
 
 health: 200
 

@@ -38,6 +38,10 @@ void Player_AI::init(string config, SDL_Renderer* renderer){
     m_health = m_maxhealth;
     m_healthBar->init(HPBar);
 
+    Gun* gun = new Gun;
+    gun->init(1);
+    m_guns.push_back(gun);
+
     SDL_Surface* loadingSurface = SDL_LoadBMP(m_img.c_str());
     m_objectTexture = SDL_CreateTextureFromSurface(renderer, loadingSurface);
     SDL_FreeSurface(loadingSurface);

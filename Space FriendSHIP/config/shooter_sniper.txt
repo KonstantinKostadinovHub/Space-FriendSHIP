@@ -2,7 +2,7 @@ size: 19 49
 
 image: shooter.bmp
 
-health: 50
+health: 25
 
 collision_damage: 20
 

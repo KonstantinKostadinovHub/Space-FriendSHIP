@@ -33,6 +33,7 @@ void Player::init(SDL_Renderer* renderer, string configFile, UpgradeManager* upg
     stream >> tmp >> s_gas;
     stream >> tmp >> s_brake;
     stream >> tmp >> s_dash;
+    stream >> tmp >> m_collisionDamage;
     stream >> tmp >> HPBar;
 
     stream.close();
@@ -143,6 +144,15 @@ void Player::update()
         m_objectRect.x += sin(m_rotationAngle * PI / 180) * m_dashLenght;
         m_objectRect.y -= cos(m_rotationAngle * PI / 180) * m_dashLenght;
     }
+
+    for(int i = 0; i < m_guns.size() ; i++)
+    {
+        coordinates playerCoor;
+        playerCoor.x = m_objectRect.x;
+        playerCoor.y = m_objectRect.y;
+        m_guns[i] -> update(m_rotationAngle, playerCoor);
+    }
+
 }
 
 void Player::draw(SDL_Renderer* renderer)

@@ -61,12 +61,6 @@ void World::init(string configFile)
     m_menuImg3 = "img\\" + m_menuImg3;
 
     m_menuImg = m_menuImg1;
-
-/*
-    Player_AI* bot_AI = new Player_AI();
-    bot_AI->init("PlayerAI.txt", m_main_renderer);
-    m_players.push_back(bot_AI);
-*/
 }
 
 void World::update()
@@ -180,6 +174,7 @@ void World::collisionDamage()
                 if(checkForCollisionBetweenObjects(m_players[i]->m_objectRect, m_players[i]->m_rotationAngle, &m_players[i]->m_center,
                                                    m_enemies[j]->m_objectRect, m_enemies[j]->m_rotationAngle, &m_enemies[j]->m_center)){
                     m_players[i]->m_health -= m_enemies[j]->m_collisonDamage;
+                    m_enemies[j]->m_health -= m_players[i]->m_collisionDamage;
                 }
             }
             for(int k = 0; k < m_projectiles.size(); k++){
@@ -313,8 +308,6 @@ void World::menu()
     SDL_RenderCopy(m_main_renderer, m_MenuTx, NULL, NULL);
     SDL_FreeSurface(loadingMenu);
     SDL_RenderPresent(m_main_renderer);
-
-
 }
 
 void World::shootProjectiles()
@@ -328,6 +321,19 @@ void World::shootProjectiles()
                 buff.x = m_enemies[i] -> m_guns[j] -> m_objectRect.x;
                 buff.y = m_enemies[i] -> m_guns[j] -> m_objectRect.y;
                 addBullet(m_enemies[i] -> m_bulletName, buff, m_enemies[i] -> m_guns[j] -> m_rotationAngle);
+            }
+        }
+    }
+
+    for(int i = 0; i < m_players.size(); i++)
+    {
+        for(int j = 0; j < m_players[i] -> m_guns.size(); j++)
+        {
+            if(!m_players[i] -> m_guns[j] -> m_cantShoot){
+                struct coordinates buff;
+                buff.x = m_players[i] -> m_guns[j] -> m_objectRect.x;
+                buff.y = m_players[i] -> m_guns[j] -> m_objectRect.y;
+                addBullet(m_players[i] -> m_bulletName, buff, m_players[i] -> m_guns[j] -> m_rotationAngle);
             }
         }
     }

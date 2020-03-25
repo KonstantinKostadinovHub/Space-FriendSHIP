@@ -1,6 +1,6 @@
-size: 19 49
+size: 44 44
 
-image: shooter.bmp
+image: shooter_smg.bmp
 
 health: 25
 

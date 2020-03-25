@@ -74,7 +74,7 @@ public:
                                         SDL_Rect rect_no_rotation2, float angle2, SDL_Point* center2);
     bool checkIfOffBounds(SDL_Rect rect);
 
-    int m_wallet = 10;
+    int m_wallet;
 
     void init(string configFile);
     void destroy();
