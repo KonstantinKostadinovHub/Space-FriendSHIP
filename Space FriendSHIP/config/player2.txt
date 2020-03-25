@@ -12,6 +12,8 @@ Max_Speed: 5
 
 Min_Speed: 1
 
+Dash_Lenght: 100
+
 Spawn_Angle: -90
 
 Move_Left: Left
@@ -21,5 +23,7 @@ Move_Right: Right
 Gas: Up
 
 Brake: Down
+
+Dash: Right_Ctrl
 
 HPBar: healthBar2.txt 

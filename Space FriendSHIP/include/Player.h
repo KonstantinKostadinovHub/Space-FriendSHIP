@@ -6,6 +6,7 @@
 #include <vector>
 #include <string>
 #include <cmath>
+#include <ctime>
 #include <SDL2/SDL.h>
 
 #include "Engine.h"
@@ -37,6 +38,13 @@ public:
     int m_maxhealth;
     int m_health;
 
+    int m_dashLenght;
+    bool m_canDash;
+    bool m_hasCooldown;
+    time_t m_startDashCooldown;
+    time_t m_dashCooldown = 5;
+
+
     vector<Gun*> m_guns;
 
     string s_move_up;
@@ -45,6 +53,7 @@ public:
     string s_move_right;
     string s_gas;
     string s_brake;
+    string s_dash;
 
     SDL_Scancode move_up;
     SDL_Scancode move_down;
@@ -52,10 +61,12 @@ public:
     SDL_Scancode move_right;
     SDL_Scancode gas;
     SDL_Scancode brake;
+    SDL_Scancode dash;
 
     virtual void init(SDL_Renderer* renderer, string configFile, UpgradeManager* upgradeManager);
     virtual void update();
     virtual void draw(SDL_Renderer* renderer);
+    virtual void checkForDash();
 
     SDL_Texture* m_shape1_tx = NULL;
     SDL_Surface* m_loading_surf = NULL;

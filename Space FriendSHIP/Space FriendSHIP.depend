@@ -2237,12 +2237,13 @@
 	"ZigZag.h"
 	"Bullet.h"
 
-1584955612 c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\include\player.h
+1585149105 c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\include\player.h
 	<iostream>
 	<fstream>
 	<vector>
 	<string>
 	<cmath>
+	<ctime>
 	<SDL2/SDL.h>
 	"Engine.h"
 	"UpgradeManager.h"
@@ -2341,7 +2342,7 @@
 1583258150 source:c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\src\healthbooster.cpp
 	"HealthBooster.h"
 
-1584959383 source:c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\src\player.cpp
+1585149253 source:c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\src\player.cpp
 	"Player.h"
 
 1584540090 source:c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\src\projectile.cpp
@@ -2359,7 +2360,7 @@
 1583258150 source:c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\src\speedbooster.cpp
 	"SpeedBooster.h"
 
-1585061614 source:c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\src\world.cpp
+1585149294 source:c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\src\world.cpp
 	"World.h"
 
 1584948122 source:c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\src\gun.cpp

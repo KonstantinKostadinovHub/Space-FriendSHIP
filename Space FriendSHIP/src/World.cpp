@@ -429,7 +429,7 @@ void World::AddCoins(Enemy* enemy)
 void World::chooseGameMode(){
     if(m_menuImg == m_menuImg2)
     {
-        addPlayer (m_main_renderer, "player2.txt");
+        addPlayer (m_main_renderer, "player1.txt");
         addPlayerAI (m_main_renderer,"playerAI.txt");
     }else if(m_menuImg == m_menuImg3)
     {
