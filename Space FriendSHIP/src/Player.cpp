@@ -37,6 +37,9 @@ void Player::init(SDL_Renderer* renderer, string configFile, UpgradeManager* upg
 
     stream.close();
 
+    m_center.x = 40;
+    m_center.y = 10;
+
     m_maxhealth += upgradeManager->m_CurrentHealthUpgrade;
 
     if(s_gas == "W")

@@ -175,26 +175,25 @@ void World::addPlayerAI(SDL_Renderer* renderer, string configFile)
 void World::collisionDamage()
 {
     for(int i = 0; i < m_players.size(); i++)
-        {
+    {
             for(int j = 0; j < m_enemies.size(); j++){
-                if(checkForCollisionBetweenObjects(m_players[i]->m_objectRect, m_players[i]->m_rotationAngle,
-                                                   m_enemies[j]->m_objectRect, m_enemies[j]->m_rotationAngle)){
+                if(checkForCollisionBetweenObjects(m_players[i]->m_objectRect, m_players[i]->m_rotationAngle, &m_players[i]->m_center,
+                                                   m_enemies[j]->m_objectRect, m_enemies[j]->m_rotationAngle, &m_enemies[j]->m_center)){
                     m_players[i]->m_health -= m_enemies[j]->m_collisonDamage;
-
                 }
             }
             for(int k = 0; k < m_projectiles.size(); k++){
-                if(checkForCollisionBetweenObjects(m_players[i]->m_objectRect, m_players[i]->m_rotationAngle,
-                                                   m_projectiles[k]->m_objectRect,m_projectiles[k]->m_rotationAngle)==true){
+                if(checkForCollisionBetweenObjects(m_players[i]->m_objectRect, m_players[i]->m_rotationAngle,&m_players[i]->m_center,
+                                                   m_projectiles[k]->m_objectRect,m_projectiles[k]->m_rotationAngle, NULL)){
                     m_players[i]->m_health -= m_projectiles[k]->m_collisonDamage;
                     m_projectiles[k]->m_health = 0;
                 }
             }
             for(int p = 0; p < m_artefacts.size(); p++){
-                if(checkForCollisionBetweenObjects(m_players[i] -> m_objectRect, m_players[i]->m_rotationAngle,
-                                                   m_artefacts[p]->m_objectRect, 0)==true){
+                if(checkForCollisionBetweenObjects(m_players[i] -> m_objectRect, m_players[i]->m_rotationAngle, &m_players[i] ->m_center,
+                                                   m_artefacts[p]->m_objectRect, 0, NULL)){
                     if(m_artefacts[p] -> m_type == "healthbooster"){
-                        m_players[i] -> m_health += (m_artefacts[p] -> m_actionEffect) + m_upgradeManager->m_CurrentHealthBoosterUpgrade;
+                        m_players[i] -> m_health += m_artefacts[p] -> m_actionEffect;
                         m_artefacts[p] -> m_health = 0;
 
                     }
@@ -204,12 +203,12 @@ void World::collisionDamage()
                     }
                 }
             }
-        }
+    }
 
     for(int m = 0; m < m_enemies.size(); m++){
         for(int n = 0; n < m_projectiles.size(); n++){
-            if(checkForCollisionBetweenObjects(m_enemies[m]->m_objectRect, m_enemies[m]->m_rotationAngle,
-                                               m_projectiles[n]->m_objectRect, m_projectiles[n]->m_rotationAngle)==true){
+            if(checkForCollisionBetweenObjects(m_enemies[m]->m_objectRect, m_enemies[m]->m_rotationAngle, &m_enemies[m]->m_center,
+                                               m_projectiles[n]->m_objectRect, m_projectiles[n]->m_rotationAngle, NULL)){
                 m_enemies[m]->m_health -= m_projectiles[n]->m_collisonDamage;
                 m_projectiles[n]->m_health=0;
 
@@ -249,21 +248,23 @@ void World::addBullet(string configFile, coordinates coor, float rotation)
     }
 }
 
-bool World::checkForCollisionBetweenObjects(SDL_Rect rect_no_rotation1, float angle1, SDL_Rect rect_no_rotation2, float angle2)
+bool World::checkForCollisionBetweenObjects(SDL_Rect rect_no_rotation1, float angle1, SDL_Point* center1,
+                                            SDL_Rect rect_no_rotation2, float angle2, SDL_Point* center2)
 {
     bool colide = false;
     coordinates c1, c2;
 
-    c1 = findCenter(rect_no_rotation1, angle1, NULL);
-    c2 = findCenter(rect_no_rotation2, angle2, NULL);
+    c1 = findCenter(rect_no_rotation1, angle1, center1);
+    c2 = findCenter(rect_no_rotation2, angle2, center2);
 
     float a_2 = (c1.x - c2.x)*(c1.x - c2.x);
     float b_2 = (c1.y - c2.y)*(c1.y - c2.y);
-    float c_2 = 6*6;
+    float c   = hypot(rect_no_rotation1.h,rect_no_rotation1.w)/2 +
+                hypot(rect_no_rotation2.h,rect_no_rotation2.w)/2;
 
-    return (a_2 + b_2 <= c_2);
+
+    return (a_2 + b_2 <= c*c/2);
 }
-
 bool World::checkIfOffBounds(SDL_Rect rect)
 {
     if (rect.x + rect.w > m_SCREEN_WIDTH)

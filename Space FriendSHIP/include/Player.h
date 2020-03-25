@@ -74,6 +74,7 @@ public:
     SDL_Rect m_objectRect;
 
     float m_rotationAngle;
+    SDL_Point m_center;
 
 protected:
 

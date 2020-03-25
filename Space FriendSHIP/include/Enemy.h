@@ -32,6 +32,7 @@ public:
     float m_speed;
     float m_rotationAngle;
 
+    SDL_Point m_center;
 
     SDL_Rect m_objectRect;
     SDL_Texture* m_objectTexture;

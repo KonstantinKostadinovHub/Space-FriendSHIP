@@ -33,6 +33,9 @@ void Shooter::init(string configFile, coordinates coor, float rotation, SDL_Rend
     m_coor.x = m_objectRect.x;
     m_coor.y = m_objectRect.y;
 
+    m_center.x = m_objectRect.w/2;
+    m_center.y = 0;
+
     Gun* gun = new Gun;
     gun->init(m_attackSpeed);
     m_guns.push_back(gun);

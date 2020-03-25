@@ -15,17 +15,72 @@ float returnAngleByCoordinates(coordinates direction)
     return atan2(direction.x, -1*direction.y) * 180 / PI;
 }
 
-coordinates findCenter(SDL_Rect rct, float angle, coordinates* rotation_center) {
+coordinates findTip(SDL_Rect rct, float angle, coordinates* rotation_center) {
     coordinates c,d;
     c.x = rct.x + rct.w/2;
     c.y = rct.y + rct.h/2;
 
-    if (rotation_center != NULL) {
+    if (rotation_center == NULL) {
          d = returnCoordinatesByAngle(angle);
          c.x += d.x;
          c.y += d.y;
     }
     return c;
+
+}
+
+coordinates rotatePointByAngle(coordinates* center, float angle, coordinates* rotation_center) {
+    coordinates c;
+    c.x = center->x;
+    c.y = center->y;
+
+    c.x -= rotation_center->x;
+    c.y -= rotation_center->y;
+
+    float sn, cs;
+    sn = sinf(angle*PI/180.0f);
+    cs = cosf(angle*PI/180.0f);
+
+    coordinates rotated;
+
+    rotated.x = cs * c.x - sn * c.y;
+    rotated.y = sn * c.x + cs * c.y;
+
+    rotated.x += rotation_center->x;
+    rotated.y += rotation_center->y;
+    return rotated;
+}
+
+coordinates findCenter(SDL_Rect rct, float angle, SDL_Point* rotation_center) {
+    coordinates c;
+    c.x = rct.x + rct.w/2;
+    c.y = rct.y + rct.h/2;
+
+    if (rotation_center == NULL) {
+        return c;
+    }
+    coordinates rc;
+    rc.x = rotation_center->x;
+    rc.y = rotation_center->y;
+    return findCenter(rct, angle, &rc);
+}
+
+coordinates findCenter(SDL_Rect rct, float angle, coordinates* rotation_center) {
+
+    coordinates c, rotated;
+    c.x = rct.x + rct.w/2;
+    c.y = rct.y + rct.h/2;
+
+    if (rotation_center == NULL) {
+        return c;
+    }
+    coordinates rc;
+    rc.x = rotation_center->x + rct.x;
+    rc.y = rotation_center->y + rct.y;
+
+    rotated = rotatePointByAngle(&c, angle, &rc);
+
+    return rotated;
 
 }
 
