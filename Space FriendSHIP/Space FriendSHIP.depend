@@ -2281,7 +2281,7 @@
 	<SDL2/SDL.h>
 	"Engine.h"
 
-1584348556 c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\include\artefact.h
+1585247008 c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\include\artefact.h
 	<SDL2/SDL.h>
 	<fstream>
 	<ctime>
@@ -2296,7 +2296,7 @@
 	<vector>
 	"Engine.h"
 
-1583258153 c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\include\dropper.h
+1585247008 c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\include\dropper.h
 	<stdlib.h>
 	<time.h>
 	<iostream>
@@ -2324,13 +2324,13 @@
 	"Artefact.h"
 	<fstream>
 
-1584349324 source:c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\src\artefact.cpp
+1585247007 source:c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\src\artefact.cpp
 	"Artefact.h"
 
 1583258151 source:c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\src\bullet.cpp
 	"Bullet.h"
 
-1583258150 source:c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\src\dropper.cpp
+1585247007 source:c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\src\dropper.cpp
 	"Dropper.h"
 
 1585237331 source:c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\src\enemy.cpp
@@ -2360,7 +2360,7 @@
 1583258150 source:c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\src\speedbooster.cpp
 	"SpeedBooster.h"
 
-1585238752 source:c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\src\world.cpp
+1585248181 source:c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\src\world.cpp
 	"World.h"
 
 1585152396 source:c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\src\gun.cpp

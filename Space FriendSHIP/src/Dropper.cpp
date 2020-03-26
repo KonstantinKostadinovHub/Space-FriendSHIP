@@ -21,6 +21,7 @@ void Dropper::init(string configName)
 
     stream >> tmp >> m_healthProb;
     stream >> tmp >> m_speedProb;
+    stream >> tmp >> m_slowProb;
 
     for(int i = 0; i < m_healthProb ; i++)
     {
@@ -30,6 +31,11 @@ void Dropper::init(string configName)
     {
         m_probabilities.push_back("speedbooster.txt");
     }
+    for(int i = 0; i < m_slowProb; i++)
+    {
+        m_probabilities.push_back("slowbooster.txt");
+    }
+
     stream.close();
 }
 
@@ -46,7 +52,9 @@ void Dropper::spawn(int SCREEN_WIDTH, int SCREEN_HEIGHT)
     {
         multiplayer = -1;
     }
+
     coordinates direction;
+
     switch(rand() % 4)
     {
     case 0:
@@ -74,6 +82,7 @@ void Dropper::spawn(int SCREEN_WIDTH, int SCREEN_HEIGHT)
         direction.y = (float(rand() % 9) * 0.1 + 0.1) * multiplayer;
         break;
     }
+
     m_type = m_probabilities[rand() % m_probabilities.size()];
     m_coor.x = spawn.x;
     m_coor.y = spawn.y;

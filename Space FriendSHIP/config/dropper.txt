@@ -1,3 +1,5 @@
 Health: 7
 
 Speed: 4
+
+Slow: 5

@@ -12,23 +12,27 @@
 
 class Dropper
 {
-    public:
-        Dropper();
-        virtual ~Dropper();
-        string m_configName;
-        int m_healthProb;
-        int m_speedProb;
-        vector <string> m_probabilities;
+public:
+    Dropper();
+    virtual ~Dropper();
 
-        string m_type;
-        string tmp;
-        coordinates m_coor;
-        coordinates m_direction;
+    string m_configName;
+    string m_type;
+    string tmp;
 
-        void init(string configName);
-        void spawn(int SCREEN_WIDTH, int SCREEN_HEIGHT);
-    protected:
+    int m_healthProb;
+    int m_speedProb;
+    int m_slowProb;
 
-    private:
+    vector <string> m_probabilities;
+
+    coordinates m_coor;
+    coordinates m_direction;
+
+    void init(string configName);
+    void spawn(int SCREEN_WIDTH, int SCREEN_HEIGHT);
+protected:
+
+private:
 };
 #endif // DROPPER_H

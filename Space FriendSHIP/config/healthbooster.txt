@@ -1,4 +1,4 @@
-size: 64 64
+size: 22 34
 
 image: Health-Booster.bmp
 

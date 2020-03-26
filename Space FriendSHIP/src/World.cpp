@@ -187,12 +187,17 @@ void World::collisionDamage()
             for(int p = 0; p < m_artefacts.size(); p++){
                 if(checkForCollisionBetweenObjects(m_players[i] -> m_objectRect, m_players[i]->m_rotationAngle, &m_players[i] ->m_center,
                                                    m_artefacts[p]->m_objectRect, 0, NULL)){
-                    if(m_artefacts[p] -> m_type == "healthbooster"){
+                    if(m_artefacts[p] -> m_configFile == "config\\healthbooster.txt"){
                         m_players[i] -> m_health += m_artefacts[p] -> m_actionEffect;
                         m_artefacts[p] -> m_health = 0;
 
                     }
-                    if(m_artefacts[p] -> m_type == "speedbooster"){
+                    if(m_artefacts[p] -> m_configFile == "config\\speedbooster.txt"){
+                        m_players[i] -> m_speed += m_artefacts[p] -> m_actionEffect;
+                        m_artefacts[p] -> m_health = 0;
+                    }
+                    if(m_artefacts[p] -> m_configFile == "config\\slowbooster.txt")
+                    {
                         m_players[i] -> m_speed += m_artefacts[p] -> m_actionEffect;
                         m_artefacts[p] -> m_health = 0;
                     }
@@ -338,21 +343,9 @@ void World::shootProjectiles()
 
 void World::addArtefact(string configFile,coordinates coor, coordinates direction)
 {
-    if(configFile == "healthbooster.txt")
-    {
-        Artefact* Hboost = new Artefact();
-        Hboost -> init(configFile, coor, direction,m_main_renderer);
-        Hboost -> m_type = "healthbooster";
-        m_artefacts.push_back(Hboost);
-
-    }
-    if(configFile == "speedbooster.txt")
-    {
-        Artefact* Sboost = new Artefact();
-        Sboost -> init(configFile, coor, direction,m_main_renderer);
-        Sboost -> m_type = "speedbooster";
-        m_artefacts.push_back(Sboost);
-    }
+    Artefact* artefact = new Artefact();
+    artefact -> init(configFile, coor, direction,m_main_renderer);
+    m_artefacts.push_back(artefact);
 }
 
 void World::drop()
