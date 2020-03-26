@@ -42,6 +42,7 @@ void Player::init(SDL_Renderer* renderer, string configFile, UpgradeManager* upg
     m_center.y = 10;
 
     m_maxhealth += upgradeManager->m_CurrentHealthUpgrade;
+    m_dashLenght += upgradeManager->m_CurrentDashUpgrade;
 
     if(s_gas == "W")
     {
@@ -164,7 +165,6 @@ void Player::draw(SDL_Renderer* renderer)
 void Player::checkForDash()
 {
     const Uint8 *state = SDL_GetKeyboardState(NULL);
-
 
     if(m_startDashCooldown + m_dashCooldown < time(NULL))
     {

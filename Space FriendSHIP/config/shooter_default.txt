@@ -13,3 +13,5 @@ speed: 4
 bulletConfig: bullet_default.txt
 
 Give_Points: 10
+
+CenterX: 9

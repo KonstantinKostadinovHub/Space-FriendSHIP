@@ -13,3 +13,5 @@ speed: 2
 bulletConfig: bullet_sniper.txt
 
 Give_Points: 50
+
+CenterX: 9

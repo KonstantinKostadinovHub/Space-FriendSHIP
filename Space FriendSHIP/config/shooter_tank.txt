@@ -13,3 +13,5 @@ speed: 1
 bulletConfig: bullet_tank.txt
 
 Give_Points: 50
+
+CenterX: 16

@@ -10,8 +10,12 @@ attack_speed: 0.5
 
 speed: 2
 
+bullet_name: bullet_zigzag.txt
+
 maxRotation: 60
 
 rotationFactor: 3
 
 Give_Points: 50
+
+CenterX: 20

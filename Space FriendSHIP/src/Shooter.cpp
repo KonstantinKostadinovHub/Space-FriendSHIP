@@ -24,6 +24,7 @@ void Shooter::init(string configFile, coordinates coor, float rotation, SDL_Rend
     stream >> tmp >> m_speed;
     stream >> tmp >> m_bulletName;
     stream >> tmp >> m_pointsGiven;
+    stream >> tmp >> m_center.x;
     stream.close();
 
     m_rotationAngle = rotation;
@@ -33,7 +34,6 @@ void Shooter::init(string configFile, coordinates coor, float rotation, SDL_Rend
     m_coor.x = m_objectRect.x;
     m_coor.y = m_objectRect.y;
 
-    m_center.x = m_objectRect.w/2;
     m_center.y = 0;
 
     Gun* gun = new Gun;

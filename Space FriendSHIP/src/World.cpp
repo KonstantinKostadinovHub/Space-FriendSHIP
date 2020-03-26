@@ -106,7 +106,7 @@ void World::update()
 
     shootProjectiles();
 
-    //collisionDamage();
+    collisionDamage();
 }
 
 void World::draw()
@@ -174,7 +174,7 @@ void World::collisionDamage()
                 if(checkForCollisionBetweenObjects(m_players[i]->m_objectRect, m_players[i]->m_rotationAngle, &m_players[i]->m_center,
                                                    m_enemies[j]->m_objectRect, m_enemies[j]->m_rotationAngle, &m_enemies[j]->m_center)){
                     m_players[i]->m_health -= m_enemies[j]->m_collisonDamage;
-                    m_enemies[j]->m_health -= m_players[i]->m_collisionDamage;
+                    m_enemies[j]->m_health -= m_players[i]->m_collisionDamage + m_upgradeManager->m_CurrentCollisionDamageUpgrade;
                 }
             }
             for(int k = 0; k < m_projectiles.size(); k++){
@@ -235,12 +235,9 @@ void World::addEnemy(string configFile, coordinates coor, float rotation)
 
 void World::addBullet(string configFile, coordinates coor, float rotation)
 {
-    if(configFile == "bullet_default.txt" || configFile == "bullet_sniper.txt" || configFile == "bullet_smg.txt" || configFile == "bullet_tank.txt" || configFile == "bullet_player.txt")
-    {
-        Projectile* proj = new Bullet();
-        proj -> init(configFile, coor, rotation, m_main_renderer);
-        m_projectiles.push_back(proj);
-    }
+    Projectile* proj = new Bullet();
+    proj -> init(configFile, coor, rotation, m_main_renderer);
+    m_projectiles.push_back(proj);
 }
 
 bool World::checkForCollisionBetweenObjects(SDL_Rect rect_no_rotation1, float angle1, SDL_Point* center1,

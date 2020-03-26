@@ -12,6 +12,8 @@ speed: 1
 
 Give_Points: 10
 
+CenterX: 16
+
 
 
 

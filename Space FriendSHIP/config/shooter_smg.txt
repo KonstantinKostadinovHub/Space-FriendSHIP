@@ -13,3 +13,5 @@ speed: 2
 bulletConfig: bullet_smg.txt
 
 Give_Points: 25
+
+CenterX: 23
