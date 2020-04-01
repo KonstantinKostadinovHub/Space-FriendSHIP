@@ -9,24 +9,24 @@
 
 class Gun
 {
-    public:
-        Gun();
-        virtual ~Gun();
+public:
+    Gun();
+    virtual ~Gun();
 
-        SDL_Rect m_objectRect;
-        struct coordinates m_coor;
-        float m_rotationAngle;
+    SDL_Rect m_objectRect;
+    struct coordinates m_coor;
+    float m_rotationAngle;
 
-        time_t m_startShootCooldown;
-        time_t m_shootCooldown;
-        bool m_cantShoot;
+    time_t m_startShootCooldown;
+    time_t m_shootCooldown;
+    bool m_cantShoot;
 
-        virtual void init(float attackSpeed);
-        virtual void update(float playerAng, coordinates playerCoor);
+    virtual void init(float attackSpeed);
+    virtual void update(float playerAng, coordinates playerCoor);
 
-    protected:
+protected:
 
-    private:
+private:
 };
 
 #endif // GUN_H

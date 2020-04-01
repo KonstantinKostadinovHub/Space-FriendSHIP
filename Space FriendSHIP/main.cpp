@@ -10,7 +10,8 @@ int main (int argc, char* argv[])
 {
     const Uint8 *state = SDL_GetKeyboardState(NULL);
     const Uint8 *state2 = SDL_GetKeyboardState(NULL);
-    while(1){
+    while(1)
+    {
         world.init("world.txt");
         world.endgame = false;
         bool quit = false;

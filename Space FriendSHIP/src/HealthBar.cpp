@@ -12,7 +12,8 @@ HealthBar::~HealthBar()
     SDL_DestroyTexture(m_healthTexture);
 }
 
-void HealthBar::init(string configFile){
+void HealthBar::init(string configFile)
+{
     m_configFile = "config//" + configFile;
 
     fstream stream;
@@ -23,10 +24,12 @@ void HealthBar::init(string configFile){
     m_healthImgFile = "img//" + m_healthImgFile;
 
 }
-void HealthBar::update(int health, int maxHealth){
-        HP = (float)health/(float)maxHealth;
+void HealthBar::update(int health, int maxHealth)
+{
+    HP = (float)health/(float)maxHealth;
 }
-void HealthBar::draw(SDL_Renderer* renderer){
+void HealthBar::draw(SDL_Renderer* renderer)
+{
     SDL_Surface* Loading_Surf = NULL;
     Loading_Surf = SDL_LoadBMP(m_borderFile.c_str());
     m_borderTexture = SDL_CreateTextureFromSurface(renderer, Loading_Surf);

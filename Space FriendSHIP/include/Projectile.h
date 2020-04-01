@@ -26,7 +26,8 @@ public:
 
     virtual void update();
     virtual void draw(SDL_Renderer* renderer);
-    virtual void init(string configFile, struct coordinates coor, float rotation, SDL_Renderer* renderer);
+    virtual void init(string configFile, coordinates coor, float rotation, Projectile* projectile);
+    virtual void load(string configFile, SDL_Renderer* renderer);
 
 protected:
 

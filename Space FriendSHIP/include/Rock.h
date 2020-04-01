@@ -7,14 +7,14 @@
 
 class Rock: public Enemy
 {
-    public:
-        Rock();
-        virtual ~Rock();
-        string tmp;
+public:
+    Rock();
+    virtual ~Rock();
+    string tmp;
 
-    protected:
+protected:
 
-    private:
+private:
 };
 
 #endif // ROCK_H

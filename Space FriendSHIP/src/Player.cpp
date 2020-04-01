@@ -105,7 +105,8 @@ void Player::update()
     const Uint8 *state = SDL_GetKeyboardState(NULL);
     m_screen_speed = m_speed  * SPEED_FACTOR;
 
-    if(state != NULL){
+    if(state != NULL)
+    {
 
         if (state[gas])
         {
@@ -154,6 +155,11 @@ void Player::update()
         m_guns[i] -> update(m_rotationAngle, playerCoor);
     }
 
+    if(m_health > m_maxhealth)
+    {
+        m_health = m_maxhealth;
+    }
+
 }
 
 void Player::draw(SDL_Renderer* renderer)
@@ -175,7 +181,9 @@ void Player::checkForDash()
         m_hasCooldown = true;
         m_startDashCooldown = time(NULL);
         m_canDash = true;
-    }else{
+    }
+    else
+    {
         m_canDash = false;
     }
 }

@@ -19,32 +19,23 @@ void Artefact::update()
     m_objectRect.y = (int)m_coor.y;
 }
 
-void Artefact::init(string configFile, coordinates coor, coordinates direction,SDL_Renderer* renderer)
+void Artefact::init(string configFile, coordinates coor, coordinates direction, Artefact* artefact)
 {
+    Artefact* model = artefact;
 
-    m_configFile = "config\\" + configFile;
-    fstream stream;
-    stream.open(m_configFile.c_str());
-
-    stream >> tmp >> m_objectRect.w >> m_objectRect.h;
-    stream >> tmp >> m_img;
-    stream >> tmp >> m_speed;
-    stream >> tmp >> m_FrameCount;
-    stream >> tmp >> m_actionEffect;
-    stream.close();
+    m_configFile = configFile;
+    m_objectRect = model -> m_objectRect;
+    m_speed = model -> m_speed;
+    m_FrameCount = model -> m_FrameCount;
+    m_actionEffect = model -> m_actionEffect;
+    m_objectTexture = model -> m_objectTexture;
 
     m_direction.x = direction.x;
     m_direction.y = direction.y;
     m_objectRect.x = coor.x;
     m_objectRect.y = coor.y;
-    m_img = "img\\" + m_img;
     m_coor.x = m_objectRect.x;
     m_coor.y = m_objectRect.y;
-
-    SDL_Surface* loadingSurface = SDL_LoadBMP(m_img.c_str());
-    m_objectTexture = SDL_CreateTextureFromSurface(renderer, loadingSurface);
-    SDL_FreeSurface(loadingSurface);
-
 }
 
 void Artefact::draw( SDL_Renderer* renderer)
@@ -68,4 +59,23 @@ void Artefact::draw( SDL_Renderer* renderer)
     }
     SDL_RenderCopy(renderer, m_objectTexture, &pictureRect, &m_objectRect);
 
+}
+
+void Artefact::load(string configFile, SDL_Renderer* renderer)
+{
+    m_configFile = "config\\" + configFile;
+    fstream stream;
+    stream.open(m_configFile.c_str());
+    stream >> tmp >> m_objectRect.w >> m_objectRect.h;
+    stream >> tmp >> m_img;
+    stream >> tmp >> m_speed;
+    stream >> tmp >> m_FrameCount;
+    stream >> tmp >> m_actionEffect;
+    stream.close();
+
+    m_img = "img\\" + m_img;
+
+    SDL_Surface* loadingSurface = SDL_LoadBMP(m_img.c_str());
+    m_objectTexture = SDL_CreateTextureFromSurface(renderer, loadingSurface);
+    SDL_FreeSurface(loadingSurface);
 }

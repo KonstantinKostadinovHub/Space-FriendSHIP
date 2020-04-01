@@ -5,22 +5,23 @@
 
 class ZigZag : public Shooter
 {
-    public:
-        ZigZag();
-        virtual ~ZigZag();
+public:
+    ZigZag();
+    virtual ~ZigZag();
 
-        float m_rotatedUntilNow;
-        float m_startRotation;
-        float m_maxRotation;
-        float m_rotationFactor;
-        bool m_rotateRight;
+    float m_rotatedUntilNow;
+    float m_startRotation;
+    float m_maxRotation;
+    float m_rotationFactor;
+    bool m_rotateRight;
 
-        virtual void init(string configFile, coordinates coor, float rotation, SDL_Renderer* renderer);
-        virtual void update();
-        virtual void draw(SDL_Renderer* renderer);
-    protected:
+    virtual void init(string configFile, coordinates coor, float rotation, ZigZag* zigzag);
+    virtual void load(string configFile, SDL_Renderer* renderer);
+    virtual void update();
+    virtual void draw(SDL_Renderer* renderer);
+protected:
 
-    private:
+private:
 };
 
 #endif // ZIGZAG_H

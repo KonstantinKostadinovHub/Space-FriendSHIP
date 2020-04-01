@@ -41,6 +41,7 @@
 		</Linker>
 		<Unit filename="include/Artefact.h" />
 		<Unit filename="include/Bullet.h" />
+		<Unit filename="include/ConfigManager.h" />
 		<Unit filename="include/Dropper.h" />
 		<Unit filename="include/Enemy.h" />
 		<Unit filename="include/Engine.h" />
@@ -58,6 +59,7 @@
 		<Unit filename="main.cpp" />
 		<Unit filename="src/Artefact.cpp" />
 		<Unit filename="src/Bullet.cpp" />
+		<Unit filename="src/ConfigManager.cpp" />
 		<Unit filename="src/Dropper.cpp" />
 		<Unit filename="src/Enemy.cpp" />
 		<Unit filename="src/Engine.cpp" />

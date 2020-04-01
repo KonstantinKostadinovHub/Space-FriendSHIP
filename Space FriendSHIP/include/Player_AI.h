@@ -6,29 +6,29 @@
 
 class Player_AI : public Player
 {
-    public:
-        Player_AI();
-        virtual ~Player_AI();
+public:
+    Player_AI();
+    virtual ~Player_AI();
 
-        SDL_Rect m_desiredPos;
-        const int MIN_DIST = 135;
-        int m_clockwise;
-        int m_indexOfEngagement;
-        bool m_follow;
-        chrono::high_resolution_clock::time_point m_elapsed_shoot;
-        chrono::high_resolution_clock::time_point m_elapsed_engage;
-        chrono::duration<float> m_shootingRate;
-        chrono::duration<float> m_engagementRate;
+    SDL_Rect m_desiredPos;
+    const int MIN_DIST = 135;
+    int m_clockwise;
+    int m_indexOfEngagement;
+    bool m_follow;
+    chrono::high_resolution_clock::time_point m_elapsed_shoot;
+    chrono::high_resolution_clock::time_point m_elapsed_engage;
+    chrono::duration<float> m_shootingRate;
+    chrono::duration<float> m_engagementRate;
 
-        virtual void init(string config, SDL_Renderer* renderer);
-        virtual void update();
-        virtual void draw(SDL_Renderer* renderer);
-    protected:
+    virtual void init(string config, SDL_Renderer* renderer);
+    virtual void update();
+    virtual void draw(SDL_Renderer* renderer);
+protected:
 
-    private:
-        void engage();
-        void moveToTarget();
-        void shoot();
+private:
+    void engage();
+    void moveToTarget();
+    void shoot();
 };
 
 #endif // PLAYER_AI_H

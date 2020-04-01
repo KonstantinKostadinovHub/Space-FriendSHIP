@@ -42,7 +42,8 @@ public:
 
     vector <Gun*> m_guns;
 
-    virtual void init(string configFile, coordinates coor, float rotation, SDL_Renderer* renderer);
+    virtual void init(string configFile, coordinates coor, float rotation, Enemy* enemy);
+    virtual void load(string configFile, SDL_Renderer* renderer);
     virtual void update();
     virtual void draw(SDL_Renderer* renderer);
     virtual void dealDamage(int damage);

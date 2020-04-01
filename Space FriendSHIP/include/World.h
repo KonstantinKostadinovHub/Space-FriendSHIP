@@ -13,16 +13,17 @@
 #include "Artefact.h"
 #include "Player_AI.h"
 
-#include "Engine.h"
-#include "Spawner.h"
-#include "Dropper.h"
-#include "UpgradeManager.h"
-
 #include "Rock.h"
 #include "Shooter.h"
 #include "ZigZag.h"
 
 #include "Bullet.h"
+
+#include "Engine.h"
+#include "Spawner.h"
+#include "Dropper.h"
+#include "UpgradeManager.h"
+#include "ConfigManager.h"
 
 using namespace std;
 
@@ -40,6 +41,7 @@ public:
     Spawner* m_spawnManager;
     Dropper* m_dropper;
     UpgradeManager* m_upgradeManager;
+    ConfigManager* m_configManager;
 
     string m_configFile;
     string tmp;
@@ -71,7 +73,7 @@ public:
     bool endgame = false;
     bool m_drop;
     bool checkForCollisionBetweenObjects(SDL_Rect rect_no_rotation1, float angle1, SDL_Point* center1,
-                                        SDL_Rect rect_no_rotation2, float angle2, SDL_Point* center2);
+                                         SDL_Rect rect_no_rotation2, float angle2, SDL_Point* center2);
     bool checkIfOffBounds(SDL_Rect rect);
 
     int m_wallet;

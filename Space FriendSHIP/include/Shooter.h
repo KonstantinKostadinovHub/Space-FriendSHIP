@@ -5,14 +5,15 @@
 
 class Shooter : public Enemy
 {
-    public:
-        Shooter();
-        virtual ~Shooter();
+public:
+    Shooter();
+    virtual ~Shooter();
 
-        virtual void init(string configFile, coordinates coor, float rotation, SDL_Renderer* renderer);
-    protected:
+    virtual void init(string configFile, coordinates coor, float rotation, Shooter* enemy);
+    virtual void load(string configFile, SDL_Renderer* renderer);
+protected:
 
-    private:
+private:
 };
 
 #endif // SHOOTER_H

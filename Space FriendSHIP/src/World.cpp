@@ -5,6 +5,7 @@ World::World()
     m_dropper = new Dropper;
     m_spawnManager = new Spawner;
     m_upgradeManager = new UpgradeManager;
+    m_configManager = new ConfigManager;
 }
 
 World::~World()
@@ -30,10 +31,6 @@ void World::init(string configFile)
     stream >> tmp >> m_dropCooldown;
     stream.close();
 
-    m_spawnManager -> init("spawner.txt");
-    m_dropper -> init("dropper.txt");
-    m_upgradeManager -> init("upgrade_manager.txt");
-
     m_startDropCooldown = time(NULL);
     m_startSpawnCooldown = time(NULL);
 
@@ -41,6 +38,11 @@ void World::init(string configFile)
 
     m_main_window = SDL_CreateWindow("Space FriendSHIP", SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, m_SCREEN_WIDTH, m_SCREEN_HEIGHT, 0);
     m_main_renderer = SDL_CreateRenderer(m_main_window, -1, SDL_RENDERER_ACCELERATED);
+
+    m_spawnManager -> init("spawner.txt");
+    m_dropper -> init("dropper.txt");
+    m_upgradeManager -> init("upgrade_manager.txt");
+    m_configManager -> init("config_manager.txt", m_main_renderer);
 
     SDL_Surface* loadingSurface = SDL_LoadBMP("img\\background.bmp");
     m_backgroundTexture = SDL_CreateTextureFromSurface(m_main_renderer, loadingSurface);
@@ -170,49 +172,59 @@ void World::collisionDamage()
 {
     for(int i = 0; i < m_players.size(); i++)
     {
-            for(int j = 0; j < m_enemies.size(); j++){
-                if(checkForCollisionBetweenObjects(m_players[i]->m_objectRect, m_players[i]->m_rotationAngle, &m_players[i]->m_center,
-                                                   m_enemies[j]->m_objectRect, m_enemies[j]->m_rotationAngle, &m_enemies[j]->m_center)){
-                    m_players[i]->m_health -= m_enemies[j]->m_collisonDamage;
-                    m_enemies[j]->m_health -= m_players[i]->m_collisionDamage + m_upgradeManager->m_CurrentCollisionDamageUpgrade;
-                }
+        for(int j = 0; j < m_enemies.size(); j++)
+        {
+            if(checkForCollisionBetweenObjects(m_players[i]->m_objectRect, m_players[i]->m_rotationAngle, &m_players[i]->m_center,
+                                               m_enemies[j]->m_objectRect, m_enemies[j]->m_rotationAngle, &m_enemies[j]->m_center))
+            {
+                m_players[i]->m_health -= m_enemies[j]->m_collisonDamage;
+                m_enemies[j]->m_health -= m_players[i]->m_collisionDamage + m_upgradeManager->m_CurrentCollisionDamageUpgrade;
             }
-            for(int k = 0; k < m_projectiles.size(); k++){
-                if(checkForCollisionBetweenObjects(m_players[i]->m_objectRect, m_players[i]->m_rotationAngle,&m_players[i]->m_center,
-                                                   m_projectiles[k]->m_objectRect,m_projectiles[k]->m_rotationAngle, NULL)){
-                    m_players[i]->m_health -= m_projectiles[k]->m_collisonDamage;
-                    m_projectiles[k]->m_health = 0;
-                }
+        }
+        for(int k = 0; k < m_projectiles.size(); k++)
+        {
+            if(checkForCollisionBetweenObjects(m_players[i]->m_objectRect, m_players[i]->m_rotationAngle,&m_players[i]->m_center,
+                                               m_projectiles[k]->m_objectRect,m_projectiles[k]->m_rotationAngle, NULL))
+            {
+                m_players[i]->m_health -= m_projectiles[k]->m_collisonDamage;
+                m_projectiles[k]->m_health = 0;
             }
-            for(int p = 0; p < m_artefacts.size(); p++){
-                if(checkForCollisionBetweenObjects(m_players[i] -> m_objectRect, m_players[i]->m_rotationAngle, &m_players[i] ->m_center,
-                                                   m_artefacts[p]->m_objectRect, 0, NULL)){
-                    if(m_artefacts[p] -> m_configFile == "config\\healthbooster.txt"){
-                        m_players[i] -> m_health += m_artefacts[p] -> m_actionEffect;
-                        m_artefacts[p] -> m_health = 0;
+        }
+        for(int p = 0; p < m_artefacts.size(); p++)
+        {
+            if(checkForCollisionBetweenObjects(m_players[i] -> m_objectRect, m_players[i]->m_rotationAngle, &m_players[i] ->m_center,
+                                               m_artefacts[p]->m_objectRect, 0, NULL))
+            {
+                if(m_artefacts[p] -> m_configFile == "healthbooster.txt")
+                {
+                    m_players[i] -> m_health += m_artefacts[p] -> m_actionEffect;
+                    m_artefacts[p] -> m_health = 0;
 
-                    }
-                    if(m_artefacts[p] -> m_configFile == "config\\speedbooster.txt"){
-                        m_players[i] -> m_speed += m_artefacts[p] -> m_actionEffect;
-                        m_artefacts[p] -> m_health = 0;
-                    }
-                    if(m_artefacts[p] -> m_configFile == "config\\slowbooster.txt")
-                    {
-                        m_players[i] -> m_speed += m_artefacts[p] -> m_actionEffect;
-                        m_artefacts[p] -> m_health = 0;
-                    }
+                }
+                if(m_artefacts[p] -> m_configFile == "speedbooster.txt")
+                {
+                    m_players[i] -> m_speed += m_artefacts[p] -> m_actionEffect;
+                    m_artefacts[p] -> m_health = 0;
+                }
+                if(m_artefacts[p] -> m_configFile == "slowbooster.txt")
+                {
+                    m_players[i] -> m_speed += m_artefacts[p] -> m_actionEffect;
+                    m_artefacts[p] -> m_health = 0;
                 }
             }
+        }
     }
 
-    for(int m = 0; m < m_enemies.size(); m++){
-        for(int n = 0; n < m_projectiles.size(); n++){
+    for(int m = 0; m < m_enemies.size(); m++)
+    {
+        for(int n = 0; n < m_projectiles.size(); n++)
+        {
             if(checkForCollisionBetweenObjects(m_enemies[m]->m_objectRect, m_enemies[m]->m_rotationAngle, &m_enemies[m]->m_center,
-                                               m_projectiles[n]->m_objectRect, m_projectiles[n]->m_rotationAngle, NULL)){
+                                               m_projectiles[n]->m_objectRect, m_projectiles[n]->m_rotationAngle, NULL))
+            {
                 m_enemies[m]->m_health -= m_projectiles[n]->m_collisonDamage;
-                m_projectiles[n]->m_health=0;
-
-               }
+                m_projectiles[n]->m_health = 0;
+            }
         }
     }
 
@@ -220,33 +232,101 @@ void World::collisionDamage()
 
 void World::addEnemy(string configFile, coordinates coor, float rotation)
 {
-    if(configFile == "rock.txt")
+    Enemy* model;
+    Enemy* enemy;
+    if(configFile == "rock")
     {
-        Enemy* enemy = new Rock();
-        enemy -> init(configFile, coor, rotation, m_main_renderer);
-        m_enemies.push_back(enemy);
-    }else if (configFile == "shooter_default.txt" || configFile == "shooter_sniper.txt" || configFile == "shooter_smg.txt" || configFile == "shooter_tank.txt")
-    {
-        Enemy* enemy = new Shooter();
-        enemy -> init(configFile, coor, rotation, m_main_renderer);
-        m_enemies.push_back(enemy);
-    }else if (configFile == "zigzag.txt")
-    {
-        Enemy* enemy = new ZigZag();
-        enemy -> init(configFile, coor, rotation, m_main_renderer);
-        m_enemies.push_back(enemy);
+        model = m_configManager -> m_rock;
+        enemy = new Enemy;
     }
+    else if (configFile == "shooter_default")
+    {
+        model = m_configManager -> m_shooter_default;
+        enemy = new Shooter;
+    }
+    else if (configFile == "shooter_sniper")
+    {
+        model = m_configManager -> m_shooter_sniper;
+        enemy = new Shooter;
+    }
+    else if(configFile == "shooter_tank")
+    {
+        model = m_configManager -> m_shooter_tank;
+        enemy = new Shooter;
+    }
+    else if(configFile == "shooter_smg")
+    {
+        model = m_configManager -> m_shooter_smg;
+        enemy = new Shooter;
+    }
+    else if (configFile == "zigzag")
+    {
+        model = m_configManager -> m_zigzag;
+        enemy = new ZigZag;
+        cout << "WORLD 266" << endl;
+    }
+    enemy -> init(configFile, coor, rotation, model);
+    m_enemies.push_back(enemy);
 }
 
 void World::addBullet(string configFile, coordinates coor, float rotation)
 {
+    Projectile* model;
+
+    if(configFile == "bullet_default.txt")
+    {
+        model = m_configManager->m_bullet_deafult;
+    }
+    else if(configFile == "bullet_tank.txt")
+    {
+        model = m_configManager->m_bullet_tank;
+    }
+    else if(configFile == "bullet_sniper.txt")
+    {
+        model = m_configManager->m_bullet_sniper;
+    }
+    else if(configFile == "bullet_smg.txt")
+    {
+        model = m_configManager->m_bullet_smg;
+    }
+    else if(configFile == "bullet_zigzag.txt")
+    {
+        model = m_configManager->m_bullet_zigzag;
+    }
+    else if(configFile == "bullet_player.txt")
+    {
+        model = m_configManager->m_bullet_player;
+    }
+
     Projectile* proj = new Bullet();
-    proj -> init(configFile, coor, rotation, m_main_renderer);
+    proj -> init(configFile, coor, rotation, model);
     m_projectiles.push_back(proj);
 }
 
+void World::addArtefact(string configFile,coordinates coor, coordinates direction)
+{
+    Artefact* model;
+
+    if(configFile == "healthbooster.txt")
+    {
+        model = m_configManager -> m_healthBooster;
+    }
+    else if(configFile == "speedbooster.txt")
+    {
+        model = m_configManager -> m_speedBooster;
+    }
+    else if(configFile == "slowbooster.txt")
+    {
+        model = m_configManager -> m_slowBooster;
+    }
+
+    Artefact* artefact = new Artefact();
+    artefact -> init(configFile, coor, direction, model);
+    m_artefacts.push_back(artefact);
+}
+
 bool World::checkForCollisionBetweenObjects(SDL_Rect rect_no_rotation1, float angle1, SDL_Point* center1,
-                                            SDL_Rect rect_no_rotation2, float angle2, SDL_Point* center2)
+        SDL_Rect rect_no_rotation2, float angle2, SDL_Point* center2)
 {
     bool colide = false;
     coordinates c1, c2;
@@ -262,6 +342,7 @@ bool World::checkForCollisionBetweenObjects(SDL_Rect rect_no_rotation1, float an
 
     return (a_2 + b_2 <= c*c/2);
 }
+
 bool World::checkIfOffBounds(SDL_Rect rect)
 {
     if (rect.x + rect.w > m_SCREEN_WIDTH)
@@ -318,7 +399,8 @@ void World::shootProjectiles()
     {
         for(int j = 0; j < m_enemies[i] -> m_guns.size(); j++)
         {
-            if(!m_enemies[i] -> m_guns[j] -> m_cantShoot){
+            if(!m_enemies[i] -> m_guns[j] -> m_cantShoot)
+            {
                 struct coordinates buff;
                 buff.x = m_enemies[i] -> m_guns[j] -> m_objectRect.x;
                 buff.y = m_enemies[i] -> m_guns[j] -> m_objectRect.y;
@@ -331,7 +413,8 @@ void World::shootProjectiles()
     {
         for(int j = 0; j < m_players[i] -> m_guns.size(); j++)
         {
-            if(!m_players[i] -> m_guns[j] -> m_cantShoot){
+            if(!m_players[i] -> m_guns[j] -> m_cantShoot)
+            {
                 struct coordinates buff;
                 buff.x = m_players[i] -> m_guns[j] -> m_objectRect.x;
                 buff.y = m_players[i] -> m_guns[j] -> m_objectRect.y;
@@ -339,13 +422,6 @@ void World::shootProjectiles()
             }
         }
     }
-}
-
-void World::addArtefact(string configFile,coordinates coor, coordinates direction)
-{
-    Artefact* artefact = new Artefact();
-    artefact -> init(configFile, coor, direction,m_main_renderer);
-    m_artefacts.push_back(artefact);
 }
 
 void World::drop()
@@ -356,7 +432,7 @@ void World::drop()
 
 void World::cleaner()
 {
-for(int i = 0; i < m_players.size(); i++)
+    for(int i = 0; i < m_players.size(); i++)
     {
         if(m_players[i] -> m_health <= 0)
         {
@@ -385,7 +461,7 @@ for(int i = 0; i < m_players.size(); i++)
         }
     }
     for(int i = 0; i < m_projectiles.size(); i++)
-        {
+    {
         if(m_projectiles[i] -> m_health <= 0 ||checkIfOffBounds(m_projectiles[i] -> m_objectRect))
         {
             m_projectiles.erase(m_projectiles.begin() + i);
@@ -393,13 +469,13 @@ for(int i = 0; i < m_players.size(); i++)
         }
     }
     for(int i = 0; i < m_artefacts.size(); i++)
-        {
+    {
         if(checkIfOffBounds(m_artefacts[i] -> m_objectRect) || m_artefacts[i]->m_health <= 0 )
         {
             m_artefacts.erase(m_artefacts.begin() + i);
             i--;
         }
-   }
+    }
 }
 
 void World::saveProgress()
@@ -423,12 +499,14 @@ void World::AddCoins(Enemy* enemy)
     m_coins += enemy -> m_pointsGiven + m_upgradeManager->m_CurrentCoinsMultiplierUpgrade;
 }
 
-void World::chooseGameMode(){
+void World::chooseGameMode()
+{
     if(m_menuImg == m_menuImg2)
     {
         addPlayer (m_main_renderer, "player1.txt");
         addPlayerAI (m_main_renderer,"playerAI.txt");
-    }else if(m_menuImg == m_menuImg3)
+    }
+    else if(m_menuImg == m_menuImg3)
     {
         addPlayer (m_main_renderer, "player2.txt");
         addPlayer (m_main_renderer, "player1.txt");

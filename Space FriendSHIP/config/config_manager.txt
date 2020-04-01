@@ -1,0 +1,29 @@
+rock_config: rock.txt
+
+shooter_default_config: shooter_default.txt
+
+shooter_sniper_config: shooter_sniper.txt
+
+shooter_tank_config: shooter_tank.txt
+
+shooter_smg_config: shooter_smg.txt
+
+zigzag_config: zigzag.txt
+
+bullet_default_config: bullet_default.txt
+
+bullet_sniper_config: bullet_sniper.txt
+
+bullet_tank_config: bullet_tank.txt
+
+bullet_smg_config: bullet_smg.txt
+
+bullet_zigzag_config: bullet_zigzag.txt
+
+bullet_player_config: bullet_player.txt
+
+healthbooster_config: healthbooster.txt
+
+speedbooster_config: speedbooster.txt
+
+slowbooster_config: slowbooster.txt

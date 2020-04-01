@@ -12,32 +12,32 @@
 
 class Spawner
 {
-    public:
-        Spawner();
-        virtual ~Spawner();
+public:
+    Spawner();
+    virtual ~Spawner();
 
-        string m_type;
-        string m_configName;
-        string tmp;
+    string m_type;
+    string m_configName;
+    string tmp;
 
-        int m_rockProb;
-        int m_shooterDefaultProb;
-        int m_shooterSniperProb;
-        int m_shooterTankProb;
-        int m_shooterSMGProb;
-        int m_zigZagProb;
+    int m_rockProb;
+    int m_shooterDefaultProb;
+    int m_shooterSniperProb;
+    int m_shooterTankProb;
+    int m_shooterSMGProb;
+    int m_zigZagProb;
 
-        vector <string> m_probabilities;
+    vector <string> m_probabilities;
 
-        coordinates m_coor;
-        coordinates m_direction;
+    coordinates m_coor;
+    coordinates m_direction;
 
-        void init(string configName);
-        void spawn(int SCREEN_WIDTH, int SCREEN_HEIGHT);
+    void init(string configName);
+    void spawn(int SCREEN_WIDTH, int SCREEN_HEIGHT);
 
-    protected:
+protected:
 
-    private:
+private:
 };
 
 #endif // SPAWNER_H
