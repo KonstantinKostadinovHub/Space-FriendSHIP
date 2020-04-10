@@ -52,6 +52,7 @@
 		<Unit filename="include/Projectile.h" />
 		<Unit filename="include/Rock.h" />
 		<Unit filename="include/Shooter.h" />
+		<Unit filename="include/Shop.h" />
 		<Unit filename="include/Spawner.h" />
 		<Unit filename="include/UpgradeManager.h" />
 		<Unit filename="include/World.h" />
@@ -70,6 +71,7 @@
 		<Unit filename="src/Projectile.cpp" />
 		<Unit filename="src/Rock.cpp" />
 		<Unit filename="src/Shooter.cpp" />
+		<Unit filename="src/Shop.cpp" />
 		<Unit filename="src/Spawner.cpp" />
 		<Unit filename="src/UpgradeManager.cpp" />
 		<Unit filename="src/World.cpp" />

@@ -6,6 +6,7 @@ World::World()
     m_spawnManager = new Spawner;
     m_upgradeManager = new UpgradeManager;
     m_configManager = new ConfigManager;
+    m_shop = new Shop;
 }
 
 World::~World()
@@ -43,6 +44,7 @@ void World::init(string configFile)
     m_dropper -> init("dropper.txt");
     m_upgradeManager -> init("upgrade_manager.txt");
     m_configManager -> init("config_manager.txt", m_main_renderer);
+    m_shop -> init("shop.txt", m_configManager, m_main_renderer, &mouseX, &mouseY, &mouseIsPressed, &m_wallet);
 
     SDL_Surface* loadingSurface = SDL_LoadBMP("img\\background.bmp");
     m_backgroundTexture = SDL_CreateTextureFromSurface(m_main_renderer, loadingSurface);
@@ -385,6 +387,7 @@ void World::menu()
         m_menuImg = m_menuImg2;
     }
 
+    //NEEDS OPTIMIZATION
     SDL_Texture* m_MenuTx;
     SDL_Surface* loadingMenu = SDL_LoadBMP(m_menuImg.c_str());
     m_MenuTx = SDL_CreateTextureFromSurface(m_main_renderer, loadingMenu);
@@ -511,4 +514,10 @@ void World::chooseGameMode()
         addPlayer (m_main_renderer, "player2.txt");
         addPlayer (m_main_renderer, "player1.txt");
     }
+}
+
+void World::shop()
+{
+    m_shop->update();
+    m_shop->draw();
 }

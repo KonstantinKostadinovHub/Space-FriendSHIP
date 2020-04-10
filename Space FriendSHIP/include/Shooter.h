@@ -9,7 +9,7 @@ public:
     Shooter();
     virtual ~Shooter();
 
-    virtual void init(string configFile, coordinates coor, float rotation, Shooter* enemy);
+    virtual void init(string configFile, coordinates coor, float rotation, Enemy* enemy);
     virtual void load(string configFile, SDL_Renderer* renderer);
 protected:
 

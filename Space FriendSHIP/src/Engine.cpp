@@ -111,3 +111,24 @@ float LoadFromFile(string file)
     stream.close();
     return result;
 }
+
+SDL_Texture* LoadTexture(string file, SDL_Renderer* renderer)
+{
+    SDL_Texture* objectTexture;
+    file = "img\\" + file;
+
+    SDL_Surface* loadingSurface = SDL_LoadBMP(file.c_str());
+    objectTexture = SDL_CreateTextureFromSurface(renderer, loadingSurface);
+    SDL_FreeSurface(loadingSurface);
+
+    return objectTexture;
+}
+
+bool checkForMouseCollision(int mouseX, int mouseY, SDL_Rect object)
+{
+    if(mouseX > object.x && mouseX < object.x + object.w && mouseY > object.y && mouseY < object.y + object.h)
+    {
+        return true;
+    }
+    return false;
+}

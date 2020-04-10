@@ -13,7 +13,8 @@ Projectile::~Projectile()
 void Projectile::init(string configFile, struct coordinates coor, float rotation, Projectile* projectile)
 {
 
-    m_objectRect = projectile -> m_objectRect;
+    m_objectRect.w = projectile -> m_objectRect.w;
+    m_objectRect.h = projectile -> m_objectRect.h;
     m_health = projectile -> m_health;
     m_speed = projectile -> m_speed;
     m_collisonDamage = projectile -> m_collisonDamage;

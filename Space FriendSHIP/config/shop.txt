@@ -1,0 +1,38 @@
+spacing: 50
+frameRect: 216 318
+imgRect: 192 192
+coordinates: 100 50
+background: background.bmp
+numberOFPrices: 8
+
+Number_Of_Ability_Images: 8
+
+healthUpgrade.bmp
+25 50 75 100 125 150 175 200
+moneyUpgrade.bmp
+25 50 75 100 125 150 175 200
+dashUpgrade.bmp
+25 50 75 100 125 150 175 200
+collisionDamageUpgrade.bmp
+25 50 75 100 125 150 175 200
+healthBoosterUpgrade.bmp
+25 50 75 100 125 150 175 200
+shieldBoosterUpgrade.bmp
+25 50 75 100 125 150 175 200
+bulletDamageUpgrade.bmp
+25 50 75 100 125 150 175 200
+bulletSpeedUpgrade.bmp
+25 50 75 100 125 150 175 200
+
+Number_Of_Update_Frame_States: 9
+
+basic_Shop_Item_0.bmp
+basic_Shop_Item_1.bmp
+basic_Shop_Item_2.bmp
+basic_Shop_Item_3.bmp
+basic_Shop_Item_4.bmp
+basic_Shop_Item_5.bmp
+basic_Shop_Item_6.bmp
+basic_Shop_Item_7.bmp
+basic_Shop_Item_8.bmp
+

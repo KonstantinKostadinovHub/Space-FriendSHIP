@@ -10,20 +10,23 @@ Shooter::~Shooter()
     //dtor
 }
 
-void Shooter::init(string configFile, coordinates coor, float rotation, Shooter* enemy)
+void Shooter::init(string configFile, coordinates coor, float rotation, Enemy* enemy)
 {
-    cout << "SHOOTER 15" << endl;
+    Shooter* shooter = (Shooter*)enemy;
 
-    m_objectRect = enemy -> m_objectRect;
-    m_health = enemy -> m_health;
-    m_collisonDamage = enemy -> m_collisonDamage;
-    m_attackSpeed = enemy -> m_attackSpeed;
-    m_speed = enemy -> m_speed;
-    m_bulletName = enemy -> m_bulletName;
-    m_pointsGiven = enemy -> m_pointsGiven;
-    m_center = enemy -> m_center;
-    m_objectTexture = enemy -> m_objectTexture;
-    m_guns = enemy -> m_guns;
+    m_objectRect = shooter -> m_objectRect;
+    m_health = shooter -> m_health;
+    m_collisonDamage = shooter -> m_collisonDamage;
+    m_speed = shooter -> m_speed;
+    m_attackSpeed = shooter -> m_attackSpeed;
+    m_bulletName = shooter -> m_bulletName;
+    m_pointsGiven = shooter -> m_pointsGiven;
+    m_center = shooter -> m_center;
+    m_objectTexture = shooter -> m_objectTexture;
+
+    Gun* gun = new Gun;
+    gun->init(m_attackSpeed);
+    m_guns.push_back(gun);
 
     m_rotationAngle = rotation;
     m_objectRect.x = coor.x;
@@ -49,10 +52,6 @@ void Shooter::load(string configFile, SDL_Renderer* renderer)
     stream.close();
 
     m_center.y = 0;
-
-    Gun* gun = new Gun;
-    gun->init(m_attackSpeed);
-    m_guns.push_back(gun);
 
     m_img = "img\\" + m_img;
 

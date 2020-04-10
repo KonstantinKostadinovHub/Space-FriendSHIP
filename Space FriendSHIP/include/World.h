@@ -24,6 +24,7 @@
 #include "Dropper.h"
 #include "UpgradeManager.h"
 #include "ConfigManager.h"
+#include "Shop.h"
 
 using namespace std;
 
@@ -42,6 +43,7 @@ public:
     Dropper* m_dropper;
     UpgradeManager* m_upgradeManager;
     ConfigManager* m_configManager;
+    Shop* m_shop;
 
     string m_configFile;
     string tmp;
@@ -54,6 +56,9 @@ public:
 
     int m_SCREEN_WIDTH;
     int m_SCREEN_HEIGHT;
+
+    int mouseX, mouseY;
+    bool mouseIsPressed;
 
     int m_points;
     int m_highScore;
@@ -82,23 +87,24 @@ public:
     void destroy();
     void update();
     void draw();
-    void addPlayer(SDL_Renderer* renderer, string configFile);
-    void addPlayerAI(SDL_Renderer* renderer, string configFile);
     void collisionDamage();
+    void cleaner();
+    void shootProjectiles();
+    void spawn();
+    void drop();
     void addEnemy(string configFile, coordinates coor, float rotation);
     void addBullet(string configFile, coordinates coor, float rotation);
-    void cleaner();
-    void spawn();
-    void endgameScreen();
-    void menu();
-    void shootProjectiles();
     void addArtefact(string configFile,coordinates coor, coordinates direction);
-    void drop();
-    void saveProgress();
-    void loadProgress();
+    void addPlayer(SDL_Renderer* renderer, string configFile);
+    void addPlayerAI(SDL_Renderer* renderer, string configFile);
     void AddPoints(Enemy* enemy);
     void AddCoins (Enemy* enemy);
     void chooseGameMode();
+    void menu();
+    void endgameScreen();
+    void saveProgress();
+    void loadProgress();
+    void shop();
 
 protected:
 

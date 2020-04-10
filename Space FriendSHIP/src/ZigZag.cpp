@@ -11,9 +11,11 @@ ZigZag::~ZigZag()
     //dtor
 }
 
-void ZigZag::init(string configFile, coordinates coor, float rotation, ZigZag* zigzag)
+void ZigZag::init(string configFile, coordinates coor, float rotation, Enemy* enemy)
 {
     m_configFile = configFile;
+
+    ZigZag* zigzag = (ZigZag*)enemy;
 
     m_objectRect = zigzag -> m_objectRect;
     m_health = zigzag -> m_health;
