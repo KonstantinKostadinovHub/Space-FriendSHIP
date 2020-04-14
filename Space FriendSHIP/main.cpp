@@ -11,9 +11,10 @@ int main (int argc, char* argv[])
     const Uint8 *state = SDL_GetKeyboardState(NULL);
     const Uint8 *state2 = SDL_GetKeyboardState(NULL);
 
+    world.init("world.txt");
     while(1)
     {
-        world.init("world.txt");
+        world.initSession();
         world.endgame = false;
         bool quit = false;
 
@@ -69,8 +70,9 @@ int main (int argc, char* argv[])
         SDL_Delay(500);
         world.endgameScreen();
         SDL_Delay(8000);
-        world.destroy();
+        world.destroySession();
     }
+    world.destroy();
 
     return 0;
 }

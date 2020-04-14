@@ -133,6 +133,36 @@ bool checkForMouseCollision(int mouseX, int mouseY, SDL_Rect object)
     return false;
 }
 
+bool checkIfOffBounds(SDL_Rect rect, int SCREEN_WIDTH, int SCREEN_HEIGHT)
+{
+    if (rect.x + rect.w > SCREEN_WIDTH)
+        return true;
+    if (rect.x < 0)
+        return true;
+    if (rect.y + rect.h > SCREEN_HEIGHT)
+        return true;
+    if (rect.y < 0)
+        return true;
+    return false;
+}
+
+bool checkForCollisionBetweenObjects(SDL_Rect rect_no_rotation1, float angle1, SDL_Point* center1,
+        SDL_Rect rect_no_rotation2, float angle2, SDL_Point* center2)
+{
+    bool colide = false;
+    coordinates c1, c2;
+
+    c1 = findCenter(rect_no_rotation1, angle1, center1);
+    c2 = findCenter(rect_no_rotation2, angle2, center2);
+
+    float a_2 = (c1.x - c2.x)*(c1.x - c2.x);
+    float b_2 = (c1.y - c2.y)*(c1.y - c2.y);
+    float c   = hypot(rect_no_rotation1.h,rect_no_rotation1.w)/2 +
+                hypot(rect_no_rotation2.h,rect_no_rotation2.w)/2;
+
+    return (a_2 + b_2 <= c*c/2);
+}
+
 UIElement* LoadUIElement(string file, SDL_Renderer* render)
 {
     UIElement* buff = new UIElement;

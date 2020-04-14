@@ -197,7 +197,7 @@ void World::collisionDamage()
             {
                 m_players[i]->m_health -= m_enemies[j]->m_collisonDamage;
                 m_enemies[j]->m_health -= m_players[i]->m_collisionDamage + m_upgradeManager->m_CurrentCollisionDamageUpgrade;
-                addAnimation("explosion.txt",m_enemies[j]->m_coor,m_main_renderer,0);
+                addAnimation("explosion.txt",m_enemies[j]->m_coor,m_main_renderer, NULL);
 
             }
         }
@@ -354,35 +354,12 @@ void World::addArtefact(string configFile,coordinates coor, coordinates directio
     m_artefacts.push_back(artefact);
 }
 
-bool World::checkForCollisionBetweenObjects(SDL_Rect rect_no_rotation1, float angle1, SDL_Point* center1,
-        SDL_Rect rect_no_rotation2, float angle2, SDL_Point* center2)
+void World::addAnimation(string configFile, coordinates coor,SDL_Renderer* renderer,float rotation,SDL_Point* center)
 {
-    bool colide = false;
-    coordinates c1, c2;
 
-    c1 = findCenter(rect_no_rotation1, angle1, center1);
-    c2 = findCenter(rect_no_rotation2, angle2, center2);
-
-    float a_2 = (c1.x - c2.x)*(c1.x - c2.x);
-    float b_2 = (c1.y - c2.y)*(c1.y - c2.y);
-    float c   = hypot(rect_no_rotation1.h,rect_no_rotation1.w)/2 +
-                hypot(rect_no_rotation2.h,rect_no_rotation2.w)/2;
-
-
-    return (a_2 + b_2 <= c*c/2);
-}
-
-bool World::checkIfOffBounds(SDL_Rect rect)
-{
-    if (rect.x + rect.w > m_SCREEN_WIDTH)
-        return true;
-    if (rect.x < 0)
-        return true;
-    if (rect.y + rect.h > m_SCREEN_HEIGHT)
-        return true;
-    if (rect.y < 0)
-        return true;
-    return false;
+    Animation* animation = new Animation;
+    animation -> init(configFile, coor,renderer,rotation,center);
+    m_animations.push_back(animation);
 }
 
 void World::spawn()
@@ -478,7 +455,7 @@ void World::cleaner()
     }
     for(int i = 0; i < m_enemies.size(); i++)
     {
-        if(m_enemies[i] -> m_health <= 0 || checkIfOffBounds(m_enemies[i] -> m_objectRect))
+        if(m_enemies[i] -> m_health <= 0 || checkIfOffBounds(m_enemies[i] -> m_objectRect, m_SCREEN_WIDTH, m_SCREEN_HEIGHT))
         {
             if(m_enemies[i] -> m_health <= 0)
             {
@@ -495,7 +472,7 @@ void World::cleaner()
     }
     for(int i = 0; i < m_projectiles.size(); i++)
     {
-        if(m_projectiles[i] -> m_health <= 0 ||checkIfOffBounds(m_projectiles[i] -> m_objectRect))
+        if(m_projectiles[i] -> m_health <= 0 ||checkIfOffBounds(m_projectiles[i] -> m_objectRect, m_SCREEN_WIDTH, m_SCREEN_HEIGHT))
         {
             m_projectiles.erase(m_projectiles.begin() + i);
             i--;
@@ -503,7 +480,7 @@ void World::cleaner()
     }
     for(int i = 0; i < m_artefacts.size(); i++)
     {
-        if(checkIfOffBounds(m_artefacts[i] -> m_objectRect) || m_artefacts[i]->m_health <= 0 )
+        if(checkIfOffBounds(m_artefacts[i] -> m_objectRect, m_SCREEN_WIDTH, m_SCREEN_HEIGHT) || m_artefacts[i]->m_health <= 0 )
         {
             m_artefacts.erase(m_artefacts.begin() + i);
             i--;
@@ -568,10 +545,32 @@ void World::shop()
     m_shop->draw();
 }
 
-void World::addAnimation(string configFile, coordinates coor,SDL_Renderer* renderer,float rotation,SDL_Point* center)
+void World::initSession()
 {
+    m_startDropCooldown = time(NULL);
+    m_startSpawnCooldown = time(NULL);
+}
 
-    Animation* animation = new Animation;
-    animation -> init(configFile, coor,renderer,rotation,center);
-    m_animations.push_back(animation);
+void World::destroySession()
+{
+    for(int i = 0; i < m_players.size(); i++)
+    {
+        m_players.erase(m_players.begin() + i);
+        i--;
+    }
+    for(int i = 0; i < m_enemies.size(); i++)
+    {
+        m_enemies.erase(m_enemies.begin() + i);
+        i--;
+    }
+    for(int i = 0; i < m_projectiles.size(); i++)
+    {
+        m_projectiles.erase(m_projectiles.begin() + i);
+        i--;
+    }
+    for(int i = 0; i < m_artefacts.size(); i++)
+    {
+        m_artefacts.erase(m_artefacts.begin() + i);
+        i--;
+    }
 }

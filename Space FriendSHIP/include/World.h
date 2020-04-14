@@ -80,9 +80,6 @@ public:
     bool m_spawn;
     bool endgame = false;
     bool m_drop;
-    bool checkForCollisionBetweenObjects(SDL_Rect rect_no_rotation1, float angle1, SDL_Point* center1,
-                                         SDL_Rect rect_no_rotation2, float angle2, SDL_Point* center2);
-    bool checkIfOffBounds(SDL_Rect rect);
 
     int m_wallet;
 
@@ -100,6 +97,7 @@ public:
     void addArtefact(string configFile,coordinates coor, coordinates direction);
     void addPlayer(SDL_Renderer* renderer, string configFile);
     void addPlayerAI(SDL_Renderer* renderer, string configFile);
+    void addAnimation(string configFile, coordinates coor,SDL_Renderer* renderer,float rotation, SDL_Point* center = NULL);
     void AddPoints(Enemy* enemy);
     void AddCoins (Enemy* enemy);
     void chooseGameMode();
@@ -108,8 +106,8 @@ public:
     void saveProgress();
     void loadProgress();
     void shop();
-    void addAnimation(string configFile, coordinates coor,SDL_Renderer* renderer,float rotation,SDL_Point* center = NULL);
-
+    void initSession();
+    void destroySession();
 
 protected:
 
