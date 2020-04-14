@@ -39,7 +39,7 @@ public:
     int m_maxhealth;
     int m_health;
 
-    float m_collisionDamage;
+    float m_collisionDamage = 0;
     float m_speed;
     float m_screen_speed;
 

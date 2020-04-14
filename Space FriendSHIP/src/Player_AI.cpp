@@ -150,10 +150,8 @@ void Player_AI::shoot()
 {
     for(int i = 0; i < m_guns.size() ; i++)
     {
-        coordinates playerCoor;
-        playerCoor.x = m_objectRect.x;
-        playerCoor.y = m_objectRect.y;
-        m_guns[i] -> update(m_rotationAngle, playerCoor);
+        coordinates* buff = NULL;
+        m_guns[i] -> update(m_rotationAngle, findCenter(m_objectRect, m_rotationAngle, buff));
     }
     //m_soundManager -> play_sound("Shooting.mp3");
 }

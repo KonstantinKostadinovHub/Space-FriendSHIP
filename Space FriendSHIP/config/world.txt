@@ -14,4 +14,4 @@ SpawnCooldown: 1
 
 DropCooldown: 3
 
-EnemiesPerSpawn: 3
+EnemiesPerSpawn: 2

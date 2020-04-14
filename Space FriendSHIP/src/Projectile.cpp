@@ -20,9 +20,13 @@ void Projectile::init(string configFile, struct coordinates coor, float rotation
     m_collisonDamage = projectile -> m_collisonDamage;
     m_objectTexture = projectile -> m_objectTexture;
 
-    int startPosMultiplier = m_objectRect.w / m_speed + 1;
+    int startPosMultiplier = 1;
 
     m_rotationAngle = rotation;
+    if(configFile == "bullet_player.txt")
+    {
+        startPosMultiplier = 10;
+    }
     m_coor.x = coor.x + startPosMultiplier * (sin(m_rotationAngle * PI / 180) * m_speed * SPEED_FACTOR);
     m_coor.y = coor.y - startPosMultiplier * (cos(m_rotationAngle * PI / 180) * m_speed * SPEED_FACTOR);
 }
@@ -38,7 +42,7 @@ void Projectile::update()
 void Projectile::draw(SDL_Renderer* renderer)
 {
     SDL_RenderCopyEx(renderer, m_objectTexture, NULL, &m_objectRect, m_rotationAngle, NULL, SDL_FLIP_NONE);
-    //SDL_RenderCopyEx(renderer, m_objectTexture, NULL, &m_objectRect, NULL, NULL, SDL_FLIP_NONE);
+    SDL_RenderCopyEx(renderer, m_objectTexture, NULL, &m_objectRect, NULL, NULL, SDL_FLIP_NONE);
 }
 
 void Projectile::load(string configFile, SDL_Renderer* renderer)

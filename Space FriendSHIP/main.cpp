@@ -64,7 +64,7 @@ int main (int argc, char* argv[])
                 world.update();
                 world.draw();
                 world.cleaner();
-                SDL_Delay(20);
+                SDL_Delay(100);
             }
         }
         world.saveProgress();

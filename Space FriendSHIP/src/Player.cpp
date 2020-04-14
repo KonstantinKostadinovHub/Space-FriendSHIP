@@ -43,7 +43,7 @@ void Player::init(SDL_Renderer* renderer, string configFile, UpgradeManager* upg
     stream.close();
 
     m_center.x = 40;
-    m_center.y = 10;
+    m_center.y = 0;
 
     m_maxhealth += upgradeManager->m_CurrentHealthUpgrade;
     m_dashLenght += upgradeManager->m_CurrentDashUpgrade;
@@ -130,7 +130,7 @@ void Player::update()
         coordinates playerCoor;
         playerCoor.x = m_objectRect.x;
         playerCoor.y = m_objectRect.y;
-        m_guns[i] -> update(m_rotationAngle, playerCoor);
+        m_guns[i] -> update(m_rotationAngle, findCenter(m_objectRect, m_rotationAngle, &m_center));
         m_guns[i] -> m_cantShoot = true;
     }
 
@@ -182,8 +182,8 @@ void Player::update()
     if(m_canDash)
     {
         inDash = true;
-        m_coor.x = m_objectRect.x;
-        m_coor.y = m_objectRect.y;
+        m_oldCoor.x = m_objectRect.x;
+        m_oldCoor.y = m_objectRect.y;
 
         m_coor.x += sin(m_rotationAngle * PI / 180) * m_dashLenght;
         m_coor.y -= cos(m_rotationAngle * PI / 180) * m_dashLenght;

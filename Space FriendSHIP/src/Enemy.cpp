@@ -41,6 +41,7 @@ void Enemy::update()
         playerCoor.x = m_objectRect.x;
         playerCoor.y = m_objectRect.y;
         m_guns[i] -> update(m_rotationAngle, playerCoor);
+        cout << playerCoor.x << " " << playerCoor.y << endl;
     }
 }
 

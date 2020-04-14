@@ -29,8 +29,8 @@ struct UIElement
 
 struct coordinates returnCoordinatesByAngle(float angle);
 float returnAngleByCoordinates(struct coordinates direction);
-coordinates findCenter(SDL_Rect rct, float angle, coordinates* rotation_center);
-coordinates findCenter(SDL_Rect rct, float angle, SDL_Point* rotation_center);
+coordinates findCenter(SDL_Rect rct, float angle, coordinates* rotation_center = NULL);
+coordinates findCenter(SDL_Rect rct, float angle, SDL_Point* rotation_center = NULL);
 void SaveInFile(string file, string tmp, float value);
 float LoadFromFile(string file);
 SDL_Texture* LoadTexture(string file, SDL_Renderer* renderer);

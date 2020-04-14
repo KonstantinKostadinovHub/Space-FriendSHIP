@@ -199,6 +199,10 @@ void World::collisionDamage()
 {
     for(int i = 0; i < m_players.size(); i++)
     {
+        if(m_players[i]->m_collisionDamage == 0)
+        {
+            break;
+        }
         for(int j = 0; j < m_enemies.size(); j++)
         {
             if(checkForCollisionBetweenObjects(m_players[i]->m_objectRect, m_players[i]->m_rotationAngle, &m_players[i]->m_center,
@@ -206,9 +210,11 @@ void World::collisionDamage()
             {
                 m_players[i]->m_health -= m_enemies[j]->m_collisonDamage;
                 m_enemies[j]->m_health -= m_players[i]->m_collisionDamage + m_upgradeManager->m_CurrentCollisionDamageUpgrade;
-                addAnimation("explosion.txt",m_enemies[j]->m_coor,m_main_renderer,0);
+                coordinates buff;
+                buff.x = (m_players[i]->m_coor.x + m_enemies[j]->m_coor.x)/2;
+                buff.y = (m_players[i]->m_coor.y + m_enemies[j]->m_coor.y)/2;
+                addAnimation("explosion.txt", buff, m_main_renderer,0);
                 m_soundManager -> play_sound("Explosion.mp3");
-
             }
         }
         for(int k = 0; k < m_projectiles.size(); k++)
@@ -340,6 +346,7 @@ void World::addBullet(string configFile, coordinates coor, float rotation)
     }
 
     Projectile* proj = new Bullet();
+    cout << "BULLET " << coor.x << " " << coor.y << endl;
     proj -> init(configFile, coor, rotation, model);
     m_projectiles.push_back(proj);
 }
@@ -474,6 +481,7 @@ void World::cleaner()
             {
                 AddCoins(m_enemies[i]);
             }
+            delete m_enemies[i];
             m_enemies.erase(m_enemies.begin() + i);
             i--;
         }
@@ -482,6 +490,7 @@ void World::cleaner()
     {
         if(m_projectiles[i] -> m_health <= 0 ||checkIfOffBounds(m_projectiles[i] -> m_objectRect, m_SCREEN_WIDTH, m_SCREEN_HEIGHT))
         {
+            delete m_projectiles[i];
             m_projectiles.erase(m_projectiles.begin() + i);
             i--;
         }
@@ -490,6 +499,7 @@ void World::cleaner()
     {
         if(checkIfOffBounds(m_artefacts[i] -> m_objectRect, m_SCREEN_WIDTH, m_SCREEN_HEIGHT) || m_artefacts[i]->m_health <= 0 )
         {
+            delete m_artefacts[i];
             m_artefacts.erase(m_artefacts.begin() + i);
             i--;
         }
@@ -571,22 +581,22 @@ void World::destroySession()
 {
     for(int i = 0; i < m_players.size(); i++)
     {
-        m_players.erase(m_players.begin() + i);
-        i--;
+        delete m_players[i];
     }
+    m_players.clear();
     for(int i = 0; i < m_enemies.size(); i++)
     {
-        m_enemies.erase(m_enemies.begin() + i);
-        i--;
+        delete m_enemies[i];
     }
+    m_enemies.clear();
     for(int i = 0; i < m_projectiles.size(); i++)
     {
-        m_projectiles.erase(m_projectiles.begin() + i);
-        i--;
+        delete m_projectiles[i];
     }
+    m_projectiles.clear();
     for(int i = 0; i < m_artefacts.size(); i++)
     {
-        m_artefacts.erase(m_artefacts.begin() + i);
-        i--;
+        delete m_artefacts[i];
     }
+    m_artefacts.clear();
 }
