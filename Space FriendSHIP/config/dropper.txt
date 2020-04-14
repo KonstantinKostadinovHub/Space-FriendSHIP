@@ -4,4 +4,6 @@ Speed: 1
 
 Slow: 1
 
+Stopper: 1
+
 Reverse: 1

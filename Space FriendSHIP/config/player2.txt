@@ -28,4 +28,4 @@ Dash: Right_Ctrl
 
 CollisionDamage: 80
 
-HPBar: healthBar1.txt 
+HPBar: healthBar2.txt 

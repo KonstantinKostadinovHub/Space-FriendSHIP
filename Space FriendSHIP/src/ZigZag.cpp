@@ -27,6 +27,7 @@ void ZigZag::init(string configFile, coordinates coor, float rotation, Enemy* en
     m_rotationFactor = zigzag -> m_rotationFactor;
     m_pointsGiven = zigzag -> m_pointsGiven;
     m_center = zigzag -> m_center;
+    m_guns = zigzag -> m_guns;
     m_objectTexture = zigzag -> m_objectTexture;
 
     m_rotationAngle = rotation;

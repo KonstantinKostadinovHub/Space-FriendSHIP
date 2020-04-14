@@ -35,6 +35,7 @@ int main (int argc, char* argv[])
             }
         }
         world.loadProgress();
+
         /*while(true)
           {
               while(SDL_PollEvent(&e) == 0)

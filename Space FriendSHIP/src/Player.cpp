@@ -23,7 +23,7 @@ void Player::init(SDL_Renderer* renderer, string configFile, UpgradeManager* upg
     stream >> tmp >> m_objectRect.w >> m_objectRect.h;
     stream >> tmp >> m_img;
     stream >> tmp >> m_maxhealth;
-    stream >> tmp >> m_spawn_x >> m_spawn_y;
+    stream >> tmp >> m_spawn.x >> m_spawn.y;
     stream >> tmp >> m_speed;
     stream >> tmp >> m_max_speed;
     stream >> tmp >> m_min_speed;
@@ -88,8 +88,10 @@ void Player::init(SDL_Renderer* renderer, string configFile, UpgradeManager* upg
     }
 
     m_img = "img\\" + m_img;
-    m_objectRect.x = m_spawn_x;
-    m_objectRect.y = m_spawn_y;
+    m_objectRect.x = m_spawn.x;
+    m_objectRect.y = m_spawn.y;
+    m_coor.x = m_objectRect.x;
+    m_coor.y = m_objectRect.y;
 
     m_health = m_maxhealth;
     m_healthBar->init(HPBar);
@@ -137,20 +139,20 @@ void Player::update()
         }
     }
 
-    m_objectRect.x += sin(m_rotationAngle * PI / 180) * m_screen_speed;
-    m_objectRect.y -= cos(m_rotationAngle * PI / 180) * m_screen_speed;
+    m_coor.x += sin(m_rotationAngle * PI / 180) * m_screen_speed;
+    m_coor.y -= cos(m_rotationAngle * PI / 180) * m_screen_speed;
 
     checkForDash();
 
     if(m_canDash)
     {
         inDash = true;
-        m_oldCoor.x = m_objectRect.x;
-        m_oldCoor.y = m_objectRect.y;
+        m_oldCoor.x = m_coor.x;
+        m_oldCoor.y = m_coor.y;
 
 
-        m_objectRect.x += sin(m_rotationAngle * PI / 180) * m_dashLenght;
-        m_objectRect.y -= cos(m_rotationAngle * PI / 180) * m_dashLenght;
+        m_coor.x += sin(m_rotationAngle * PI / 180) * m_dashLenght;
+        m_coor.y -= cos(m_rotationAngle * PI / 180) * m_dashLenght;
     }
 
     for(int i = 0; i < m_guns.size() ; i++)
@@ -166,6 +168,8 @@ void Player::update()
         m_health = m_maxhealth;
     }
 
+    m_objectRect.x = m_coor.x;
+    m_objectRect.y = m_coor.y;
 }
 
 void Player::draw(SDL_Renderer* renderer)

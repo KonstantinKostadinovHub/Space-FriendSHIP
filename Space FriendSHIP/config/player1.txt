@@ -28,4 +28,4 @@ Dash: E
 
 CollisionDamage: 80
 
-HPBar: healthBar2.txt
+HPBar: healthBar1.txt

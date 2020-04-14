@@ -30,9 +30,9 @@ public:
     string tmp;
 
     coordinates m_oldCoor;
+    coordinates m_coor;
 
-    int m_spawn_x;
-    int m_spawn_y;
+    coordinates m_spawn;
     int m_dashLenght;
     int m_min_speed;
     int m_max_speed;
@@ -70,11 +70,6 @@ public:
     SDL_Scancode brake;
     SDL_Scancode dash;
 
-    virtual void init(SDL_Renderer* renderer, string configFile, UpgradeManager* upgradeManager);
-    virtual void update();
-    virtual void draw(SDL_Renderer* renderer);
-    virtual void checkForDash();
-
     SDL_Texture* m_shape1_tx = NULL;
     SDL_Surface* m_loading_surf = NULL;
     SDL_Texture* m_objectTexture;
@@ -82,6 +77,11 @@ public:
 
     float m_rotationAngle;
     SDL_Point m_center;
+
+    virtual void init(SDL_Renderer* renderer, string configFile, UpgradeManager* upgradeManager);
+    virtual void update();
+    virtual void draw(SDL_Renderer* renderer);
+    virtual void checkForDash();
 
 protected:
 
