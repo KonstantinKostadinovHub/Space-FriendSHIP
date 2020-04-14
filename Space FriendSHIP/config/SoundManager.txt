@@ -1,0 +1,13 @@
+General_Music: General.mp3
+
+Explosion_Sound_Effect: Explosion.mp3
+
+Shooting_Sound_Effect: Shooting.mp3
+
+Dash_Sound_Effect: Dash.mp3
+
+Healing_Sound_Effect: Healing.mp3
+
+Stop_Sound_Effect: Stop.mp3
+
+Reverse_Sound_Effect: Reverse.mp3

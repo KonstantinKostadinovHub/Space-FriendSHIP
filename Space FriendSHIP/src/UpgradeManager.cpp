@@ -84,6 +84,7 @@ void UpgradeManager::init(string configFile)
         m_shieldBoosterDurationUpgrades.push_back(pushBackBuff);
     }
     stream.close();
+
 }
 
 void UpgradeManager::loadManager()

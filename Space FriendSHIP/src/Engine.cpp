@@ -96,7 +96,7 @@ void SaveInFile(string file, string tmp, float value)
     string directory = "data\\" + file;
     fstream stream;
     stream.open (directory);
-    stream << tmp << " " << value;
+    stream << tmp << " " << value << '\0';
     stream.close ();
 }
 
@@ -131,4 +131,18 @@ bool checkForMouseCollision(int mouseX, int mouseY, SDL_Rect object)
         return true;
     }
     return false;
+}
+
+UIElement* LoadUIElement(string file, SDL_Renderer* render)
+{
+    UIElement* buff = new UIElement;
+    file = "config\\" + file;
+    string tmp;
+    fstream stream;
+    stream.open (file);
+    stream >> tmp >> buff->objectRect->w >> buff->objectRect->h >> buff->objectRect->x >> buff->objectRect->y;
+    stream >> tmp >> tmp;
+    stream.close();
+    buff->objectTexture = LoadTexture(tmp, render);
+    return buff;
 }

@@ -12,8 +12,6 @@ Enemy::~Enemy()
 
 void Enemy::init(string configFile, coordinates coor, float rotation, Enemy* enemy)
 {
-    cout << "ENEMY 15" << endl;
-
     m_objectRect = enemy -> m_objectRect;
     m_health = enemy -> m_health;
     m_collisonDamage = enemy -> m_collisonDamage;

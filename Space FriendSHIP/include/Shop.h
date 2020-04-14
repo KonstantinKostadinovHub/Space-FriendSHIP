@@ -7,6 +7,7 @@
 #include <SDL2/SDL.h>
 
 #include <ConfigManager.h>
+#include <UpgradeManager.h>
 
 struct abilityUpgradeStructure
 {
@@ -28,6 +29,7 @@ class Shop
 
         SDL_Renderer* m_renderer;
         SDL_Texture* m_backgroundTexture;
+        UIElement* m_buttonBack;
 
         vector<abilityUpgradeStructure*> m_shopArticles;
 
@@ -41,8 +43,9 @@ class Shop
 
         int m_numberOfPrices;
         int m_numberOfAbilityUpgrades;
+        vector<int*> m_upgradeManagerLevels;
 
-        void init(string configFile, ConfigManager* configManager, SDL_Renderer* renderer, int *mouseX, int *mouseY, bool *mouseIsPressed, int *money);
+        void init(string configFile, ConfigManager* configManager, SDL_Renderer* renderer, int* mouseX, int* mouseY, bool* mouseIsPressed, int *money, UpgradeManager* um);
         void update();
         void draw();
 

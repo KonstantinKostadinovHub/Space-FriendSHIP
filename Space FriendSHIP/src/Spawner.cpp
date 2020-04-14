@@ -47,6 +47,7 @@ void Spawner::init(string configName)
     {
         m_probabilities.push_back("zigzag");
     }
+
     stream.close();
 }
 

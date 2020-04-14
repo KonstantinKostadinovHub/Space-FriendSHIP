@@ -10,7 +10,7 @@ Shop::~Shop()
     //dtor
 }
 
-void Shop::init(string configFile, ConfigManager* configManager, SDL_Renderer* renderer, int *mouseX, int *mouseY, bool *mouseIsPressed, int *money)
+void Shop::init(string configFile, ConfigManager* configManager, SDL_Renderer* renderer, int *mouseX, int *mouseY, bool *mouseIsPressed, int *money, UpgradeManager* um)
 {
     m_configManager = configManager;
 
@@ -28,6 +28,15 @@ void Shop::init(string configFile, ConfigManager* configManager, SDL_Renderer* r
     int intBuff;
     string stringBuff;
     string tmp;
+
+    m_upgradeManagerLevels.push_back(&(um->m_CurrentLevelHealthUpgrade));
+    m_upgradeManagerLevels.push_back(&(um->m_CurrentLevelCoinsMultiplierUpgrade));
+    m_upgradeManagerLevels.push_back(&(um->m_CurrentLevelDashUpgrade));
+    m_upgradeManagerLevels.push_back(&(um->m_CurrentLevelCollisionDamageUpgrade));
+    m_upgradeManagerLevels.push_back(&(um->m_CurrentLevelHealthBoosterUpgrade));
+    m_upgradeManagerLevels.push_back(&(um->m_CurrentLevelShieldBoosterDurationUpgrade));
+    m_upgradeManagerLevels.push_back(&(um->m_CurrentLevelBulletDamageUpgrade));
+    m_upgradeManagerLevels.push_back(&(um->m_CurrentLevelBulletSpeedUpgrade));
 
     stream.open(m_configFile.c_str());
     stream >> tmp >> intBuff;
@@ -47,7 +56,7 @@ void Shop::init(string configFile, ConfigManager* configManager, SDL_Renderer* r
         abilityUpgradeStructure* abilityUpgrade = new abilityUpgradeStructure;
         stream >> stringBuff;
         abilityUpgrade->abilityImg = LoadTexture(stringBuff, m_renderer);
-        abilityUpgrade->level = 0;
+        abilityUpgrade->level = *m_upgradeManagerLevels[i];
         abilityUpgrade->frameRect = m_frameRectModel;
         abilityUpgrade->imgRect = m_imgRectModel;
         abilityUpgrade->frameRect.x = m_coor.x + (i % 4) * (m_frameRectModel.w + m_spacing);
@@ -76,13 +85,15 @@ void Shop::init(string configFile, ConfigManager* configManager, SDL_Renderer* r
 
 void Shop::update()
 {
-    if(*m_mouseIsPressed){
+    if(*m_mouseIsPressed)
+    {
         for(int i = 0; i < m_shopArticles.size(); i++)
         {
             if(checkForMouseCollision(*m_mouseX, *m_mouseY, m_shopArticles[i]->frameRect) && m_shopArticles[i]->level < 8 && m_shopArticles[i]->prices[m_shopArticles[i]->level] <= *m_money)
             {
                 *m_money -= m_shopArticles[i]->prices[m_shopArticles[i]->level];
                 m_shopArticles[i]->level++;
+                *m_upgradeManagerLevels[i] = m_shopArticles[i]->level;
             }
         }
     }

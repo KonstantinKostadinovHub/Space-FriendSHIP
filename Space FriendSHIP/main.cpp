@@ -10,6 +10,7 @@ int main (int argc, char* argv[])
 {
     const Uint8 *state = SDL_GetKeyboardState(NULL);
     const Uint8 *state2 = SDL_GetKeyboardState(NULL);
+
     while(1)
     {
         world.init("world.txt");
@@ -25,6 +26,7 @@ int main (int argc, char* argv[])
             {
                 world.menu();
                 SDL_Delay(5);
+
                 if ((world.m_menuImg != world.m_menuImg1) && (state[SDL_SCANCODE_RETURN]))
                 {
                     quit = true;
@@ -32,25 +34,25 @@ int main (int argc, char* argv[])
             }
         }
         world.loadProgress();
-        while(true)
-        {
-            while(SDL_PollEvent(&e) == 0)
-            {
-                SDL_Delay(5);
-                if(e.type == SDL_MOUSEMOTION)
-                {
-                    SDL_GetGlobalMouseState(&(world.mouseX), &(world.mouseY));
-                }
-                world.mouseIsPressed = false;
-                if(e.type == SDL_MOUSEBUTTONDOWN)
-                {
-                    world.mouseIsPressed = true;
-                    e.type = SDLK_UNKNOWN;
-                }
-                world.shop();
-            }
-        }
-
+        /*while(true)
+          {
+              while(SDL_PollEvent(&e) == 0)
+              {
+                  SDL_Delay(5);
+                  if(e.type == SDL_MOUSEMOTION)
+                  {
+                      SDL_GetGlobalMouseState(&(world.mouseX), &(world.mouseY));
+                  }
+                  world.mouseIsPressed = false;
+                  if(e.type == SDL_MOUSEBUTTONDOWN)
+                  {
+                      world.mouseIsPressed = true;
+                      e.type = SDLK_UNKNOWN;
+                  }
+                  world.shop();
+              }
+          }
+        */
         world.chooseGameMode();
         world.loadProgress();
         while(world.endgame == false)

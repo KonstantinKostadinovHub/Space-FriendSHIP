@@ -1,5 +1,7 @@
-Health: 7
+Health: 1
 
-Speed: 4
+Speed: 1
 
-Slow: 5
+Slow: 1
+
+Reverse: 1

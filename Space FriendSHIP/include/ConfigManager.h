@@ -15,35 +15,36 @@
 
 class ConfigManager
 {
-    public:
-        ConfigManager();
-        virtual ~ConfigManager();
+public:
+    ConfigManager();
+    virtual ~ConfigManager();
 
-        string m_configFile;
+    string m_configFile;
 
-        Enemy* m_rock;
-        Enemy* m_shooter_default;
-        Enemy* m_shooter_sniper;
-        Enemy* m_shooter_tank;
-        Enemy* m_shooter_smg;
-        Enemy* m_zigzag;
+    Enemy* m_rock;
+    Enemy* m_shooter_default;
+    Enemy* m_shooter_sniper;
+    Enemy* m_shooter_tank;
+    Enemy* m_shooter_smg;
+    Enemy* m_zigzag;
 
-        Projectile* m_bullet_deafult;
-        Projectile* m_bullet_sniper;
-        Projectile* m_bullet_tank;
-        Projectile* m_bullet_smg;
-        Projectile* m_bullet_zigzag;
-        Projectile* m_bullet_player;
+    Projectile* m_bullet_deafult;
+    Projectile* m_bullet_sniper;
+    Projectile* m_bullet_tank;
+    Projectile* m_bullet_smg;
+    Projectile* m_bullet_zigzag;
+    Projectile* m_bullet_player;
 
-        Artefact* m_healthBooster;
-        Artefact* m_speedBooster;
-        Artefact* m_slowBooster;
+    Artefact* m_healthBooster;
+    Artefact* m_speedBooster;
+    Artefact* m_slowBooster;
+    Artefact* m_reverseBooster;
 
-        void init(string configFile, SDL_Renderer* renderer);
-        void initObject(string configFile);
-    protected:
+    void init(string configFile, SDL_Renderer* renderer);
+    void initObject(string configFile);
+protected:
 
-    private:
+private:
 };
 
 #endif // CONFIGMANAGER_H

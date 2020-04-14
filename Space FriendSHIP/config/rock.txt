@@ -4,7 +4,7 @@ image: rock.bmp
 
 health: 10
 
-collision_damage: 80
+collision_damage: 25
 
 attack_speed: 0
 

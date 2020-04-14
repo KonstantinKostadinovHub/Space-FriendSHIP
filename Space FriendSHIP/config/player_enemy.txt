@@ -1,0 +1,9 @@
+Size: 32 50
+
+Image: player_enemy.bmp
+
+Health: 10
+
+Spawn_Point: 600 600
+
+Speed: 2

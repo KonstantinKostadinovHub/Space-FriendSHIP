@@ -43,8 +43,9 @@ void World::init(string configFile)
     m_spawnManager -> init("spawner.txt");
     m_dropper -> init("dropper.txt");
     m_upgradeManager -> init("upgrade_manager.txt");
+    loadProgress();
     m_configManager -> init("config_manager.txt", m_main_renderer);
-    m_shop -> init("shop.txt", m_configManager, m_main_renderer, &mouseX, &mouseY, &mouseIsPressed, &m_wallet);
+    m_shop -> init("shop.txt", m_configManager, m_main_renderer, &mouseX, &mouseY, &mouseIsPressed, &m_wallet, m_upgradeManager);
 
     SDL_Surface* loadingSurface = SDL_LoadBMP("img\\background.bmp");
     m_backgroundTexture = SDL_CreateTextureFromSurface(m_main_renderer, loadingSurface);
@@ -65,6 +66,8 @@ void World::init(string configFile)
     m_menuImg3 = "img\\" + m_menuImg3;
 
     m_menuImg = m_menuImg1;
+
+    SDL_SetWindowFullscreen(m_main_window, SDL_WINDOW_FULLSCREEN);
 }
 
 void World::update()
@@ -90,7 +93,15 @@ void World::update()
     {
         m_drop = true;
     }
-
+    for(int i = 0; i < m_players.size(); i++)
+    {
+        if(m_players[i]->inDash)
+        {
+            string buff = "dash.txt";
+            addAnimation(buff, m_players[i]->m_oldCoor, m_main_renderer, m_players[i]->m_rotationAngle, &(m_players[i]->m_center));
+            m_players[i]->inDash = false;
+        }
+    }
     for(vector <Player*> :: iterator it = m_players.begin(); it != m_players.end(); it++)
     {
         (*it) -> update();
@@ -104,6 +115,10 @@ void World::update()
         (*it) -> update();
     }
     for(vector <Artefact*> :: iterator it = m_artefacts.begin(); it != m_artefacts.end(); it++)
+    {
+        (*it) -> update();
+    }
+    for(vector <Animation*> :: iterator it = m_animations.begin(); it != m_animations.end(); it++)
     {
         (*it) -> update();
     }
@@ -121,18 +136,19 @@ void World::draw()
     {
         (*it) -> draw(m_main_renderer);
     }
-
     for(vector <Projectile*> :: iterator it = m_projectiles.begin(); it != m_projectiles.end(); it++)
     {
         (*it) -> draw(m_main_renderer);
     }
-
     for(vector <Artefact*> :: iterator it = m_artefacts.begin(); it != m_artefacts.end(); it++)
     {
         (*it) -> draw(m_main_renderer);
     }
-
     for(vector <Player*> :: iterator it = m_players.begin(); it != m_players.end(); it++)
+    {
+        (*it) -> draw(m_main_renderer);
+    }
+    for(vector <Animation*> :: iterator it = m_animations.begin(); it != m_animations.end(); it++)
     {
         (*it) -> draw(m_main_renderer);
     }
@@ -181,6 +197,8 @@ void World::collisionDamage()
             {
                 m_players[i]->m_health -= m_enemies[j]->m_collisonDamage;
                 m_enemies[j]->m_health -= m_players[i]->m_collisionDamage + m_upgradeManager->m_CurrentCollisionDamageUpgrade;
+                addAnimation("explosion.txt",m_enemies[j]->m_coor,m_main_renderer,0);
+
             }
         }
         for(int k = 0; k < m_projectiles.size(); k++)
@@ -190,6 +208,7 @@ void World::collisionDamage()
             {
                 m_players[i]->m_health -= m_projectiles[k]->m_collisonDamage;
                 m_projectiles[k]->m_health = 0;
+                addAnimation("explosion.txt",m_projectiles[k]->m_coor,m_main_renderer,0);
             }
         }
         for(int p = 0; p < m_artefacts.size(); p++)
@@ -201,7 +220,6 @@ void World::collisionDamage()
                 {
                     m_players[i] -> m_health += m_artefacts[p] -> m_actionEffect;
                     m_artefacts[p] -> m_health = 0;
-
                 }
                 if(m_artefacts[p] -> m_configFile == "speedbooster.txt")
                 {
@@ -210,7 +228,12 @@ void World::collisionDamage()
                 }
                 if(m_artefacts[p] -> m_configFile == "slowbooster.txt")
                 {
-                    m_players[i] -> m_speed += m_artefacts[p] -> m_actionEffect;
+                    m_players[i] -> m_speed = m_artefacts[p] -> m_actionEffect;
+                    m_artefacts[p] -> m_health = 0;
+                }
+                if(m_artefacts[p] -> m_configFile == "reversebooster.txt")
+                {
+                    m_players[i] -> m_speed = m_artefacts[p] -> m_actionEffect;
                     m_artefacts[p] -> m_health = 0;
                 }
             }
@@ -226,16 +249,17 @@ void World::collisionDamage()
             {
                 m_enemies[m]->m_health -= m_projectiles[n]->m_collisonDamage;
                 m_projectiles[n]->m_health = 0;
+                addAnimation("explosion.txt",m_projectiles[n]->m_coor,m_main_renderer,0);
             }
         }
     }
-
 }
 
 void World::addEnemy(string configFile, coordinates coor, float rotation)
 {
     Enemy* model;
     Enemy* enemy;
+
     if(configFile == "rock")
     {
         model = m_configManager -> m_rock;
@@ -265,7 +289,6 @@ void World::addEnemy(string configFile, coordinates coor, float rotation)
     {
         model = m_configManager -> m_zigzag;
         enemy = new ZigZag;
-        cout << "WORLD 266" << endl;
     }
     enemy -> init(configFile, coor, rotation, model);
     m_enemies.push_back(enemy);
@@ -320,6 +343,10 @@ void World::addArtefact(string configFile,coordinates coor, coordinates directio
     else if(configFile == "slowbooster.txt")
     {
         model = m_configManager -> m_slowBooster;
+    }
+    else if(configFile == "reversebooster.txt")
+    {
+        model = m_configManager -> m_reverseBooster;
     }
 
     Artefact* artefact = new Artefact();
@@ -387,7 +414,6 @@ void World::menu()
         m_menuImg = m_menuImg2;
     }
 
-    //NEEDS OPTIMIZATION
     SDL_Texture* m_MenuTx;
     SDL_Surface* loadingMenu = SDL_LoadBMP(m_menuImg.c_str());
     m_MenuTx = SDL_CreateTextureFromSurface(m_main_renderer, loadingMenu);
@@ -408,6 +434,10 @@ void World::shootProjectiles()
                 buff.x = m_enemies[i] -> m_guns[j] -> m_objectRect.x;
                 buff.y = m_enemies[i] -> m_guns[j] -> m_objectRect.y;
                 addBullet(m_enemies[i] -> m_bulletName, buff, m_enemies[i] -> m_guns[j] -> m_rotationAngle);
+            }
+            for(vector <Animation*> :: iterator it = m_animations.begin(); it != m_animations.end(); it++)
+            {
+                (*it) -> update();
             }
         }
     }
@@ -483,11 +513,27 @@ void World::cleaner()
 
 void World::saveProgress()
 {
+    SaveInFile("bulletDamageUpgrade.txt", "Level:", m_upgradeManager->m_CurrentLevelBulletDamageUpgrade);
+    SaveInFile("bulletSpeedUpgrade.txt", "Level:", m_upgradeManager->m_CurrentLevelBulletSpeedUpgrade);
+    SaveInFile("collisionUpgrade.txt", "Level:", m_upgradeManager->m_CurrentLevelCollisionDamageUpgrade);
+    SaveInFile("dashUpgrade.txt", "Level:", m_upgradeManager->m_CurrentLevelDashUpgrade);
+    SaveInFile("moneyUpgrade.txt", "Level:", m_upgradeManager->m_CurrentLevelCoinsMultiplierUpgrade);
+    SaveInFile("healthUpgrade.txt", "Level:", m_upgradeManager->m_CurrentLevelHealthUpgrade);
+    SaveInFile("healthBoosterUpgrade.txt", "Level:", m_upgradeManager->m_CurrentLevelHealthBoosterUpgrade);
+    SaveInFile("shieldBoosterUpgrade.txt", "Level:", m_upgradeManager->m_CurrentLevelShieldBoosterDurationUpgrade);
     SaveInFile("wallet.txt", "Money_in_wallet:", m_wallet);
 }
 
 void World::loadProgress()
 {
+    m_upgradeManager->m_CurrentLevelBulletDamageUpgrade = LoadFromFile("bulletDamageUpgrade.txt");
+    m_upgradeManager->m_CurrentLevelBulletSpeedUpgrade = LoadFromFile("bulletSpeedUpgrade.txt");
+    m_upgradeManager->m_CurrentLevelCollisionDamageUpgrade = LoadFromFile("collisionUpgrade.txt");
+    m_upgradeManager->m_CurrentLevelCoinsMultiplierUpgrade = LoadFromFile("moneyUpgrade.txt");
+    m_upgradeManager->m_CurrentLevelDashUpgrade = LoadFromFile("dashUpgrade.txt");
+    m_upgradeManager->m_CurrentLevelHealthUpgrade = LoadFromFile("healthUpgrade.txt");
+    m_upgradeManager->m_CurrentLevelHealthBoosterUpgrade = LoadFromFile("healthBoosterUpgrade.txt");
+    m_upgradeManager->m_CurrentLevelShieldBoosterDurationUpgrade = LoadFromFile("shieldBoosterUpgrade.txt");
     m_upgradeManager->loadManager();
     m_wallet = LoadFromFile("wallet.txt");
 }
@@ -520,4 +566,12 @@ void World::shop()
 {
     m_shop->update();
     m_shop->draw();
+}
+
+void World::addAnimation(string configFile, coordinates coor,SDL_Renderer* renderer,float rotation,SDL_Point* center)
+{
+
+    Animation* animation = new Animation;
+    animation -> init(configFile, coor,renderer,rotation,center);
+    m_animations.push_back(animation);
 }

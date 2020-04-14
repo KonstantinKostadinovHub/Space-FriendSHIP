@@ -29,20 +29,24 @@ public:
     string m_img;
     string tmp;
 
+    coordinates m_oldCoor;
+
     int m_spawn_x;
     int m_spawn_y;
-    float m_speed;
-    float m_screen_speed;
+    int m_dashLenght;
     int m_min_speed;
     int m_max_speed;
     int m_maxhealth;
     int m_health;
 
     float m_collisionDamage;
+    float m_speed;
+    float m_screen_speed;
 
-    int m_dashLenght;
     bool m_canDash;
     bool m_hasCooldown;
+    bool inDash;
+
     time_t m_startDashCooldown;
     time_t m_dashCooldown = 5;
 

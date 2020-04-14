@@ -18,14 +18,14 @@ public:
     vector<int> m_healthBoosterUpgrades;
     vector<int> m_shieldBoosterDurationUpgrades;
 
-    int m_CurrentLevelHealthUpgrade = 0;
-    int m_CurrentLevelBulletDamageUpgrade = 0;
-    int m_CurrentLevelBulletSpeedUpgrade = 0;
-    int m_CurrentLevelCoinsMultiplierUpgrade = 0;
-    int m_CurrentLevelDashUpgrade = 0;
-    int m_CurrentLevelCollisionDamageUpgrade = 0;
-    int m_CurrentLevelHealthBoosterUpgrade = 0;
-    int m_CurrentLevelShieldBoosterDurationUpgrade = 0;
+    int m_CurrentLevelHealthUpgrade;
+    int m_CurrentLevelBulletDamageUpgrade;
+    int m_CurrentLevelBulletSpeedUpgrade;
+    int m_CurrentLevelCoinsMultiplierUpgrade;
+    int m_CurrentLevelDashUpgrade;
+    int m_CurrentLevelCollisionDamageUpgrade;
+    int m_CurrentLevelHealthBoosterUpgrade;
+    int m_CurrentLevelShieldBoosterDurationUpgrade;
 
     int m_CurrentHealthUpgrade;
     int m_CurrentBulletDamageUpgrade;

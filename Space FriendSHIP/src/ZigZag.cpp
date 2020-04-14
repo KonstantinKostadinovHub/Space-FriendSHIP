@@ -29,14 +29,13 @@ void ZigZag::init(string configFile, coordinates coor, float rotation, Enemy* en
     m_center = zigzag -> m_center;
     m_objectTexture = zigzag -> m_objectTexture;
 
-    cout << "ZIG ZAG 30" << endl;
-
     m_rotationAngle = rotation;
     m_startRotation = rotation;
     m_objectRect.x = coor.x;
     m_objectRect.y = coor.y;
     m_coor.x = m_objectRect.x;
     m_coor.y = m_objectRect.y;
+
 }
 
 void ZigZag::update()

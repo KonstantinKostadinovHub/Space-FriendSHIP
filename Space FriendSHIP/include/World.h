@@ -25,6 +25,8 @@
 #include "UpgradeManager.h"
 #include "ConfigManager.h"
 #include "Shop.h"
+#include "SoundManager.h"
+#include "Animation.h"
 
 using namespace std;
 
@@ -68,6 +70,7 @@ public:
     vector <Enemy*> m_enemies;
     vector <Projectile*> m_projectiles;
     vector <Artefact*> m_artefacts;
+    vector <Animation*> m_animations;
 
     time_t m_startSpawnCooldown;
     time_t m_spawnCooldown;
@@ -105,6 +108,8 @@ public:
     void saveProgress();
     void loadProgress();
     void shop();
+    void addAnimation(string configFile, coordinates coor,SDL_Renderer* renderer,float rotation,SDL_Point* center = NULL);
+
 
 protected:
 

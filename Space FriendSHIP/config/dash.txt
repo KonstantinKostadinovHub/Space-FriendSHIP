@@ -1,0 +1,7 @@
+Size: 96 96
+
+Image: DashSpriteSheet.bmp
+
+frameCount: 10
+
+frameCooldown: 0

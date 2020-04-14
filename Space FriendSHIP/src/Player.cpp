@@ -13,6 +13,7 @@ Player::~Player()
 void Player::init(SDL_Renderer* renderer, string configFile, UpgradeManager* upgradeManager)
 {
     m_healthBar = new HealthBar;
+    inDash == false;
 
     m_configFile = "config\\" + configFile;
     fstream stream;
@@ -143,6 +144,11 @@ void Player::update()
 
     if(m_canDash)
     {
+        inDash = true;
+        m_oldCoor.x = m_objectRect.x;
+        m_oldCoor.y = m_objectRect.y;
+
+
         m_objectRect.x += sin(m_rotationAngle * PI / 180) * m_dashLenght;
         m_objectRect.y -= cos(m_rotationAngle * PI / 180) * m_dashLenght;
     }

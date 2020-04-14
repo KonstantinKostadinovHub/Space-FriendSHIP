@@ -1,4 +1,4 @@
-Rock_Probability: 5
+Rock_Probability: 3
 
 Shooter_Default_Probability: 3
 
@@ -8,4 +8,4 @@ Shooter_SMG_Probability: 2
 
 Shooter_Tank_Probability: 1
 
-ZigZag_Probabiblity: 1
+ZigZag_Probabiblity: 1 
