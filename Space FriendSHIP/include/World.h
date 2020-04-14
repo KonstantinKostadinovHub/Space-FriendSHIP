@@ -46,6 +46,7 @@ public:
     UpgradeManager* m_upgradeManager;
     ConfigManager* m_configManager;
     Shop* m_shop;
+    SoundManager* m_soundManager;
 
     string m_configFile;
     string tmp;
@@ -65,6 +66,7 @@ public:
     int m_points;
     int m_highScore;
     int m_coins;
+    int m_enemiesPerSpawn;
 
     vector <Player*> m_players;
     vector <Enemy*> m_enemies;
@@ -97,7 +99,7 @@ public:
     void addArtefact(string configFile,coordinates coor, coordinates direction);
     void addPlayer(SDL_Renderer* renderer, string configFile);
     void addPlayerAI(SDL_Renderer* renderer, string configFile);
-    void addAnimation(string configFile, coordinates coor,SDL_Renderer* renderer,float rotation, SDL_Point* center = NULL);
+    void addAnimation(string configFile, coordinates coor,SDL_Renderer* renderer,float rotation,SDL_Point* center = NULL);
     void AddPoints(Enemy* enemy);
     void AddCoins (Enemy* enemy);
     void chooseGameMode();
@@ -106,8 +108,8 @@ public:
     void saveProgress();
     void loadProgress();
     void shop();
-    void initSession();
     void destroySession();
+    void initSession();
 
 protected:
 

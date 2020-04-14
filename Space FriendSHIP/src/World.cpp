@@ -7,6 +7,7 @@ World::World()
     m_upgradeManager = new UpgradeManager;
     m_configManager = new ConfigManager;
     m_shop = new Shop;
+    m_soundManager = new SoundManager;
 }
 
 World::~World()
@@ -30,6 +31,7 @@ void World::init(string configFile)
     stream >> tmp >> m_menuImg3;
     stream >> tmp >> m_spawnCooldown;
     stream >> tmp >> m_dropCooldown;
+    stream >> tmp >> m_enemiesPerSpawn;
     stream.close();
 
     m_startDropCooldown = time(NULL);
@@ -46,6 +48,7 @@ void World::init(string configFile)
     loadProgress();
     m_configManager -> init("config_manager.txt", m_main_renderer);
     m_shop -> init("shop.txt", m_configManager, m_main_renderer, &mouseX, &mouseY, &mouseIsPressed, &m_wallet, m_upgradeManager);
+    m_soundManager -> init("SoundManager.txt");
 
     SDL_Surface* loadingSurface = SDL_LoadBMP("img\\background.bmp");
     m_backgroundTexture = SDL_CreateTextureFromSurface(m_main_renderer, loadingSurface);
@@ -68,6 +71,8 @@ void World::init(string configFile)
     m_menuImg = m_menuImg1;
 
     SDL_SetWindowFullscreen(m_main_window, SDL_WINDOW_FULLSCREEN);
+
+    m_soundManager -> play_sound("General.mp3");
 }
 
 void World::update()
@@ -76,7 +81,10 @@ void World::update()
     {
         m_spawn = true;
         m_startSpawnCooldown = time(NULL);
-        spawn();
+        for(int i = 0; i < m_enemiesPerSpawn; i++)
+        {
+            spawn();
+        }
     }
     else if(m_startSpawnCooldown + m_spawnCooldown < time(NULL))
     {
@@ -99,7 +107,8 @@ void World::update()
         {
             string buff = "dash.txt";
             addAnimation(buff, m_players[i]->m_oldCoor, m_main_renderer, m_players[i]->m_rotationAngle, &(m_players[i]->m_center));
-            m_players[i]->inDash = false;
+            m_players[i] -> inDash = false;
+            m_soundManager -> play_sound("Dash.mp3");
         }
     }
     for(vector <Player*> :: iterator it = m_players.begin(); it != m_players.end(); it++)
@@ -197,7 +206,8 @@ void World::collisionDamage()
             {
                 m_players[i]->m_health -= m_enemies[j]->m_collisonDamage;
                 m_enemies[j]->m_health -= m_players[i]->m_collisionDamage + m_upgradeManager->m_CurrentCollisionDamageUpgrade;
-                addAnimation("explosion.txt",m_enemies[j]->m_coor,m_main_renderer, NULL);
+                addAnimation("explosion.txt",m_enemies[j]->m_coor,m_main_renderer,0);
+                m_soundManager -> play_sound("Explosion.mp3");
 
             }
         }
@@ -209,6 +219,7 @@ void World::collisionDamage()
                 m_players[i]->m_health -= m_projectiles[k]->m_collisonDamage;
                 m_projectiles[k]->m_health = 0;
                 addAnimation("explosion.txt",m_projectiles[k]->m_coor,m_main_renderer,0);
+                m_soundManager -> play_sound("Explosion.mp3");
             }
         }
         for(int p = 0; p < m_artefacts.size(); p++)
@@ -220,21 +231,25 @@ void World::collisionDamage()
                 {
                     m_players[i] -> m_health += m_artefacts[p] -> m_actionEffect;
                     m_artefacts[p] -> m_health = 0;
+                    m_soundManager -> play_sound("Healing.mp3");
                 }
                 if(m_artefacts[p] -> m_configFile == "speedbooster.txt")
                 {
                     m_players[i] -> m_speed += m_artefacts[p] -> m_actionEffect;
                     m_artefacts[p] -> m_health = 0;
+                    m_soundManager -> play_sound("Dash.mp3");
                 }
-                if(m_artefacts[p] -> m_configFile == "slowbooster.txt")
+                if(m_artefacts[p] -> m_configFile == "stopper.txt")
                 {
                     m_players[i] -> m_speed = m_artefacts[p] -> m_actionEffect;
                     m_artefacts[p] -> m_health = 0;
+                    m_soundManager -> play_sound("Stop.mp3");
                 }
-                if(m_artefacts[p] -> m_configFile == "reversebooster.txt")
+                if(m_artefacts[p] -> m_configFile == "reverser.txt")
                 {
                     m_players[i] -> m_speed = m_artefacts[p] -> m_actionEffect;
                     m_artefacts[p] -> m_health = 0;
+                    m_soundManager -> play_sound("Reverse.mp3");
                 }
             }
         }
@@ -250,6 +265,7 @@ void World::collisionDamage()
                 m_enemies[m]->m_health -= m_projectiles[n]->m_collisonDamage;
                 m_projectiles[n]->m_health = 0;
                 addAnimation("explosion.txt",m_projectiles[n]->m_coor,m_main_renderer,0);
+                m_soundManager -> play_sound("Explosion.mp3");
             }
         }
     }
@@ -340,26 +356,18 @@ void World::addArtefact(string configFile,coordinates coor, coordinates directio
     {
         model = m_configManager -> m_speedBooster;
     }
-    else if(configFile == "slowbooster.txt")
+    else if(configFile == "stopper.txt")
     {
-        model = m_configManager -> m_slowBooster;
+        model = m_configManager -> m_Stopper;
     }
-    else if(configFile == "reversebooster.txt")
+    else if(configFile == "reverser.txt")
     {
-        model = m_configManager -> m_reverseBooster;
+        model = m_configManager -> m_Reverser;
     }
 
     Artefact* artefact = new Artefact();
     artefact -> init(configFile, coor, direction, model);
     m_artefacts.push_back(artefact);
-}
-
-void World::addAnimation(string configFile, coordinates coor,SDL_Renderer* renderer,float rotation,SDL_Point* center)
-{
-
-    Animation* animation = new Animation;
-    animation -> init(configFile, coor,renderer,rotation,center);
-    m_animations.push_back(animation);
 }
 
 void World::spawn()
@@ -429,6 +437,7 @@ void World::shootProjectiles()
                 buff.x = m_players[i] -> m_guns[j] -> m_objectRect.x;
                 buff.y = m_players[i] -> m_guns[j] -> m_objectRect.y;
                 addBullet(m_players[i] -> m_bulletName, buff, m_players[i] -> m_guns[j] -> m_rotationAngle);
+                m_soundManager->play_sound("Shooting.mp3");
             }
         }
     }
@@ -446,10 +455,9 @@ void World::cleaner()
     {
         if(m_players[i] -> m_health <= 0)
         {
-
+            endgame = true;
             m_players.erase(m_players.begin() + i);
             i--;
-            endgame = true;
             break;
         }
     }
@@ -543,6 +551,14 @@ void World::shop()
 {
     m_shop->update();
     m_shop->draw();
+}
+
+void World::addAnimation(string configFile, coordinates coor,SDL_Renderer* renderer,float rotation,SDL_Point* center)
+{
+
+    Animation* animation = new Animation;
+    animation -> init(configFile, coor,renderer,rotation,center);
+    m_animations.push_back(animation);
 }
 
 void World::initSession()

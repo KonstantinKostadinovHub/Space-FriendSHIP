@@ -355,7 +355,7 @@
 	"begin_code.h"
 	"close_code.h"
 
-1586859339 c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\include\engine.h
+1586565514 c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\include\engine.h
 	<iostream>
 	<cmath>
 	<windows.h>
@@ -431,7 +431,7 @@
 1586854658 source:c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\src\enemy.cpp
 	"Enemy.h"
 
-1586859695 source:c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\src\engine.cpp
+1586782588 source:c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\src\engine.cpp
 	"Engine.h"
 
 1586854658 source:c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\src\gun.cpp
@@ -446,10 +446,10 @@
 	<fstream>
 	<iostream>
 
-1586864996 source:c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\src\player.cpp
+1586854659 source:c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\src\player.cpp
 	"Player.h"
 
-1586864978 c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\include\player.h
+1586854671 c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\include\player.h
 	<iostream>
 	<fstream>
 	<vector>
@@ -467,7 +467,7 @@
 	<fstream>
 	<vector>
 
-1586859299 source:c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\src\player_ai.cpp
+1586854658 source:c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\src\player_ai.cpp
 	"Player_AI.h"
 	"World.h"
 
@@ -475,7 +475,7 @@
 	"Player.h"
 	<chrono>
 
-1586859305 c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\include\world.h
+1586854671 c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\include\world.h
 	<iostream>
 	<fstream>
 	<vector>
@@ -530,16 +530,16 @@
 1586783185 source:c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\src\upgrademanager.cpp
 	"UpgradeManager.h"
 
-1586860964 source:c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\src\world.cpp
+1586855164 source:c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\src\world.cpp
 	"World.h"
 
-1586860877 source:c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\src\zigzag.cpp
+1586854658 source:c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\src\zigzag.cpp
 	"ZigZag.h"
 
 1586782774 source:c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\src\shop.cpp
 	"Shop.h"
 
-1586870778 source:c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\main.cpp
+1586447662 source:c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\main.cpp
 	<SDL2/SDL.h>
 	"World.h"
 
@@ -1665,11 +1665,11 @@
 1586507803 source:d:\молц\programming nikola tesla\space-friendship-master\space friendship\src\zigzag.cpp
 	"ZigZag.h"
 
-1586775663 source:d:\молц\nite game studio\space-friendship-master\space friendship\main.cpp
+1586872073 source:d:\молц\nite game studio\space-friendship-master\space friendship\main.cpp
 	<SDL2/SDL.h>
 	"World.h"
 
-1585252219 d:\молц\nite game studio\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl.h
+1586855870 d:\молц\nite game studio\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl.h
 	"SDL_main.h"
 	"SDL_stdinc.h"
 	"SDL_assert.h"
@@ -1702,12 +1702,12 @@
 	"begin_code.h"
 	"close_code.h"
 
-1585252219 d:\молц\nite game studio\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_main.h
+1586855870 d:\молц\nite game studio\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_main.h
 	"SDL_stdinc.h"
 	"begin_code.h"
 	"close_code.h"
 
-1585252219 d:\молц\nite game studio\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_stdinc.h
+1586855870 d:\молц\nite game studio\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_stdinc.h
 	"SDL_config.h"
 	<sys/types.h>
 	<stdio.h>
@@ -1736,27 +1736,27 @@
 	"begin_code.h"
 	"close_code.h"
 
-1585252219 d:\молц\nite game studio\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_config.h
+1586855870 d:\молц\nite game studio\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_config.h
 	"SDL_platform.h"
 
-1585252219 d:\молц\nite game studio\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_platform.h
+1586855870 d:\молц\nite game studio\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_platform.h
 	"AvailabilityMacros.h"
 	"TargetConditionals.h"
 	<winapifamily.h>
 	"begin_code.h"
 	"close_code.h"
 
-1585252219 d:\молц\nite game studio\space-friendship-master\space friendship\dep_sdl\include\sdl2\begin_code.h
+1586855870 d:\молц\nite game studio\space-friendship-master\space friendship\dep_sdl\include\sdl2\begin_code.h
 
-1585252219 d:\молц\nite game studio\space-friendship-master\space friendship\dep_sdl\include\sdl2\close_code.h
+1586855870 d:\молц\nite game studio\space-friendship-master\space friendship\dep_sdl\include\sdl2\close_code.h
 
-1585252219 d:\молц\nite game studio\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_assert.h
+1586855870 d:\молц\nite game studio\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_assert.h
 	"SDL_config.h"
 	"begin_code.h"
 	<signal.h>
 	"close_code.h"
 
-1585252219 d:\молц\nite game studio\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_atomic.h
+1586855870 d:\молц\nite game studio\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_atomic.h
 	"SDL_stdinc.h"
 	"SDL_platform.h"
 	"begin_code.h"
@@ -1764,7 +1764,7 @@
 	<mbarrier.h>
 	"close_code.h"
 
-1585252219 d:\молц\nite game studio\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_audio.h
+1586855870 d:\молц\nite game studio\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_audio.h
 	"SDL_stdinc.h"
 	"SDL_error.h"
 	"SDL_endian.h"
@@ -1774,24 +1774,24 @@
 	"begin_code.h"
 	"close_code.h"
 
-1585252219 d:\молц\nite game studio\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_error.h
+1586855870 d:\молц\nite game studio\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_error.h
 	"SDL_stdinc.h"
 	"begin_code.h"
 	"close_code.h"
 
-1585252219 d:\молц\nite game studio\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_endian.h
+1586855870 d:\молц\nite game studio\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_endian.h
 	"SDL_stdinc.h"
 	<endian.h>
 	"begin_code.h"
 	"close_code.h"
 
-1585252219 d:\молц\nite game studio\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_mutex.h
+1586855870 d:\молц\nite game studio\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_mutex.h
 	"SDL_stdinc.h"
 	"SDL_error.h"
 	"begin_code.h"
 	"close_code.h"
 
-1585252219 d:\молц\nite game studio\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_thread.h
+1586855870 d:\молц\nite game studio\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_thread.h
 	"SDL_stdinc.h"
 	"SDL_error.h"
 	"SDL_atomic.h"
@@ -1802,18 +1802,18 @@
 	<stdlib.h>
 	"close_code.h"
 
-1585252219 d:\молц\nite game studio\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_rwops.h
+1586855870 d:\молц\nite game studio\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_rwops.h
 	"SDL_stdinc.h"
 	"SDL_error.h"
 	"begin_code.h"
 	"close_code.h"
 
-1585252219 d:\молц\nite game studio\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_clipboard.h
+1586855870 d:\молц\nite game studio\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_clipboard.h
 	"SDL_stdinc.h"
 	"begin_code.h"
 	"close_code.h"
 
-1585252219 d:\молц\nite game studio\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_cpuinfo.h
+1586855870 d:\молц\nite game studio\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_cpuinfo.h
 	"SDL_stdinc.h"
 	<intrin.h>
 	<intrin.h>
@@ -1832,7 +1832,7 @@
 	"begin_code.h"
 	"close_code.h"
 
-1585252219 d:\молц\nite game studio\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_events.h
+1586855870 d:\молц\nite game studio\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_events.h
 	"SDL_stdinc.h"
 	"SDL_error.h"
 	"SDL_video.h"
@@ -1846,7 +1846,7 @@
 	"begin_code.h"
 	"close_code.h"
 
-1585252219 d:\молц\nite game studio\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_video.h
+1586855870 d:\молц\nite game studio\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_video.h
 	"SDL_stdinc.h"
 	"SDL_pixels.h"
 	"SDL_rect.h"
@@ -1854,13 +1854,13 @@
 	"begin_code.h"
 	"close_code.h"
 
-1585252219 d:\молц\nite game studio\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_pixels.h
+1586855870 d:\молц\nite game studio\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_pixels.h
 	"SDL_stdinc.h"
 	"SDL_endian.h"
 	"begin_code.h"
 	"close_code.h"
 
-1585252219 d:\молц\nite game studio\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_rect.h
+1586855870 d:\молц\nite game studio\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_rect.h
 	"SDL_stdinc.h"
 	"SDL_error.h"
 	"SDL_pixels.h"
@@ -1868,7 +1868,7 @@
 	"begin_code.h"
 	"close_code.h"
 
-1585252219 d:\молц\nite game studio\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_surface.h
+1586855870 d:\молц\nite game studio\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_surface.h
 	"SDL_stdinc.h"
 	"SDL_pixels.h"
 	"SDL_rect.h"
@@ -1877,11 +1877,11 @@
 	"begin_code.h"
 	"close_code.h"
 
-1585252219 d:\молц\nite game studio\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_blendmode.h
+1586855870 d:\молц\nite game studio\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_blendmode.h
 	"begin_code.h"
 	"close_code.h"
 
-1585252219 d:\молц\nite game studio\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_keyboard.h
+1586855870 d:\молц\nite game studio\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_keyboard.h
 	"SDL_stdinc.h"
 	"SDL_error.h"
 	"SDL_keycode.h"
@@ -1889,27 +1889,27 @@
 	"begin_code.h"
 	"close_code.h"
 
-1585252219 d:\молц\nite game studio\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_keycode.h
+1586855870 d:\молц\nite game studio\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_keycode.h
 	"SDL_stdinc.h"
 	"SDL_scancode.h"
 
-1585252219 d:\молц\nite game studio\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_scancode.h
+1586855870 d:\молц\nite game studio\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_scancode.h
 	"SDL_stdinc.h"
 
-1585252219 d:\молц\nite game studio\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_mouse.h
+1586855870 d:\молц\nite game studio\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_mouse.h
 	"SDL_stdinc.h"
 	"SDL_error.h"
 	"SDL_video.h"
 	"begin_code.h"
 	"close_code.h"
 
-1585252219 d:\молц\nite game studio\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_joystick.h
+1586855870 d:\молц\nite game studio\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_joystick.h
 	"SDL_stdinc.h"
 	"SDL_error.h"
 	"begin_code.h"
 	"close_code.h"
 
-1585252219 d:\молц\nite game studio\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_gamecontroller.h
+1586855870 d:\молц\nite game studio\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_gamecontroller.h
 	"SDL_stdinc.h"
 	"SDL_error.h"
 	"SDL_rwops.h"
@@ -1917,11 +1917,11 @@
 	"begin_code.h"
 	"close_code.h"
 
-1585252219 d:\молц\nite game studio\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_quit.h
+1586855870 d:\молц\nite game studio\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_quit.h
 	"SDL_stdinc.h"
 	"SDL_error.h"
 
-1585252219 d:\молц\nite game studio\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_gesture.h
+1586855870 d:\молц\nite game studio\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_gesture.h
 	"SDL_stdinc.h"
 	"SDL_error.h"
 	"SDL_video.h"
@@ -1929,66 +1929,66 @@
 	"begin_code.h"
 	"close_code.h"
 
-1585252219 d:\молц\nite game studio\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_touch.h
+1586855870 d:\молц\nite game studio\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_touch.h
 	"SDL_stdinc.h"
 	"SDL_error.h"
 	"SDL_video.h"
 	"begin_code.h"
 	"close_code.h"
 
-1585252219 d:\молц\nite game studio\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_filesystem.h
+1586855870 d:\молц\nite game studio\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_filesystem.h
 	"SDL_stdinc.h"
 	"begin_code.h"
 	"close_code.h"
 
-1585252219 d:\молц\nite game studio\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_haptic.h
+1586855870 d:\молц\nite game studio\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_haptic.h
 	"SDL_stdinc.h"
 	"SDL_error.h"
 	"SDL_joystick.h"
 	"begin_code.h"
 	"close_code.h"
 
-1585252219 d:\молц\nite game studio\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_hints.h
+1586855870 d:\молц\nite game studio\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_hints.h
 	"SDL_stdinc.h"
 	"begin_code.h"
 	"close_code.h"
 
-1585252219 d:\молц\nite game studio\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_loadso.h
+1586855870 d:\молц\nite game studio\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_loadso.h
 	"SDL_stdinc.h"
 	"SDL_error.h"
 	"begin_code.h"
 	"close_code.h"
 
-1585252219 d:\молц\nite game studio\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_log.h
+1586855870 d:\молц\nite game studio\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_log.h
 	"SDL_stdinc.h"
 	"begin_code.h"
 	"close_code.h"
 
-1585252219 d:\молц\nite game studio\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_messagebox.h
+1586855870 d:\молц\nite game studio\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_messagebox.h
 	"SDL_stdinc.h"
 	"SDL_video.h"
 	"begin_code.h"
 	"close_code.h"
 
-1585252219 d:\молц\nite game studio\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_power.h
+1586855870 d:\молц\nite game studio\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_power.h
 	"SDL_stdinc.h"
 	"begin_code.h"
 	"close_code.h"
 
-1585252219 d:\молц\nite game studio\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_render.h
+1586855870 d:\молц\nite game studio\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_render.h
 	"SDL_stdinc.h"
 	"SDL_rect.h"
 	"SDL_video.h"
 	"begin_code.h"
 	"close_code.h"
 
-1585252219 d:\молц\nite game studio\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_sensor.h
+1586855870 d:\молц\nite game studio\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_sensor.h
 	"SDL_stdinc.h"
 	"SDL_error.h"
 	"begin_code.h"
 	"close_code.h"
 
-1585252219 d:\молц\nite game studio\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_shape.h
+1586855870 d:\молц\nite game studio\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_shape.h
 	"SDL_stdinc.h"
 	"SDL_pixels.h"
 	"SDL_rect.h"
@@ -1997,7 +1997,7 @@
 	"begin_code.h"
 	"close_code.h"
 
-1585252219 d:\молц\nite game studio\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_system.h
+1586855870 d:\молц\nite game studio\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_system.h
 	"SDL_stdinc.h"
 	"SDL_keyboard.h"
 	"SDL_render.h"
@@ -2005,18 +2005,18 @@
 	"begin_code.h"
 	"close_code.h"
 
-1585252219 d:\молц\nite game studio\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_timer.h
+1586855870 d:\молц\nite game studio\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_timer.h
 	"SDL_stdinc.h"
 	"SDL_error.h"
 	"begin_code.h"
 	"close_code.h"
 
-1585252219 d:\молц\nite game studio\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_version.h
+1586855870 d:\молц\nite game studio\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_version.h
 	"SDL_stdinc.h"
 	"begin_code.h"
 	"close_code.h"
 
-1586779369 d:\молц\nite game studio\space-friendship-master\space friendship\include\world.h
+1586872011 d:\молц\nite game studio\space-friendship-master\space friendship\include\world.h
 	<iostream>
 	<fstream>
 	<vector>
@@ -2040,7 +2040,7 @@
 	"SoundManager.h"
 	"Animation.h"
 
-1586775663 d:\молц\nite game studio\space-friendship-master\space friendship\include\player.h
+1586872215 d:\молц\nite game studio\space-friendship-master\space friendship\include\player.h
 	<iostream>
 	<fstream>
 	<vector>
@@ -2053,7 +2053,7 @@
 	"HealthBar.h"
 	"Gun.h"
 
-1586775663 d:\молц\nite game studio\space-friendship-master\space friendship\include\engine.h
+1586855870 d:\молц\nite game studio\space-friendship-master\space friendship\include\engine.h
 	<iostream>
 	<cmath>
 	<windows.h>
@@ -2062,23 +2062,23 @@
 	<iostream>
 	<SDL2/SDL.h>
 
-1586775663 d:\молц\nite game studio\space-friendship-master\space friendship\include\upgrademanager.h
+1586855870 d:\молц\nite game studio\space-friendship-master\space friendship\include\upgrademanager.h
 	<iostream>
 	<fstream>
 	<vector>
 
-1586775662 d:\молц\nite game studio\space-friendship-master\space friendship\include\healthbar.h
+1586855870 d:\молц\nite game studio\space-friendship-master\space friendship\include\healthbar.h
 	<SDL2/SDL.h>
 	<string>
 	<fstream>
 	<iostream>
 
-1586775663 d:\молц\nite game studio\space-friendship-master\space friendship\include\gun.h
+1586855870 d:\молц\nite game studio\space-friendship-master\space friendship\include\gun.h
 	<time.h>
 	<SDL2/Sdl.h>
 	"Engine.h"
 
-1586775663 d:\молц\nite game studio\space-friendship-master\space friendship\include\enemy.h
+1586855870 d:\молц\nite game studio\space-friendship-master\space friendship\include\enemy.h
 	<iostream>
 	<fstream>
 	<cstring>
@@ -2088,38 +2088,39 @@
 	<Engine.h>
 	<Gun.h>
 
-1586775662 d:\молц\nite game studio\space-friendship-master\space friendship\include\projectile.h
+1586855870 d:\молц\nite game studio\space-friendship-master\space friendship\include\projectile.h
 	<iostream>
 	<fstream>
 	<cstring>
 	<SDL2/SDL.h>
 	"Engine.h"
 
-1586775662 d:\молц\nite game studio\space-friendship-master\space friendship\include\artefact.h
+1586855870 d:\молц\nite game studio\space-friendship-master\space friendship\include\artefact.h
 	<SDL2/SDL.h>
 	<fstream>
 	<ctime>
 	"Engine.h"
 
-1586775662 d:\молц\nite game studio\space-friendship-master\space friendship\include\player_ai.h
+1586862298 d:\молц\nite game studio\space-friendship-master\space friendship\include\player_ai.h
 	"Player.h"
+	"SoundManager.h"
 	<chrono>
 
-1586775662 d:\молц\nite game studio\space-friendship-master\space friendship\include\rock.h
+1586855870 d:\молц\nite game studio\space-friendship-master\space friendship\include\rock.h
 	"Enemy.h"
 	<fstream>
 	<cstring>
 
-1586775662 d:\молц\nite game studio\space-friendship-master\space friendship\include\shooter.h
+1586855870 d:\молц\nite game studio\space-friendship-master\space friendship\include\shooter.h
 	"Enemy.h"
 
-1586775662 d:\молц\nite game studio\space-friendship-master\space friendship\include\zigzag.h
+1586855870 d:\молц\nite game studio\space-friendship-master\space friendship\include\zigzag.h
 	"Shooter.h"
 
-1586775662 d:\молц\nite game studio\space-friendship-master\space friendship\include\bullet.h
+1586855870 d:\молц\nite game studio\space-friendship-master\space friendship\include\bullet.h
 	"Projectile.h"
 
-1586778778 d:\молц\nite game studio\space-friendship-master\space friendship\include\spawner.h
+1586855870 d:\молц\nite game studio\space-friendship-master\space friendship\include\spawner.h
 	<stdlib.h>
 	<time.h>
 	<iostream>
@@ -2128,7 +2129,7 @@
 	<vector>
 	"Engine.h"
 
-1586775663 d:\молц\nite game studio\space-friendship-master\space friendship\include\dropper.h
+1586861331 d:\молц\nite game studio\space-friendship-master\space friendship\include\dropper.h
 	<stdlib.h>
 	<time.h>
 	<iostream>
@@ -2137,7 +2138,7 @@
 	<vector>
 	"Engine.h"
 
-1586778785 d:\молц\nite game studio\space-friendship-master\space friendship\include\configmanager.h
+1586861482 d:\молц\nite game studio\space-friendship-master\space friendship\include\configmanager.h
 	<SDL2/SDL.h>
 	"Enemy.h"
 	"Projectile.h"
@@ -2150,20 +2151,21 @@
 1586548100 d:\молц\nite game studio\space-friendship-master\space friendship\include\playerenemy.h
 	"Enemy.h"
 
-1586775662 d:\молц\nite game studio\space-friendship-master\space friendship\include\shop.h
+1586855870 d:\молц\nite game studio\space-friendship-master\space friendship\include\shop.h
 	<fstream>
 	<vector>
 	<SDL2/SDL.h>
-	"ConfigManager.h"
+	<ConfigManager.h>
+	<UpgradeManager.h>
 
-1586546999 d:\молц\nite game studio\space-friendship-master\space friendship\include\soundmanager.h
+1586860569 d:\молц\nite game studio\space-friendship-master\space friendship\include\soundmanager.h
 	<SDL2/SDL_mixer.h>
 	<SDL2/SDL.h>
 	<fstream>
 	<string>
 	<iostream>
 
-1541001592 d:\молц\nite game studio\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_mixer.h
+1586855870 d:\молц\nite game studio\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_mixer.h
 	"SDL_stdinc.h"
 	"SDL_rwops.h"
 	"SDL_audio.h"
@@ -2172,65 +2174,65 @@
 	"begin_code.h"
 	"close_code.h"
 
-1586775662 source:d:\молц\nite game studio\space-friendship-master\space friendship\src\artefact.cpp
+1586855870 source:d:\молц\nite game studio\space-friendship-master\space friendship\src\artefact.cpp
 	"Artefact.h"
 
-1586775663 source:d:\молц\nite game studio\space-friendship-master\space friendship\src\bullet.cpp
+1586855870 source:d:\молц\nite game studio\space-friendship-master\space friendship\src\bullet.cpp
 	"Bullet.h"
 
-1586779922 source:d:\молц\nite game studio\space-friendship-master\space friendship\src\dropper.cpp
+1586861570 source:d:\молц\nite game studio\space-friendship-master\space friendship\src\dropper.cpp
 	"Dropper.h"
 
-1586775662 source:d:\молц\nite game studio\space-friendship-master\space friendship\src\enemy.cpp
+1586855870 source:d:\молц\nite game studio\space-friendship-master\space friendship\src\enemy.cpp
 	"Enemy.h"
 
-1586775662 source:d:\молц\nite game studio\space-friendship-master\space friendship\src\engine.cpp
+1586855870 source:d:\молц\nite game studio\space-friendship-master\space friendship\src\engine.cpp
 	"Engine.h"
 
-1586775663 source:d:\молц\nite game studio\space-friendship-master\space friendship\src\gun.cpp
+1586855870 source:d:\молц\nite game studio\space-friendship-master\space friendship\src\gun.cpp
 	"Gun.h"
 
-1586775663 source:d:\молц\nite game studio\space-friendship-master\space friendship\src\healthbar.cpp
+1586855870 source:d:\молц\nite game studio\space-friendship-master\space friendship\src\healthbar.cpp
 	"HealthBar.h"
 
-1586775663 source:d:\молц\nite game studio\space-friendship-master\space friendship\src\player.cpp
+1586872495 source:d:\молц\nite game studio\space-friendship-master\space friendship\src\player.cpp
 	"Player.h"
 
-1586775662 source:d:\молц\nite game studio\space-friendship-master\space friendship\src\player_ai.cpp
+1586863668 source:d:\молц\nite game studio\space-friendship-master\space friendship\src\player_ai.cpp
 	"Player_AI.h"
 	"World.h"
 
-1586775662 source:d:\молц\nite game studio\space-friendship-master\space friendship\src\projectile.cpp
+1586855870 source:d:\молц\nite game studio\space-friendship-master\space friendship\src\projectile.cpp
 	"Projectile.h"
 
-1586775663 source:d:\молц\nite game studio\space-friendship-master\space friendship\src\rock.cpp
+1586855870 source:d:\молц\nite game studio\space-friendship-master\space friendship\src\rock.cpp
 	"Rock.h"
 
-1586775662 source:d:\молц\nite game studio\space-friendship-master\space friendship\src\shooter.cpp
+1586855870 source:d:\молц\nite game studio\space-friendship-master\space friendship\src\shooter.cpp
 	"Shooter.h"
 
-1586775663 source:d:\молц\nite game studio\space-friendship-master\space friendship\src\shop.cpp
+1586855870 source:d:\молц\nite game studio\space-friendship-master\space friendship\src\shop.cpp
 	"Shop.h"
 
-1586777674 source:d:\молц\nite game studio\space-friendship-master\space friendship\src\soundmanager.cpp
+1586863741 source:d:\молц\nite game studio\space-friendship-master\space friendship\src\soundmanager.cpp
 	"SoundManager.h"
 
-1586775663 source:d:\молц\nite game studio\space-friendship-master\space friendship\src\upgrademanager.cpp
+1586855870 source:d:\молц\nite game studio\space-friendship-master\space friendship\src\upgrademanager.cpp
 	"UpgradeManager.h"
 
-1586775662 source:d:\молц\nite game studio\space-friendship-master\space friendship\src\zigzag.cpp
+1586855870 source:d:\молц\nite game studio\space-friendship-master\space friendship\src\zigzag.cpp
 	"ZigZag.h"
 
 1586076611 source:d:\молц\nite game studio\space-friendship-master\space friendship\src\playerenemy.cpp
 	"PlayerEnemy.h"
 
-1586778778 source:d:\молц\nite game studio\space-friendship-master\space friendship\src\spawner.cpp
+1586855870 source:d:\молц\nite game studio\space-friendship-master\space friendship\src\spawner.cpp
 	"Spawner.h"
 
-1586780706 source:d:\молц\nite game studio\space-friendship-master\space friendship\src\world.cpp
+1586871942 source:d:\молц\nite game studio\space-friendship-master\space friendship\src\world.cpp
 	"World.h"
 
-1586779988 source:d:\молц\nite game studio\space-friendship-master\space friendship\src\configmanager.cpp
+1586861560 source:d:\молц\nite game studio\space-friendship-master\space friendship\src\configmanager.cpp
 	"ConfigManager.h"
 
 1586775663 source:d:\молц\nite game studio\space-friendship-master\space friendship\src\progresssaver.cpp
@@ -2239,13 +2241,13 @@
 1586775663 d:\молц\nite game studio\space-friendship-master\space friendship\include\progresssaver.h
 	<fstream>
 
-1586775663 d:\молц\nite game studio\space-friendship-master\space friendship\include\animation.h
+1586855870 d:\молц\nite game studio\space-friendship-master\space friendship\include\animation.h
 	<SDL2/SDL.h>
 	<fstream>
 	<ctime>
 	"Engine.h"
 
-1586775663 source:d:\молц\nite game studio\space-friendship-master\space friendship\src\animation.cpp
+1586855870 source:d:\молц\nite game studio\space-friendship-master\space friendship\src\animation.cpp
 	"Animation.h"
 
 1586854653 source:c:\users\konstantin\downloads\space-friendship-master-20200414t075108z-001\space-friendship-master\space friendship\main.cpp
@@ -2853,4 +2855,577 @@
 
 1586854658 source:c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\src\soundmanager.cpp
 	"SoundManager.h"
+
+1586873346 source:c:\users\konstantin\downloads\space-friendship-master-20200414t130208z-001\space-friendship-master\space friendship\main.cpp
+	<SDL2/SDL.h>
+	"World.h"
+
+1586873354 c:\users\konstantin\downloads\space-friendship-master-20200414t130208z-001\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl.h
+	"SDL_main.h"
+	"SDL_stdinc.h"
+	"SDL_assert.h"
+	"SDL_atomic.h"
+	"SDL_audio.h"
+	"SDL_clipboard.h"
+	"SDL_cpuinfo.h"
+	"SDL_endian.h"
+	"SDL_error.h"
+	"SDL_events.h"
+	"SDL_filesystem.h"
+	"SDL_gamecontroller.h"
+	"SDL_haptic.h"
+	"SDL_hints.h"
+	"SDL_joystick.h"
+	"SDL_loadso.h"
+	"SDL_log.h"
+	"SDL_messagebox.h"
+	"SDL_mutex.h"
+	"SDL_power.h"
+	"SDL_render.h"
+	"SDL_rwops.h"
+	"SDL_sensor.h"
+	"SDL_shape.h"
+	"SDL_system.h"
+	"SDL_thread.h"
+	"SDL_timer.h"
+	"SDL_version.h"
+	"SDL_video.h"
+	"begin_code.h"
+	"close_code.h"
+
+1586873356 c:\users\konstantin\downloads\space-friendship-master-20200414t130208z-001\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_main.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+
+1586873354 c:\users\konstantin\downloads\space-friendship-master-20200414t130208z-001\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_stdinc.h
+	"SDL_config.h"
+	<sys/types.h>
+	<stdio.h>
+	<stdlib.h>
+	<stddef.h>
+	<stdarg.h>
+	<stdlib.h>
+	<malloc.h>
+	<stddef.h>
+	<stdarg.h>
+	<memory.h>
+	<string.h>
+	<strings.h>
+	<wchar.h>
+	<inttypes.h>
+	<stdint.h>
+	<ctype.h>
+	<math.h>
+	<float.h>
+	<alloca.h>
+	<malloc.h>
+	<malloc.h>
+	<malloc.h>
+	<stdlib.h>
+	<sal.h>
+	"begin_code.h"
+	"close_code.h"
+
+1586873357 c:\users\konstantin\downloads\space-friendship-master-20200414t130208z-001\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_config.h
+	"SDL_platform.h"
+
+1586873355 c:\users\konstantin\downloads\space-friendship-master-20200414t130208z-001\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_platform.h
+	"AvailabilityMacros.h"
+	"TargetConditionals.h"
+	<winapifamily.h>
+	"begin_code.h"
+	"close_code.h"
+
+1586873356 c:\users\konstantin\downloads\space-friendship-master-20200414t130208z-001\space-friendship-master\space friendship\dep_sdl\include\sdl2\begin_code.h
+
+1586873354 c:\users\konstantin\downloads\space-friendship-master-20200414t130208z-001\space-friendship-master\space friendship\dep_sdl\include\sdl2\close_code.h
+
+1586873354 c:\users\konstantin\downloads\space-friendship-master-20200414t130208z-001\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_assert.h
+	"SDL_config.h"
+	"begin_code.h"
+	<signal.h>
+	"close_code.h"
+
+1586873357 c:\users\konstantin\downloads\space-friendship-master-20200414t130208z-001\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_atomic.h
+	"SDL_stdinc.h"
+	"SDL_platform.h"
+	"begin_code.h"
+	<sys/cpuinline.h>
+	<mbarrier.h>
+	"close_code.h"
+
+1586873355 c:\users\konstantin\downloads\space-friendship-master-20200414t130208z-001\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_audio.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_endian.h"
+	"SDL_mutex.h"
+	"SDL_thread.h"
+	"SDL_rwops.h"
+	"begin_code.h"
+	"close_code.h"
+
+1586873354 c:\users\konstantin\downloads\space-friendship-master-20200414t130208z-001\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_error.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+
+1586873355 c:\users\konstantin\downloads\space-friendship-master-20200414t130208z-001\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_endian.h
+	"SDL_stdinc.h"
+	<endian.h>
+	"begin_code.h"
+	"close_code.h"
+
+1586873354 c:\users\konstantin\downloads\space-friendship-master-20200414t130208z-001\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_mutex.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1586873356 c:\users\konstantin\downloads\space-friendship-master-20200414t130208z-001\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_thread.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_atomic.h"
+	"SDL_mutex.h"
+	"begin_code.h"
+	<process.h>
+	<process.h>
+	<stdlib.h>
+	"close_code.h"
+
+1586873353 c:\users\konstantin\downloads\space-friendship-master-20200414t130208z-001\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_rwops.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1586873355 c:\users\konstantin\downloads\space-friendship-master-20200414t130208z-001\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_clipboard.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+
+1586873355 c:\users\konstantin\downloads\space-friendship-master-20200414t130208z-001\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_cpuinfo.h
+	"SDL_stdinc.h"
+	<intrin.h>
+	<intrin.h>
+	<altivec.h>
+	<arm_neon.h>
+	<armintr.h>
+	<arm_neon.h>
+	<armintr.h>
+	<arm_neon.h>
+	<mm3dnow.h>
+	<immintrin.h>
+	<mmintrin.h>
+	<xmmintrin.h>
+	<emmintrin.h>
+	<pmmintrin.h>
+	"begin_code.h"
+	"close_code.h"
+
+1586873354 c:\users\konstantin\downloads\space-friendship-master-20200414t130208z-001\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_events.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_video.h"
+	"SDL_keyboard.h"
+	"SDL_mouse.h"
+	"SDL_joystick.h"
+	"SDL_gamecontroller.h"
+	"SDL_quit.h"
+	"SDL_gesture.h"
+	"SDL_touch.h"
+	"begin_code.h"
+	"close_code.h"
+
+1586873357 c:\users\konstantin\downloads\space-friendship-master-20200414t130208z-001\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_video.h
+	"SDL_stdinc.h"
+	"SDL_pixels.h"
+	"SDL_rect.h"
+	"SDL_surface.h"
+	"begin_code.h"
+	"close_code.h"
+
+1586873354 c:\users\konstantin\downloads\space-friendship-master-20200414t130208z-001\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_pixels.h
+	"SDL_stdinc.h"
+	"SDL_endian.h"
+	"begin_code.h"
+	"close_code.h"
+
+1586873356 c:\users\konstantin\downloads\space-friendship-master-20200414t130208z-001\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_rect.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_pixels.h"
+	"SDL_rwops.h"
+	"begin_code.h"
+	"close_code.h"
+
+1586873354 c:\users\konstantin\downloads\space-friendship-master-20200414t130208z-001\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_surface.h
+	"SDL_stdinc.h"
+	"SDL_pixels.h"
+	"SDL_rect.h"
+	"SDL_blendmode.h"
+	"SDL_rwops.h"
+	"begin_code.h"
+	"close_code.h"
+
+1586873355 c:\users\konstantin\downloads\space-friendship-master-20200414t130208z-001\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_blendmode.h
+	"begin_code.h"
+	"close_code.h"
+
+1586873356 c:\users\konstantin\downloads\space-friendship-master-20200414t130208z-001\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_keyboard.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_keycode.h"
+	"SDL_video.h"
+	"begin_code.h"
+	"close_code.h"
+
+1586873355 c:\users\konstantin\downloads\space-friendship-master-20200414t130208z-001\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_keycode.h
+	"SDL_stdinc.h"
+	"SDL_scancode.h"
+
+1586873355 c:\users\konstantin\downloads\space-friendship-master-20200414t130208z-001\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_scancode.h
+	"SDL_stdinc.h"
+
+1586873355 c:\users\konstantin\downloads\space-friendship-master-20200414t130208z-001\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_mouse.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_video.h"
+	"begin_code.h"
+	"close_code.h"
+
+1586873356 c:\users\konstantin\downloads\space-friendship-master-20200414t130208z-001\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_joystick.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1586873354 c:\users\konstantin\downloads\space-friendship-master-20200414t130208z-001\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_gamecontroller.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_rwops.h"
+	"SDL_joystick.h"
+	"begin_code.h"
+	"close_code.h"
+
+1586873356 c:\users\konstantin\downloads\space-friendship-master-20200414t130208z-001\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_quit.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+
+1586873356 c:\users\konstantin\downloads\space-friendship-master-20200414t130208z-001\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_gesture.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_video.h"
+	"SDL_touch.h"
+	"begin_code.h"
+	"close_code.h"
+
+1586873356 c:\users\konstantin\downloads\space-friendship-master-20200414t130208z-001\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_touch.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_video.h"
+	"begin_code.h"
+	"close_code.h"
+
+1586873354 c:\users\konstantin\downloads\space-friendship-master-20200414t130208z-001\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_filesystem.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+
+1586873355 c:\users\konstantin\downloads\space-friendship-master-20200414t130208z-001\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_haptic.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_joystick.h"
+	"begin_code.h"
+	"close_code.h"
+
+1586873354 c:\users\konstantin\downloads\space-friendship-master-20200414t130208z-001\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_hints.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+
+1586873355 c:\users\konstantin\downloads\space-friendship-master-20200414t130208z-001\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_loadso.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1586873356 c:\users\konstantin\downloads\space-friendship-master-20200414t130208z-001\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_log.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+
+1586873355 c:\users\konstantin\downloads\space-friendship-master-20200414t130208z-001\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_messagebox.h
+	"SDL_stdinc.h"
+	"SDL_video.h"
+	"begin_code.h"
+	"close_code.h"
+
+1586873356 c:\users\konstantin\downloads\space-friendship-master-20200414t130208z-001\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_power.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+
+1586873354 c:\users\konstantin\downloads\space-friendship-master-20200414t130208z-001\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_render.h
+	"SDL_stdinc.h"
+	"SDL_rect.h"
+	"SDL_video.h"
+	"begin_code.h"
+	"close_code.h"
+
+1586873356 c:\users\konstantin\downloads\space-friendship-master-20200414t130208z-001\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_sensor.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1586873355 c:\users\konstantin\downloads\space-friendship-master-20200414t130208z-001\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_shape.h
+	"SDL_stdinc.h"
+	"SDL_pixels.h"
+	"SDL_rect.h"
+	"SDL_surface.h"
+	"SDL_video.h"
+	"begin_code.h"
+	"close_code.h"
+
+1586873354 c:\users\konstantin\downloads\space-friendship-master-20200414t130208z-001\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_system.h
+	"SDL_stdinc.h"
+	"SDL_keyboard.h"
+	"SDL_render.h"
+	"SDL_video.h"
+	"begin_code.h"
+	"close_code.h"
+
+1586873356 c:\users\konstantin\downloads\space-friendship-master-20200414t130208z-001\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_timer.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1586873354 c:\users\konstantin\downloads\space-friendship-master-20200414t130208z-001\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_version.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+
+1586877704 c:\users\konstantin\downloads\space-friendship-master-20200414t130208z-001\space-friendship-master\space friendship\include\world.h
+	<iostream>
+	<fstream>
+	<vector>
+	<string>
+	<SDL2/SDL.h>
+	"Player.h"
+	"Enemy.h"
+	"Projectile.h"
+	"Artefact.h"
+	"Player_AI.h"
+	"Rock.h"
+	"Shooter.h"
+	"ZigZag.h"
+	"Bullet.h"
+	"Engine.h"
+	"Spawner.h"
+	"Dropper.h"
+	"UpgradeManager.h"
+	"ConfigManager.h"
+	"Shop.h"
+	"SoundManager.h"
+	"Animation.h"
+
+1586873348 c:\users\konstantin\downloads\space-friendship-master-20200414t130208z-001\space-friendship-master\space friendship\include\player.h
+	<iostream>
+	<fstream>
+	<vector>
+	<string>
+	<cmath>
+	<ctime>
+	<SDL2/SDL.h>
+	"Engine.h"
+	"UpgradeManager.h"
+	"HealthBar.h"
+	"Gun.h"
+
+1586874099 c:\users\konstantin\downloads\space-friendship-master-20200414t130208z-001\space-friendship-master\space friendship\include\engine.h
+	<iostream>
+	<cmath>
+	<windows.h>
+	<winuser.h>
+	<fstream>
+	<iostream>
+	<SDL2/SDL.h>
+
+1586873348 c:\users\konstantin\downloads\space-friendship-master-20200414t130208z-001\space-friendship-master\space friendship\include\upgrademanager.h
+	<iostream>
+	<fstream>
+	<vector>
+
+1586873348 c:\users\konstantin\downloads\space-friendship-master-20200414t130208z-001\space-friendship-master\space friendship\include\healthbar.h
+	<SDL2/SDL.h>
+	<string>
+	<fstream>
+	<iostream>
+
+1586873348 c:\users\konstantin\downloads\space-friendship-master-20200414t130208z-001\space-friendship-master\space friendship\include\gun.h
+	<time.h>
+	<SDL2/Sdl.h>
+	"Engine.h"
+
+1586854670 c:\users\konstantin\downloads\space-friendship-master-20200414t130208z-001\space-friendship-master\space friendship\include\enemy.h
+	<iostream>
+	<fstream>
+	<cstring>
+	<cmath>
+	<vector>
+	<SDL2/SDL.h>
+	<Engine.h>
+	<Gun.h>
+
+1586873348 c:\users\konstantin\downloads\space-friendship-master-20200414t130208z-001\space-friendship-master\space friendship\include\projectile.h
+	<iostream>
+	<fstream>
+	<cstring>
+	<SDL2/SDL.h>
+	"Engine.h"
+
+1586873348 c:\users\konstantin\downloads\space-friendship-master-20200414t130208z-001\space-friendship-master\space friendship\include\artefact.h
+	<SDL2/SDL.h>
+	<fstream>
+	<ctime>
+	"Engine.h"
+
+1586873348 c:\users\konstantin\downloads\space-friendship-master-20200414t130208z-001\space-friendship-master\space friendship\include\player_ai.h
+	"Player.h"
+	"SoundManager.h"
+	<chrono>
+
+1586873348 c:\users\konstantin\downloads\space-friendship-master-20200414t130208z-001\space-friendship-master\space friendship\include\soundmanager.h
+	<SDL2/SDL_mixer.h>
+	<SDL2/SDL.h>
+	<fstream>
+	<string>
+	<iostream>
+
+1586873355 c:\users\konstantin\downloads\space-friendship-master-20200414t130208z-001\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_mixer.h
+	"SDL_stdinc.h"
+	"SDL_rwops.h"
+	"SDL_audio.h"
+	"SDL_endian.h"
+	"SDL_version.h"
+	"begin_code.h"
+	"close_code.h"
+
+1586873348 c:\users\konstantin\downloads\space-friendship-master-20200414t130208z-001\space-friendship-master\space friendship\include\rock.h
+	"Enemy.h"
+	<fstream>
+	<cstring>
+
+1586873348 c:\users\konstantin\downloads\space-friendship-master-20200414t130208z-001\space-friendship-master\space friendship\include\shooter.h
+	"Enemy.h"
+
+1586873348 c:\users\konstantin\downloads\space-friendship-master-20200414t130208z-001\space-friendship-master\space friendship\include\zigzag.h
+	"Shooter.h"
+
+1586873348 c:\users\konstantin\downloads\space-friendship-master-20200414t130208z-001\space-friendship-master\space friendship\include\bullet.h
+	"Projectile.h"
+
+1586873348 c:\users\konstantin\downloads\space-friendship-master-20200414t130208z-001\space-friendship-master\space friendship\include\spawner.h
+	<stdlib.h>
+	<time.h>
+	<iostream>
+	<fstream>
+	<string>
+	<vector>
+	"Engine.h"
+
+1586873348 c:\users\konstantin\downloads\space-friendship-master-20200414t130208z-001\space-friendship-master\space friendship\include\dropper.h
+	<stdlib.h>
+	<time.h>
+	<iostream>
+	<fstream>
+	<string>
+	<vector>
+	"Engine.h"
+
+1586873348 c:\users\konstantin\downloads\space-friendship-master-20200414t130208z-001\space-friendship-master\space friendship\include\configmanager.h
+	<SDL2/SDL.h>
+	"Enemy.h"
+	"Projectile.h"
+	"Artefact.h"
+	"Rock.h"
+	"Shooter.h"
+	"ZigZag.h"
+	"Bullet.h"
+
+1586873348 c:\users\konstantin\downloads\space-friendship-master-20200414t130208z-001\space-friendship-master\space friendship\include\shop.h
+	<fstream>
+	<vector>
+	<SDL2/SDL.h>
+	<ConfigManager.h>
+	<UpgradeManager.h>
+
+1586873348 c:\users\konstantin\downloads\space-friendship-master-20200414t130208z-001\space-friendship-master\space friendship\include\animation.h
+	<SDL2/SDL.h>
+	<fstream>
+	<ctime>
+	"Engine.h"
+
+1586873350 source:c:\users\konstantin\downloads\space-friendship-master-20200414t130208z-001\space-friendship-master\space friendship\src\animation.cpp
+	"Animation.h"
+
+1586878569 source:c:\users\konstantin\downloads\space-friendship-master-20200414t130208z-001\space-friendship-master\space friendship\src\artefact.cpp
+	"Artefact.h"
+
+1586873350 source:c:\users\konstantin\downloads\space-friendship-master-20200414t130208z-001\space-friendship-master\space friendship\src\bullet.cpp
+	"Bullet.h"
+
+1586873350 source:c:\users\konstantin\downloads\space-friendship-master-20200414t130208z-001\space-friendship-master\space friendship\src\configmanager.cpp
+	"ConfigManager.h"
+
+1586875121 source:c:\users\konstantin\downloads\space-friendship-master-20200414t130208z-001\space-friendship-master\space friendship\src\dropper.cpp
+	"Dropper.h"
+
+1586873350 source:c:\users\konstantin\downloads\space-friendship-master-20200414t130208z-001\space-friendship-master\space friendship\src\enemy.cpp
+	"Enemy.h"
+
+1586859695 source:c:\users\konstantin\downloads\space-friendship-master-20200414t130208z-001\space-friendship-master\space friendship\src\engine.cpp
+	"Engine.h"
+
+1586873351 source:c:\users\konstantin\downloads\space-friendship-master-20200414t130208z-001\space-friendship-master\space friendship\src\gun.cpp
+	"Gun.h"
+
+1586873350 source:c:\users\konstantin\downloads\space-friendship-master-20200414t130208z-001\space-friendship-master\space friendship\src\healthbar.cpp
+	"HealthBar.h"
+
+1586874352 source:c:\users\konstantin\downloads\space-friendship-master-20200414t130208z-001\space-friendship-master\space friendship\src\player.cpp
+	"Player.h"
+
+1586878818 source:c:\users\konstantin\downloads\space-friendship-master-20200414t130208z-001\space-friendship-master\space friendship\src\player_ai.cpp
+	"Player_AI.h"
+	"World.h"
+
+1586873351 source:c:\users\konstantin\downloads\space-friendship-master-20200414t130208z-001\space-friendship-master\space friendship\src\projectile.cpp
+	"Projectile.h"
+
+1586873350 source:c:\users\konstantin\downloads\space-friendship-master-20200414t130208z-001\space-friendship-master\space friendship\src\rock.cpp
+	"Rock.h"
+
+1586873350 source:c:\users\konstantin\downloads\space-friendship-master-20200414t130208z-001\space-friendship-master\space friendship\src\shooter.cpp
+	"Shooter.h"
+
+1586873351 source:c:\users\konstantin\downloads\space-friendship-master-20200414t130208z-001\space-friendship-master\space friendship\src\shop.cpp
+	"Shop.h"
+
+1586873350 source:c:\users\konstantin\downloads\space-friendship-master-20200414t130208z-001\space-friendship-master\space friendship\src\soundmanager.cpp
+	"SoundManager.h"
+
+1586873350 source:c:\users\konstantin\downloads\space-friendship-master-20200414t130208z-001\space-friendship-master\space friendship\src\spawner.cpp
+	"Spawner.h"
+
+1586873351 source:c:\users\konstantin\downloads\space-friendship-master-20200414t130208z-001\space-friendship-master\space friendship\src\upgrademanager.cpp
+	"UpgradeManager.h"
+
+1586878938 source:c:\users\konstantin\downloads\space-friendship-master-20200414t130208z-001\space-friendship-master\space friendship\src\world.cpp
+	"World.h"
+
+1586876987 source:c:\users\konstantin\downloads\space-friendship-master-20200414t130208z-001\space-friendship-master\space friendship\src\zigzag.cpp
+	"ZigZag.h"
 

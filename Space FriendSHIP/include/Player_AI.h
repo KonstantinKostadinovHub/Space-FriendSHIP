@@ -2,6 +2,7 @@
 #define PLAYER_AI_H
 
 #include "Player.h"
+#include "SoundManager.h"
 #include <chrono>
 
 class Player_AI : public Player
@@ -9,6 +10,7 @@ class Player_AI : public Player
 public:
     Player_AI();
     virtual ~Player_AI();
+    SoundManager* m_soundManager;
 
     SDL_Rect m_desiredPos;
     const int MIN_DIST = 135;

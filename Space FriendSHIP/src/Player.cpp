@@ -13,7 +13,7 @@ Player::~Player()
 void Player::init(SDL_Renderer* renderer, string configFile, UpgradeManager* upgradeManager)
 {
     m_healthBar = new HealthBar;
-    inDash == false;
+    inDash = false;
 
     m_configFile = "config\\" + configFile;
     fstream stream;
@@ -34,8 +34,11 @@ void Player::init(SDL_Renderer* renderer, string configFile, UpgradeManager* upg
     stream >> tmp >> s_gas;
     stream >> tmp >> s_brake;
     stream >> tmp >> s_dash;
+    stream >> tmp >> s_shoot;
     stream >> tmp >> m_collisionDamage;
     stream >> tmp >> HPBar;
+    stream >> tmp >> m_dashCooldown;
+    stream >> tmp >> m_shootCooldown;
 
     stream.close();
 
@@ -65,6 +68,10 @@ void Player::init(SDL_Renderer* renderer, string configFile, UpgradeManager* upg
     {
         dash = SDL_SCANCODE_E;
     }
+    if(s_shoot == "Q")
+    {
+        shoot = SDL_SCANCODE_Q;
+    }
 
     if(s_gas == "Up")
     {
@@ -82,10 +89,19 @@ void Player::init(SDL_Renderer* renderer, string configFile, UpgradeManager* upg
     {
         move_right = SDL_SCANCODE_RIGHT;
     }
-    if(s_dash == "Right_Ctrl")
+    if(s_dash == "Right_Alt")
     {
-        dash = SDL_SCANCODE_RCTRL;
+        dash = SDL_SCANCODE_RALT;
     }
+    if(s_shoot == "Right_Shift")
+    {
+        shoot = SDL_SCANCODE_RSHIFT;
+    }
+
+    Gun* gun = new Gun;
+    gun -> init(0);
+    m_guns.push_back(gun);
+
 
     m_img = "img\\" + m_img;
     m_objectRect.x = m_spawn.x;
@@ -99,18 +115,37 @@ void Player::init(SDL_Renderer* renderer, string configFile, UpgradeManager* upg
     SDL_Surface* loadingSurface = SDL_LoadBMP(m_img.c_str());
     m_objectTexture = SDL_CreateTextureFromSurface(renderer, loadingSurface);
     SDL_FreeSurface(loadingSurface);
-
 }
 
 void Player::update()
 {
+    checkforShooting();
+
     m_healthBar -> update(m_health, m_maxhealth);
     const Uint8 *state = SDL_GetKeyboardState(NULL);
     m_screen_speed = m_speed  * SPEED_FACTOR;
 
+    for(int i = 0; i < m_guns.size() ; i++)
+    {
+        coordinates playerCoor;
+        playerCoor.x = m_objectRect.x;
+        playerCoor.y = m_objectRect.y;
+        m_guns[i] -> update(m_rotationAngle, playerCoor);
+        m_guns[i] -> m_cantShoot = true;
+    }
+
     if(state != NULL)
     {
+        if(state[shoot] && m_canShoot)
+        {
+            for (int i = 0; i < m_guns.size(); i++)
+            {
+                m_guns[i] -> m_cantShoot = false;
 
+            }
+            m_startShootCooldown = time (NULL);
+            m_canShoot = false;
+        }
         if (state[gas])
         {
             m_speed += 0.7;
@@ -147,20 +182,11 @@ void Player::update()
     if(m_canDash)
     {
         inDash = true;
-        m_oldCoor.x = m_coor.x;
-        m_oldCoor.y = m_coor.y;
-
+        m_coor.x = m_objectRect.x;
+        m_coor.y = m_objectRect.y;
 
         m_coor.x += sin(m_rotationAngle * PI / 180) * m_dashLenght;
         m_coor.y -= cos(m_rotationAngle * PI / 180) * m_dashLenght;
-    }
-
-    for(int i = 0; i < m_guns.size() ; i++)
-    {
-        coordinates playerCoor;
-        playerCoor.x = m_objectRect.x;
-        playerCoor.y = m_objectRect.y;
-        m_guns[i] -> update(m_rotationAngle, playerCoor);
     }
 
     if(m_health > m_maxhealth)
@@ -195,5 +221,13 @@ void Player::checkForDash()
     else
     {
         m_canDash = false;
+    }
+}
+
+bool Player::checkforShooting()
+{
+    if(m_startShootCooldown + m_shootCooldown < time(NULL))
+    {
+        m_canShoot = true;
     }
 }

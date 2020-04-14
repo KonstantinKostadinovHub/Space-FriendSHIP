@@ -37,8 +37,8 @@ public:
 
     Artefact* m_healthBooster;
     Artefact* m_speedBooster;
-    Artefact* m_slowBooster;
-    Artefact* m_reverseBooster;
+    Artefact* m_Stopper;
+    Artefact* m_Reverser;
 
     void init(string configFile, SDL_Renderer* renderer);
     void initObject(string configFile);

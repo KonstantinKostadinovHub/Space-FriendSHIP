@@ -26,4 +26,6 @@ healthbooster_config: healthbooster.txt
 
 speedbooster_config: speedbooster.txt
 
-slowbooster_config: slowbooster.txt
+stopper_config: stopper.txt
+
+reverser_config: reverser.txt

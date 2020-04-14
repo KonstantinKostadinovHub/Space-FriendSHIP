@@ -24,8 +24,14 @@ Gas: Up
 
 Brake: Down
 
-Dash: Right_Ctrl
+Dash: Right_Alt
+
+Shoot: Right_Shift
 
 CollisionDamage: 80
 
 HPBar: healthBar2.txt 
+
+dashCooldown: 5
+
+shootCooldown: 1

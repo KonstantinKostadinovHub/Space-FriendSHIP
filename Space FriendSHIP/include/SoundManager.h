@@ -31,7 +31,7 @@ public:
     string Stop_str;
     string Reverse_str;
 
-    Mix_Music* General;
+    Mix_Chunk* General;
     Mix_Chunk* Explosion;
     Mix_Chunk* Shooting;
     Mix_Chunk* Dash;

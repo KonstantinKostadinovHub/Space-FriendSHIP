@@ -26,6 +26,12 @@ Brake: S
 
 Dash: E
 
+Shoot: Q
+
 CollisionDamage: 80
 
 HPBar: healthBar1.txt
+
+dashCooldown: 5
+
+shootCooldown: 1

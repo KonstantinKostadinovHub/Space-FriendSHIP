@@ -31,8 +31,8 @@ public:
 
     coordinates m_oldCoor;
     coordinates m_coor;
-
     coordinates m_spawn;
+
     int m_dashLenght;
     int m_min_speed;
     int m_max_speed;
@@ -46,9 +46,13 @@ public:
     bool m_canDash;
     bool m_hasCooldown;
     bool inDash;
+    bool checkforShooting();
+    bool m_canShoot;
 
     time_t m_startDashCooldown;
     time_t m_dashCooldown = 5;
+    time_t m_startShootCooldown;
+    time_t m_shootCooldown = 1;
 
     vector<Gun*> m_guns;
 
@@ -59,6 +63,7 @@ public:
     string s_gas;
     string s_brake;
     string s_dash;
+    string s_shoot;
 
     string m_bulletName = "bullet_player.txt";
 
@@ -69,6 +74,13 @@ public:
     SDL_Scancode gas;
     SDL_Scancode brake;
     SDL_Scancode dash;
+    SDL_Scancode shoot;
+
+    virtual void init(SDL_Renderer* renderer, string configFile, UpgradeManager* upgradeManager);
+    virtual void update();
+    virtual void draw(SDL_Renderer* renderer);
+    virtual void checkForDash();
+
 
     SDL_Texture* m_shape1_tx = NULL;
     SDL_Surface* m_loading_surf = NULL;
@@ -77,11 +89,6 @@ public:
 
     float m_rotationAngle;
     SDL_Point m_center;
-
-    virtual void init(SDL_Renderer* renderer, string configFile, UpgradeManager* upgradeManager);
-    virtual void update();
-    virtual void draw(SDL_Renderer* renderer);
-    virtual void checkForDash();
 
 protected:
 

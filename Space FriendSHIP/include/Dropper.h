@@ -22,7 +22,7 @@ public:
 
     int m_healthProb;
     int m_speedProb;
-    int m_slowProb;
+    int m_stopProb;
     int m_reverseProb;
 
     vector <string> m_probabilities;

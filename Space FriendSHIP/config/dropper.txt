@@ -2,8 +2,6 @@ Health: 1
 
 Speed: 1
 
-Slow: 1
+Slow: 5
 
-Stopper: 1
-
-Reverse: 1
+Reverse: 5

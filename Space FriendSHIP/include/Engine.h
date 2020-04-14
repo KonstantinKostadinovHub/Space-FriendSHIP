@@ -35,8 +35,8 @@ void SaveInFile(string file, string tmp, float value);
 float LoadFromFile(string file);
 SDL_Texture* LoadTexture(string file, SDL_Renderer* renderer);
 bool checkForMouseCollision(int mouseX, int mouseY, SDL_Rect object);
-UIElement* LoadUIElement(string file);
 bool checkForCollisionBetweenObjects(SDL_Rect rect_no_rotation1, float angle1, SDL_Point* center1,
-                                         SDL_Rect rect_no_rotation2, float angle2, SDL_Point* center2);
+        SDL_Rect rect_no_rotation2, float angle2, SDL_Point* center2);
 bool checkIfOffBounds(SDL_Rect rect, int SCREEN_WIDTH, int SCREEN_HEIGHT);
+UIElement* LoadUIElement(string file);
 #endif // ENGINE_H

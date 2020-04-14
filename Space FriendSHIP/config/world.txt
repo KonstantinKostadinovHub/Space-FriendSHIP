@@ -10,6 +10,8 @@ menuScreen2: MenuScreen2Game.bmp
 
 menuScreen3: MenuScreen3Game.bmp
 
-SpawnCooldown: 0.2
+SpawnCooldown: 1
 
-DropCooldown: 2
+DropCooldown: 3
+
+EnemiesPerSpawn: 3
