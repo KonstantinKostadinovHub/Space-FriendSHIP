@@ -153,7 +153,6 @@ void Player_AI::shoot()
         coordinates* buff = NULL;
         m_guns[i] -> update(m_rotationAngle, findCenter(m_objectRect, m_rotationAngle, buff));
     }
-    //m_soundManager -> play_sound("Shooting.mp3");
 }
 
 void Player_AI::update()

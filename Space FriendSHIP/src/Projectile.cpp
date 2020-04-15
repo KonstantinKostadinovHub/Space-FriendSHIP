@@ -29,6 +29,9 @@ void Projectile::init(string configFile, struct coordinates coor, float rotation
     }
     m_coor.x = coor.x + startPosMultiplier * (sin(m_rotationAngle * PI / 180) * m_speed * SPEED_FACTOR);
     m_coor.y = coor.y - startPosMultiplier * (cos(m_rotationAngle * PI / 180) * m_speed * SPEED_FACTOR);
+
+    m_objectRect.x = (int)m_coor.x;
+    m_objectRect.y = (int)m_coor.y;
 }
 
 void Projectile::update()
@@ -42,7 +45,6 @@ void Projectile::update()
 void Projectile::draw(SDL_Renderer* renderer)
 {
     SDL_RenderCopyEx(renderer, m_objectTexture, NULL, &m_objectRect, m_rotationAngle, NULL, SDL_FLIP_NONE);
-    SDL_RenderCopyEx(renderer, m_objectTexture, NULL, &m_objectRect, NULL, NULL, SDL_FLIP_NONE);
 }
 
 void Projectile::load(string configFile, SDL_Renderer* renderer)

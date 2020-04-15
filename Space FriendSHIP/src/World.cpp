@@ -427,10 +427,6 @@ void World::shootProjectiles()
                 buff.y = m_enemies[i] -> m_guns[j] -> m_objectRect.y;
                 addBullet(m_enemies[i] -> m_bulletName, buff, m_enemies[i] -> m_guns[j] -> m_rotationAngle);
             }
-            for(vector <Animation*> :: iterator it = m_animations.begin(); it != m_animations.end(); it++)
-            {
-                (*it) -> update();
-            }
         }
     }
 
