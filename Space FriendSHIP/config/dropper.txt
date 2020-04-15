@@ -1,7 +1,9 @@
 Health: 1
 
-Speed: 1
+Speed: 5
 
 Slow: 5
 
 Reverse: 5
+
+Coin: 5

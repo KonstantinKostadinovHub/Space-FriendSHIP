@@ -238,24 +238,30 @@ void World::collisionDamage()
                     m_players[i] -> m_health += m_artefacts[p] -> m_actionEffect;
                     m_artefacts[p] -> m_health = 0;
                     m_soundManager -> play_sound("Healing.mp3");
-                }
+                } else
                 if(m_artefacts[p] -> m_configFile == "speedbooster.txt")
                 {
                     m_players[i] -> m_speed += m_artefacts[p] -> m_actionEffect;
                     m_artefacts[p] -> m_health = 0;
                     m_soundManager -> play_sound("Dash.mp3");
-                }
+                } else
                 if(m_artefacts[p] -> m_configFile == "stopper.txt")
                 {
                     m_players[i] -> m_speed = m_artefacts[p] -> m_actionEffect;
                     m_artefacts[p] -> m_health = 0;
                     m_soundManager -> play_sound("Stop.mp3");
-                }
+                } else
                 if(m_artefacts[p] -> m_configFile == "reverser.txt")
                 {
                     m_players[i] -> m_speed = m_artefacts[p] -> m_actionEffect;
                     m_artefacts[p] -> m_health = 0;
                     m_soundManager -> play_sound("Reverse.mp3");
+                } else
+                if(m_artefacts[p] -> m_configFile == "coin.txt")
+                {
+                    m_coins += m_artefacts[p] -> m_actionEffect;
+                    m_artefacts[p] -> m_health = 0;
+                    m_soundManager -> play_sound("Coin.mp3");
                 }
             }
         }
@@ -346,7 +352,6 @@ void World::addBullet(string configFile, coordinates coor, float rotation)
     }
 
     Projectile* proj = new Bullet();
-    cout << "BULLET " << coor.x << " " << coor.y << endl;
     proj -> init(configFile, coor, rotation, model);
     m_projectiles.push_back(proj);
 }
@@ -370,6 +375,10 @@ void World::addArtefact(string configFile,coordinates coor, coordinates directio
     else if(configFile == "reverser.txt")
     {
         model = m_configManager -> m_Reverser;
+    }
+    else if(configFile == "coin.txt")
+    {
+        model = m_configManager -> m_Coin;
     }
 
     Artefact* artefact = new Artefact();
@@ -440,7 +449,10 @@ void World::shootProjectiles()
                 buff.x = m_players[i] -> m_guns[j] -> m_objectRect.x;
                 buff.y = m_players[i] -> m_guns[j] -> m_objectRect.y;
                 addBullet(m_players[i] -> m_bulletName, buff, m_players[i] -> m_guns[j] -> m_rotationAngle);
-                m_soundManager->play_sound("Shooting.mp3");
+                if(m_players[i]->m_configFile!="config\\playerAI.txt")
+                {
+                    m_soundManager->play_sound("Shooting.mp3");
+                }
             }
         }
     }

@@ -20,7 +20,7 @@ void Projectile::init(string configFile, struct coordinates coor, float rotation
     m_collisonDamage = projectile -> m_collisonDamage;
     m_objectTexture = projectile -> m_objectTexture;
 
-    int startPosMultiplier = 1;
+    int startPosMultiplier = 2;
 
     m_rotationAngle = rotation;
     if(configFile == "bullet_player.txt")

@@ -30,6 +30,7 @@ void ConfigManager::init(string configFile, SDL_Renderer* renderer)
     m_speedBooster = new Artefact;
     m_Stopper = new Artefact;
     m_Reverser = new Artefact;
+    m_Coin = new Artefact;
 
     m_configFile = "config\\" + configFile;
 
@@ -68,6 +69,8 @@ void ConfigManager::init(string configFile, SDL_Renderer* renderer)
     m_Stopper -> load(buff, renderer);
     stream >> tmp >> buff;
     m_Reverser -> load(buff, renderer);
+    stream >> tmp >> buff;
+    m_Coin -> load(buff, renderer);
 
     stream.close();
 }

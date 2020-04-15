@@ -29,3 +29,5 @@ speedbooster_config: speedbooster.txt
 stopper_config: stopper.txt
 
 reverser_config: reverser.txt
+
+coin_config: coin.txt

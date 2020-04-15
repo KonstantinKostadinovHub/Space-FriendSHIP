@@ -11,3 +11,5 @@ Healing_Sound_Effect: Healing.mp3
 Stop_Sound_Effect: Stop.mp3
 
 Reverse_Sound_Effect: Reverse.mp3
+
+Coin_Sound_Effect: Coin.mp3

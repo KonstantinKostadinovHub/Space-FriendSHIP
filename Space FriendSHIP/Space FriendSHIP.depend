@@ -377,10 +377,10 @@
 	<SDL2/SDL.h>
 	"Engine.h"
 
-1586873350 source:c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\src\configmanager.cpp
+1586958724 source:c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\src\configmanager.cpp
 	"ConfigManager.h"
 
-1586873348 c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\include\configmanager.h
+1586959004 c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\include\configmanager.h
 	<SDL2/SDL.h>
 	"Enemy.h"
 	"Projectile.h"
@@ -416,10 +416,10 @@
 1586873348 c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\include\zigzag.h
 	"Shooter.h"
 
-1586875121 source:c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\src\dropper.cpp
+1586958800 source:c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\src\dropper.cpp
 	"Dropper.h"
 
-1586873348 c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\include\dropper.h
+1586958785 c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\include\dropper.h
 	<stdlib.h>
 	<time.h>
 	<iostream>
@@ -428,7 +428,7 @@
 	<vector>
 	"Engine.h"
 
-1586884728 source:c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\src\enemy.cpp
+1586959949 source:c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\src\enemy.cpp
 	"Enemy.h"
 
 1586883905 source:c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\src\engine.cpp
@@ -467,7 +467,7 @@
 	<fstream>
 	<vector>
 
-1586956818 source:c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\src\player_ai.cpp
+1586960213 source:c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\src\player_ai.cpp
 	"Player_AI.h"
 	"World.h"
 
@@ -516,7 +516,7 @@
 	<ConfigManager.h>
 	<UpgradeManager.h>
 
-1586957091 source:c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\src\projectile.cpp
+1586959297 source:c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\src\projectile.cpp
 	"Projectile.h"
 
 1586873350 source:c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\src\rock.cpp
@@ -531,7 +531,7 @@
 1586873351 source:c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\src\upgrademanager.cpp
 	"UpgradeManager.h"
 
-1586956839 source:c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\src\world.cpp
+1586960257 source:c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\src\world.cpp
 	"World.h"
 
 1586876987 source:c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\src\zigzag.cpp
@@ -540,7 +540,7 @@
 1586873351 source:c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\src\shop.cpp
 	"Shop.h"
 
-1586885427 source:c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\main.cpp
+1586957604 source:c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\main.cpp
 	<SDL2/SDL.h>
 	"World.h"
 
@@ -2838,7 +2838,7 @@
 	<ctime>
 	"Engine.h"
 
-1586873348 c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\include\soundmanager.h
+1586959024 c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\include\soundmanager.h
 	<SDL2/SDL_mixer.h>
 	<SDL2/SDL.h>
 	<fstream>
@@ -2854,7 +2854,7 @@
 	"begin_code.h"
 	"close_code.h"
 
-1586873350 source:c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\src\soundmanager.cpp
+1586960072 source:c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\src\soundmanager.cpp
 	"SoundManager.h"
 
 1586873346 source:c:\users\konstantin\downloads\space-friendship-master-20200414t130208z-001\space-friendship-master\space friendship\main.cpp

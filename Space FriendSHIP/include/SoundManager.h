@@ -30,6 +30,7 @@ public:
     string Healing_str;
     string Stop_str;
     string Reverse_str;
+    string Coin_str;
 
     Mix_Chunk* General;
     Mix_Chunk* Explosion;
@@ -37,7 +38,7 @@ public:
     Mix_Chunk* Dash;
     Mix_Chunk* Healing;
     Mix_Chunk* Stop;
-    Mix_Chunk* Reverse;
+    Mix_Chunk* Reverse;Mix_Chunk* Coin;
 
 protected:
 

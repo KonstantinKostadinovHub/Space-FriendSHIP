@@ -20,8 +20,6 @@ Player_AI::~Player_AI()
 
 void Player_AI::init(string config, SDL_Renderer* renderer)
 {
-    m_soundManager = new SoundManager;
-
     m_health = 1000000;
 
     m_configFile = "config\\" + config;

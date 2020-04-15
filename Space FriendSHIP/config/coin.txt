@@ -1,0 +1,9 @@
+size: 25 25
+
+image: Coin.bmp
+
+speed: 1
+
+frameCounter: 1
+
+actionFX: 10

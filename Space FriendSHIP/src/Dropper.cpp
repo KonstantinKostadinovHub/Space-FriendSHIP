@@ -23,6 +23,7 @@ void Dropper::init(string configName)
     stream >> tmp >> m_speedProb;
     stream >> tmp >> m_stopProb;
     stream >> tmp >> m_reverseProb;
+    stream >> tmp >> m_coinProb;
 
     for(int i = 0; i < m_healthProb ; i++)
     {
@@ -39,6 +40,10 @@ void Dropper::init(string configName)
     for(int i = 0; i < m_reverseProb; i++)
     {
         m_probabilities.push_back("reverser.txt");
+    }
+    for(int i = 0; i < m_coinProb; i++)
+    {
+        m_probabilities.push_back("coin.txt");
     }
 
     stream.close();

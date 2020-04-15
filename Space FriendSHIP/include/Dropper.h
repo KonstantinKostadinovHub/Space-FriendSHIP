@@ -24,6 +24,7 @@ public:
     int m_speedProb;
     int m_stopProb;
     int m_reverseProb;
+    int m_coinProb;
 
     vector <string> m_probabilities;
 

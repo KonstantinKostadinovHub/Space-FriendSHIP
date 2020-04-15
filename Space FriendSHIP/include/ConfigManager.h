@@ -39,6 +39,7 @@ public:
     Artefact* m_speedBooster;
     Artefact* m_Stopper;
     Artefact* m_Reverser;
+    Artefact* m_Coin;
 
     void init(string configFile, SDL_Renderer* renderer);
     void initObject(string configFile);
