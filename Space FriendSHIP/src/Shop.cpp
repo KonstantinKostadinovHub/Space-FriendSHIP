@@ -27,6 +27,7 @@ void Shop::init(string configFile, ConfigManager* configManager, SDL_Renderer* r
 
     int intBuff;
     string stringBuff;
+    coordinates coorBuff;
     string tmp;
 
     m_upgradeManagerLevels.push_back(&(um->m_CurrentLevelHealthUpgrade));
@@ -34,14 +35,13 @@ void Shop::init(string configFile, ConfigManager* configManager, SDL_Renderer* r
     m_upgradeManagerLevels.push_back(&(um->m_CurrentLevelDashUpgrade));
     m_upgradeManagerLevels.push_back(&(um->m_CurrentLevelCollisionDamageUpgrade));
     m_upgradeManagerLevels.push_back(&(um->m_CurrentLevelHealthBoosterUpgrade));
-    m_upgradeManagerLevels.push_back(&(um->m_CurrentLevelShieldBoosterDurationUpgrade));
     m_upgradeManagerLevels.push_back(&(um->m_CurrentLevelBulletDamageUpgrade));
-    m_upgradeManagerLevels.push_back(&(um->m_CurrentLevelBulletSpeedUpgrade));
 
     stream.open(m_configFile.c_str());
     stream >> tmp >> intBuff;
     m_spacing = intBuff;
     stream >> tmp >> m_frameRectModel.w >> m_frameRectModel.h;
+    stream >> tmp >> coorBuff.x >> coorBuff.y;
     stream >> tmp >> m_imgRectModel.w >> m_imgRectModel.h;
     stream >> tmp >> m_coor.x >> m_coor.y;
     stream >> tmp >> stringBuff;
@@ -59,10 +59,10 @@ void Shop::init(string configFile, ConfigManager* configManager, SDL_Renderer* r
         abilityUpgrade->level = *m_upgradeManagerLevels[i];
         abilityUpgrade->frameRect = m_frameRectModel;
         abilityUpgrade->imgRect = m_imgRectModel;
-        abilityUpgrade->frameRect.x = m_coor.x + (i % 4) * (m_frameRectModel.w + m_spacing);
-        abilityUpgrade->frameRect.y = m_coor.y + (i / 4) * (m_frameRectModel.h + m_spacing);
-        abilityUpgrade->imgRect.x = abilityUpgrade->frameRect.x + 4;
-        abilityUpgrade->imgRect.y = abilityUpgrade->frameRect.y + 4;
+        abilityUpgrade->frameRect.x = m_coor.x + (i % 3) * (m_frameRectModel.w + m_spacing);
+        abilityUpgrade->frameRect.y = m_coor.y + (i / 3) * (m_frameRectModel.h + m_spacing);
+        abilityUpgrade->imgRect.x = abilityUpgrade->frameRect.x + 3 + (coorBuff.x - abilityUpgrade->imgRect.w) / 2;
+        abilityUpgrade->imgRect.y = abilityUpgrade->frameRect.y + 3 + (coorBuff.y - abilityUpgrade->imgRect.h) / 2;
 
         for(int j = 0; j < m_numberOfPrices; j++)
         {
@@ -73,6 +73,7 @@ void Shop::init(string configFile, ConfigManager* configManager, SDL_Renderer* r
         m_shopArticles.push_back(abilityUpgrade);
 
     }
+
     stream >> tmp >> intBuff;
     for(int i = 0; i < intBuff; i++)
     {
@@ -85,6 +86,7 @@ void Shop::init(string configFile, ConfigManager* configManager, SDL_Renderer* r
 
 void Shop::update()
 {
+
     if(*m_mouseIsPressed)
     {
         for(int i = 0; i < m_shopArticles.size(); i++)

@@ -222,10 +222,14 @@ void World::collisionDamage()
             if(checkForCollisionBetweenObjects(m_players[i]->m_objectRect, m_players[i]->m_rotationAngle,&m_players[i]->m_center,
                                                m_projectiles[k]->m_objectRect,m_projectiles[k]->m_rotationAngle, NULL))
             {
-                m_players[i]->m_health -= m_projectiles[k]->m_collisonDamage;
-                m_projectiles[k]->m_health = 0;
-                addAnimation("explosion.txt",m_projectiles[k]->m_coor,m_main_renderer,0);
-                m_soundManager -> play_sound("Explosion.mp3");
+                if(m_projectiles[k]->m_configFile != "bullet_player.txt")
+                {
+                    cout << m_projectiles[k]->m_configFile << endl;
+                    m_players[i]->m_health -= m_projectiles[k]->m_collisonDamage;
+                    m_projectiles[k]->m_health = 0;
+                    addAnimation("explosion.txt",m_projectiles[k]->m_coor,m_main_renderer,0);
+                    m_soundManager -> play_sound("Explosion.mp3");
+                }
             }
         }
         for(int p = 0; p < m_artefacts.size(); p++)
@@ -274,6 +278,10 @@ void World::collisionDamage()
             if(checkForCollisionBetweenObjects(m_enemies[m]->m_objectRect, m_enemies[m]->m_rotationAngle, &m_enemies[m]->m_center,
                                                m_projectiles[n]->m_objectRect, m_projectiles[n]->m_rotationAngle, NULL))
             {
+                if(m_projectiles[n]->m_configFile == "bullet_player.txt")
+                {
+                    m_enemies[m]->m_health -= m_upgradeManager->m_CurrentBulletDamageUpgrade;
+                }
                 m_enemies[m]->m_health -= m_projectiles[n]->m_collisonDamage;
                 m_projectiles[n]->m_health = 0;
                 addAnimation("explosion.txt",m_projectiles[n]->m_coor,m_main_renderer,0);
@@ -517,26 +525,22 @@ void World::cleaner()
 void World::saveProgress()
 {
     SaveInFile("bulletDamageUpgrade.txt", "Level:", m_upgradeManager->m_CurrentLevelBulletDamageUpgrade);
-    SaveInFile("bulletSpeedUpgrade.txt", "Level:", m_upgradeManager->m_CurrentLevelBulletSpeedUpgrade);
     SaveInFile("collisionUpgrade.txt", "Level:", m_upgradeManager->m_CurrentLevelCollisionDamageUpgrade);
     SaveInFile("dashUpgrade.txt", "Level:", m_upgradeManager->m_CurrentLevelDashUpgrade);
     SaveInFile("moneyUpgrade.txt", "Level:", m_upgradeManager->m_CurrentLevelCoinsMultiplierUpgrade);
     SaveInFile("healthUpgrade.txt", "Level:", m_upgradeManager->m_CurrentLevelHealthUpgrade);
     SaveInFile("healthBoosterUpgrade.txt", "Level:", m_upgradeManager->m_CurrentLevelHealthBoosterUpgrade);
-    SaveInFile("shieldBoosterUpgrade.txt", "Level:", m_upgradeManager->m_CurrentLevelShieldBoosterDurationUpgrade);
     SaveInFile("wallet.txt", "Money_in_wallet:", m_wallet);
 }
 
 void World::loadProgress()
 {
     m_upgradeManager->m_CurrentLevelBulletDamageUpgrade = LoadFromFile("bulletDamageUpgrade.txt");
-    m_upgradeManager->m_CurrentLevelBulletSpeedUpgrade = LoadFromFile("bulletSpeedUpgrade.txt");
     m_upgradeManager->m_CurrentLevelCollisionDamageUpgrade = LoadFromFile("collisionUpgrade.txt");
     m_upgradeManager->m_CurrentLevelCoinsMultiplierUpgrade = LoadFromFile("moneyUpgrade.txt");
     m_upgradeManager->m_CurrentLevelDashUpgrade = LoadFromFile("dashUpgrade.txt");
     m_upgradeManager->m_CurrentLevelHealthUpgrade = LoadFromFile("healthUpgrade.txt");
     m_upgradeManager->m_CurrentLevelHealthBoosterUpgrade = LoadFromFile("healthBoosterUpgrade.txt");
-    m_upgradeManager->m_CurrentLevelShieldBoosterDurationUpgrade = LoadFromFile("shieldBoosterUpgrade.txt");
     m_upgradeManager->loadManager();
     m_wallet = LoadFromFile("wallet.txt");
 }

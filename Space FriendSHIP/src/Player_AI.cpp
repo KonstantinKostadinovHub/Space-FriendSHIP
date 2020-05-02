@@ -35,7 +35,7 @@ void Player_AI::init(string config, SDL_Renderer* renderer)
     m_img = "img\\" + m_img;
 
     Gun* gun = new Gun;
-    gun->init(1);
+    gun->init(0);
     m_guns.push_back(gun);
 
     SDL_Surface* loadingSurface = SDL_LoadBMP(m_img.c_str());

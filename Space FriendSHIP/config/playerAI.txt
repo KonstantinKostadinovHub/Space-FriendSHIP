@@ -5,3 +5,5 @@ Image: Player2.bmp
 Spawn_Point: 250 500
 
 Speed: 4
+
+Shoot_Cooldown: 500

@@ -26,6 +26,10 @@ void Projectile::init(string configFile, struct coordinates coor, float rotation
     if(configFile == "bullet_player.txt")
     {
         startPosMultiplier = 10;
+    }else
+    if(configFile == "bullet_tank.txt")
+    {
+        startPosMultiplier = 4;
     }
     m_coor.x = coor.x + startPosMultiplier * (sin(m_rotationAngle * PI / 180) * m_speed * SPEED_FACTOR);
     m_coor.y = coor.y - startPosMultiplier * (cos(m_rotationAngle * PI / 180) * m_speed * SPEED_FACTOR);

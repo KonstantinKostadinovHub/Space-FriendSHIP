@@ -6,10 +6,6 @@ Number_Of_Bullets_Damage_Upgrades: 9
 
 Levels_Of_Bullets_Damage_Upgrade: 0 12 25 38  50 62 75 87 100
 
-Number_Of_Bullets_Speed_Upgrades: 9
-
-Levels_Of_Bullets_Speed_Upgrade: 0 12 25 38  50 62 75 87 100
-
 Number_Of_Coins_Upgrades: 9
 
 Levels_Of_Coins_Upgrade: 0 12 25 38  50 62 75 87 100
@@ -25,7 +21,3 @@ Levels_Of_Collision_Damage_Upgrade: 0 12 25 38  50 62 75 87 100
 Number_Of_Health_Booster_Upgrades: 9
 
 Levels_Of_Health_Booster_Upgrade: 0 12 25 38  50 62 75 87 100
-
-Number_Of_Shield_Booster_Duration_Upgrades: 9
-
-Levels_Of_Shield_Booster_Duration_Upgrade: 0 12 25 38  50 62 75 87 100

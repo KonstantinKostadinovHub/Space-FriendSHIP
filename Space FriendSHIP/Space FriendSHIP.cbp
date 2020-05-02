@@ -50,7 +50,6 @@
 		<Unit filename="include/HealthBar.h" />
 		<Unit filename="include/Player.h" />
 		<Unit filename="include/Player_AI.h" />
-		<Unit filename="include/ProgressSaver.h" />
 		<Unit filename="include/Projectile.h" />
 		<Unit filename="include/Rock.h" />
 		<Unit filename="include/Shooter.h" />
@@ -72,7 +71,6 @@
 		<Unit filename="src/HealthBar.cpp" />
 		<Unit filename="src/Player.cpp" />
 		<Unit filename="src/Player_AI.cpp" />
-		<Unit filename="src/ProgressSaver.cpp" />
 		<Unit filename="src/Projectile.cpp" />
 		<Unit filename="src/Rock.cpp" />
 		<Unit filename="src/Shooter.cpp" />
