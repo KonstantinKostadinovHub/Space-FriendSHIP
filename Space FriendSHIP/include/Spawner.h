@@ -26,6 +26,7 @@ public:
     int m_shooterTankProb;
     int m_shooterSMGProb;
     int m_zigZagProb;
+    int m_playerEnemyProb;
 
     vector <string> m_probabilities;
 

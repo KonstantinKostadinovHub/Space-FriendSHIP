@@ -10,6 +10,12 @@ menuScreen2: MenuScreen2Game.bmp
 
 menuScreen3: MenuScreen3Game.bmp
 
+BloodImage1: BloodImg1.bmp
+
+BloodImage2: BloodImg2.bmp
+
+BloodImage3: BloodImg3.bmp
+
 SpawnCooldown: 1
 
 DropCooldown: 3

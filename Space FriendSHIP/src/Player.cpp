@@ -22,6 +22,7 @@ void Player::init(SDL_Renderer* renderer, string configFile, UpgradeManager* upg
 
     stream >> tmp >> m_objectRect.w >> m_objectRect.h;
     stream >> tmp >> m_img;
+    stream >> tmp >> m_imgShield;
     stream >> tmp >> m_maxhealth;
     stream >> tmp >> m_spawn.x >> m_spawn.y;
     stream >> tmp >> m_speed;
@@ -99,11 +100,15 @@ void Player::init(SDL_Renderer* renderer, string configFile, UpgradeManager* upg
     }
 
     Gun* gun = new Gun;
-    gun -> init(0);
+    gun -> init(100);
     m_guns.push_back(gun);
 
+    m_elapsed_engage = chrono::high_resolution_clock::now();
+    m_engagementRate = chrono::milliseconds(m_shootCooldown);
 
     m_img = "img\\" + m_img;
+    m_imgShield = "img\\" + m_imgShield;
+
     m_objectRect.x = m_spawn.x;
     m_objectRect.y = m_spawn.y;
     m_coor.x = m_objectRect.x;
@@ -113,8 +118,13 @@ void Player::init(SDL_Renderer* renderer, string configFile, UpgradeManager* upg
     m_healthBar->init(HPBar);
 
     SDL_Surface* loadingSurface = SDL_LoadBMP(m_img.c_str());
+    SDL_Surface* loadingSurface1 = SDL_LoadBMP(m_imgShield.c_str());
+
     m_objectTexture = SDL_CreateTextureFromSurface(renderer, loadingSurface);
+    m_TextureWithShield = SDL_CreateTextureFromSurface(renderer, loadingSurface1);
+
     SDL_FreeSurface(loadingSurface);
+    SDL_FreeSurface(loadingSurface1);
 }
 
 void Player::update()
@@ -141,9 +151,8 @@ void Player::update()
             for (int i = 0; i < m_guns.size(); i++)
             {
                 m_guns[i] -> m_cantShoot = false;
-
             }
-            m_startShootCooldown = time (NULL);
+            m_elapsed_engage = chrono::high_resolution_clock::now();
             m_canShoot = false;
         }
         if (state[gas])
@@ -200,8 +209,16 @@ void Player::update()
 
 void Player::draw(SDL_Renderer* renderer)
 {
-    SDL_RenderCopyEx(renderer, m_objectTexture, NULL, &m_objectRect, m_rotationAngle, &m_center, SDL_FLIP_NONE);
-    m_healthBar->draw(renderer);
+    if(inShield)
+    {
+        SDL_RenderCopyEx(renderer, m_TextureWithShield, NULL, &m_objectRect, m_rotationAngle, &m_center, SDL_FLIP_NONE);
+    }
+    else
+    {
+        SDL_RenderCopyEx(renderer, m_objectTexture, NULL, &m_objectRect, m_rotationAngle, &m_center, SDL_FLIP_NONE);
+    }
+
+    m_healthBar -> draw(renderer);
 }
 
 void Player::checkForDash()
@@ -226,7 +243,7 @@ void Player::checkForDash()
 
 bool Player::checkforShooting()
 {
-    if(m_startShootCooldown + m_shootCooldown < time(NULL))
+    if(chrono::duration_cast<chrono::milliseconds>(chrono::high_resolution_clock::now() - m_elapsed_engage) > m_engagementRate)
     {
         m_canShoot = true;
     }

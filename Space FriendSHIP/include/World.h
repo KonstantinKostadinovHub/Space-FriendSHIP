@@ -39,8 +39,12 @@ public:
     SDL_Window* m_main_window = NULL;
     SDL_Renderer* m_main_renderer = NULL;
     SDL_Texture* m_backgroundTexture;
+    SDL_Texture* m_bloodTexture1;
+    SDL_Texture* m_bloodTexture2;
+    SDL_Texture* m_bloodTexture3;
     SDL_Rect m_ScreenR;
     SDL_Rect m_ScreenMenu;
+
     Spawner* m_spawnManager;
     Dropper* m_dropper;
     UpgradeManager* m_upgradeManager;
@@ -56,17 +60,18 @@ public:
     string m_menuImg1;
     string m_menuImg2;
     string m_menuImg3;
-
-    int m_SCREEN_WIDTH;
-    int m_SCREEN_HEIGHT;
-
-    int mouseX, mouseY;
-    bool mouseIsPressed;
+    string m_bloodImg1;
+    string m_bloodImg2;
+    string m_bloodImg3;
 
     int m_points;
     int m_highScore;
     int m_coins;
     int m_enemiesPerSpawn;
+    int m_wallet;
+    int m_SCREEN_WIDTH;
+    int m_SCREEN_HEIGHT;
+    int mouseX, mouseY;
 
     vector <Player*> m_players;
     vector <Enemy*> m_enemies;
@@ -82,8 +87,7 @@ public:
     bool m_spawn;
     bool endgame = false;
     bool m_drop;
-
-    int m_wallet;
+    bool mouseIsPressed;
 
     void init(string configFile);
     void destroy();

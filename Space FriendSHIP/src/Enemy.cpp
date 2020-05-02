@@ -12,6 +12,7 @@ Enemy::~Enemy()
 
 void Enemy::init(string configFile, coordinates coor, float rotation, Enemy* enemy)
 {
+    m_configFile = enemy->m_configFile;
     m_objectRect = enemy -> m_objectRect;
     m_health = enemy -> m_health;
     m_collisonDamage = enemy -> m_collisonDamage;
@@ -40,7 +41,7 @@ void Enemy::update()
         coordinates playerCoor;
         playerCoor.x = m_objectRect.x;
         playerCoor.y = m_objectRect.y;
-        m_guns[i] -> update(m_rotationAngle, playerCoor);
+        m_guns[i]->update(m_rotationAngle, playerCoor);
     }
 }
 

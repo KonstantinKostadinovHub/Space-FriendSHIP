@@ -26,6 +26,7 @@ void SoundManager::init(string configFile)
     stream >> tmp >> Stop_str;
     stream >> tmp >> Reverse_str;
     stream >> tmp >> Coin_str;
+    stream >> tmp >> Shield_str;
 
     if (Mix_OpenAudio(44100, MIX_DEFAULT_FORMAT, 2, 2048) < 0)
     {
@@ -45,6 +46,7 @@ void SoundManager::init(string configFile)
     Stop = Mix_LoadWAV(("music\\" + Stop_str).c_str());
     Reverse = Mix_LoadWAV(("music\\" + Reverse_str).c_str());
     Coin = Mix_LoadWAV(("music\\" + Coin_str).c_str());
+    Shield = Mix_LoadWAV(("music\\" + Shield_str).c_str());
 
     stream.close();
 }
@@ -81,17 +83,22 @@ void SoundManager::play_sound(string sound)
     else if (sound == Stop_str)
     {
         Mix_PlayChannel(5, Stop, 0);
-        Mix_Volume(5, 7);
+        Mix_Volume(5, 25);
     }
     else if (sound == Reverse_str)
     {
         Mix_PlayChannel(6, Reverse, 0);
-        Mix_Volume(6, 7);
+        Mix_Volume(6, 15);
     }
     else if (sound == Coin_str)
     {
         Mix_PlayChannel(8, Coin, 0);
         Mix_Volume(8, 18);
+    }
+    else if (sound == Shield_str)
+    {
+        Mix_PlayChannel(9, Shield, 0);
+        Mix_Volume(9, 45);
     }
 }
 
@@ -120,6 +127,9 @@ void SoundManager::destroy()
 
     Mix_FreeChunk(Coin);
     Coin = NULL;
+
+    Mix_FreeChunk(Shield);
+    Shield = NULL;
 
     Mix_Quit();
 }

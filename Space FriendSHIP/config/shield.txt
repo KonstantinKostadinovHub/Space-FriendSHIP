@@ -1,0 +1,11 @@
+size: 35 35
+
+image: Shield.bmp
+
+speed: 1
+
+frameCounter: 1
+
+actionFX: 0
+
+Frame_Width_Height: 556 556

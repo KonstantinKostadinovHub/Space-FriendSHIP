@@ -39,12 +39,9 @@ void HealthBar::draw(SDL_Renderer* renderer)
     m_healthTexture = SDL_CreateTextureFromSurface(renderer, Loading_Surf);
     SDL_FreeSurface(Loading_Surf);
 
-
     SDL_Rect m_barRect;
     m_barRect = m_objRect;
     m_barRect.w = m_objRect.w * HP;
     SDL_RenderCopy(renderer, m_borderTexture, NULL, &m_objRect);
     SDL_RenderCopy(renderer, m_healthTexture, NULL, &m_barRect);
-
-
 }

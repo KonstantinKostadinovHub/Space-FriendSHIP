@@ -1,4 +1,4 @@
-size: 22 36
+size: 22 34
 
 image: Reverser.bmp
 
@@ -6,4 +6,4 @@ speed: 1
 
 frameCounter: 4
 
-actionFX: -4
+actionFX: -7

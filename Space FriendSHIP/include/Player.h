@@ -7,6 +7,7 @@
 #include <string>
 #include <cmath>
 #include <ctime>
+#include <chrono>
 #include <SDL2/SDL.h>
 
 #include "Engine.h"
@@ -28,6 +29,7 @@ public:
     string m_configFile;
     string m_img;
     string tmp;
+    string m_imgShield;
 
     coordinates m_oldCoor;
     coordinates m_coor;
@@ -48,6 +50,7 @@ public:
     bool inDash;
     bool checkforShooting();
     bool m_canShoot;
+    bool inShield = false;
 
     time_t m_startDashCooldown;
     time_t m_dashCooldown = 5;
@@ -64,7 +67,6 @@ public:
     string s_brake;
     string s_dash;
     string s_shoot;
-
     string m_bulletName = "bullet_player.txt";
 
     SDL_Scancode move_up;
@@ -76,19 +78,24 @@ public:
     SDL_Scancode dash;
     SDL_Scancode shoot;
 
-    virtual void init(SDL_Renderer* renderer, string configFile, UpgradeManager* upgradeManager);
-    virtual void update();
-    virtual void draw(SDL_Renderer* renderer);
-    virtual void checkForDash();
-
-
     SDL_Texture* m_shape1_tx = NULL;
     SDL_Surface* m_loading_surf = NULL;
     SDL_Texture* m_objectTexture;
+    SDL_Texture* m_TextureWithShield;
+
     SDL_Rect m_objectRect;
 
     float m_rotationAngle;
     SDL_Point m_center;
+
+
+    chrono::high_resolution_clock::time_point m_elapsed_engage;
+    chrono::duration<float> m_engagementRate;
+
+    virtual void init(SDL_Renderer* renderer, string configFile, UpgradeManager* upgradeManager);
+    virtual void update();
+    virtual void draw(SDL_Renderer* renderer);
+    virtual void checkForDash();
 
 protected:
 

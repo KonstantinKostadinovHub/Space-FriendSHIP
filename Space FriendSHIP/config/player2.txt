@@ -2,6 +2,8 @@ Player_Size: 96 96
 
 Image: Player2.bmp
 
+Image_with_Shield: Player2WithShield.bmp
+
 Health: 100
 
 Spawn_Point: 500 500

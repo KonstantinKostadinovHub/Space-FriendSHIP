@@ -10,6 +10,7 @@
 #include "Rock.h"
 #include "Shooter.h"
 #include "ZigZag.h"
+#include "PlayerEnemy.h"
 
 #include "Bullet.h"
 
@@ -27,6 +28,7 @@ public:
     Enemy* m_shooter_tank;
     Enemy* m_shooter_smg;
     Enemy* m_zigzag;
+    Enemy* m_player_enemy;
 
     Projectile* m_bullet_deafult;
     Projectile* m_bullet_sniper;
@@ -40,6 +42,7 @@ public:
     Artefact* m_Stopper;
     Artefact* m_Reverser;
     Artefact* m_Coin;
+    Artefact* m_Shield;
 
     void init(string configFile, SDL_Renderer* renderer);
     void initObject(string configFile);

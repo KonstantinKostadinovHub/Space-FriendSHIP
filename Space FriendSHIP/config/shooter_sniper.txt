@@ -6,9 +6,9 @@ health: 25
 
 collision_damage: 20
 
-attack_speed: 2000
+attack_speed: 3000
 
-speed: 2000
+speed: 2
 
 bulletConfig: bullet_sniper.txt
 

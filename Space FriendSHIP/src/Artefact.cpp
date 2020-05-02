@@ -30,22 +30,26 @@ void Artefact::init(string configFile, coordinates coor, coordinates direction, 
     m_actionEffect = model -> m_actionEffect;
     m_objectTexture = model -> m_objectTexture;
 
+    m_FrameWidth = model -> m_FrameWidth;
+    m_FrameHeight = model -> m_FrameHeight;
+
     m_direction.x = direction.x;
     m_direction.y = direction.y;
     m_objectRect.x = coor.x;
     m_objectRect.y = coor.y;
     m_coor.x = m_objectRect.x;
     m_coor.y = m_objectRect.y;
+
+
 }
 
 void Artefact::draw( SDL_Renderer* renderer)
 {
-
     SDL_Rect pictureRect;
     pictureRect.x = 0;
-    pictureRect.y = m_objectRect.h * m_frameCounter;
-    pictureRect.w = m_objectRect.w;
-    pictureRect.h = m_objectRect.h;
+    pictureRect.y = m_FrameHeight * m_frameCounter;
+    pictureRect.w = m_FrameWidth;
+    pictureRect.h = m_FrameHeight;
     m_frameCounter++;
 
     if(m_startCounter + m_FrameCooldown < time(NULL))
@@ -57,6 +61,8 @@ void Artefact::draw( SDL_Renderer* renderer)
     {
         m_frameCounter = 0;
     }
+
+
     SDL_RenderCopy(renderer, m_objectTexture, &pictureRect, &m_objectRect);
 
 }
@@ -71,6 +77,12 @@ void Artefact::load(string configFile, SDL_Renderer* renderer)
     stream >> tmp >> m_speed;
     stream >> tmp >> m_FrameCount;
     stream >> tmp >> m_actionEffect;
+
+    m_FrameWidth = m_objectRect.w;
+    m_FrameHeight = m_objectRect.h;
+
+    stream >> tmp >> m_FrameWidth >> m_FrameHeight;
+
     stream.close();
 
     m_img = "img\\" + m_img;

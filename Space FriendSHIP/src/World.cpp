@@ -29,6 +29,9 @@ void World::init(string configFile)
     stream >> tmp >> m_menuImg1;
     stream >> tmp >> m_menuImg2;
     stream >> tmp >> m_menuImg3;
+    stream >> tmp >> m_bloodImg1;
+    stream >> tmp >> m_bloodImg2;
+    stream >> tmp >> m_bloodImg3;
     stream >> tmp >> m_spawnCooldown;
     stream >> tmp >> m_dropCooldown;
     stream >> tmp >> m_enemiesPerSpawn;
@@ -63,6 +66,10 @@ void World::init(string configFile)
     m_ScreenMenu.w = m_SCREEN_WIDTH;
     m_ScreenMenu.h = m_SCREEN_HEIGHT;
 
+    m_bloodImg1 = "img\\" + m_bloodImg1;
+    m_bloodImg2 = "img\\" + m_bloodImg2;
+    m_bloodImg3 = "img\\" + m_bloodImg3;
+
     m_endScreenImg = "img\\" + m_endScreenImg;
     m_menuImg1 = "img\\" + m_menuImg1;
     m_menuImg2 = "img\\" + m_menuImg2;
@@ -70,7 +77,20 @@ void World::init(string configFile)
 
     m_menuImg = m_menuImg1;
 
-    SDL_SetWindowFullscreen(m_main_window, SDL_WINDOW_FULLSCREEN);
+    SDL_Surface* loadingSurface1 = SDL_LoadBMP(m_bloodImg1.c_str());
+    m_bloodTexture1 = SDL_CreateTextureFromSurface(m_main_renderer, loadingSurface1);
+
+    SDL_Surface* loadingSurface2 = SDL_LoadBMP(m_bloodImg2.c_str());
+    m_bloodTexture2 = SDL_CreateTextureFromSurface(m_main_renderer, loadingSurface2);
+
+    SDL_Surface* loadingSurface3 = SDL_LoadBMP(m_bloodImg3.c_str());
+    m_bloodTexture3 = SDL_CreateTextureFromSurface(m_main_renderer, loadingSurface3);
+
+    SDL_FreeSurface(loadingSurface1);
+    SDL_FreeSurface(loadingSurface2);
+    SDL_FreeSurface(loadingSurface3);
+
+    // SDL_SetWindowFullscreen(m_main_window, SDL_WINDOW_FULLSCREEN);
 
     m_soundManager -> play_sound("General.mp3");
 }
@@ -162,6 +182,22 @@ void World::draw()
         (*it) -> draw(m_main_renderer);
     }
 
+    for(int i = 0; i < m_players.size(); i++)
+    {
+        if(m_players[i] -> m_health <= 50)
+        {
+            SDL_RenderCopy(m_main_renderer, m_bloodTexture1, NULL, NULL);
+        }
+        /*if(m_players[i] -> m_health <= 30)
+        {
+            SDL_RenderCopy(m_main_renderer, m_bloodTexture2, NULL, NULL);
+        }
+        if(m_players[i] -> m_health <= 15)
+        {
+            SDL_RenderCopy(m_main_renderer, m_bloodTexture3, NULL, NULL);
+        }*/
+    }
+
     SDL_RenderPresent(m_main_renderer);
 }
 
@@ -208,13 +244,20 @@ void World::collisionDamage()
             if(checkForCollisionBetweenObjects(m_players[i]->m_objectRect, m_players[i]->m_rotationAngle, &m_players[i]->m_center,
                                                m_enemies[j]->m_objectRect, m_enemies[j]->m_rotationAngle, &m_enemies[j]->m_center))
             {
-                m_players[i]->m_health -= m_enemies[j]->m_collisonDamage;
-                m_enemies[j]->m_health -= m_players[i]->m_collisionDamage + m_upgradeManager->m_CurrentCollisionDamageUpgrade;
-                coordinates buff;
-                buff.x = (m_players[i]->m_coor.x + m_enemies[j]->m_coor.x)/2;
-                buff.y = (m_players[i]->m_coor.y + m_enemies[j]->m_coor.y)/2;
-                addAnimation("explosion.txt", buff, m_main_renderer,0);
-                m_soundManager -> play_sound("Explosion.mp3");
+                if(m_players[i] -> inShield)
+                {
+                    m_players[i] -> inShield = false;
+                }
+                else
+                {
+                    m_players[i]->m_health -= m_enemies[j]->m_collisonDamage;
+                    m_enemies[j]->m_health -= m_players[i]->m_collisionDamage + m_upgradeManager->m_CurrentCollisionDamageUpgrade;
+                    coordinates buff;
+                    buff.x = (m_players[i]->m_coor.x + m_enemies[j]->m_coor.x)/2;
+                    buff.y = (m_players[i]->m_coor.y + m_enemies[j]->m_coor.y)/2;
+                    addAnimation("explosion.txt", buff, m_main_renderer,0);
+                    m_soundManager -> play_sound("Explosion.mp3");
+                }
             }
         }
         for(int k = 0; k < m_projectiles.size(); k++)
@@ -222,13 +265,19 @@ void World::collisionDamage()
             if(checkForCollisionBetweenObjects(m_players[i]->m_objectRect, m_players[i]->m_rotationAngle,&m_players[i]->m_center,
                                                m_projectiles[k]->m_objectRect,m_projectiles[k]->m_rotationAngle, NULL))
             {
-                if(m_projectiles[k]->m_configFile != "bullet_player.txt")
+                if(m_projectiles[k] -> m_configFile != "bullet_player.txt")
                 {
-                    cout << m_projectiles[k]->m_configFile << endl;
-                    m_players[i]->m_health -= m_projectiles[k]->m_collisonDamage;
-                    m_projectiles[k]->m_health = 0;
-                    addAnimation("explosion.txt",m_projectiles[k]->m_coor,m_main_renderer,0);
-                    m_soundManager -> play_sound("Explosion.mp3");
+                    if(m_players[i] -> inShield)
+                    {
+                        m_players[i] -> inShield = false;
+                    }
+                    else
+                    {
+                        m_players[i]->m_health -= m_projectiles[k]->m_collisonDamage;
+                        m_projectiles[k]->m_health = 0;
+                        addAnimation("explosion.txt",m_projectiles[k]->m_coor,m_main_renderer,0);
+                        m_soundManager -> play_sound("Explosion.mp3");
+                    }
                 }
             }
         }
@@ -242,30 +291,36 @@ void World::collisionDamage()
                     m_players[i] -> m_health += m_artefacts[p] -> m_actionEffect;
                     m_artefacts[p] -> m_health = 0;
                     m_soundManager -> play_sound("Healing.mp3");
-                } else
-                if(m_artefacts[p] -> m_configFile == "speedbooster.txt")
+                }
+                else if(m_artefacts[p] -> m_configFile == "speedbooster.txt")
                 {
                     m_players[i] -> m_speed += m_artefacts[p] -> m_actionEffect;
                     m_artefacts[p] -> m_health = 0;
                     m_soundManager -> play_sound("Dash.mp3");
-                } else
-                if(m_artefacts[p] -> m_configFile == "stopper.txt")
+                }
+                else if(m_artefacts[p] -> m_configFile == "stopper.txt")
                 {
                     m_players[i] -> m_speed = m_artefacts[p] -> m_actionEffect;
                     m_artefacts[p] -> m_health = 0;
                     m_soundManager -> play_sound("Stop.mp3");
-                } else
-                if(m_artefacts[p] -> m_configFile == "reverser.txt")
+                }
+                else if(m_artefacts[p] -> m_configFile == "reverser.txt")
                 {
                     m_players[i] -> m_speed = m_artefacts[p] -> m_actionEffect;
                     m_artefacts[p] -> m_health = 0;
                     m_soundManager -> play_sound("Reverse.mp3");
-                } else
-                if(m_artefacts[p] -> m_configFile == "coin.txt")
+                }
+                else if(m_artefacts[p] -> m_configFile == "coin.txt")
                 {
                     m_coins += m_artefacts[p] -> m_actionEffect;
                     m_artefacts[p] -> m_health = 0;
                     m_soundManager -> play_sound("Coin.mp3");
+                }
+                else if(m_artefacts[p] -> m_configFile == "shield.txt")
+                {
+                    m_players[i] -> inShield = true;
+                    m_artefacts[p] -> m_health = 0;
+                    m_soundManager -> play_sound("Shield.mp3");
                 }
             }
         }
@@ -278,10 +333,6 @@ void World::collisionDamage()
             if(checkForCollisionBetweenObjects(m_enemies[m]->m_objectRect, m_enemies[m]->m_rotationAngle, &m_enemies[m]->m_center,
                                                m_projectiles[n]->m_objectRect, m_projectiles[n]->m_rotationAngle, NULL))
             {
-                if(m_projectiles[n]->m_configFile == "bullet_player.txt")
-                {
-                    m_enemies[m]->m_health -= m_upgradeManager->m_CurrentBulletDamageUpgrade;
-                }
                 m_enemies[m]->m_health -= m_projectiles[n]->m_collisonDamage;
                 m_projectiles[n]->m_health = 0;
                 addAnimation("explosion.txt",m_projectiles[n]->m_coor,m_main_renderer,0);
@@ -326,8 +377,20 @@ void World::addEnemy(string configFile, coordinates coor, float rotation)
         model = m_configManager -> m_zigzag;
         enemy = new ZigZag;
     }
-    enemy -> init(configFile, coor, rotation, model);
-    m_enemies.push_back(enemy);
+    else if (configFile == "player_enemy")
+    {
+        PlayerEnemy* enemy_pl;
+        model = m_configManager -> m_player_enemy;
+        enemy_pl = new PlayerEnemy;
+        enemy_pl -> init(configFile, coor, rotation, model, m_players[0]);
+        m_enemies.push_back(enemy_pl);
+        return;
+    }
+    if (model != NULL)
+    {
+        enemy -> init(configFile, coor, rotation, model);
+        m_enemies.push_back(enemy);
+    }
 }
 
 void World::addBullet(string configFile, coordinates coor, float rotation)
@@ -387,6 +450,10 @@ void World::addArtefact(string configFile,coordinates coor, coordinates directio
     else if(configFile == "coin.txt")
     {
         model = m_configManager -> m_Coin;
+    }
+    else if(configFile == "shield.txt")
+    {
+        model = m_configManager -> m_Shield;
     }
 
     Artefact* artefact = new Artefact();
@@ -457,6 +524,7 @@ void World::shootProjectiles()
                 buff.x = m_players[i] -> m_guns[j] -> m_objectRect.x;
                 buff.y = m_players[i] -> m_guns[j] -> m_objectRect.y;
                 addBullet(m_players[i] -> m_bulletName, buff, m_players[i] -> m_guns[j] -> m_rotationAngle);
+
                 if(m_players[i]->m_configFile!="config\\playerAI.txt")
                 {
                     m_soundManager->play_sound("Shooting.mp3");
@@ -498,6 +566,7 @@ void World::cleaner()
                 AddCoins(m_enemies[i]);
             }
             delete m_enemies[i];
+            //m_enemies[i] = NULL;
             m_enemies.erase(m_enemies.begin() + i);
             i--;
         }

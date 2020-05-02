@@ -22,6 +22,7 @@ void Spawner::init(string configName)
     stream >> tmp >> m_shooterSMGProb;
     stream >> tmp >> m_shooterTankProb;
     stream >> tmp >> m_zigZagProb;
+    stream >> tmp >> m_playerEnemyProb;
 
     for(int i = 0; i < m_rockProb ; i++)
     {
@@ -46,6 +47,10 @@ void Spawner::init(string configName)
     for(int i = 0; i < m_zigZagProb ; i++)
     {
         m_probabilities.push_back("zigzag");
+    }
+    for(int i = 0; i < m_playerEnemyProb ; i++)
+    {
+        m_probabilities.push_back("player_enemy");
     }
 
     stream.close();

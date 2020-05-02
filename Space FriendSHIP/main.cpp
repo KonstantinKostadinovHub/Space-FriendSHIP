@@ -36,27 +36,28 @@ int main (int argc, char* argv[])
         }
         world.loadProgress();
 
-        while(true)
-        {
-            while(SDL_PollEvent(&e) == 0)
-            {
-                SDL_Delay(5);
-                if(e.type == SDL_MOUSEMOTION)
-                {
-                    SDL_GetGlobalMouseState(&(world.mouseX), &(world.mouseY));
-                }
-                world.mouseIsPressed = false;
-                if(e.type == SDL_MOUSEBUTTONDOWN)
-                {
-                    world.mouseIsPressed = true;
-                    e.type = SDLK_UNKNOWN;
-                }
-                world.shop();
-            }
-        }
-
+  /*      while(true)
+          {
+              while(SDL_PollEvent(&e) == 0)
+              {
+                  SDL_Delay(5);
+                  if(e.type == SDL_MOUSEMOTION)
+                  {
+                      SDL_GetGlobalMouseState(&(world.mouseX), &(world.mouseY));
+                  }
+                  world.mouseIsPressed = false;
+                  if(e.type == SDL_MOUSEBUTTONDOWN)
+                  {
+                      world.mouseIsPressed = true;
+                      e.type = SDLK_UNKNOWN;
+                  }
+                  world.shop();
+              }
+          }
+*/
         world.chooseGameMode();
         world.loadProgress();
+
         while(world.endgame == false)
         {
             while(SDL_PollEvent(&e) == 0)
@@ -64,7 +65,8 @@ int main (int argc, char* argv[])
                 world.update();
                 world.draw();
                 world.cleaner();
-                if(world.endgame) break;
+                if(world.endgame)
+                    break;
                 SDL_Delay(20);
             }
         }

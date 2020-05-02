@@ -18,6 +18,7 @@ void ConfigManager::init(string configFile, SDL_Renderer* renderer)
     m_shooter_tank = new Shooter;
     m_shooter_smg = new Shooter;
     m_zigzag = new ZigZag;
+    m_player_enemy = new PlayerEnemy;
 
     m_bullet_deafult = new Projectile;
     m_bullet_sniper = new Projectile;
@@ -31,6 +32,7 @@ void ConfigManager::init(string configFile, SDL_Renderer* renderer)
     m_Stopper = new Artefact;
     m_Reverser = new Artefact;
     m_Coin = new Artefact;
+    m_Shield = new Artefact;
 
     m_configFile = "config\\" + configFile;
 
@@ -49,6 +51,9 @@ void ConfigManager::init(string configFile, SDL_Renderer* renderer)
     m_shooter_smg -> load(buff, renderer);
     stream >> tmp >> buff;
     m_zigzag -> load(buff, renderer);
+    stream >> tmp >> buff;
+    m_player_enemy -> load(buff, renderer);
+
     stream >> tmp >> buff;
     m_bullet_deafult -> load(buff, renderer);
     stream >> tmp >> buff;
@@ -71,6 +76,8 @@ void ConfigManager::init(string configFile, SDL_Renderer* renderer)
     m_Reverser -> load(buff, renderer);
     stream >> tmp >> buff;
     m_Coin -> load(buff, renderer);
+    stream >> tmp >> buff;
+    m_Shield -> load(buff, renderer);
 
     stream.close();
 }

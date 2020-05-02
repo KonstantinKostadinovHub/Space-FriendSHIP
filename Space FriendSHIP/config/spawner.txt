@@ -9,3 +9,5 @@ Shooter_SMG_Probability: 2
 Shooter_Tank_Probability: 1
 
 ZigZag_Probabiblity: 1
+
+Player_Enemy_Enemy: 1

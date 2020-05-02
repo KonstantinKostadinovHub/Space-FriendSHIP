@@ -26,12 +26,16 @@ public:
     string m_configFile;
 
     float m_actionEffect;
-    float m_speed ;
+    float m_speed;
+
     int m_health = 2;
     int m_frameCounter;
+    int m_FrameCount;
+    int m_FrameWidth;
+    int m_FrameHeight;
+
     time_t m_startCounter;
     time_t m_FrameCooldown;
-    int m_FrameCount;
 
     virtual void init(string configFile, coordinates coor, coordinates direction, Artefact* artefact);
     virtual void load(string configFile, SDL_Renderer* renderer);

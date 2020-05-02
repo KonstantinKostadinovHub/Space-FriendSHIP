@@ -2,6 +2,8 @@ Player_Size: 96 96
 
 Image: Player1.bmp
 
+Image_with_Shield: Player1WithShield.bmp
+
 Health: 100
 
 Spawn_Point: 500 500
@@ -34,4 +36,4 @@ HPBar: healthBar1.txt
 
 dashCooldown: 5
 
-shootCooldown: 1
+shootCooldown: 500

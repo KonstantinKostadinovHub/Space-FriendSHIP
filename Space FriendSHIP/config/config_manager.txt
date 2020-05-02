@@ -10,6 +10,8 @@ shooter_smg_config: shooter_smg.txt
 
 zigzag_config: zigzag.txt
 
+player_enemy: player_enemy.txt
+
 bullet_default_config: bullet_default.txt
 
 bullet_sniper_config: bullet_sniper.txt
@@ -31,3 +33,5 @@ stopper_config: stopper.txt
 reverser_config: reverser.txt
 
 coin_config: coin.txt
+
+shield_config: shield.txt

@@ -6,9 +6,7 @@ extern World world;
 Player_AI::Player_AI()
 {
     m_rotationAngle = .0;
-    m_elapsed_shoot = chrono::high_resolution_clock::now();
     m_elapsed_engage = chrono::high_resolution_clock::now();
-    m_shootingRate = 500ms;
     m_engagementRate = 5000ms;
     m_follow = false;
 }
@@ -30,12 +28,13 @@ void Player_AI::init(string config, SDL_Renderer* renderer)
     stream >> tmp >> m_img;
     stream >> tmp >> m_objectRect.x >> m_objectRect.y;
     stream >> tmp >> m_speed;
+    stream >> tmp >> m_shootCooldown;
     stream.close();
 
     m_img = "img\\" + m_img;
 
     Gun* gun = new Gun;
-    gun->init(0);
+    gun->init(m_shootCooldown);
     m_guns.push_back(gun);
 
     SDL_Surface* loadingSurface = SDL_LoadBMP(m_img.c_str());

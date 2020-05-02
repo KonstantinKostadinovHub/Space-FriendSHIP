@@ -1,9 +1,15 @@
-Size: 32 50
+Size: 50 50
 
 Image: player_enemy.bmp
 
-Health: 10
+Health: 100
 
-Spawn_Point: 600 600
+collision_damage: 10
 
-Speed: 2
+attack_speed: 1000
+
+speed: 4
+
+bulletConfig: bullet_default.txt
+
+Shooting_center: 25

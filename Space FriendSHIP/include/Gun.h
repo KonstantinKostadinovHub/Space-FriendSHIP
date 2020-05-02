@@ -4,6 +4,7 @@
 #include <time.h>
 
 #include <SDL2/Sdl.h>
+#include <chrono>
 
 #include "Engine.h"
 
@@ -20,6 +21,8 @@ public:
     time_t m_startShootCooldown;
     time_t m_shootCooldown;
     bool m_cantShoot;
+    chrono::high_resolution_clock::time_point m_elapsed_engage;
+    chrono::duration<float> m_engagementRate;
 
     virtual void init(float attackSpeed);
     virtual void update(float playerAng, coordinates playerCoor);

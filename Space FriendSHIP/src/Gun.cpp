@@ -12,7 +12,10 @@ Gun::~Gun()
 
 void Gun::init(float attackSpeed)
 {
-    m_shootCooldown = attackSpeed;
+    m_engagementRate = chrono::milliseconds((int)attackSpeed);
+    m_elapsed_engage = chrono::high_resolution_clock::now();
+    m_cantShoot = true;
+    //cout << attackSpeed << " " << (int)attackSpeed << endl;
 }
 
 void Gun::update(float rotation, coordinates playerCoor)
@@ -28,9 +31,9 @@ void Gun::update(float rotation, coordinates playerCoor)
     if(!m_cantShoot)
     {
         m_cantShoot = true;
-        m_startShootCooldown = time(NULL);
+        m_elapsed_engage = chrono::high_resolution_clock::now();
     }
-    else if(m_startShootCooldown + m_shootCooldown < time(NULL))
+    else if(chrono::duration_cast<chrono::milliseconds>(chrono::high_resolution_clock::now() - m_elapsed_engage) > m_engagementRate)
     {
         m_cantShoot = false;
     }

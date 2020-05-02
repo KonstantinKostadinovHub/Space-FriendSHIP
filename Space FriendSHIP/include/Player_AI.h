@@ -17,9 +17,7 @@ public:
     int m_clockwise;
     int m_indexOfEngagement;
     bool m_follow;
-    chrono::high_resolution_clock::time_point m_elapsed_shoot;
     chrono::high_resolution_clock::time_point m_elapsed_engage;
-    chrono::duration<float> m_shootingRate;
     chrono::duration<float> m_engagementRate;
 
     virtual void init(string config, SDL_Renderer* renderer);
