@@ -4,9 +4,9 @@ image: shooter_tank.bmp
 
 health: 200
 
-collision_damage: 40
+collision_damage: 30
 
-attack_speed: 1000
+attack_speed: 1250
 
 speed: 1
 

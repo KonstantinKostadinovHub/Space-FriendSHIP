@@ -1,4 +1,4 @@
-Player_Size: 96 96
+Player_Size: 72 72
 
 Image: Player2.bmp
 

@@ -6,7 +6,7 @@ health: 25
 
 collision_damage: 20
 
-attack_speed: 3000
+attack_speed: 3250
 
 speed: 2
 
