@@ -162,6 +162,8 @@ void World::update()
 
 void World::draw()
 {
+
+    SDL_RenderCopy(m_main_renderer, m_backgroundTexture, NULL, NULL);
     for(vector <Enemy*> :: iterator it = m_enemies.begin(); it != m_enemies.end(); it++)
     {
         (*it) -> draw(m_main_renderer);
@@ -183,10 +185,6 @@ void World::draw()
         (*it) -> draw(m_main_renderer);
     }
 
-    coordinates buff;
-    buff.x = 300;
-    buff.y = 300;
-    write("Hello, World!", buff, m_main_renderer, 20);
     for(int i = 0; i < m_players.size(); i++)
     {
         if(m_players[i] -> m_health <= 50)

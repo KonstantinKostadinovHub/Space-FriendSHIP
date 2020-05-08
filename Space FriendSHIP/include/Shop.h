@@ -3,6 +3,7 @@
 
 #include <fstream>
 #include <vector>
+#include <string>
 
 #include <SDL2/SDL.h>
 
@@ -30,6 +31,10 @@ class Shop
         SDL_Renderer* m_renderer;
         SDL_Texture* m_backgroundTexture;
         UIElement* m_buttonBack;
+
+        string s_moneyText;
+        int m_FONT_SIZE;
+        coordinates m_moneyTextCoor;
 
         vector<abilityUpgradeStructure*> m_shopArticles;
 

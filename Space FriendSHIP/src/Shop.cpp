@@ -38,18 +38,18 @@ void Shop::init(string configFile, ConfigManager* configManager, SDL_Renderer* r
     m_upgradeManagerLevels.push_back(&(um->m_CurrentLevelBulletDamageUpgrade));
 
     stream.open(m_configFile.c_str());
-    stream >> tmp >> intBuff;
-    m_spacing = intBuff;
+    stream >> tmp >> m_moneyTextCoor.x >> m_moneyTextCoor.y;
+    stream >> tmp >> m_FONT_SIZE;
+    stream >> tmp >> s_moneyText;
+    stream >> tmp >> m_spacing;
     stream >> tmp >> m_frameRectModel.w >> m_frameRectModel.h;
     stream >> tmp >> coorBuff.x >> coorBuff.y;
     stream >> tmp >> m_imgRectModel.w >> m_imgRectModel.h;
     stream >> tmp >> m_coor.x >> m_coor.y;
     stream >> tmp >> stringBuff;
     m_backgroundTexture = LoadTexture(stringBuff, m_renderer);
-    stream >> tmp >> intBuff;
-    m_numberOfPrices = intBuff;
-    stream >> tmp >> intBuff;
-    m_numberOfAbilityUpgrades = intBuff;
+    stream >> tmp >> m_numberOfPrices;
+    stream >> tmp >> m_numberOfAbilityUpgrades;
 
     for(int i = 0; i < m_numberOfAbilityUpgrades; i++)
     {
@@ -104,10 +104,15 @@ void Shop::update()
 void Shop::draw()
 {
     SDL_RenderCopy(m_renderer, m_backgroundTexture, NULL, NULL);
+
     for(int i = 0; i < m_shopArticles.size(); i++)
     {
         SDL_RenderCopy(m_renderer, m_shopArticles[i]->abilityImg, NULL, &(m_shopArticles[i]->imgRect));
         SDL_RenderCopy(m_renderer, m_upgradeFrameTexture[m_shopArticles[i]->level], NULL, &(m_shopArticles[i]->frameRect));
     }
+
+    string stringBuff = s_moneyText + to_string(*m_money);
+    write(stringBuff, m_moneyTextCoor, m_renderer, m_FONT_SIZE);
+
     SDL_RenderPresent(m_renderer);
 }

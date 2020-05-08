@@ -1,3 +1,7 @@
+coor: 1355 768
+font_size: 30
+money_text: money: 
+
 spacing: 50
 frameRect: 216 318
 slotSpace: 192 192

@@ -514,9 +514,10 @@
 	<vector>
 	"Engine.h"
 
-1588442831 c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\include\shop.h
+1588973152 c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\include\shop.h
 	<fstream>
 	<vector>
+	<string>
 	<SDL2/SDL.h>
 	<ConfigManager.h>
 	<UpgradeManager.h>
@@ -536,16 +537,16 @@
 1588442818 source:c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\src\upgrademanager.cpp
 	"UpgradeManager.h"
 
-1588969761 source:c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\src\world.cpp
+1588973264 source:c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\src\world.cpp
 	"World.h"
 
 1588442818 source:c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\src\zigzag.cpp
 	"ZigZag.h"
 
-1588442818 source:c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\src\shop.cpp
+1588973407 source:c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\src\shop.cpp
 	"Shop.h"
 
-1588585113 source:c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\main.cpp
+1588973280 source:c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\main.cpp
 	<SDL2/SDL.h>
 	"World.h"
 
