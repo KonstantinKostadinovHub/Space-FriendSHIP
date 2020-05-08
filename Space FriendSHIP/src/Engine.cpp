@@ -1,5 +1,6 @@
 #include "Engine.h"
 
+#include <SDL2/SDL_ttf.h>
 
 struct coordinates returnCoordinatesByAngle(float angle)
 {
@@ -175,4 +176,35 @@ UIElement* LoadUIElement(string file, SDL_Renderer* render)
     stream.close();
     buff->objectTexture = LoadTexture(tmp, render);
     return buff;
+}
+
+void write(string text, coordinates coor, SDL_Renderer* renderer, int FONT_SIZE) {
+    SDL_Texture* texture;
+    SDL_Surface* surface;
+    SDL_Rect rect;
+    SDL_Color fcolor;
+    TTF_Font* font;
+
+    string str = "ttf/Roboto-Regular.ttf";
+    font = TTF_OpenFont(str.c_str(), FONT_SIZE);
+
+    if (font == NULL)
+    {
+        fprintf(stderr, "error: font not found\n");
+        exit(EXIT_FAILURE);
+    }
+
+    fcolor.r = 255;
+    fcolor.g = 255;
+    fcolor.b = 255;
+    const char* t = text.c_str();
+    surface = TTF_RenderText_Solid(font, t, fcolor);
+    texture = SDL_CreateTextureFromSurface(renderer, surface);
+    rect.w = surface->w;
+    rect.h = surface->h;
+    rect.x = coor.x-rect.w;
+    rect.y = coor.y-rect.h;
+    SDL_RenderCopy(renderer, texture, NULL, &rect);
+    SDL_FreeSurface(surface);
+    SDL_DestroyTexture(texture);
 }

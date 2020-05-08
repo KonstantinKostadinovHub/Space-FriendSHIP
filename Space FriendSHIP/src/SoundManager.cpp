@@ -12,8 +12,6 @@ SoundManager::~SoundManager()
 
 void SoundManager::init(string configFile)
 {
-    SDL_Init(SDL_INIT_VIDEO | SDL_INIT_AUDIO);
-
     m_configFile = "config\\" + configFile;
     fstream stream;
 
@@ -27,11 +25,6 @@ void SoundManager::init(string configFile)
     stream >> tmp >> Reverse_str;
     stream >> tmp >> Coin_str;
     stream >> tmp >> Shield_str;
-
-    if (Mix_OpenAudio(44100, MIX_DEFAULT_FORMAT, 2, 2048) < 0)
-    {
-        cout << "Mixer error: " << Mix_GetError() << endl;
-    }
 
     if (Mix_OpenAudio(44100, MIX_DEFAULT_FORMAT, MIX_DEFAULT_CHANNELS, 1024) == -1)
     {

@@ -41,6 +41,7 @@ void World::init(string configFile)
     m_startSpawnCooldown = time(NULL);
 
     SDL_Init(SDL_INIT_EVERYTHING);
+    TTF_Init();
 
     m_main_window = SDL_CreateWindow("Space FriendSHIP", SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, m_SCREEN_WIDTH, m_SCREEN_HEIGHT, 0);
     m_main_renderer = SDL_CreateRenderer(m_main_window, -1, SDL_RENDERER_ACCELERATED);
@@ -93,6 +94,8 @@ void World::init(string configFile)
     // SDL_SetWindowFullscreen(m_main_window, SDL_WINDOW_FULLSCREEN);
 
     m_soundManager -> play_sound("General.mp3");
+
+    SDL_RenderCopy(m_main_renderer, m_backgroundTexture, NULL, NULL);
 }
 
 void World::update()
@@ -159,8 +162,6 @@ void World::update()
 
 void World::draw()
 {
-    SDL_RenderCopy(m_main_renderer, m_backgroundTexture, NULL, NULL);
-
     for(vector <Enemy*> :: iterator it = m_enemies.begin(); it != m_enemies.end(); it++)
     {
         (*it) -> draw(m_main_renderer);
@@ -182,6 +183,10 @@ void World::draw()
         (*it) -> draw(m_main_renderer);
     }
 
+    coordinates buff;
+    buff.x = 300;
+    buff.y = 300;
+    write("Hello, World!", buff, m_main_renderer, 20);
     for(int i = 0; i < m_players.size(); i++)
     {
         if(m_players[i] -> m_health <= 50)
