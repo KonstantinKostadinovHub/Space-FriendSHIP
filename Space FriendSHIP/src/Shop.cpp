@@ -108,6 +108,20 @@ void Shop::draw()
     for(int i = 0; i < m_shopArticles.size(); i++)
     {
         SDL_RenderCopy(m_renderer, m_shopArticles[i]->abilityImg, NULL, &(m_shopArticles[i]->imgRect));
+        coordinates coorBuff;
+        coorBuff.x = m_shopArticles[i]->frameRect.x + m_shopArticles[i]->frameRect.w;
+        coorBuff.y = m_shopArticles[i]->frameRect.y + m_shopArticles[i]->frameRect.h + 30;
+        string stringBuff;
+        cout << m_shopArticles[i]->level << endl;
+        if(m_shopArticles[i]->level != 8)
+        {
+            stringBuff = to_string(m_shopArticles[i]->prices[m_shopArticles[i]->level]) + " $";
+        }
+        else
+        {
+            stringBuff = "MAX LEVEL";
+        }
+        write(stringBuff, coorBuff, m_renderer, m_FONT_SIZE);
         SDL_RenderCopy(m_renderer, m_upgradeFrameTexture[m_shopArticles[i]->level], NULL, &(m_shopArticles[i]->frameRect));
     }
 
