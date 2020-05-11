@@ -43,6 +43,7 @@ int main (int argc, char* argv[])
             }
         }
         world.loadProgress();
+        cout << world.m_highScore << " sakdfsdnv" << endl;
 /*
         while(true)
         {
@@ -94,6 +95,7 @@ int main (int argc, char* argv[])
             }
         }
         world.saveProgress();
+        world.loadProgress();
         SDL_Delay(500);
         world.endgameScreen();
         SDL_Delay(8000);

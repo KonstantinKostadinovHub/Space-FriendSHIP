@@ -98,6 +98,7 @@ void World::init(string configFile)
 
 void World::update()
 {
+
     if(!m_spawn)
     {
         m_spawn = true;
@@ -643,6 +644,7 @@ void World::saveProgress()
     SaveInFile("healthUpgrade.txt", "Level:", m_upgradeManager->m_CurrentLevelHealthUpgrade);
     SaveInFile("healthBoosterUpgrade.txt", "Level:", m_upgradeManager->m_CurrentLevelHealthBoosterUpgrade);
     SaveInFile("wallet.txt", "Money_in_wallet:", m_wallet);
+    SaveInFile("highscore.txt", "HighScore:", m_highScore);
 }
 
 void World::loadProgress()
@@ -655,14 +657,17 @@ void World::loadProgress()
     m_upgradeManager->m_CurrentLevelHealthBoosterUpgrade = LoadFromFile("healthBoosterUpgrade.txt");
     m_upgradeManager->loadManager();
     m_wallet = LoadFromFile("wallet.txt");
+    m_highScore = LoadFromFile("highscore.txt");
 }
 
 void World::AddPoints(Enemy* enemy)
 {
     m_points += enemy -> m_pointsGiven;
 
-    if(m_points > m_highScore){
+    if(m_points > m_highScore)
+    {
         m_highScore = m_points;
+        saveProgress();
     }
 }
 
