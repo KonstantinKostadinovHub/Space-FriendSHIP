@@ -2,7 +2,7 @@ Size: 50 50
 
 Image: player_enemy.bmp
 
-Health: 100
+Health: 60
 
 collision_damage: 10
 
@@ -13,3 +13,5 @@ speed: 4
 bulletConfig: bullet_default.txt
 
 Shooting_center: 25
+
+Give_Points: 50

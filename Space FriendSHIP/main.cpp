@@ -22,9 +22,17 @@ int main (int argc, char* argv[])
 
         while(quit!=true)
         {
+            world.m_lastFrame = SDL_GetTicks();
+            if(world.m_lastFrame >= (world.m_lastTime+1000))
+            {
+                world.m_lastTime=world.m_lastFrame;
+                world.m_fps=world.m_frameCount;
+                world.m_frameCount=0;
+            }
 
             while(SDL_PollEvent(&e) == 0)
             {
+
                 world.menu();
                 SDL_Delay(5);
 
@@ -35,9 +43,16 @@ int main (int argc, char* argv[])
             }
         }
         world.loadProgress();
-
+/*
         while(true)
-          {
+        {
+        world.m_lastFrame=SDL_GetTicks();
+        if(world.m_lastFrame>=(world.m_lastTime+1000)) {
+            world.m_lastTime=world.m_lastFrame;
+            world.m_fps=world.m_frameCount;
+            world.m_frameCount=0;
+        }
+
               while(SDL_PollEvent(&e) == 0)
               {
                   SDL_Delay(5);
@@ -51,15 +66,23 @@ int main (int argc, char* argv[])
                       world.mouseIsPressed = true;
                       e.type = SDLK_UNKNOWN;
                   }
+                  world.m_shop->m_mouseIsPressed = world.mouseIsPressed;
                   world.shop();
               }
           }
-
+*/
         world.chooseGameMode();
         world.loadProgress();
 
         while(world.endgame == false)
         {
+            world.m_lastFrame=SDL_GetTicks();
+            if(world.m_lastFrame>=(world.m_lastTime+1000)) {
+                world.m_lastTime=world.m_lastFrame;
+                world.m_fps=world.m_frameCount;
+                world.m_frameCount=0;
+            }
+
             while(SDL_PollEvent(&e) == 0)
             {
                 world.update();

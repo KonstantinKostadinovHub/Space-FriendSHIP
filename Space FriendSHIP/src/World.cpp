@@ -91,11 +91,9 @@ void World::init(string configFile)
     SDL_FreeSurface(loadingSurface2);
     SDL_FreeSurface(loadingSurface3);
 
-    // SDL_SetWindowFullscreen(m_main_window, SDL_WINDOW_FULLSCREEN);
+     SDL_SetWindowFullscreen(m_main_window, SDL_WINDOW_FULLSCREEN);
 
     m_soundManager -> play_sound("General.mp3");
-
-    SDL_RenderCopy(m_main_renderer, m_backgroundTexture, NULL, NULL);
 }
 
 void World::update()
@@ -163,7 +161,21 @@ void World::update()
 void World::draw()
 {
 
+    m_frameCount++;
+    int m_timerFPS = SDL_GetTicks()-m_lastFrame;
+    if(m_timerFPS<(1000/60)) {
+        SDL_Delay((1000/60)-m_timerFPS);
+    }
+
+
     SDL_RenderCopy(m_main_renderer, m_backgroundTexture, NULL, NULL);
+
+    coordinates fpsCoorBuff;
+    fpsCoorBuff.x = 1300;
+    fpsCoorBuff.y = 20;
+
+    write("FPS: " + to_string(m_fps), fpsCoorBuff, m_main_renderer, 18);
+
     for(vector <Enemy*> :: iterator it = m_enemies.begin(); it != m_enemies.end(); it++)
     {
         (*it) -> draw(m_main_renderer);
@@ -200,6 +212,21 @@ void World::draw()
             SDL_RenderCopy(m_main_renderer, m_bloodTexture3, NULL, NULL);
         }*/
     }
+
+    coordinates buff;
+    coordinates buff1;
+    buff.x = m_SCREEN_WIDTH / 2  + 10;
+    buff.y = 730;
+
+    buff1.x = m_SCREEN_WIDTH / 2 + 45;
+    buff1.y =  700;
+
+    stringstream ss;
+    ss << m_points;
+    string score = ss.str();
+
+    write("Score: ", buff1, m_main_renderer, 30);
+    write(score, buff, m_main_renderer, 25);
 
     SDL_RenderPresent(m_main_renderer);
 }
@@ -478,6 +505,19 @@ void World::endgameScreen()
     m_EndTx = SDL_CreateTextureFromSurface(m_main_renderer, loadingEndGame);
     SDL_RenderCopy(m_main_renderer, m_EndTx, &m_ScreenR, NULL);
     SDL_FreeSurface(loadingEndGame);
+
+    coordinates buff2;
+    coordinates buff3;
+
+    buff2.x = m_SCREEN_WIDTH / 2  + 10;
+    buff2.y = 730;
+
+    stringstream sss;
+    sss << m_highScore;
+    string highScore = sss.str();
+
+    write("High Score: " + highScore, buff2, m_main_renderer, 30);
+
     SDL_RenderPresent(m_main_renderer);
 }
 
@@ -620,6 +660,10 @@ void World::loadProgress()
 void World::AddPoints(Enemy* enemy)
 {
     m_points += enemy -> m_pointsGiven;
+
+    if(m_points > m_highScore){
+        m_highScore = m_points;
+    }
 }
 
 void World::AddCoins(Enemy* enemy)
@@ -683,4 +727,6 @@ void World::destroySession()
         delete m_artefacts[i];
     }
     m_artefacts.clear();
+
+    m_points = 0;
 }

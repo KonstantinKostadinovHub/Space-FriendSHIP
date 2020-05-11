@@ -32,7 +32,7 @@ void Projectile::init(string configFile, struct coordinates coor, float rotation
     }
     else if(configFile == "bullet_tank.txt")
     {
-        startPosMultiplier = 6;
+        startPosMultiplier = 10;
     }
 
     m_coor.x = coor.x + startPosMultiplier * (sin(m_rotationAngle * PI / 180) * m_speed * SPEED_FACTOR);

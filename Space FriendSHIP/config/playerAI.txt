@@ -1,6 +1,6 @@
-Player_Size: 96 96
+Player_Size: 72 72
 
-Image: Player2.bmp
+Image: Player_AI.bmp
 
 Spawn_Point: 250 500
 

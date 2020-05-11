@@ -26,6 +26,7 @@ void PlayerEnemy::load(string config, SDL_Renderer* renderer)
     stream >> tmp >> m_speed;
     stream >> tmp >> m_bulletName;
     stream >> tmp >> m_center.x;
+    stream >> tmp >> m_pointsGiven;
     stream.close();
 
     m_center.y = 0;
@@ -50,6 +51,7 @@ void PlayerEnemy::init(string config, coordinates coor, float rotation, Enemy* e
     m_objectTexture = enemy->m_objectTexture;
     m_speed = enemy->m_speed;
     m_bulletName = enemy ->m_bulletName;
+    m_pointsGiven = enemy -> m_pointsGiven;
     m_target = player;
 
     Gun* gun = new Gun;

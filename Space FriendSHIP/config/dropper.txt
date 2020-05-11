@@ -2,7 +2,7 @@ Health: 2
 
 Speed: 5
 
-Slow: 5
+Stop: 2
 
 Reverse: 5
 

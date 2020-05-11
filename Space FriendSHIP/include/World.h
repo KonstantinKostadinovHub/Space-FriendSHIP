@@ -7,6 +7,7 @@
 #include <string>
 #include <SDL2/SDL.h>
 #include <SDL2/SDL_ttf.h>
+#include <sstream>
 
 #include "Player.h"
 #include "Enemy.h"
@@ -66,13 +67,15 @@ public:
     string m_bloodImg3;
 
     int m_points;
-    int m_highScore;
+    int m_highScore = 0;
     int m_coins;
     int m_enemiesPerSpawn;
     int m_wallet;
     int m_SCREEN_WIDTH;
     int m_SCREEN_HEIGHT;
     int mouseX, mouseY;
+    int m_frameCount, m_timerFPS, m_lastFrame, m_fps;
+    int m_lastTime = 0;
 
     vector <Player*> m_players;
     vector <Enemy*> m_enemies;
