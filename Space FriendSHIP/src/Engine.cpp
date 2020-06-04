@@ -178,7 +178,8 @@ UIElement* LoadUIElement(string file, SDL_Renderer* render)
     return buff;
 }
 
-void write(string text, coordinates coor, SDL_Renderer* renderer, int FONT_SIZE) {
+void write(string text, coordinates coor, SDL_Renderer* renderer, int FONT_SIZE)
+{
     SDL_Texture* texture;
     SDL_Surface* surface;
     SDL_Rect rect;

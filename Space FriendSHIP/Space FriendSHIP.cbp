@@ -60,6 +60,7 @@
 		<Unit filename="include/UpgradeManager.h" />
 		<Unit filename="include/World.h" />
 		<Unit filename="include/ZigZag.h" />
+		<Unit filename="include/defines.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="src/Animation.cpp" />
 		<Unit filename="src/Artefact.cpp" />

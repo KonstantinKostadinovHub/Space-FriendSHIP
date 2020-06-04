@@ -433,7 +433,7 @@
 1589183648 source:c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\src\enemy.cpp
 	"Enemy.h"
 
-1589183648 source:c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\src\engine.cpp
+1590998166 source:c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\src\engine.cpp
 	"Engine.h"
 	<SDL2/SDL_ttf.h>
 
@@ -480,7 +480,7 @@
 	"SoundManager.h"
 	<chrono>
 
-1589185711 c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\include\world.h
+1591271338 c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\include\world.h
 	<iostream>
 	<fstream>
 	<vector>
@@ -488,6 +488,7 @@
 	<SDL2/SDL.h>
 	<SDL2/SDL_ttf.h>
 	<sstream>
+	"defines.h"
 	"Player.h"
 	"Enemy.h"
 	"Projectile.h"
@@ -503,6 +504,7 @@
 	"UpgradeManager.h"
 	"ConfigManager.h"
 	"Shop.h"
+	"Menu.h"
 	"SoundManager.h"
 	"Animation.h"
 
@@ -515,7 +517,7 @@
 	<vector>
 	"Engine.h"
 
-1589183888 c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\include\shop.h
+1591266815 c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\include\shop.h
 	<fstream>
 	<vector>
 	<string>
@@ -538,16 +540,16 @@
 1589183648 source:c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\src\upgrademanager.cpp
 	"UpgradeManager.h"
 
-1589188960 source:c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\src\world.cpp
+1591272480 source:c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\src\world.cpp
 	"World.h"
 
 1589183647 source:c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\src\zigzag.cpp
 	"ZigZag.h"
 
-1589184001 source:c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\src\shop.cpp
+1591266935 source:c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\src\shop.cpp
 	"Shop.h"
 
-1589188378 source:c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\main.cpp
+1591273139 source:c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\main.cpp
 	<SDL2/SDL.h>
 	"World.h"
 
@@ -6960,4 +6962,20 @@
 
 1589184001 source:c:\users\konstantin\downloads\untitled folder-20200511t065219z-001\untitled folder\space-friendship\space-friendship-master\space friendship\src\shop.cpp
 	"Shop.h"
+
+1591273109 c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\include\defines.h
+	<SDL2/SDL.h>
+	<cmath>
+
+1591273277 source:c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\src\menu.cpp
+	"Menu.h"
+
+1591272466 c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\include\menu.h
+	<cstring>
+	<fstream>
+	<string>
+	<SDL2/SDL.h>
+	<SDL2/SDL_ttf.h>
+	"defines.h"
+	"Engine.h"
 

@@ -9,6 +9,8 @@
 #include <SDL2/SDL_ttf.h>
 #include <sstream>
 
+#include "defines.h"
+
 #include "Player.h"
 #include "Enemy.h"
 #include "Projectile.h"
@@ -27,6 +29,7 @@
 #include "UpgradeManager.h"
 #include "ConfigManager.h"
 #include "Shop.h"
+#include "Menu.h"
 #include "SoundManager.h"
 #include "Animation.h"
 
@@ -52,6 +55,7 @@ public:
     UpgradeManager* m_upgradeManager;
     ConfigManager* m_configManager;
     Shop* m_shop;
+    Menu* m_menu;
     SoundManager* m_soundManager;
 
     string m_configFile;
@@ -91,12 +95,18 @@ public:
     bool m_spawn;
     bool endgame = false;
     bool m_drop;
-    bool mouseIsPressed;
+    bool m_mouseIsPressed;
+
+    SDL_Event m_event;
+    GAME_STATE m_gameState;
+    bool m_quitScene;
 
     void init(string configFile);
     void destroy();
     void update();
     void draw();
+    void input();
+
     void collisionDamage();
     void cleaner();
     void shootProjectiles();
@@ -109,9 +119,8 @@ public:
     void addPlayerAI(SDL_Renderer* renderer, string configFile);
     void addAnimation(string configFile, coordinates coor,SDL_Renderer* renderer,float rotation,SDL_Point* center = NULL);
     void AddPoints(Enemy* enemy);
-    void AddCoins (Enemy* enemy);
+    void AddCoins(Enemy* enemy);
     void chooseGameMode();
-    void menu();
     void endgameScreen();
     void saveProgress();
     void loadProgress();

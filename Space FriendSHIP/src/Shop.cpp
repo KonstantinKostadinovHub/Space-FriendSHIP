@@ -20,6 +20,7 @@ void Shop::init(string configFile, ConfigManager* configManager, SDL_Renderer* r
 
     m_mouseX = mouseX;
     m_mouseY = mouseY;
+    m_mouseIsPressed = mouseIsPressed;
     m_money = money;
 
     fstream stream;
@@ -86,7 +87,7 @@ void Shop::init(string configFile, ConfigManager* configManager, SDL_Renderer* r
 void Shop::update()
 {
 
-    if(m_mouseIsPressed)
+    if((*m_mouseIsPressed))
     {
         for(int i = 0; i < m_shopArticles.size(); i++)
         {

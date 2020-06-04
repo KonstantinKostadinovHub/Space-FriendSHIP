@@ -6,7 +6,7 @@ Image_with_Shield: Player2WithShield.bmp
 
 Health: 100
 
-Spawn_Point: 500 500
+Spawn_Point: 668 384
 
 Speed: 2
 
@@ -14,7 +14,7 @@ Max_Speed: 5
 
 Min_Speed: 1
 
-Dash_Lenght: 100
+Dash_Lenght: 100	
 
 Spawn_Angle: -90
 
@@ -30,7 +30,7 @@ Dash: Right_Alt
 
 Shoot: Right_Shift
 
-CollisionDamage: 80
+CollisionDamage: 60
 
 HPBar: healthBar2.txt 
 

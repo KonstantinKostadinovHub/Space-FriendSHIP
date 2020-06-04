@@ -6,7 +6,7 @@ Image_with_Shield: Player1WithShield.bmp
 
 Health: 100
 
-Spawn_Point: 500 500
+Spawn_Point: 668 384
 
 Speed: 2
 
@@ -30,7 +30,7 @@ Dash: E
 
 Shoot: Q
 
-CollisionDamage: 80
+CollisionDamage: 60
 
 HPBar: healthBar1.txt
 

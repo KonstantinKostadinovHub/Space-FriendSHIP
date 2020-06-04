@@ -7,6 +7,7 @@ World::World()
     m_upgradeManager = new UpgradeManager;
     m_configManager = new ConfigManager;
     m_shop = new Shop;
+    m_menu = new Menu;
     m_soundManager = new SoundManager;
 }
 
@@ -51,7 +52,8 @@ void World::init(string configFile)
     m_upgradeManager -> init("upgrade_manager.txt");
     loadProgress();
     m_configManager -> init("config_manager.txt", m_main_renderer);
-    m_shop -> init("shop.txt", m_configManager, m_main_renderer, &mouseX, &mouseY, &mouseIsPressed, &m_wallet, m_upgradeManager);
+    m_shop -> init("shop.txt", m_configManager, m_main_renderer, &mouseX, &mouseY, &m_mouseIsPressed, &m_wallet, m_upgradeManager);
+    m_menu -> load("menu.txt", m_main_renderer, &mouseX, &mouseY, &m_mouseIsPressed, &m_quitScene, &m_gameState);
     m_soundManager -> init("SoundManager.txt");
 
     SDL_Surface* loadingSurface = SDL_LoadBMP("img\\background.bmp");
@@ -172,7 +174,7 @@ void World::draw()
     SDL_RenderCopy(m_main_renderer, m_backgroundTexture, NULL, NULL);
 
     coordinates fpsCoorBuff;
-    fpsCoorBuff.x = 1300;
+    fpsCoorBuff.x = m_SCREEN_WIDTH;
     fpsCoorBuff.y = 20;
 
     write("FPS: " + to_string(m_fps), fpsCoorBuff, m_main_renderer, 18);
@@ -216,18 +218,28 @@ void World::draw()
 
     coordinates buff;
     coordinates buff1;
+    coordinates buff2;
+    coordinates buff3;
     buff.x = m_SCREEN_WIDTH / 2  + 10;
     buff.y = 730;
 
     buff1.x = m_SCREEN_WIDTH / 2 + 45;
     buff1.y =  700;
 
-    stringstream ss;
-    ss << m_points;
-    string score = ss.str();
+    buff3.x = 145;
+    buff3.y = 700;
+
+    buff4.x = 895;
+    buff4.y = 700;
 
     write("Score: ", buff1, m_main_renderer, 30);
-    write(score, buff, m_main_renderer, 25);
+    write(to_string(m_points), buff, m_main_renderer, 25);
+
+    write("Player 1:", buff3, m_main_renderer, 25);
+    if (m_gameState == GAME_MULTIPLAYER)
+    {
+        write("Player 2:", buff4, m_main_renderer, 25);
+    }
 
     SDL_RenderPresent(m_main_renderer);
 }
@@ -236,6 +248,25 @@ void World::destroy()
 {
     SDL_DestroyRenderer(m_main_renderer);
     SDL_DestroyWindow(m_main_window);
+}
+
+void World::input()
+{
+    m_event.type = SDLK_UNKNOWN;
+    m_mouseIsPressed = false;
+
+    SDL_PollEvent(&m_event);
+
+    if (m_event.type == SDL_MOUSEMOTION)
+    {
+        SDL_GetGlobalMouseState(&(mouseX), &(mouseY));
+    }
+    if (m_event.type == SDL_MOUSEBUTTONDOWN)
+    {
+        m_mouseIsPressed = true;
+    }
+    ///cout << m_mouseIsPressed << endl;
+    ///cout << mouseX << " " << mouseY << endl;
 }
 
 void World::addPlayer(SDL_Renderer* renderer, string configFile)
@@ -513,32 +544,8 @@ void World::endgameScreen()
     buff2.x = m_SCREEN_WIDTH / 2  + 10;
     buff2.y = 730;
 
-    stringstream sss;
-    sss << m_highScore;
-    string highScore = sss.str();
+    write("High Score: " + to_string(m_highScore), buff2, m_main_renderer, 35);
 
-    write("High Score: " + highScore, buff2, m_main_renderer, 30);
-
-    SDL_RenderPresent(m_main_renderer);
-}
-
-void World::menu()
-{
-    const Uint8 *state = SDL_GetKeyboardState(NULL);
-    if (state[SDL_SCANCODE_RIGHT])
-    {
-        m_menuImg = m_menuImg3;
-    }
-    else if(state[SDL_SCANCODE_LEFT])
-    {
-        m_menuImg = m_menuImg2;
-    }
-
-    SDL_Texture* m_MenuTx;
-    SDL_Surface* loadingMenu = SDL_LoadBMP(m_menuImg.c_str());
-    m_MenuTx = SDL_CreateTextureFromSurface(m_main_renderer, loadingMenu);
-    SDL_RenderCopy(m_main_renderer, m_MenuTx, NULL, NULL);
-    SDL_FreeSurface(loadingMenu);
     SDL_RenderPresent(m_main_renderer);
 }
 
@@ -590,10 +597,11 @@ void World::cleaner()
     {
         if(m_players[i] -> m_health <= 0)
         {
-            endgame = true;
-            m_players.erase(m_players.begin() + i);
-            i--;
-            break;
+            m_quitScene = true;
+            m_gameState = DIED;
+            //m_players.erase(m_players.begin() + i);
+            //i--;
+            //break;
         }
     }
     for(int i = 0; i < m_enemies.size(); i++)
@@ -678,12 +686,12 @@ void World::AddCoins(Enemy* enemy)
 
 void World::chooseGameMode()
 {
-    if(m_menuImg == m_menuImg2)
+    if(m_gameState == GAME_SINGLEPLAYER)
     {
         addPlayer (m_main_renderer, "player1.txt");
         addPlayerAI (m_main_renderer,"playerAI.txt");
     }
-    else if(m_menuImg == m_menuImg3)
+    else
     {
         addPlayer (m_main_renderer, "player2.txt");
         addPlayer (m_main_renderer, "player1.txt");

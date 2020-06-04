@@ -43,7 +43,7 @@ class Shop
         SDL_Rect m_frameRectModel;
         SDL_Rect m_imgRectModel;
         int *m_mouseX, *m_mouseY;
-        bool m_mouseIsPressed;
+        bool *m_mouseIsPressed;
         int *m_money;
 
         int m_numberOfPrices;

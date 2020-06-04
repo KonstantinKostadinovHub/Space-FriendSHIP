@@ -1,0 +1,4 @@
+backgroundImg: menu.bmp
+Singleplayer_Button: 510 505 390 115
+Multiplayer_Button: 920 505 390 115
+Shop_Button: 50 440 150 120
