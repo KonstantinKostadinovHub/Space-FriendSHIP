@@ -220,6 +220,7 @@ void World::draw()
     coordinates buff1;
     coordinates buff2;
     coordinates buff3;
+    coordinates buff4;
     buff.x = m_SCREEN_WIDTH / 2  + 10;
     buff.y = 730;
 
