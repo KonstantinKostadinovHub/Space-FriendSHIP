@@ -1,0 +1,9 @@
+CoorScore: 693 730
+
+CoorScoreText: 728 700
+
+CoorPlayer1: 145 700
+
+CoolPlayer2: 895 700
+
+CoorHighScore: 693 730

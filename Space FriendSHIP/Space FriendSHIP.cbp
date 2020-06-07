@@ -60,6 +60,7 @@
 		<Unit filename="include/Spawner.h" />
 		<Unit filename="include/UpgradeManager.h" />
 		<Unit filename="include/World.h" />
+		<Unit filename="include/Writer.h" />
 		<Unit filename="include/ZigZag.h" />
 		<Unit filename="include/defines.h" />
 		<Unit filename="main.cpp" />
@@ -84,6 +85,7 @@
 		<Unit filename="src/Spawner.cpp" />
 		<Unit filename="src/UpgradeManager.cpp" />
 		<Unit filename="src/World.cpp" />
+		<Unit filename="src/Writer.cpp" />
 		<Unit filename="src/ZigZag.cpp" />
 		<Extensions>
 			<code_completion />

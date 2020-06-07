@@ -32,6 +32,7 @@
 #include "Menu.h"
 #include "SoundManager.h"
 #include "Animation.h"
+#include "Writer.h"
 
 using namespace std;
 
@@ -57,6 +58,7 @@ public:
     Shop* m_shop;
     Menu* m_menu;
     SoundManager* m_soundManager;
+    Writer* m_writer;
 
     string m_configFile;
     string tmp;

@@ -9,6 +9,7 @@ World::World()
     m_shop = new Shop;
     m_menu = new Menu;
     m_soundManager = new SoundManager;
+    m_writer = new Writer;
 }
 
 World::~World()
@@ -55,6 +56,8 @@ void World::init(string configFile)
     m_shop -> init("shop.txt", m_configManager, m_main_renderer, &mouseX, &mouseY, &m_mouseIsPressed, &m_wallet, m_upgradeManager);
     m_menu -> load("menu.txt", m_main_renderer, &mouseX, &mouseY, &m_mouseIsPressed, &m_quitScene, &m_gameState);
     m_soundManager -> init("SoundManager.txt");
+    m_writer -> init("writer.txt", m_main_renderer, &m_points, &m_highScore);
+
 
     SDL_Surface* loadingSurface = SDL_LoadBMP("img\\background.bmp");
     m_backgroundTexture = SDL_CreateTextureFromSurface(m_main_renderer, loadingSurface);
@@ -215,32 +218,14 @@ void World::draw()
             SDL_RenderCopy(m_main_renderer, m_bloodTexture3, NULL, NULL);
         }*/
     }
+    m_writer->WriteScore();
+    m_writer->WritePlayer1();
 
-    coordinates buff;
-    coordinates buff1;
-    coordinates buff2;
-    coordinates buff3;
-    coordinates buff4;
-    buff.x = m_SCREEN_WIDTH / 2  + 10;
-    buff.y = 730;
-
-    buff1.x = m_SCREEN_WIDTH / 2 + 45;
-    buff1.y =  700;
-
-    buff3.x = 145;
-    buff3.y = 700;
-
-    buff4.x = 895;
-    buff4.y = 700;
-
-    write("Score: ", buff1, m_main_renderer, 30);
-    write(to_string(m_points), buff, m_main_renderer, 25);
-
-    write("Player 1:", buff3, m_main_renderer, 25);
     if (m_gameState == GAME_MULTIPLAYER)
     {
-        write("Player 2:", buff4, m_main_renderer, 25);
+        m_writer->WritePlayer2();
     }
+
 
     SDL_RenderPresent(m_main_renderer);
 }
@@ -539,13 +524,7 @@ void World::endgameScreen()
     SDL_RenderCopy(m_main_renderer, m_EndTx, &m_ScreenR, NULL);
     SDL_FreeSurface(loadingEndGame);
 
-    coordinates buff2;
-    coordinates buff3;
-
-    buff2.x = m_SCREEN_WIDTH / 2  + 10;
-    buff2.y = 730;
-
-    write("High Score: " + to_string(m_highScore), buff2, m_main_renderer, 35);
+    m_writer->WriteHighScore();
 
     SDL_RenderPresent(m_main_renderer);
 }
@@ -741,6 +720,11 @@ void World::destroySession()
         delete m_artefacts[i];
     }
     m_artefacts.clear();
+    for(int i = 0; i < m_animations.size(); i++)
+    {
+        delete m_animations[i];
+    }
+    m_animations.clear();
 
     m_points = 0;
 }

@@ -480,7 +480,7 @@
 	"SoundManager.h"
 	<chrono>
 
-1591273498 c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\include\world.h
+1591560097 c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\include\world.h
 	<iostream>
 	<fstream>
 	<vector>
@@ -507,6 +507,7 @@
 	"Menu.h"
 	"SoundManager.h"
 	"Animation.h"
+	"Writer.h"
 
 1589183647 c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\include\spawner.h
 	<stdlib.h>
@@ -540,7 +541,7 @@
 1589183648 source:c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\src\upgrademanager.cpp
 	"UpgradeManager.h"
 
-1591272480 source:c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\src\world.cpp
+1591560194 source:c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\src\world.cpp
 	"World.h"
 
 1589183647 source:c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\src\zigzag.cpp
@@ -549,7 +550,7 @@
 1591266935 source:c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\src\shop.cpp
 	"Shop.h"
 
-1591273139 source:c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\main.cpp
+1591560416 source:c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\main.cpp
 	<SDL2/SDL.h>
 	"World.h"
 
@@ -6978,4 +6979,13 @@
 	<SDL2/SDL_ttf.h>
 	"defines.h"
 	"Engine.h"
+
+1591559347 c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\include\writer.h
+	"Engine.h"
+	<SDL2/SDL.h>
+	<string>
+	<fstream>
+
+1591559358 source:c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\src\writer.cpp
+	"Writer.h"
 
