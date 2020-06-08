@@ -17,7 +17,7 @@ public:
     virtual ~SoundManager();
 
     void init(string configFile);
-    void destroy();
+    void destroyChunks();
     void play_sound(string sound);
 
     string m_configFile;

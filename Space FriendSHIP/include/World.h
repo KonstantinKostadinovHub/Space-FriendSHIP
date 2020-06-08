@@ -48,8 +48,12 @@ public:
     SDL_Texture* m_bloodTexture1;
     SDL_Texture* m_bloodTexture2;
     SDL_Texture* m_bloodTexture3;
+    SDL_Texture* m_tutorialTexture;
+    SDL_Texture* m_backButtonTexture;
+
     SDL_Rect m_ScreenR;
     SDL_Rect m_ScreenMenu;
+    SDL_Rect m_tutorialBackButton;
 
     Spawner* m_spawnManager;
     Dropper* m_dropper;
@@ -71,6 +75,8 @@ public:
     string m_bloodImg1;
     string m_bloodImg2;
     string m_bloodImg3;
+    string m_tutorialImg;
+    string m_backButtonImg;
 
     int m_points;
     int m_highScore = 0;
@@ -98,17 +104,16 @@ public:
     bool endgame = false;
     bool m_drop;
     bool m_mouseIsPressed;
+    bool m_quitScene;
 
     SDL_Event m_event;
     GAME_STATE m_gameState;
-    bool m_quitScene;
 
     void init(string configFile);
     void destroy();
     void update();
     void draw();
     void input();
-
     void collisionDamage();
     void cleaner();
     void shootProjectiles();
@@ -129,6 +134,7 @@ public:
     void shop();
     void destroySession();
     void initSession();
+    void tutorial();
 
 protected:
 

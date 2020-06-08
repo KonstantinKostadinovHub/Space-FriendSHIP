@@ -1,6 +1,6 @@
-size: 19 49
+size: 50 52
 
-image: shooter.bmp
+image: Sniper_Enemy.bmp
 
 health: 25
 

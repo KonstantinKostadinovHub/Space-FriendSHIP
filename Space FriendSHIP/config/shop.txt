@@ -1,31 +1,46 @@
 coor: 1355 768
+
 font_size: 30
-money_text: money: 
+
+money_text: Coins: 
 
 spacing: 50
+
 frameRect: 216 318
+
 slotSpace: 192 192
+
 imgRect: 134 134
+
 coordinates: 275 50
+
 background: background.bmp
-reutrnButton: Return_Button.bmp
-returnButton: 50 600 67 37
+
+backButton: back_button.bmp
+
+backButton: 50 600 67 37
+
 numberOFPrices: 8
 
 Number_Of_Ability_Images: 6
 
 healthUpgrade.bmp
-25 50 75 100 125 150 175 200
+25 50 75 100 150 200 250 300
+
 moneyUpgrade.bmp
-25 50 75 100 125 150 175 200
+25 50 75 100 150 200 250 300
+
 dashUpgrade.bmp
-25 50 75 100 125 150 175 200
+25 50 75 100 150 200 250 300
+
 collisionDamageUpgrade.bmp
-25 50 75 100 125 150 175 200
+25 50 75 100 150 200 250 300
+
 healthBoosterUpgrade.bmp
-25 50 75 100 125 150 175 200
+25 50 75 100 150 200 250 300
+
 bulletDamageUpgrade.bmp
-25 50 75 100 125 150 175 200
+25 50 75 100 150 200 250 300
 
 Number_Of_Update_Frame_States: 9
 

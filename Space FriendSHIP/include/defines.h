@@ -11,7 +11,8 @@ enum GAME_STATE
     GAME_SINGLEPLAYER = 2,
     GAME_MULTIPLAYER = 3,
     SHOP = 4,
-    DIED = 5
+    DIED = 5,
+    TUTORIAL = 6
 };
 
 #endif // DEFINES_H

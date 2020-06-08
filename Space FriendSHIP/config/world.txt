@@ -21,3 +21,7 @@ SpawnCooldown: 1
 DropCooldown: 3
 
 EnemiesPerSpawn: 2
+
+Tutorial: Tutorial.bmp
+
+Back_button: back_button.bmp

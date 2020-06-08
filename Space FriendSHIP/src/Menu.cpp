@@ -28,6 +28,7 @@ void Menu::load(string configFile, SDL_Renderer* renderer,int *mouseX, int *mous
     stream >> tmp >> m_SingleplayerButton.x >> m_SingleplayerButton.y >> m_SingleplayerButton.w >> m_SingleplayerButton.h;
     stream >> tmp >> m_MultiplayerButton.x >> m_MultiplayerButton.y >> m_MultiplayerButton.w >> m_MultiplayerButton.h;
     stream >> tmp >> m_ShopButton.x >> m_ShopButton.y >> m_ShopButton.w >> m_ShopButton.h;
+    stream >> tmp >> m_TutorialButton.x >> m_TutorialButton.y >> m_TutorialButton.w >> m_TutorialButton.h;
     stream.close();
 
     m_backgroundTexture = LoadTexture(backgroundImg, m_renderer);
@@ -52,8 +53,13 @@ void Menu::update()
             (*m_gameState) = SHOP;
             (*m_quitScene) = true;
         }
+        if(checkForMouseCollision(*m_mouseX, *m_mouseY, m_TutorialButton))
+        {
+            (*m_gameState) = TUTORIAL;
+            (*m_quitScene) = true;
+        }
     }
-    ///cout << *m_mouseX << " " << *m_mouseY << endl;
+    //cout << *m_mouseX << " " << *m_mouseY << endl;
 }
 
 void Menu::draw()

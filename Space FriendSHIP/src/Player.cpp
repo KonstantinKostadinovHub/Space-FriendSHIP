@@ -205,8 +205,6 @@ void Player::update()
 
     m_objectRect.x = m_coor.x;
     m_objectRect.y = m_coor.y;
-
-    cout << "USPESHEN UPDATE NA IGRACHA" << endl;
 }
 
 void Player::draw(SDL_Renderer* renderer)

@@ -24,6 +24,7 @@ class Menu
         SDL_Rect m_SingleplayerButton;
         SDL_Rect m_MultiplayerButton;
         SDL_Rect m_ShopButton;
+        SDL_Rect m_TutorialButton;
         SDL_Renderer* m_renderer;
 
         int *m_mouseX, *m_mouseY;

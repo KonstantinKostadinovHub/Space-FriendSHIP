@@ -8,6 +8,9 @@ World world;
 
 int main (int argc, char* argv[])
 {
+    const Uint8 *state = SDL_GetKeyboardState(NULL);
+    const Uint8 *state2 = SDL_GetKeyboardState(NULL);
+
     world.init("world.txt");
     world.m_gameState = MENU;
 
@@ -20,6 +23,16 @@ int main (int argc, char* argv[])
                 world.input();
                 world.m_menu->update();
                 world.m_menu->draw();
+                SDL_Delay(20);
+            }
+            world.m_quitScene = false;
+        }
+        if(world.m_gameState == TUTORIAL)
+        {
+            while(!world.m_quitScene)
+            {
+                world.input();
+                world.tutorial();
                 SDL_Delay(20);
             }
             world.m_quitScene = false;
@@ -46,7 +59,7 @@ int main (int argc, char* argv[])
                 world.update();
                 world.draw();
                 world.cleaner();
-                SDL_Delay(18);
+                SDL_Delay(17);
             }
             world.m_quitScene = false;
             world.saveProgress();
@@ -58,9 +71,7 @@ int main (int argc, char* argv[])
             world.destroySession();
             world.m_gameState = MENU;
             world.m_quitScene = false;
-            cout << "END GAME" << endl;
         }
     }
-
     return 0;
 }

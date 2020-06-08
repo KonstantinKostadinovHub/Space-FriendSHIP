@@ -46,42 +46,42 @@ void SoundManager::init(string configFile)
 
 void SoundManager::play_sound(string sound)
 {
-    Mix_AllocateChannels(16);
+    Mix_AllocateChannels(10);
 
     if (sound == General_Music_str)
     {
-        Mix_PlayChannel(7, General, -1);
-        Mix_Volume(7, 10);
+        Mix_PlayChannel(1, General, -1);
+        Mix_Volume(1, 7);
     }
     else if (sound == Explosion_str)
     {
-        Mix_PlayChannel(1, Explosion, 0);
-        Mix_Volume(1, 15);
+        Mix_PlayChannel(2, Explosion, 0);
+        Mix_Volume(2, 13);
     }
     else if (sound == Dash_str)
     {
-        Mix_PlayChannel(2, Dash, 0);
-        Mix_Volume(2, 7);
+        Mix_PlayChannel(3, Dash, 0);
+        Mix_Volume(3, 7);
     }
     else if (sound == Shooting_str)
     {
-        Mix_PlayChannel(3, Shooting, 0);
-        Mix_Volume(3, 7);
+        Mix_PlayChannel(4, Shooting, 0);
+        Mix_Volume(4, 6);
     }
     else if (sound == Healing_str)
     {
-        Mix_PlayChannel(4, Healing, 0);
-        Mix_Volume(4, 7);
+        Mix_PlayChannel(5, Healing, 0);
+        Mix_Volume(5, 7);
     }
     else if (sound == Stop_str)
     {
-        Mix_PlayChannel(5, Stop, 0);
-        Mix_Volume(5, 25);
+        Mix_PlayChannel(6, Stop, 0);
+        Mix_Volume(6, 25);
     }
     else if (sound == Reverse_str)
     {
-        Mix_PlayChannel(6, Reverse, 0);
-        Mix_Volume(6, 15);
+        Mix_PlayChannel(7, Reverse, 0);
+        Mix_Volume(7, 15);
     }
     else if (sound == Coin_str)
     {
@@ -95,7 +95,7 @@ void SoundManager::play_sound(string sound)
     }
 }
 
-void SoundManager::destroy()
+void SoundManager::destroyChunks()
 {
     Mix_FreeChunk(General);
     General = NULL;
@@ -103,11 +103,11 @@ void SoundManager::destroy()
     Mix_FreeChunk(Explosion);
     Explosion = NULL;
 
-    Mix_FreeChunk(Shooting);
-    Shooting = NULL;
-
     Mix_FreeChunk(Dash);
     Dash = NULL;
+
+    Mix_FreeChunk(Shooting);
+    Shooting = NULL;
 
     Mix_FreeChunk(Healing);
     Healing = NULL;

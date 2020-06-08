@@ -37,6 +37,9 @@ void World::init(string configFile)
     stream >> tmp >> m_spawnCooldown;
     stream >> tmp >> m_dropCooldown;
     stream >> tmp >> m_enemiesPerSpawn;
+    stream >> tmp >> m_tutorialImg;
+    stream >> tmp >> m_backButtonImg;
+
     stream.close();
 
     m_startDropCooldown = time(NULL);
@@ -58,7 +61,6 @@ void World::init(string configFile)
     m_soundManager -> init("SoundManager.txt");
     m_writer -> init("writer.txt", m_main_renderer, &m_points, &m_highScore);
 
-
     SDL_Surface* loadingSurface = SDL_LoadBMP("img\\background.bmp");
     m_backgroundTexture = SDL_CreateTextureFromSurface(m_main_renderer, loadingSurface);
     SDL_FreeSurface(loadingSurface);
@@ -71,6 +73,11 @@ void World::init(string configFile)
     m_ScreenMenu.y = 0;
     m_ScreenMenu.w = m_SCREEN_WIDTH;
     m_ScreenMenu.h = m_SCREEN_HEIGHT;
+
+    m_tutorialBackButton.x = m_SCREEN_WIDTH - 100;
+    m_tutorialBackButton.y = m_SCREEN_HEIGHT - 50;
+    m_tutorialBackButton.w = 100;
+    m_tutorialBackButton.h = 50;
 
     m_bloodImg1 = "img\\" + m_bloodImg1;
     m_bloodImg2 = "img\\" + m_bloodImg2;
@@ -96,7 +103,10 @@ void World::init(string configFile)
     SDL_FreeSurface(loadingSurface2);
     SDL_FreeSurface(loadingSurface3);
 
-     SDL_SetWindowFullscreen(m_main_window, SDL_WINDOW_FULLSCREEN);
+    m_tutorialTexture = LoadTexture(m_tutorialImg, m_main_renderer);
+    m_backButtonTexture = LoadTexture(m_backButtonImg, m_main_renderer);
+
+    SDL_SetWindowFullscreen(m_main_window, SDL_WINDOW_FULLSCREEN);
 
     m_soundManager -> play_sound("General.mp3");
 }
@@ -136,10 +146,26 @@ void World::update()
             m_players[i] -> inDash = false;
             m_soundManager -> play_sound("Dash.mp3");
         }
+        if(m_players[i]->m_objectRect.x + m_players[i]->m_objectRect.w > m_SCREEN_WIDTH + 72)
+        {
+            m_players[i]->m_health --;
+        }
+        if(m_players[i]->m_objectRect.x < -72)
+        {
+            m_players[i]->m_health --;
+        }
+        if(m_players[i]->m_objectRect.y + m_players[i]->m_objectRect.h > m_SCREEN_HEIGHT + 72)
+        {
+            m_players[i]->m_health --;
+        }
+        if(m_players[i]->m_objectRect.y < -72)
+        {
+            m_players[i]->m_health --;
+        }
     }
-    for(int i = 0; i < m_players.size(); i++)
+    for(vector <Player*> :: iterator it = m_players.begin(); it != m_players.end(); it++)
     {
-        m_players[i]->update();
+        (*it) -> update();
     }
     for(vector <Enemy*> :: iterator it = m_enemies.begin(); it != m_enemies.end(); it++)
     {
@@ -190,15 +216,15 @@ void World::draw()
 
     for(int i = 0; i < m_players.size(); i++)
     {
-        if(m_players[i] -> m_health <= 50)
+       /* if(m_players[i] -> m_health <= 50)
         {
             SDL_RenderCopy(m_main_renderer, m_bloodTexture1, NULL, NULL);
-        }
-        /*if(m_players[i] -> m_health <= 30)
+        }*/
+        if(m_players[i] -> m_health <= 30)
         {
             SDL_RenderCopy(m_main_renderer, m_bloodTexture2, NULL, NULL);
         }
-        if(m_players[i] -> m_health <= 15)
+       /* if(m_players[i] -> m_health <= 15)
         {
             SDL_RenderCopy(m_main_renderer, m_bloodTexture3, NULL, NULL);
         }*/
@@ -211,12 +237,12 @@ void World::draw()
         m_writer->WritePlayer2();
     }
 
-
     SDL_RenderPresent(m_main_renderer);
 }
 
 void World::destroy()
 {
+    m_soundManager->destroyChunks();
     SDL_DestroyRenderer(m_main_renderer);
     SDL_DestroyWindow(m_main_window);
 }
@@ -236,8 +262,6 @@ void World::input()
     {
         m_mouseIsPressed = true;
     }
-    ///cout << m_mouseIsPressed << endl;
-    ///cout << mouseX << " " << mouseY << endl;
 }
 
 void World::addPlayer(SDL_Renderer* renderer, string configFile)
@@ -564,9 +588,6 @@ void World::cleaner()
         {
             m_quitScene = true;
             m_gameState = DIED;
-            //m_players.erase(m_players.begin() + i);
-            //i--;
-            //break;
         }
     }
     for(int i = 0; i < m_enemies.size(); i++)
@@ -583,7 +604,6 @@ void World::cleaner()
                 AddCoins(m_enemies[i]);
             }
             delete m_enemies[i];
-            //m_enemies[i] = NULL;
             m_enemies.erase(m_enemies.begin() + i);
             i--;
         }
@@ -712,4 +732,18 @@ void World::destroySession()
     m_animations.clear();
 
     m_points = 0;
+}
+
+void World::tutorial()
+{
+    SDL_RenderCopy(m_main_renderer, m_tutorialTexture, NULL, NULL);
+    SDL_RenderCopy(m_main_renderer, m_backButtonTexture,  NULL, &m_tutorialBackButton);
+
+    if(checkForMouseCollision(mouseX, mouseY, m_tutorialBackButton) && m_mouseIsPressed)
+    {
+        m_quitScene = true;
+        m_gameState = MENU;
+    }
+
+    SDL_RenderPresent(m_main_renderer);
 }
