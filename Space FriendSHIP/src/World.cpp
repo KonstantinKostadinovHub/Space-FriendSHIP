@@ -53,7 +53,7 @@ void World::init(string configFile)
     m_upgradeManager -> init("upgrade_manager.txt");
     loadProgress();
     m_configManager -> init("config_manager.txt", m_main_renderer);
-    m_shop -> init("shop.txt", m_configManager, m_main_renderer, &mouseX, &mouseY, &m_mouseIsPressed, &m_wallet, m_upgradeManager);
+    m_shop -> init("shop.txt", m_configManager, m_main_renderer, &mouseX, &mouseY, &m_mouseIsPressed, &m_wallet, m_upgradeManager, &m_quitScene, &m_gameState);
     m_menu -> load("menu.txt", m_main_renderer, &mouseX, &mouseY, &m_mouseIsPressed, &m_quitScene, &m_gameState);
     m_soundManager -> init("SoundManager.txt");
     m_writer -> init("writer.txt", m_main_renderer, &m_points, &m_highScore);
@@ -103,7 +103,6 @@ void World::init(string configFile)
 
 void World::update()
 {
-
     if(!m_spawn)
     {
         m_spawn = true;
@@ -138,9 +137,9 @@ void World::update()
             m_soundManager -> play_sound("Dash.mp3");
         }
     }
-    for(vector <Player*> :: iterator it = m_players.begin(); it != m_players.end(); it++)
+    for(int i = 0; i < m_players.size(); i++)
     {
-        (*it) -> update();
+        m_players[i]->update();
     }
     for(vector <Enemy*> :: iterator it = m_enemies.begin(); it != m_enemies.end(); it++)
     {
@@ -166,21 +165,7 @@ void World::update()
 
 void World::draw()
 {
-
-    m_frameCount++;
-    int m_timerFPS = SDL_GetTicks()-m_lastFrame;
-    if(m_timerFPS<(1000/60)) {
-        SDL_Delay((1000/60)-m_timerFPS);
-    }
-
-
     SDL_RenderCopy(m_main_renderer, m_backgroundTexture, NULL, NULL);
-
-    coordinates fpsCoorBuff;
-    fpsCoorBuff.x = m_SCREEN_WIDTH;
-    fpsCoorBuff.y = 20;
-
-    write("FPS: " + to_string(m_fps), fpsCoorBuff, m_main_renderer, 18);
 
     for(vector <Enemy*> :: iterator it = m_enemies.begin(); it != m_enemies.end(); it++)
     {

@@ -10,4 +10,4 @@ Shooter_Tank_Probability: 1
 
 ZigZag_Probabiblity: 1
 
-Player_Enemy_Enemy: 1
+Player_Enemy_Enemy: 0

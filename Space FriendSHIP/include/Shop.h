@@ -7,6 +7,8 @@
 
 #include <SDL2/SDL.h>
 
+#include "defines.h"
+
 #include <ConfigManager.h>
 #include <UpgradeManager.h>
 
@@ -30,6 +32,7 @@ class Shop
 
         SDL_Renderer* m_renderer;
         SDL_Texture* m_backgroundTexture;
+        SDL_Texture* m_backButtonTexture;
         UIElement* m_buttonBack;
 
         string s_moneyText;
@@ -42,15 +45,18 @@ class Shop
         int m_spacing;
         SDL_Rect m_frameRectModel;
         SDL_Rect m_imgRectModel;
+        SDL_Rect m_backButton;
         int *m_mouseX, *m_mouseY;
         bool *m_mouseIsPressed;
         int *m_money;
+        bool *m_quitScene;
+        GAME_STATE *m_gameState;
 
         int m_numberOfPrices;
         int m_numberOfAbilityUpgrades;
         vector<int*> m_upgradeManagerLevels;
 
-        void init(string configFile, ConfigManager* configManager, SDL_Renderer* renderer, int* mouseX, int* mouseY, bool* mouseIsPressed, int *money, UpgradeManager* um);
+        void init(string configFile, ConfigManager* configManager, SDL_Renderer* renderer, int* mouseX, int* mouseY, bool* mouseIsPressed, int *money, UpgradeManager* um, bool *quitScene, GAME_STATE *gameState);
         void update();
         void draw();
 

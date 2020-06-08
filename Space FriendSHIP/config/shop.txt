@@ -8,6 +8,8 @@ slotSpace: 192 192
 imgRect: 134 134
 coordinates: 275 50
 background: background.bmp
+reutrnButton: Return_Button.bmp
+returnButton: 50 600 67 37
 numberOFPrices: 8
 
 Number_Of_Ability_Images: 6

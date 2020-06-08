@@ -10,7 +10,7 @@ Shop::~Shop()
     //dtor
 }
 
-void Shop::init(string configFile, ConfigManager* configManager, SDL_Renderer* renderer, int *mouseX, int *mouseY, bool *mouseIsPressed, int *money, UpgradeManager* um)
+void Shop::init(string configFile, ConfigManager* configManager, SDL_Renderer* renderer, int* mouseX, int* mouseY, bool* mouseIsPressed, int *money, UpgradeManager* um, bool *quitScene, GAME_STATE *gameState)
 {
     m_configManager = configManager;
 
@@ -22,6 +22,8 @@ void Shop::init(string configFile, ConfigManager* configManager, SDL_Renderer* r
     m_mouseY = mouseY;
     m_mouseIsPressed = mouseIsPressed;
     m_money = money;
+    m_quitScene = quitScene;
+    m_gameState = gameState;
 
     fstream stream;
 
@@ -48,6 +50,9 @@ void Shop::init(string configFile, ConfigManager* configManager, SDL_Renderer* r
     stream >> tmp >> m_coor.x >> m_coor.y;
     stream >> tmp >> stringBuff;
     m_backgroundTexture = LoadTexture(stringBuff, m_renderer);
+    stream >> tmp >> stringBuff;
+    m_backButtonTexture = LoadTexture(stringBuff, m_renderer);
+    stream >> tmp >> m_backButton.x >> m_backButton.y >> m_backButton.w >> m_backButton.h;
     stream >> tmp >> m_numberOfPrices;
     stream >> tmp >> m_numberOfAbilityUpgrades;
 
@@ -98,12 +103,18 @@ void Shop::update()
                 *m_upgradeManagerLevels[i] = m_shopArticles[i]->level;
             }
         }
+        if(checkForMouseCollision(*m_mouseX, *m_mouseY, m_backButton))
+        {
+            (*m_quitScene) = true;
+            (*m_gameState) = MENU;
+        }
     }
 }
 
 void Shop::draw()
 {
     SDL_RenderCopy(m_renderer, m_backgroundTexture, NULL, NULL);
+    SDL_RenderCopy(m_renderer, m_backButtonTexture, NULL, &m_backButton);
 
     for(int i = 0; i < m_shopArticles.size(); i++)
     {

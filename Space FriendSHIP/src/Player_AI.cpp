@@ -9,6 +9,7 @@ Player_AI::Player_AI()
     m_elapsed_engage = chrono::high_resolution_clock::now();
     m_engagementRate = 5000ms;
     m_follow = false;
+    m_indexOfEngagement = -1;
 }
 
 Player_AI::~Player_AI()
@@ -64,8 +65,11 @@ void Player_AI::engage()
             }
         }
     }
-    m_desiredPos.x = world.m_enemies[m_indexOfEngagement]->m_objectRect.x;
-    m_desiredPos.y = world.m_enemies[m_indexOfEngagement]->m_objectRect.y;
+    if(m_indexOfEngagement != -1)
+    {
+        m_desiredPos.x = world.m_enemies[m_indexOfEngagement]->m_objectRect.x;
+        m_desiredPos.y = world.m_enemies[m_indexOfEngagement]->m_objectRect.y;
+    }
     if(chrono::duration_cast<chrono::milliseconds>(chrono::high_resolution_clock::now() - m_elapsed_engage) < m_engagementRate)
     {
         m_follow = true;

@@ -8,9 +8,6 @@ World world;
 
 int main (int argc, char* argv[])
 {
-    const Uint8 *state = SDL_GetKeyboardState(NULL);
-    const Uint8 *state2 = SDL_GetKeyboardState(NULL);
-
     world.init("world.txt");
     world.m_gameState = MENU;
 
@@ -49,7 +46,7 @@ int main (int argc, char* argv[])
                 world.update();
                 world.draw();
                 world.cleaner();
-                SDL_Delay(15);
+                SDL_Delay(18);
             }
             world.m_quitScene = false;
             world.saveProgress();
@@ -61,17 +58,9 @@ int main (int argc, char* argv[])
             world.destroySession();
             world.m_gameState = MENU;
             world.m_quitScene = false;
+            cout << "END GAME" << endl;
         }
     }
 
-    /*
-    world.m_lastFrame = SDL_GetTicks();
-            if(world.m_lastFrame >= (world.m_lastTime+1000))
-            {
-                world.m_lastTime=world.m_lastFrame;
-                world.m_fps=world.m_frameCount;
-                world.m_frameCount=0;
-            }
-    */
     return 0;
 }
