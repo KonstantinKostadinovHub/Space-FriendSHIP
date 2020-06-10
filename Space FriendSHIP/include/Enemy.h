@@ -8,8 +8,8 @@
 #include <vector>
 #include <SDL2/SDL.h>
 
-#include <Engine.h>
-#include <Gun.h>
+#include "Engine.h"
+#include "Gun.h"
 
 using namespace std;
 
@@ -22,7 +22,6 @@ public:
     string m_configFile;
     string m_img;
     string m_bulletName;
-    string tmp;
 
     int m_health;
     int m_collisonDamage;
@@ -33,7 +32,6 @@ public:
     float m_rotationAngle;
 
     SDL_Point m_center;
-
     SDL_Rect m_objectRect;
     SDL_Texture* m_objectTexture;
 
@@ -49,10 +47,6 @@ public:
     virtual void dealDamage(int damage);
     virtual void action();
 
-protected:
-
-private:
 };
 
-#endif // ENEMY_H
-
+#endif

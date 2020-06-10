@@ -12,7 +12,8 @@ enum GAME_STATE
     GAME_MULTIPLAYER = 3,
     SHOP = 4,
     DIED = 5,
-    TUTORIAL = 6
+    TUTORIAL = 6,
+    EXIT = 7
 };
 
-#endif // DEFINES_H
+#endif

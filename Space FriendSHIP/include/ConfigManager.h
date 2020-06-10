@@ -46,9 +46,6 @@ public:
 
     void init(string configFile, SDL_Renderer* renderer);
     void initObject(string configFile);
-protected:
-
-private:
 };
 
-#endif // CONFIGMANAGER_H
+#endif

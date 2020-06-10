@@ -19,8 +19,8 @@ float returnAngleByCoordinates(coordinates direction)
 coordinates findTip(SDL_Rect rct, float angle, coordinates* rotation_center)
 {
     coordinates c,d;
-    c.x = rct.x + rct.w/2;
-    c.y = rct.y + rct.h/2;
+    c.x = rct.x + rct.w / 2;
+    c.y = rct.y + rct.h / 2;
 
     if (rotation_center == NULL)
     {
@@ -29,7 +29,6 @@ coordinates findTip(SDL_Rect rct, float angle, coordinates* rotation_center)
         c.y += d.y;
     }
     return c;
-
 }
 
 coordinates rotatePointByAngle(coordinates* center, float angle, coordinates* rotation_center)
@@ -42,8 +41,8 @@ coordinates rotatePointByAngle(coordinates* center, float angle, coordinates* ro
     c.y -= rotation_center->y;
 
     float sn, cs;
-    sn = sinf(angle*PI/180.0f);
-    cs = cosf(angle*PI/180.0f);
+    sn = sinf(angle * PI / 180.0f);
+    cs = cosf(angle * PI / 180.0f);
 
     coordinates rotated;
 
@@ -58,8 +57,8 @@ coordinates rotatePointByAngle(coordinates* center, float angle, coordinates* ro
 coordinates findCenter(SDL_Rect rct, float angle, SDL_Point* rotation_center)
 {
     coordinates c;
-    c.x = rct.x + rct.w/2;
-    c.y = rct.y + rct.h/2;
+    c.x = rct.x + rct.w / 2;
+    c.y = rct.y + rct.h / 2;
 
     if (rotation_center == NULL)
     {
@@ -73,10 +72,9 @@ coordinates findCenter(SDL_Rect rct, float angle, SDL_Point* rotation_center)
 
 coordinates findCenter(SDL_Rect rct, float angle, coordinates* rotation_center)
 {
-
     coordinates c, rotated;
-    c.x = rct.x + rct.w/2;
-    c.y = rct.y + rct.h/2;
+    c.x = rct.x + rct.w / 2;
+    c.y = rct.y + rct.h / 2;
 
     if (rotation_center == NULL)
     {
@@ -89,13 +87,13 @@ coordinates findCenter(SDL_Rect rct, float angle, coordinates* rotation_center)
     rotated = rotatePointByAngle(&c, angle, &rc);
 
     return rotated;
-
 }
 
 void SaveInFile(string file, string tmp, float value)
 {
     string directory = "data\\" + file;
     fstream stream;
+
     stream.open (directory);
     stream << tmp << " " << value << '\0';
     stream.close ();
@@ -107,9 +105,11 @@ float LoadFromFile(string file)
     string tmp;
     string directory = "data\\" + file;
     fstream stream;
+
     stream.open (directory);
     stream >> tmp >> result;
     stream.close();
+
     return result;
 }
 
@@ -156,25 +156,29 @@ bool checkForCollisionBetweenObjects(SDL_Rect rect_no_rotation1, float angle1, S
     c1 = findCenter(rect_no_rotation1, angle1, center1);
     c2 = findCenter(rect_no_rotation2, angle2, center2);
 
-    float a_2 = (c1.x - c2.x)*(c1.x - c2.x);
-    float b_2 = (c1.y - c2.y)*(c1.y - c2.y);
-    float c   = hypot(rect_no_rotation1.h,rect_no_rotation1.w)/2 +
-                hypot(rect_no_rotation2.h,rect_no_rotation2.w)/2;
+    float a_2 = (c1.x - c2.x) * (c1.x - c2.x);
+    float b_2 = (c1.y - c2.y) * (c1.y - c2.y);
+    float c   = hypot(rect_no_rotation1.h,rect_no_rotation1.w) / 2 +
+                hypot(rect_no_rotation2.h,rect_no_rotation2.w) / 2;
 
-    return (a_2 + b_2 <= c*c/2);
+    return (a_2 + b_2 <= c * c / 2);
 }
 
 UIElement* LoadUIElement(string file, SDL_Renderer* render)
 {
     UIElement* buff = new UIElement;
     file = "config\\" + file;
+
     string tmp;
     fstream stream;
+
     stream.open (file);
     stream >> tmp >> buff->objectRect->w >> buff->objectRect->h >> buff->objectRect->x >> buff->objectRect->y;
     stream >> tmp >> tmp;
     stream.close();
+
     buff->objectTexture = LoadTexture(tmp, render);
+
     return buff;
 }
 
@@ -188,12 +192,6 @@ void write(string text, coordinates coor, SDL_Renderer* renderer, int FONT_SIZE)
 
     string str = "ttf/Roboto-Regular.ttf";
     font = TTF_OpenFont(str.c_str(), FONT_SIZE);
-
-    if (font == NULL)
-    {
-        fprintf(stderr, "error: font not found\n");
-        exit(EXIT_FAILURE);
-    }
 
     fcolor.r = 255;
     fcolor.g = 255;

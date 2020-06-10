@@ -37,6 +37,16 @@ int main (int argc, char* argv[])
             }
             world.m_quitScene = false;
         }
+        if(world.m_gameState == EXIT)
+        {
+            while(!world.m_quitScene)
+            {
+                world.input();
+                world.destroy();
+                SDL_Delay(20);
+            }
+            world.m_quitScene = false;
+        }
         if(world.m_gameState == SHOP)
         {
             world.loadProgress();

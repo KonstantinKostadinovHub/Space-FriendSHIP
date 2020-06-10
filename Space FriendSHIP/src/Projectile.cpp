@@ -2,17 +2,16 @@
 
 Projectile::Projectile()
 {
-    //ctor
+
 }
 
 Projectile::~Projectile()
 {
-    //dtor
+
 }
 
 void Projectile::init(string configFile, struct coordinates coor, float rotation, Projectile* projectile)
 {
-
     m_objectRect.w = projectile -> m_objectRect.w;
     m_objectRect.h = projectile -> m_objectRect.h;
     m_health = projectile -> m_health;
@@ -60,6 +59,8 @@ void Projectile::load(string configFile, SDL_Renderer* renderer)
     m_configFile = "config\\" + configFile;
 
     fstream stream;
+    string tmp;
+
     stream.open(m_configFile.c_str());
     stream >> tmp >> m_objectRect.w >> m_objectRect.h;
     stream >> tmp >> m_health;

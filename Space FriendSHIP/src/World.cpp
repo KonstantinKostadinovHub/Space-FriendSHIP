@@ -23,14 +23,12 @@ void World::init(string configFile)
 
     m_configFile = "config\\" + configFile;
     fstream stream;
+    string tmp;
 
     stream.open(m_configFile.c_str());
     stream >> tmp >> m_SCREEN_WIDTH >> m_SCREEN_HEIGHT;
     stream >> tmp >> m_backgroundImg;
     stream >> tmp >> m_endScreenImg;
-    stream >> tmp >> m_menuImg1;
-    stream >> tmp >> m_menuImg2;
-    stream >> tmp >> m_menuImg3;
     stream >> tmp >> m_bloodImg1;
     stream >> tmp >> m_bloodImg2;
     stream >> tmp >> m_bloodImg3;
@@ -84,11 +82,8 @@ void World::init(string configFile)
     m_bloodImg3 = "img\\" + m_bloodImg3;
 
     m_endScreenImg = "img\\" + m_endScreenImg;
-    m_menuImg1 = "img\\" + m_menuImg1;
-    m_menuImg2 = "img\\" + m_menuImg2;
-    m_menuImg3 = "img\\" + m_menuImg3;
 
-    m_menuImg = m_menuImg1;
+
 
     SDL_Surface* loadingSurface1 = SDL_LoadBMP(m_bloodImg1.c_str());
     m_bloodTexture1 = SDL_CreateTextureFromSurface(m_main_renderer, loadingSurface1);
@@ -216,18 +211,18 @@ void World::draw()
 
     for(int i = 0; i < m_players.size(); i++)
     {
-       /* if(m_players[i] -> m_health <= 50)
-        {
-            SDL_RenderCopy(m_main_renderer, m_bloodTexture1, NULL, NULL);
-        }*/
+        /* if(m_players[i] -> m_health <= 50)
+         {
+             SDL_RenderCopy(m_main_renderer, m_bloodTexture1, NULL, NULL);
+         }*/
         if(m_players[i] -> m_health <= 30)
         {
             SDL_RenderCopy(m_main_renderer, m_bloodTexture2, NULL, NULL);
         }
-       /* if(m_players[i] -> m_health <= 15)
-        {
-            SDL_RenderCopy(m_main_renderer, m_bloodTexture3, NULL, NULL);
-        }*/
+        /* if(m_players[i] -> m_health <= 15)
+         {
+             SDL_RenderCopy(m_main_renderer, m_bloodTexture3, NULL, NULL);
+         }*/
     }
     m_writer->WriteScore();
     m_writer->WritePlayer1();
@@ -351,7 +346,7 @@ void World::collisionDamage()
                 }
                 else if(m_artefacts[p] -> m_configFile == "speedbooster.txt")
                 {
-                    m_players[i] -> m_speed += m_artefacts[p] -> m_actionEffect;
+                    m_players[i] -> m_speed = m_artefacts[p] -> m_actionEffect;
                     m_artefacts[p] -> m_health = 0;
                     m_soundManager -> play_sound("Dash.mp3");
                 }

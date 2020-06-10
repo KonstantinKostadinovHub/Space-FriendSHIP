@@ -17,6 +17,7 @@ void Player::init(SDL_Renderer* renderer, string configFile, UpgradeManager* upg
 
     m_configFile = "config\\" + configFile;
     fstream stream;
+    string tmp;
 
     stream.open(m_configFile.c_str());
 

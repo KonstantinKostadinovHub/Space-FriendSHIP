@@ -1,5 +1,4 @@
-500 35
-800
-700
-health_border.bmp
-health_bar2.bmp
+Rect.w_&_Rect.h: 500 35
+Rect.x_&_Rect.y: 800 700
+Border: health_border.bmp
+Img: health_bar2.bmp

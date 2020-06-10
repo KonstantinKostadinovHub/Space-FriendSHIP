@@ -29,8 +29,8 @@ void Shop::init(string configFile, ConfigManager* configManager, SDL_Renderer* r
 
     int intBuff;
     string stringBuff;
-    coordinates coorBuff;
     string tmp;
+    coordinates coorBuff;
 
     m_upgradeManagerLevels.push_back(&(um->m_CurrentLevelHealthUpgrade));
     m_upgradeManagerLevels.push_back(&(um->m_CurrentLevelCoinsMultiplierUpgrade));
@@ -75,23 +75,23 @@ void Shop::init(string configFile, ConfigManager* configManager, SDL_Renderer* r
             abilityUpgrade->prices.push_back(intBuff);
         }
 
-        m_shopArticles.push_back(abilityUpgrade);
+        stream >> abilityUpgrade->name >> abilityUpgrade->textCoor.x >> abilityUpgrade->textCoor.y;
 
+        m_shopArticles.push_back(abilityUpgrade);
     }
 
     stream >> tmp >> intBuff;
+
     for(int i = 0; i < intBuff; i++)
     {
         stream >> stringBuff;
         m_upgradeFrameTexture.push_back(LoadTexture(stringBuff, m_renderer));
     }
     stream.close();
-
 }
 
 void Shop::update()
 {
-
     if((*m_mouseIsPressed))
     {
         for(int i = 0; i < m_shopArticles.size(); i++)
@@ -122,7 +122,9 @@ void Shop::draw()
         coordinates coorBuff;
         coorBuff.x = m_shopArticles[i]->frameRect.x + m_shopArticles[i]->frameRect.w;
         coorBuff.y = m_shopArticles[i]->frameRect.y + m_shopArticles[i]->frameRect.h + 30;
+
         string stringBuff;
+
         if(m_shopArticles[i]->level != 8)
         {
             stringBuff = to_string(m_shopArticles[i]->prices[m_shopArticles[i]->level]) + " $";
@@ -132,6 +134,7 @@ void Shop::draw()
             stringBuff = "MAX LEVEL";
         }
         write(stringBuff, coorBuff, m_renderer, m_FONT_SIZE);
+        write(m_shopArticles[i]->name, m_shopArticles[i]->textCoor, m_renderer, 24);
         SDL_RenderCopy(m_renderer, m_upgradeFrameTexture[m_shopArticles[i]->level], NULL, &(m_shopArticles[i]->frameRect));
     }
 

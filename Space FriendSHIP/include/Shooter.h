@@ -11,10 +11,6 @@ public:
 
     virtual void init(string configFile, coordinates coor, float rotation, Enemy* enemy);
     virtual void load(string configFile, SDL_Renderer* renderer);
-
-protected:
-
-private:
 };
 
-#endif // SHOOTER_H
+#endif

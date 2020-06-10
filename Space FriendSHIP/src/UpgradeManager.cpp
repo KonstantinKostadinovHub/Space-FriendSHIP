@@ -2,12 +2,12 @@
 
 UpgradeManager::UpgradeManager()
 {
-    //ctor
+
 }
 
 UpgradeManager::~UpgradeManager()
 {
-    //dtor
+
 }
 
 void UpgradeManager::init(string configFile)
@@ -21,54 +21,65 @@ void UpgradeManager::init(string configFile)
     stream.open(m_configFile.c_str());
     stream >> tmp >> buff;
     stream >> tmp;
+
     for(int i = 0; i < buff ; i++)
     {
         int pushBackBuff;
         stream >> pushBackBuff;
         m_healthUpgrades.push_back(pushBackBuff);
     }
+
     stream >> tmp >> buff;
     stream >> tmp;
+
     for(int i = 0; i < buff ; i++)
     {
         int pushBackBuff;
         stream >> pushBackBuff;
         m_bulletDamageUpgrades.push_back(pushBackBuff);
     }
+
     stream >> tmp >> buff;
     stream >> tmp;
+
     for(int i = 0; i < buff ; i++)
     {
         int pushBackBuff;
         stream >> pushBackBuff;
         m_coinsMultiplierUpgrades.push_back(pushBackBuff);
     }
+
     stream >> tmp >> buff;
     stream >> tmp;
+
     for(int i = 0; i < buff ; i++)
     {
         int pushBackBuff;
         stream >> pushBackBuff;
         m_dashUpgrades.push_back(pushBackBuff);
     }
+
     stream >> tmp >> buff;
     stream >> tmp;
+
     for(int i = 0; i < buff ; i++)
     {
         int pushBackBuff;
         stream >> pushBackBuff;
-        m_collisionDamageUpgrades.push_back(pushBackBuff);
+       m_collisionDamageUpgrades.push_back(pushBackBuff);
     }
+
     stream >> tmp >> buff;
     stream >> tmp;
+
     for(int i = 0; i < buff ; i++)
     {
         int pushBackBuff;
         stream >> pushBackBuff;
         m_healthBoosterUpgrades.push_back(pushBackBuff);
     }
-    stream.close();
 
+    stream.close();
 }
 
 void UpgradeManager::loadManager()

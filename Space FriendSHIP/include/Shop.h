@@ -4,13 +4,12 @@
 #include <fstream>
 #include <vector>
 #include <string>
-
 #include <SDL2/SDL.h>
 
 #include "defines.h"
 
-#include <ConfigManager.h>
-#include <UpgradeManager.h>
+#include "ConfigManager.h"
+#include "UpgradeManager.h"
 
 struct abilityUpgradeStructure
 {
@@ -19,53 +18,53 @@ struct abilityUpgradeStructure
     vector<int> prices;
     SDL_Rect frameRect;
     SDL_Rect imgRect;
+    coordinates textCoor;
+    string name;
 };
 
 class Shop
 {
-    public:
-        ConfigManager* m_configManager;
+public:
+    ConfigManager* m_configManager;
 
-        string m_configFile;
+    string m_configFile;
+    string s_moneyText;
 
-        vector<SDL_Texture*> m_upgradeFrameTexture;
+    vector<SDL_Texture*> m_upgradeFrameTexture;
+    vector<abilityUpgradeStructure*> m_shopArticles;
+    vector<int*> m_upgradeManagerLevels;
 
-        SDL_Renderer* m_renderer;
-        SDL_Texture* m_backgroundTexture;
-        SDL_Texture* m_backButtonTexture;
-        UIElement* m_buttonBack;
+    SDL_Renderer* m_renderer;
+    SDL_Texture* m_backgroundTexture;
+    SDL_Texture* m_backButtonTexture;
 
-        string s_moneyText;
-        int m_FONT_SIZE;
-        coordinates m_moneyTextCoor;
+    SDL_Rect m_frameRectModel;
+    SDL_Rect m_imgRectModel;
+    SDL_Rect m_backButton;
 
-        vector<abilityUpgradeStructure*> m_shopArticles;
+    UIElement* m_buttonBack;
 
-        coordinates m_coor;
-        int m_spacing;
-        SDL_Rect m_frameRectModel;
-        SDL_Rect m_imgRectModel;
-        SDL_Rect m_backButton;
-        int *m_mouseX, *m_mouseY;
-        bool *m_mouseIsPressed;
-        int *m_money;
-        bool *m_quitScene;
-        GAME_STATE *m_gameState;
+    int m_FONT_SIZE;
+    int m_spacing;
+    int *m_money;
+    int *m_mouseX, *m_mouseY;
+    int m_numberOfPrices;
+    int m_numberOfAbilityUpgrades;
 
-        int m_numberOfPrices;
-        int m_numberOfAbilityUpgrades;
-        vector<int*> m_upgradeManagerLevels;
+    coordinates m_moneyTextCoor;
+    coordinates m_coor;
 
-        void init(string configFile, ConfigManager* configManager, SDL_Renderer* renderer, int* mouseX, int* mouseY, bool* mouseIsPressed, int *money, UpgradeManager* um, bool *quitScene, GAME_STATE *gameState);
-        void update();
-        void draw();
+    bool *m_mouseIsPressed;
+    bool *m_quitScene;
 
-        Shop();
-        virtual ~Shop();
+    GAME_STATE *m_gameState;
 
-    protected:
+    void init(string configFile, ConfigManager* configManager, SDL_Renderer* renderer, int* mouseX, int* mouseY, bool* mouseIsPressed, int *money, UpgradeManager* um, bool *quitScene, GAME_STATE *gameState);
+    void update();
+    void draw();
 
-    private:
+    Shop();
+    virtual ~Shop();
 };
 
-#endif // SHOP_H
+#endif

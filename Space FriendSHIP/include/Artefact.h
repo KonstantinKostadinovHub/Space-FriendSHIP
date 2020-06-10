@@ -1,8 +1,10 @@
 #ifndef ARTEFACT_H
 #define ARTEFACT_H
+
 #include <SDL2/SDL.h>
 #include <fstream>
 #include <ctime>
+
 #include "Engine.h"
 
 using namespace std;
@@ -22,7 +24,6 @@ public:
 
     string m_img;
     string m_type;
-    string tmp;
     string m_configFile;
 
     float m_actionEffect;
@@ -41,9 +42,6 @@ public:
     virtual void load(string configFile, SDL_Renderer* renderer);
     virtual void update();
     virtual void draw(SDL_Renderer* renderer);
-protected:
-
-private:
 };
 
-#endif // ARTEFACT_H
+#endif

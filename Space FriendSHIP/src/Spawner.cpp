@@ -2,18 +2,21 @@
 
 Spawner::Spawner()
 {
-    //ctor
+
 }
 
 Spawner::~Spawner()
 {
-    //dtor
+
 }
 
 void Spawner::init(string configName)
 {
     m_configName = "config\\" + configName;
+
     fstream stream;
+    string tmp;
+
     stream.open(m_configName.c_str());
 
     stream >> tmp >> m_rockProb;
@@ -102,4 +105,3 @@ void Spawner::spawn(int SCREEN_WIDTH, int SCREEN_HEIGHT)
     m_direction.x = direction.x;
     m_direction.y = direction.y;
 }
-

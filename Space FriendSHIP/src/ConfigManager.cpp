@@ -38,44 +38,62 @@ void ConfigManager::init(string configFile, SDL_Renderer* renderer)
 
     fstream stream;
     string tmp, buff;
+
     stream.open(m_configFile.c_str());
     stream >> tmp >> buff;
     m_rock -> load(buff, renderer);
+
     stream >> tmp >> buff;
     m_shooter_default -> load(buff, renderer);
+
     stream >> tmp >> buff;
     m_shooter_sniper -> load(buff, renderer);
+
     stream >> tmp >> buff;
     m_shooter_tank -> load(buff, renderer);
+
     stream >> tmp >> buff;
     m_shooter_smg -> load(buff, renderer);
+
     stream >> tmp >> buff;
     m_zigzag -> load(buff, renderer);
+
     stream >> tmp >> buff;
     m_player_enemy -> load(buff, renderer);
 
     stream >> tmp >> buff;
     m_bullet_deafult -> load(buff, renderer);
+
     stream >> tmp >> buff;
     m_bullet_sniper -> load(buff, renderer);
+
     stream >> tmp >> buff;
     m_bullet_tank -> load(buff, renderer);
+
     stream >> tmp >> buff;
     m_bullet_smg -> load(buff, renderer);
+
     stream >> tmp >> buff;
     m_bullet_zigzag -> load(buff, renderer);
+
     stream >> tmp >> buff;
     m_bullet_player -> load(buff, renderer);
+
     stream >> tmp >> buff;
     m_healthBooster -> load(buff, renderer);
+
     stream >> tmp >> buff;
     m_speedBooster -> load(buff, renderer);
+
     stream >> tmp >> buff;
     m_Stopper -> load(buff, renderer);
+
     stream >> tmp >> buff;
     m_Reverser -> load(buff, renderer);
+
     stream >> tmp >> buff;
     m_Coin -> load(buff, renderer);
+
     stream >> tmp >> buff;
     m_Shield -> load(buff, renderer);
 

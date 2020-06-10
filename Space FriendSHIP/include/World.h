@@ -7,7 +7,6 @@
 #include <string>
 #include <SDL2/SDL.h>
 #include <SDL2/SDL_ttf.h>
-#include <sstream>
 
 #include "defines.h"
 
@@ -68,10 +67,6 @@ public:
     string tmp;
     string m_backgroundImg;
     string m_endScreenImg;
-    string m_menuImg;
-    string m_menuImg1;
-    string m_menuImg2;
-    string m_menuImg3;
     string m_bloodImg1;
     string m_bloodImg2;
     string m_bloodImg3;
@@ -135,10 +130,6 @@ public:
     void destroySession();
     void initSession();
     void tutorial();
-
-protected:
-
-private:
 };
 
 #endif

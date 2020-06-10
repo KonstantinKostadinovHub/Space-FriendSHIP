@@ -2,12 +2,12 @@
 
 Menu::Menu()
 {
-    //ctor
+
 }
 
 Menu::~Menu()
 {
-    //dtor
+
 }
 
 void Menu::load(string configFile, SDL_Renderer* renderer,int *mouseX, int *mouseY, bool *mouseIsPressed, bool *quit, GAME_STATE* gameState)
@@ -29,6 +29,7 @@ void Menu::load(string configFile, SDL_Renderer* renderer,int *mouseX, int *mous
     stream >> tmp >> m_MultiplayerButton.x >> m_MultiplayerButton.y >> m_MultiplayerButton.w >> m_MultiplayerButton.h;
     stream >> tmp >> m_ShopButton.x >> m_ShopButton.y >> m_ShopButton.w >> m_ShopButton.h;
     stream >> tmp >> m_TutorialButton.x >> m_TutorialButton.y >> m_TutorialButton.w >> m_TutorialButton.h;
+    stream >> tmp >> m_ExitButton.x >> m_ExitButton.y >> m_ExitButton.w >> m_ExitButton.h;
     stream.close();
 
     m_backgroundTexture = LoadTexture(backgroundImg, m_renderer);
@@ -58,8 +59,12 @@ void Menu::update()
             (*m_gameState) = TUTORIAL;
             (*m_quitScene) = true;
         }
+        if(checkForMouseCollision(*m_mouseX, *m_mouseY, m_ExitButton))
+        {
+            (*m_gameState) = EXIT;
+            (*m_quitScene) = true;
+        }
     }
-    //cout << *m_mouseX << " " << *m_mouseY << endl;
 }
 
 void Menu::draw()

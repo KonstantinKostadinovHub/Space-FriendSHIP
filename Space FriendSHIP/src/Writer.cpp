@@ -14,6 +14,7 @@ void Writer::init(string configFile, SDL_Renderer* renderer, int *points, int *h
 {
     m_configFile = "config\\" + configFile;
     fstream stream;
+    string tmp;
 
     stream.open(m_configFile.c_str());
 

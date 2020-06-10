@@ -2,10 +2,10 @@
 
 Rock::Rock()
 {
-    //ctor
+
 }
 
 Rock::~Rock()
 {
-    //dtor
+
 }

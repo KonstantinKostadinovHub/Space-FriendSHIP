@@ -24,12 +24,6 @@ public:
     virtual ~Player();
 
     HealthBar* m_healthBar;
-    string HPBar;
-    string m_playerImage;
-    string m_configFile;
-    string m_img;
-    string tmp;
-    string m_imgShield;
 
     coordinates m_oldCoor;
     coordinates m_coor;
@@ -68,6 +62,11 @@ public:
     string s_dash;
     string s_shoot;
     string m_bulletName = "bullet_player.txt";
+    string HPBar;
+    string m_playerImage;
+    string m_configFile;
+    string m_img;
+    string m_imgShield;
 
     SDL_Scancode move_up;
     SDL_Scancode move_down;
@@ -88,7 +87,6 @@ public:
     float m_rotationAngle;
     SDL_Point m_center;
 
-
     chrono::high_resolution_clock::time_point m_elapsed_engage;
     chrono::duration<float> m_engagementRate;
 
@@ -96,10 +94,6 @@ public:
     virtual void update();
     virtual void draw(SDL_Renderer* renderer);
     virtual void checkForDash();
-
-protected:
-
-private:
 };
 
 #endif

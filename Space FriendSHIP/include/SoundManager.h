@@ -3,7 +3,6 @@
 
 #include <SDL2/SDL_mixer.h>
 #include <SDL2/SDL.h>
-
 #include <fstream>
 #include <string>
 #include <iostream>
@@ -21,8 +20,6 @@ public:
     void play_sound(string sound);
 
     string m_configFile;
-    string tmp;
-
     string General_Music_str;
     string Shooting_str;
     string Dash_str;
@@ -42,10 +39,6 @@ public:
     Mix_Chunk* Reverse;
     Mix_Chunk* Coin;
     Mix_Chunk* Shield;
-
-protected:
-
-private:
 };
 
 #endif

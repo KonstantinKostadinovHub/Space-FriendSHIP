@@ -8,7 +8,7 @@ Artefact::Artefact()
 
 Artefact::~Artefact()
 {
-    //dtor
+
 }
 
 void Artefact::update()
@@ -39,8 +39,6 @@ void Artefact::init(string configFile, coordinates coor, coordinates direction, 
     m_objectRect.y = coor.y;
     m_coor.x = m_objectRect.x;
     m_coor.y = m_objectRect.y;
-
-
 }
 
 void Artefact::draw( SDL_Renderer* renderer)
@@ -50,7 +48,7 @@ void Artefact::draw( SDL_Renderer* renderer)
     pictureRect.y = m_FrameHeight * m_frameCounter;
     pictureRect.w = m_FrameWidth;
     pictureRect.h = m_FrameHeight;
-    m_frameCounter++;
+    m_frameCounter ++;
 
     if(m_startCounter + m_FrameCooldown < time(NULL))
     {
@@ -62,15 +60,16 @@ void Artefact::draw( SDL_Renderer* renderer)
         m_frameCounter = 0;
     }
 
-
     SDL_RenderCopy(renderer, m_objectTexture, &pictureRect, &m_objectRect);
-
 }
 
 void Artefact::load(string configFile, SDL_Renderer* renderer)
 {
     m_configFile = "config\\" + configFile;
+
     fstream stream;
+    string tmp;
+
     stream.open(m_configFile.c_str());
     stream >> tmp >> m_objectRect.w >> m_objectRect.h;
     stream >> tmp >> m_img;

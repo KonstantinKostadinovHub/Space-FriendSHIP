@@ -18,7 +18,6 @@ public:
 
     string m_type;
     string m_configName;
-    string tmp;
 
     int m_rockProb;
     int m_shooterDefaultProb;
@@ -35,11 +34,7 @@ public:
 
     void init(string configName);
     void spawn(int SCREEN_WIDTH, int SCREEN_HEIGHT);
-
-protected:
-
-private:
 };
 
-#endif // SPAWNER_H
+#endif
 

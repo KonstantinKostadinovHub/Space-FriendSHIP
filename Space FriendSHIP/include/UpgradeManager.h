@@ -37,9 +37,6 @@ public:
 
     UpgradeManager();
     virtual ~UpgradeManager();
-protected:
-
-private:
 };
 
-#endif // UPGRADEMANAGER_H
+#endif

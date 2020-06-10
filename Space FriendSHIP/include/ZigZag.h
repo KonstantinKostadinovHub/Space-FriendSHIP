@@ -13,15 +13,13 @@ public:
     float m_startRotation;
     float m_maxRotation;
     float m_rotationFactor;
+
     bool m_rotateRight;
 
     virtual void init(string configFile, coordinates coor, float rotation, Enemy* zigzag);
     virtual void load(string configFile, SDL_Renderer* renderer);
     virtual void update();
     virtual void draw(SDL_Renderer* renderer);
-protected:
-
-private:
 };
 
-#endif // ZIGZAG_H
+#endif

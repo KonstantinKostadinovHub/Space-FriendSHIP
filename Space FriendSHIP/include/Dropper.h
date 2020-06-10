@@ -18,7 +18,6 @@ public:
 
     string m_configName;
     string m_type;
-    string tmp;
 
     int m_healthProb;
     int m_speedProb;
@@ -34,8 +33,6 @@ public:
 
     void init(string configName);
     void spawn(int SCREEN_WIDTH, int SCREEN_HEIGHT);
-protected:
-
-private:
 };
-#endif // DROPPER_H
+
+#endif

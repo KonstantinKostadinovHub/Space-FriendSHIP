@@ -13,7 +13,9 @@ SoundManager::~SoundManager()
 void SoundManager::init(string configFile)
 {
     m_configFile = "config\\" + configFile;
+
     fstream stream;
+    string tmp;
 
     stream.open(m_configFile.c_str());
     stream >> tmp >> General_Music_str;

@@ -28,16 +28,23 @@ struct UIElement
 };
 
 struct coordinates returnCoordinatesByAngle(float angle);
+
 float returnAngleByCoordinates(struct coordinates direction);
+float LoadFromFile(string file);
+
 coordinates findCenter(SDL_Rect rct, float angle, coordinates* rotation_center = NULL);
 coordinates findCenter(SDL_Rect rct, float angle, SDL_Point* rotation_center = NULL);
+
 void SaveInFile(string file, string tmp, float value);
-float LoadFromFile(string file);
+void write(string text, coordinates coor, SDL_Renderer* renderer, int FONT_SIZE);
+
 SDL_Texture* LoadTexture(string file, SDL_Renderer* renderer);
+
 bool checkForMouseCollision(int mouseX, int mouseY, SDL_Rect object);
 bool checkForCollisionBetweenObjects(SDL_Rect rect_no_rotation1, float angle1, SDL_Point* center1,
                                      SDL_Rect rect_no_rotation2, float angle2, SDL_Point* center2);
 bool checkIfOffBounds(SDL_Rect rect, int SCREEN_WIDTH, int SCREEN_HEIGHT);
-void write(string text, coordinates coor, SDL_Renderer* renderer, int FONT_SIZE);
+
 UIElement* LoadUIElement(string file);
-#endif // ENGINE_H
+
+#endif

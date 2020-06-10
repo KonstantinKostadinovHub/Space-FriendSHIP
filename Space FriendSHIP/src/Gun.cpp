@@ -2,12 +2,12 @@
 
 Gun::Gun()
 {
-    //ctor
+
 }
 
 Gun::~Gun()
 {
-    //dtor
+
 }
 
 void Gun::init(float attackSpeed)
@@ -15,7 +15,6 @@ void Gun::init(float attackSpeed)
     m_engagementRate = chrono::milliseconds((int)attackSpeed);
     m_elapsed_engage = chrono::high_resolution_clock::now();
     m_cantShoot = true;
-    //cout << attackSpeed << " " << (int)attackSpeed << endl;
 }
 
 void Gun::update(float rotation, coordinates playerCoor)

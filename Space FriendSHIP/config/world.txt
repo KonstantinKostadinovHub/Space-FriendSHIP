@@ -4,12 +4,6 @@ Image: background.bmp
 
 EndgameScreen: EndGameScreen.bmp
 
-menuScreen1: MenuScreen1Game.bmp
-
-menuScreen2: MenuScreen2Game.bmp
-
-menuScreen3: MenuScreen3Game.bmp
-
 BloodImage1: BloodImg1.bmp
 
 BloodImage2: BloodImg2.bmp

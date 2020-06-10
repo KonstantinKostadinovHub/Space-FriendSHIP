@@ -2,12 +2,12 @@
 
 Shooter::Shooter()
 {
-    //ctor
+
 }
 
 Shooter::~Shooter()
 {
-    //dtor
+
 }
 
 void Shooter::init(string configFile, coordinates coor, float rotation, Enemy* enemy)
@@ -39,6 +39,8 @@ void Shooter::load(string configFile, SDL_Renderer* renderer)
 {
     m_configFile = "config\\" + configFile;
     fstream stream;
+    string tmp;
+
     stream.open(m_configFile.c_str());
     stream >> tmp >> m_objectRect.w >> m_objectRect.h;
     stream >> tmp >> m_img;

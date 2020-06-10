@@ -7,14 +7,16 @@ PlayerEnemy::PlayerEnemy()
 
 PlayerEnemy::~PlayerEnemy()
 {
-    //dtor
+
 }
 
 void PlayerEnemy::load(string config, SDL_Renderer* renderer)
 {
     m_configFile = "config\\" + config;
+
     fstream stream;
     string tmp;
+
     stream.open(m_configFile.c_str());
     m_configFile = config;
 
@@ -154,4 +156,3 @@ void PlayerEnemy::draw(SDL_Renderer* renderer)
 {
     SDL_RenderCopyEx(renderer, m_objectTexture, NULL, &m_objectRect, m_rotationAngle, NULL, SDL_FLIP_NONE);
 }
-

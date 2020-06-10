@@ -6,8 +6,8 @@
 #include <fstream>
 #include <iostream>
 
-
 using namespace std;
+
 class HealthBar
 {
 public:
@@ -26,7 +26,6 @@ protected:
     SDL_Texture* m_healthTexture;
     SDL_Rect m_objRect;
 
-private:
 };
 
-#endif // HEALTHBAR_H
+#endif

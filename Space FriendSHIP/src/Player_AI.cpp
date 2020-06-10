@@ -14,7 +14,7 @@ Player_AI::Player_AI()
 
 Player_AI::~Player_AI()
 {
-    //dtor
+
 }
 
 void Player_AI::init(string config, SDL_Renderer* renderer)
@@ -22,8 +22,10 @@ void Player_AI::init(string config, SDL_Renderer* renderer)
     m_health = 1000000;
 
     m_configFile = "config\\" + config;
+
     fstream stream;
     string tmp;
+
     stream.open(m_configFile.c_str());
     stream >> tmp >> m_objectRect.w >> m_objectRect.h;
     stream >> tmp >> m_img;
@@ -158,7 +160,7 @@ void Player_AI::shoot()
 
 void Player_AI::update()
 {
-    m_health = 100000;
+    m_health = 1000000;
     engage();
     moveToTarget();
     shoot();

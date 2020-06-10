@@ -18,7 +18,7 @@ background: background.bmp
 
 backButton: back_button.bmp
 
-backButton: 50 600 67 37
+backButton: 0 718 100 50
 
 numberOFPrices: 8
 
@@ -26,21 +26,33 @@ Number_Of_Ability_Images: 6
 
 healthUpgrade.bmp
 25 50 75 100 150 200 250 300
+Health
+420 235
 
 moneyUpgrade.bmp
 25 50 75 100 150 200 250 300
+Money
+690 235
 
 dashUpgrade.bmp
 25 50 75 100 150 200 250 300
+Dash
+945 235
 
 collisionDamageUpgrade.bmp
 25 50 75 100 150 200 250 300
+Collision
+430 605
 
 healthBoosterUpgrade.bmp
 25 50 75 100 150 200 250 300
+HealthBooster
+730 605
 
 bulletDamageUpgrade.bmp
 25 50 75 100 150 200 250 300
+Damage
+965 605
 
 Number_Of_Update_Frame_States: 9
 
