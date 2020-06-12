@@ -1,0 +1,39 @@
+Player_Size: 72 72
+
+Image: Player2.bmp
+
+Image_with_Shield: Player2WithShield.bmp
+
+Health: 100
+
+Spawn_Point: 668 384
+
+Speed: 2
+
+Max_Speed: 5
+
+Min_Speed: 1
+
+Dash_Lenght: 100	
+
+Spawn_Angle: -90
+
+Move_Left: Left
+
+Move_Right: Right
+
+Gas: Up
+
+Brake: Down
+
+Dash: Right_Alt
+
+Shoot: Right_Shift
+
+CollisionDamage: 60
+
+HPBar: healthBar2.txt 
+
+dashCooldown: 5
+
+shootCooldown: 500

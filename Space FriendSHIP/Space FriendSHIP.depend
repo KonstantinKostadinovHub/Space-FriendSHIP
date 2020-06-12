@@ -1,14 +1,14 @@
 # depslib dependency file v1.0
-1589183647 source:c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\src\artefact.cpp
+1591913312 source:c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\src\artefact.cpp
 	"Artefact.h"
 
-1589183647 c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\include\artefact.h
+1591913326 c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\include\artefact.h
 	<SDL2/SDL.h>
 	<fstream>
 	<ctime>
 	"Engine.h"
 
-1589183662 c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\dep_sdl\include\sdl2\sdl.h
+1591913358 c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\dep_sdl\include\sdl2\sdl.h
 	"SDL_main.h"
 	"SDL_stdinc.h"
 	"SDL_assert.h"
@@ -41,12 +41,12 @@
 	"begin_code.h"
 	"close_code.h"
 
-1589183665 c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\dep_sdl\include\sdl2\sdl_main.h
+1591913351 c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\dep_sdl\include\sdl2\sdl_main.h
 	"SDL_stdinc.h"
 	"begin_code.h"
 	"close_code.h"
 
-1589183665 c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\dep_sdl\include\sdl2\sdl_stdinc.h
+1591913358 c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\dep_sdl\include\sdl2\sdl_stdinc.h
 	"SDL_config.h"
 	<sys/types.h>
 	<stdio.h>
@@ -75,27 +75,27 @@
 	"begin_code.h"
 	"close_code.h"
 
-1589183662 c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\dep_sdl\include\sdl2\sdl_config.h
+1591913353 c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\dep_sdl\include\sdl2\sdl_config.h
 	"SDL_platform.h"
 
-1589183664 c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\dep_sdl\include\sdl2\sdl_platform.h
+1591913360 c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\dep_sdl\include\sdl2\sdl_platform.h
 	"AvailabilityMacros.h"
 	"TargetConditionals.h"
 	<winapifamily.h>
 	"begin_code.h"
 	"close_code.h"
 
-1589183664 c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\dep_sdl\include\sdl2\begin_code.h
+1591913357 c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\dep_sdl\include\sdl2\begin_code.h
 
-1589183663 c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\dep_sdl\include\sdl2\close_code.h
+1591913353 c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\dep_sdl\include\sdl2\close_code.h
 
-1589183666 c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\dep_sdl\include\sdl2\sdl_assert.h
+1591913353 c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\dep_sdl\include\sdl2\sdl_assert.h
 	"SDL_config.h"
 	"begin_code.h"
 	<signal.h>
 	"close_code.h"
 
-1589183665 c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\dep_sdl\include\sdl2\sdl_atomic.h
+1591913354 c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\dep_sdl\include\sdl2\sdl_atomic.h
 	"SDL_stdinc.h"
 	"SDL_platform.h"
 	"begin_code.h"
@@ -103,7 +103,7 @@
 	<mbarrier.h>
 	"close_code.h"
 
-1589183664 c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\dep_sdl\include\sdl2\sdl_audio.h
+1591913359 c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\dep_sdl\include\sdl2\sdl_audio.h
 	"SDL_stdinc.h"
 	"SDL_error.h"
 	"SDL_endian.h"
@@ -113,24 +113,24 @@
 	"begin_code.h"
 	"close_code.h"
 
-1589183665 c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\dep_sdl\include\sdl2\sdl_error.h
+1591913355 c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\dep_sdl\include\sdl2\sdl_error.h
 	"SDL_stdinc.h"
 	"begin_code.h"
 	"close_code.h"
 
-1589183663 c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\dep_sdl\include\sdl2\sdl_endian.h
+1591913360 c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\dep_sdl\include\sdl2\sdl_endian.h
 	"SDL_stdinc.h"
 	<endian.h>
 	"begin_code.h"
 	"close_code.h"
 
-1589183663 c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\dep_sdl\include\sdl2\sdl_mutex.h
+1591913362 c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\dep_sdl\include\sdl2\sdl_mutex.h
 	"SDL_stdinc.h"
 	"SDL_error.h"
 	"begin_code.h"
 	"close_code.h"
 
-1589183665 c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\dep_sdl\include\sdl2\sdl_thread.h
+1591913355 c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\dep_sdl\include\sdl2\sdl_thread.h
 	"SDL_stdinc.h"
 	"SDL_error.h"
 	"SDL_atomic.h"
@@ -141,18 +141,18 @@
 	<stdlib.h>
 	"close_code.h"
 
-1589183665 c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\dep_sdl\include\sdl2\sdl_rwops.h
+1591913357 c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\dep_sdl\include\sdl2\sdl_rwops.h
 	"SDL_stdinc.h"
 	"SDL_error.h"
 	"begin_code.h"
 	"close_code.h"
 
-1589183663 c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\dep_sdl\include\sdl2\sdl_clipboard.h
+1591913360 c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\dep_sdl\include\sdl2\sdl_clipboard.h
 	"SDL_stdinc.h"
 	"begin_code.h"
 	"close_code.h"
 
-1589183664 c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\dep_sdl\include\sdl2\sdl_cpuinfo.h
+1591913358 c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\dep_sdl\include\sdl2\sdl_cpuinfo.h
 	"SDL_stdinc.h"
 	<intrin.h>
 	<intrin.h>
@@ -171,7 +171,7 @@
 	"begin_code.h"
 	"close_code.h"
 
-1589183663 c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\dep_sdl\include\sdl2\sdl_events.h
+1591913357 c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\dep_sdl\include\sdl2\sdl_events.h
 	"SDL_stdinc.h"
 	"SDL_error.h"
 	"SDL_video.h"
@@ -185,7 +185,7 @@
 	"begin_code.h"
 	"close_code.h"
 
-1589183665 c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\dep_sdl\include\sdl2\sdl_video.h
+1591913356 c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\dep_sdl\include\sdl2\sdl_video.h
 	"SDL_stdinc.h"
 	"SDL_pixels.h"
 	"SDL_rect.h"
@@ -193,13 +193,13 @@
 	"begin_code.h"
 	"close_code.h"
 
-1589183662 c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\dep_sdl\include\sdl2\sdl_pixels.h
+1591913357 c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\dep_sdl\include\sdl2\sdl_pixels.h
 	"SDL_stdinc.h"
 	"SDL_endian.h"
 	"begin_code.h"
 	"close_code.h"
 
-1589183665 c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\dep_sdl\include\sdl2\sdl_rect.h
+1591913356 c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\dep_sdl\include\sdl2\sdl_rect.h
 	"SDL_stdinc.h"
 	"SDL_error.h"
 	"SDL_pixels.h"
@@ -207,7 +207,7 @@
 	"begin_code.h"
 	"close_code.h"
 
-1589183665 c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\dep_sdl\include\sdl2\sdl_surface.h
+1591913354 c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\dep_sdl\include\sdl2\sdl_surface.h
 	"SDL_stdinc.h"
 	"SDL_pixels.h"
 	"SDL_rect.h"
@@ -216,11 +216,11 @@
 	"begin_code.h"
 	"close_code.h"
 
-1589183665 c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\dep_sdl\include\sdl2\sdl_blendmode.h
+1591913355 c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\dep_sdl\include\sdl2\sdl_blendmode.h
 	"begin_code.h"
 	"close_code.h"
 
-1589183663 c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\dep_sdl\include\sdl2\sdl_keyboard.h
+1591913354 c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\dep_sdl\include\sdl2\sdl_keyboard.h
 	"SDL_stdinc.h"
 	"SDL_error.h"
 	"SDL_keycode.h"
@@ -228,27 +228,27 @@
 	"begin_code.h"
 	"close_code.h"
 
-1589183664 c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\dep_sdl\include\sdl2\sdl_keycode.h
+1591913361 c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\dep_sdl\include\sdl2\sdl_keycode.h
 	"SDL_stdinc.h"
 	"SDL_scancode.h"
 
-1589183665 c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\dep_sdl\include\sdl2\sdl_scancode.h
+1591913360 c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\dep_sdl\include\sdl2\sdl_scancode.h
 	"SDL_stdinc.h"
 
-1589183664 c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\dep_sdl\include\sdl2\sdl_mouse.h
+1591913360 c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\dep_sdl\include\sdl2\sdl_mouse.h
 	"SDL_stdinc.h"
 	"SDL_error.h"
 	"SDL_video.h"
 	"begin_code.h"
 	"close_code.h"
 
-1589183665 c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\dep_sdl\include\sdl2\sdl_joystick.h
+1591913351 c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\dep_sdl\include\sdl2\sdl_joystick.h
 	"SDL_stdinc.h"
 	"SDL_error.h"
 	"begin_code.h"
 	"close_code.h"
 
-1589183663 c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\dep_sdl\include\sdl2\sdl_gamecontroller.h
+1591913358 c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\dep_sdl\include\sdl2\sdl_gamecontroller.h
 	"SDL_stdinc.h"
 	"SDL_error.h"
 	"SDL_rwops.h"
@@ -256,11 +256,11 @@
 	"begin_code.h"
 	"close_code.h"
 
-1589183664 c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\dep_sdl\include\sdl2\sdl_quit.h
+1591913355 c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\dep_sdl\include\sdl2\sdl_quit.h
 	"SDL_stdinc.h"
 	"SDL_error.h"
 
-1589183666 c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\dep_sdl\include\sdl2\sdl_gesture.h
+1591913361 c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\dep_sdl\include\sdl2\sdl_gesture.h
 	"SDL_stdinc.h"
 	"SDL_error.h"
 	"SDL_video.h"
@@ -268,66 +268,66 @@
 	"begin_code.h"
 	"close_code.h"
 
-1589183664 c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\dep_sdl\include\sdl2\sdl_touch.h
+1591913359 c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\dep_sdl\include\sdl2\sdl_touch.h
 	"SDL_stdinc.h"
 	"SDL_error.h"
 	"SDL_video.h"
 	"begin_code.h"
 	"close_code.h"
 
-1589183663 c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\dep_sdl\include\sdl2\sdl_filesystem.h
+1591913354 c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\dep_sdl\include\sdl2\sdl_filesystem.h
 	"SDL_stdinc.h"
 	"begin_code.h"
 	"close_code.h"
 
-1589183662 c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\dep_sdl\include\sdl2\sdl_haptic.h
+1591913356 c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\dep_sdl\include\sdl2\sdl_haptic.h
 	"SDL_stdinc.h"
 	"SDL_error.h"
 	"SDL_joystick.h"
 	"begin_code.h"
 	"close_code.h"
 
-1589183665 c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\dep_sdl\include\sdl2\sdl_hints.h
+1591913360 c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\dep_sdl\include\sdl2\sdl_hints.h
 	"SDL_stdinc.h"
 	"begin_code.h"
 	"close_code.h"
 
-1589183664 c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\dep_sdl\include\sdl2\sdl_loadso.h
+1591913360 c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\dep_sdl\include\sdl2\sdl_loadso.h
 	"SDL_stdinc.h"
 	"SDL_error.h"
 	"begin_code.h"
 	"close_code.h"
 
-1589183664 c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\dep_sdl\include\sdl2\sdl_log.h
+1591913360 c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\dep_sdl\include\sdl2\sdl_log.h
 	"SDL_stdinc.h"
 	"begin_code.h"
 	"close_code.h"
 
-1589183664 c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\dep_sdl\include\sdl2\sdl_messagebox.h
+1591913361 c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\dep_sdl\include\sdl2\sdl_messagebox.h
 	"SDL_stdinc.h"
 	"SDL_video.h"
 	"begin_code.h"
 	"close_code.h"
 
-1589183666 c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\dep_sdl\include\sdl2\sdl_power.h
+1591913357 c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\dep_sdl\include\sdl2\sdl_power.h
 	"SDL_stdinc.h"
 	"begin_code.h"
 	"close_code.h"
 
-1589183665 c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\dep_sdl\include\sdl2\sdl_render.h
+1591913360 c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\dep_sdl\include\sdl2\sdl_render.h
 	"SDL_stdinc.h"
 	"SDL_rect.h"
 	"SDL_video.h"
 	"begin_code.h"
 	"close_code.h"
 
-1589183664 c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\dep_sdl\include\sdl2\sdl_sensor.h
+1591913362 c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\dep_sdl\include\sdl2\sdl_sensor.h
 	"SDL_stdinc.h"
 	"SDL_error.h"
 	"begin_code.h"
 	"close_code.h"
 
-1589183664 c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\dep_sdl\include\sdl2\sdl_shape.h
+1591913357 c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\dep_sdl\include\sdl2\sdl_shape.h
 	"SDL_stdinc.h"
 	"SDL_pixels.h"
 	"SDL_rect.h"
@@ -336,7 +336,7 @@
 	"begin_code.h"
 	"close_code.h"
 
-1589183665 c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\dep_sdl\include\sdl2\sdl_system.h
+1591913358 c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\dep_sdl\include\sdl2\sdl_system.h
 	"SDL_stdinc.h"
 	"SDL_keyboard.h"
 	"SDL_render.h"
@@ -344,18 +344,18 @@
 	"begin_code.h"
 	"close_code.h"
 
-1589183662 c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\dep_sdl\include\sdl2\sdl_timer.h
+1591913361 c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\dep_sdl\include\sdl2\sdl_timer.h
 	"SDL_stdinc.h"
 	"SDL_error.h"
 	"begin_code.h"
 	"close_code.h"
 
-1589183663 c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\dep_sdl\include\sdl2\sdl_version.h
+1591913359 c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\dep_sdl\include\sdl2\sdl_version.h
 	"SDL_stdinc.h"
 	"begin_code.h"
 	"close_code.h"
 
-1589183647 c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\include\engine.h
+1591913327 c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\include\engine.h
 	<iostream>
 	<cmath>
 	<windows.h>
@@ -364,23 +364,23 @@
 	<iostream>
 	<SDL2/SDL.h>
 
-1589183647 source:c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\src\bullet.cpp
+1591913312 source:c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\src\bullet.cpp
 	"Bullet.h"
 
-1589183646 c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\include\bullet.h
+1591913328 c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\include\bullet.h
 	"Projectile.h"
 
-1589183647 c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\include\projectile.h
+1591913326 c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\include\projectile.h
 	<iostream>
 	<fstream>
 	<cstring>
 	<SDL2/SDL.h>
 	"Engine.h"
 
-1589183648 source:c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\src\configmanager.cpp
+1591913312 source:c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\src\configmanager.cpp
 	"ConfigManager.h"
 
-1589183646 c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\include\configmanager.h
+1591913327 c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\include\configmanager.h
 	<SDL2/SDL.h>
 	"Enemy.h"
 	"Projectile.h"
@@ -391,37 +391,37 @@
 	"PlayerEnemy.h"
 	"Bullet.h"
 
-1589183647 c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\include\enemy.h
+1591913327 c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\include\enemy.h
 	<iostream>
 	<fstream>
 	<cstring>
 	<cmath>
 	<vector>
 	<SDL2/SDL.h>
-	<Engine.h>
-	<Gun.h>
+	"Engine.h"
+	"Gun.h"
 
-1589183647 c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\include\gun.h
+1591913326 c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\include\gun.h
 	<time.h>
 	<SDL2/Sdl.h>
 	<chrono>
 	"Engine.h"
 
-1589183646 c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\include\rock.h
-	"Enemy.h"
+1591913326 c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\include\rock.h
 	<fstream>
 	<cstring>
-
-1589183647 c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\include\shooter.h
 	"Enemy.h"
 
-1589183647 c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\include\zigzag.h
+1591913327 c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\include\shooter.h
+	"Enemy.h"
+
+1591913328 c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\include\zigzag.h
 	"Shooter.h"
 
-1589183648 source:c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\src\dropper.cpp
+1591913312 source:c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\src\dropper.cpp
 	"Dropper.h"
 
-1589183647 c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\include\dropper.h
+1591913327 c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\include\dropper.h
 	<stdlib.h>
 	<time.h>
 	<iostream>
@@ -430,29 +430,29 @@
 	<vector>
 	"Engine.h"
 
-1589183648 source:c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\src\enemy.cpp
+1591913311 source:c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\src\enemy.cpp
 	"Enemy.h"
 
-1590998166 source:c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\src\engine.cpp
+1591913313 source:c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\src\engine.cpp
 	"Engine.h"
 	<SDL2/SDL_ttf.h>
 
-1589183648 source:c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\src\gun.cpp
+1591913313 source:c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\src\gun.cpp
 	"Gun.h"
 
-1589183648 source:c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\src\healthbar.cpp
+1591913313 source:c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\src\healthbar.cpp
 	"HealthBar.h"
 
-1589183646 c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\include\healthbar.h
+1591913328 c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\include\healthbar.h
 	<SDL2/SDL.h>
 	<string>
 	<fstream>
 	<iostream>
 
-1589183648 source:c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\src\player.cpp
+1591913313 source:c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\src\player.cpp
 	"Player.h"
 
-1589183647 c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\include\player.h
+1591913326 c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\include\player.h
 	<iostream>
 	<fstream>
 	<vector>
@@ -466,28 +466,27 @@
 	"HealthBar.h"
 	"Gun.h"
 
-1589183647 c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\include\upgrademanager.h
+1591913327 c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\include\upgrademanager.h
 	<iostream>
 	<fstream>
 	<vector>
 
-1589183648 source:c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\src\player_ai.cpp
+1591913312 source:c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\src\player_ai.cpp
 	"Player_AI.h"
 	"World.h"
 
-1589183646 c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\include\player_ai.h
+1591913328 c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\include\player_ai.h
+	<chrono>
 	"Player.h"
 	"SoundManager.h"
-	<chrono>
 
-1591560097 c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\include\world.h
+1591913326 c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\include\world.h
 	<iostream>
 	<fstream>
 	<vector>
 	<string>
 	<SDL2/SDL.h>
 	<SDL2/SDL_ttf.h>
-	<sstream>
 	"defines.h"
 	"Player.h"
 	"Enemy.h"
@@ -509,7 +508,7 @@
 	"Animation.h"
 	"Writer.h"
 
-1589183647 c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\include\spawner.h
+1591913327 c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\include\spawner.h
 	<stdlib.h>
 	<time.h>
 	<iostream>
@@ -518,39 +517,40 @@
 	<vector>
 	"Engine.h"
 
-1591266815 c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\include\shop.h
+1591913326 c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\include\shop.h
 	<fstream>
 	<vector>
 	<string>
 	<SDL2/SDL.h>
-	<ConfigManager.h>
-	<UpgradeManager.h>
-
-1589183647 source:c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\src\projectile.cpp
-	"Projectile.h"
-
-1589183648 source:c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\src\rock.cpp
-	"Rock.h"
-
-1589183648 source:c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\src\shooter.cpp
-	"Shooter.h"
-
-1589183648 source:c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\src\spawner.cpp
-	"Spawner.h"
-
-1589183648 source:c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\src\upgrademanager.cpp
+	"defines.h"
+	"ConfigManager.h"
 	"UpgradeManager.h"
 
-1591560194 source:c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\src\world.cpp
+1591913312 source:c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\src\projectile.cpp
+	"Projectile.h"
+
+1591913312 source:c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\src\rock.cpp
+	"Rock.h"
+
+1591913313 source:c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\src\shooter.cpp
+	"Shooter.h"
+
+1591913311 source:c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\src\spawner.cpp
+	"Spawner.h"
+
+1591913314 source:c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\src\upgrademanager.cpp
+	"UpgradeManager.h"
+
+1591913311 source:c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\src\world.cpp
 	"World.h"
 
-1589183647 source:c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\src\zigzag.cpp
+1591913313 source:c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\src\zigzag.cpp
 	"ZigZag.h"
 
-1591266935 source:c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\src\shop.cpp
+1591913314 source:c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\src\shop.cpp
 	"Shop.h"
 
-1591560416 source:c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\main.cpp
+1591913307 source:c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\main.cpp
 	<SDL2/SDL.h>
 	"World.h"
 
@@ -2841,23 +2841,23 @@
 1586854658 source:c:\users\konstantin\downloads\space-friendship-master-20200414t075108z-001\space-friendship-master\space friendship\src\zigzag.cpp
 	"ZigZag.h"
 
-1589183648 source:c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\src\animation.cpp
+1591913313 source:c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\src\animation.cpp
 	"Animation.h"
 
-1589183647 c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\include\animation.h
+1591913328 c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\include\animation.h
 	<SDL2/SDL.h>
 	<fstream>
 	<ctime>
 	"Engine.h"
 
-1589183647 c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\include\soundmanager.h
+1591913326 c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\include\soundmanager.h
 	<SDL2/SDL_mixer.h>
 	<SDL2/SDL.h>
 	<fstream>
 	<string>
 	<iostream>
 
-1589183666 c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\dep_sdl\include\sdl2\sdl_mixer.h
+1591913358 c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\dep_sdl\include\sdl2\sdl_mixer.h
 	"SDL_stdinc.h"
 	"SDL_rwops.h"
 	"SDL_audio.h"
@@ -2866,7 +2866,7 @@
 	"begin_code.h"
 	"close_code.h"
 
-1589183648 source:c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\src\soundmanager.cpp
+1591913314 source:c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\src\soundmanager.cpp
 	"SoundManager.h"
 
 1586873346 source:c:\users\konstantin\downloads\space-friendship-master-20200414t130208z-001\space-friendship-master\space friendship\main.cpp
@@ -5768,14 +5768,14 @@
 1588448775 source:c:\users\konstantin\downloads\space friendship-20200502t170545z-001\space friendship\src\gun.cpp
 	"Gun.h"
 
-1589183647 c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\include\playerenemy.h
+1591913328 c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\include\playerenemy.h
 	"Shooter.h"
 	"Player.h"
 
-1589183647 source:c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\src\playerenemy.cpp
+1591913312 source:c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\src\playerenemy.cpp
 	"PlayerEnemy.h"
 
-1589183663 c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\dep_sdl\include\sdl2\sdl_ttf.h
+1591913360 c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\dep_sdl\include\sdl2\sdl_ttf.h
 	"SDL.h"
 	"begin_code.h"
 	"close_code.h"
@@ -6964,14 +6964,14 @@
 1589184001 source:c:\users\konstantin\downloads\untitled folder-20200511t065219z-001\untitled folder\space-friendship\space-friendship-master\space friendship\src\shop.cpp
 	"Shop.h"
 
-1591273109 c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\include\defines.h
+1591913327 c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\include\defines.h
 	<SDL2/SDL.h>
 	<cmath>
 
-1591273277 source:c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\src\menu.cpp
+1591913313 source:c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\src\menu.cpp
 	"Menu.h"
 
-1591272466 c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\include\menu.h
+1591913328 c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\include\menu.h
 	<cstring>
 	<fstream>
 	<string>
@@ -6980,13 +6980,13 @@
 	"defines.h"
 	"Engine.h"
 
-1591559347 c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\include\writer.h
-	"Engine.h"
+1591913327 c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\include\writer.h
 	<SDL2/SDL.h>
 	<string>
 	<fstream>
+	"Engine.h"
 
-1591559358 source:c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\src\writer.cpp
+1591913312 source:c:\users\konstantin\documents\c++ programing\shkola_2019-2020\space friendship\space-friendship\space friendship\src\writer.cpp
 	"Writer.h"
 
 1591723861 source:d:\ÕœÃ√\nite game studio\space-friendship-master\space-friendship-master\space friendship\src\animation.cpp
@@ -7476,7 +7476,7 @@
 1591724853 source:d:\ÕœÃ√\nite game studio\space-friendship-master\space-friendship-master\space friendship\src\healthbar.cpp
 	"HealthBar.h"
 
-1591724473 source:d:\ÕœÃ√\nite game studio\space-friendship-master\space-friendship-master\space friendship\src\menu.cpp
+1591736783 source:d:\ÕœÃ√\nite game studio\space-friendship-master\space-friendship-master\space friendship\src\menu.cpp
 	"Menu.h"
 
 1591723462 d:\ÕœÃ√\nite game studio\space-friendship-master\space-friendship-master\space friendship\include\menu.h
@@ -7520,7 +7520,7 @@
 	"begin_code.h"
 	"close_code.h"
 
-1591725132 d:\ÕœÃ√\nite game studio\space-friendship-master\space-friendship-master\space friendship\include\world.h
+1591739704 d:\ÕœÃ√\nite game studio\space-friendship-master\space-friendship-master\space friendship\include\world.h
 	<iostream>
 	<fstream>
 	<vector>
@@ -7557,7 +7557,7 @@
 	<vector>
 	"Engine.h"
 
-1591723713 d:\ÕœÃ√\nite game studio\space-friendship-master\space-friendship-master\space friendship\include\shop.h
+1591739051 d:\ÕœÃ√\nite game studio\space-friendship-master\space-friendship-master\space friendship\include\shop.h
 	<fstream>
 	<vector>
 	<string>
@@ -7584,16 +7584,16 @@
 1591724617 source:d:\ÕœÃ√\nite game studio\space-friendship-master\space-friendship-master\space friendship\src\shooter.cpp
 	"Shooter.h"
 
-1591724653 source:d:\ÕœÃ√\nite game studio\space-friendship-master\space-friendship-master\space friendship\src\shop.cpp
+1591739013 source:d:\ÕœÃ√\nite game studio\space-friendship-master\space-friendship-master\space friendship\src\shop.cpp
 	"Shop.h"
 
-1591724664 source:d:\ÕœÃ√\nite game studio\space-friendship-master\space-friendship-master\space friendship\src\soundmanager.cpp
+1591740318 source:d:\ÕœÃ√\nite game studio\space-friendship-master\space-friendship-master\space friendship\src\soundmanager.cpp
 	"SoundManager.h"
 
 1591724702 source:d:\ÕœÃ√\nite game studio\space-friendship-master\space-friendship-master\space friendship\src\spawner.cpp
 	"Spawner.h"
 
-1591724733 source:d:\ÕœÃ√\nite game studio\space-friendship-master\space-friendship-master\space friendship\src\upgrademanager.cpp
+1591778093 source:d:\ÕœÃ√\nite game studio\space-friendship-master\space-friendship-master\space friendship\src\upgrademanager.cpp
 	"UpgradeManager.h"
 
 1591724872 source:d:\ÕœÃ√\nite game studio\space-friendship-master\space-friendship-master\space friendship\src\zigzag.cpp
@@ -7602,11 +7602,11 @@
 1591724745 source:d:\ÕœÃ√\nite game studio\space-friendship-master\space-friendship-master\space friendship\src\writer.cpp
 	"Writer.h"
 
-1591720455 source:d:\ÕœÃ√\nite game studio\space-friendship-master\space-friendship-master\space friendship\main.cpp
+1591880685 source:d:\ÕœÃ√\nite game studio\space-friendship-master\space-friendship-master\space friendship\main.cpp
 	<SDL2/SDL.h>
 	"World.h"
 
-1591725074 source:d:\ÕœÃ√\nite game studio\space-friendship-master\space-friendship-master\space friendship\src\world.cpp
+1591907512 source:d:\ÕœÃ√\nite game studio\space-friendship-master\space-friendship-master\space friendship\src\world.cpp
 	"World.h"
 
 1591608997 source:c:\users\konstantin\downloads\space friendship-20200608t083449z-001\space friendship\space-friendship-master\space-friendship-master\space friendship\main.cpp
@@ -8230,11 +8230,11 @@
 1591609405 source:c:\users\konstantin\downloads\space friendship-20200608t083449z-001\space friendship\space-friendship-master\space-friendship-master\space friendship\src\world.cpp
 	"World.h"
 
-1591734064 source:c:\users\konstantin\downloads\space friendship-20200609t191753z-001\space friendship\space-friendship-master\space-friendship-master\space friendship\main.cpp
+1591913307 source:c:\users\konstantin\downloads\space friendship-20200611t210711z-001\space friendship\space-friendship-master\space-friendship-master\space friendship\main.cpp
 	<SDL2/SDL.h>
 	"World.h"
 
-1591734080 c:\users\konstantin\downloads\space friendship-20200609t191753z-001\space friendship\space-friendship-master\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl.h
+1591913358 c:\users\konstantin\downloads\space friendship-20200611t210711z-001\space friendship\space-friendship-master\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl.h
 	"SDL_main.h"
 	"SDL_stdinc.h"
 	"SDL_assert.h"
@@ -8267,12 +8267,12 @@
 	"begin_code.h"
 	"close_code.h"
 
-1591734080 c:\users\konstantin\downloads\space friendship-20200609t191753z-001\space friendship\space-friendship-master\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_main.h
+1591913351 c:\users\konstantin\downloads\space friendship-20200611t210711z-001\space friendship\space-friendship-master\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_main.h
 	"SDL_stdinc.h"
 	"begin_code.h"
 	"close_code.h"
 
-1591734079 c:\users\konstantin\downloads\space friendship-20200609t191753z-001\space friendship\space-friendship-master\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_stdinc.h
+1591913358 c:\users\konstantin\downloads\space friendship-20200611t210711z-001\space friendship\space-friendship-master\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_stdinc.h
 	"SDL_config.h"
 	<sys/types.h>
 	<stdio.h>
@@ -8301,27 +8301,27 @@
 	"begin_code.h"
 	"close_code.h"
 
-1591734081 c:\users\konstantin\downloads\space friendship-20200609t191753z-001\space friendship\space-friendship-master\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_config.h
+1591913353 c:\users\konstantin\downloads\space friendship-20200611t210711z-001\space friendship\space-friendship-master\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_config.h
 	"SDL_platform.h"
 
-1591734082 c:\users\konstantin\downloads\space friendship-20200609t191753z-001\space friendship\space-friendship-master\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_platform.h
+1591913360 c:\users\konstantin\downloads\space friendship-20200611t210711z-001\space friendship\space-friendship-master\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_platform.h
 	"AvailabilityMacros.h"
 	"TargetConditionals.h"
 	<winapifamily.h>
 	"begin_code.h"
 	"close_code.h"
 
-1591734078 c:\users\konstantin\downloads\space friendship-20200609t191753z-001\space friendship\space-friendship-master\space-friendship-master\space friendship\dep_sdl\include\sdl2\begin_code.h
+1591913357 c:\users\konstantin\downloads\space friendship-20200611t210711z-001\space friendship\space-friendship-master\space-friendship-master\space friendship\dep_sdl\include\sdl2\begin_code.h
 
-1591734079 c:\users\konstantin\downloads\space friendship-20200609t191753z-001\space friendship\space-friendship-master\space-friendship-master\space friendship\dep_sdl\include\sdl2\close_code.h
+1591913353 c:\users\konstantin\downloads\space friendship-20200611t210711z-001\space friendship\space-friendship-master\space-friendship-master\space friendship\dep_sdl\include\sdl2\close_code.h
 
-1591734081 c:\users\konstantin\downloads\space friendship-20200609t191753z-001\space friendship\space-friendship-master\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_assert.h
+1591913353 c:\users\konstantin\downloads\space friendship-20200611t210711z-001\space friendship\space-friendship-master\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_assert.h
 	"SDL_config.h"
 	"begin_code.h"
 	<signal.h>
 	"close_code.h"
 
-1591734079 c:\users\konstantin\downloads\space friendship-20200609t191753z-001\space friendship\space-friendship-master\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_atomic.h
+1591913354 c:\users\konstantin\downloads\space friendship-20200611t210711z-001\space friendship\space-friendship-master\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_atomic.h
 	"SDL_stdinc.h"
 	"SDL_platform.h"
 	"begin_code.h"
@@ -8329,7 +8329,7 @@
 	<mbarrier.h>
 	"close_code.h"
 
-1591734078 c:\users\konstantin\downloads\space friendship-20200609t191753z-001\space friendship\space-friendship-master\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_audio.h
+1591913359 c:\users\konstantin\downloads\space friendship-20200611t210711z-001\space friendship\space-friendship-master\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_audio.h
 	"SDL_stdinc.h"
 	"SDL_error.h"
 	"SDL_endian.h"
@@ -8339,24 +8339,24 @@
 	"begin_code.h"
 	"close_code.h"
 
-1591734079 c:\users\konstantin\downloads\space friendship-20200609t191753z-001\space friendship\space-friendship-master\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_error.h
+1591913355 c:\users\konstantin\downloads\space friendship-20200611t210711z-001\space friendship\space-friendship-master\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_error.h
 	"SDL_stdinc.h"
 	"begin_code.h"
 	"close_code.h"
 
-1591734078 c:\users\konstantin\downloads\space friendship-20200609t191753z-001\space friendship\space-friendship-master\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_endian.h
+1591913360 c:\users\konstantin\downloads\space friendship-20200611t210711z-001\space friendship\space-friendship-master\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_endian.h
 	"SDL_stdinc.h"
 	<endian.h>
 	"begin_code.h"
 	"close_code.h"
 
-1591734079 c:\users\konstantin\downloads\space friendship-20200609t191753z-001\space friendship\space-friendship-master\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_mutex.h
+1591913362 c:\users\konstantin\downloads\space friendship-20200611t210711z-001\space friendship\space-friendship-master\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_mutex.h
 	"SDL_stdinc.h"
 	"SDL_error.h"
 	"begin_code.h"
 	"close_code.h"
 
-1591734081 c:\users\konstantin\downloads\space friendship-20200609t191753z-001\space friendship\space-friendship-master\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_thread.h
+1591913355 c:\users\konstantin\downloads\space friendship-20200611t210711z-001\space friendship\space-friendship-master\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_thread.h
 	"SDL_stdinc.h"
 	"SDL_error.h"
 	"SDL_atomic.h"
@@ -8367,18 +8367,18 @@
 	<stdlib.h>
 	"close_code.h"
 
-1591734080 c:\users\konstantin\downloads\space friendship-20200609t191753z-001\space friendship\space-friendship-master\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_rwops.h
+1591913357 c:\users\konstantin\downloads\space friendship-20200611t210711z-001\space friendship\space-friendship-master\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_rwops.h
 	"SDL_stdinc.h"
 	"SDL_error.h"
 	"begin_code.h"
 	"close_code.h"
 
-1591734078 c:\users\konstantin\downloads\space friendship-20200609t191753z-001\space friendship\space-friendship-master\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_clipboard.h
+1591913360 c:\users\konstantin\downloads\space friendship-20200611t210711z-001\space friendship\space-friendship-master\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_clipboard.h
 	"SDL_stdinc.h"
 	"begin_code.h"
 	"close_code.h"
 
-1591734082 c:\users\konstantin\downloads\space friendship-20200609t191753z-001\space friendship\space-friendship-master\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_cpuinfo.h
+1591913358 c:\users\konstantin\downloads\space friendship-20200611t210711z-001\space friendship\space-friendship-master\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_cpuinfo.h
 	"SDL_stdinc.h"
 	<intrin.h>
 	<intrin.h>
@@ -8397,7 +8397,7 @@
 	"begin_code.h"
 	"close_code.h"
 
-1591734080 c:\users\konstantin\downloads\space friendship-20200609t191753z-001\space friendship\space-friendship-master\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_events.h
+1591913357 c:\users\konstantin\downloads\space friendship-20200611t210711z-001\space friendship\space-friendship-master\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_events.h
 	"SDL_stdinc.h"
 	"SDL_error.h"
 	"SDL_video.h"
@@ -8411,7 +8411,7 @@
 	"begin_code.h"
 	"close_code.h"
 
-1591734079 c:\users\konstantin\downloads\space friendship-20200609t191753z-001\space friendship\space-friendship-master\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_video.h
+1591913356 c:\users\konstantin\downloads\space friendship-20200611t210711z-001\space friendship\space-friendship-master\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_video.h
 	"SDL_stdinc.h"
 	"SDL_pixels.h"
 	"SDL_rect.h"
@@ -8419,13 +8419,13 @@
 	"begin_code.h"
 	"close_code.h"
 
-1591734082 c:\users\konstantin\downloads\space friendship-20200609t191753z-001\space friendship\space-friendship-master\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_pixels.h
+1591913357 c:\users\konstantin\downloads\space friendship-20200611t210711z-001\space friendship\space-friendship-master\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_pixels.h
 	"SDL_stdinc.h"
 	"SDL_endian.h"
 	"begin_code.h"
 	"close_code.h"
 
-1591734078 c:\users\konstantin\downloads\space friendship-20200609t191753z-001\space friendship\space-friendship-master\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_rect.h
+1591913356 c:\users\konstantin\downloads\space friendship-20200611t210711z-001\space friendship\space-friendship-master\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_rect.h
 	"SDL_stdinc.h"
 	"SDL_error.h"
 	"SDL_pixels.h"
@@ -8433,7 +8433,7 @@
 	"begin_code.h"
 	"close_code.h"
 
-1591734081 c:\users\konstantin\downloads\space friendship-20200609t191753z-001\space friendship\space-friendship-master\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_surface.h
+1591913354 c:\users\konstantin\downloads\space friendship-20200611t210711z-001\space friendship\space-friendship-master\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_surface.h
 	"SDL_stdinc.h"
 	"SDL_pixels.h"
 	"SDL_rect.h"
@@ -8442,11 +8442,11 @@
 	"begin_code.h"
 	"close_code.h"
 
-1591734082 c:\users\konstantin\downloads\space friendship-20200609t191753z-001\space friendship\space-friendship-master\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_blendmode.h
+1591913355 c:\users\konstantin\downloads\space friendship-20200611t210711z-001\space friendship\space-friendship-master\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_blendmode.h
 	"begin_code.h"
 	"close_code.h"
 
-1591734082 c:\users\konstantin\downloads\space friendship-20200609t191753z-001\space friendship\space-friendship-master\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_keyboard.h
+1591913354 c:\users\konstantin\downloads\space friendship-20200611t210711z-001\space friendship\space-friendship-master\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_keyboard.h
 	"SDL_stdinc.h"
 	"SDL_error.h"
 	"SDL_keycode.h"
@@ -8454,27 +8454,27 @@
 	"begin_code.h"
 	"close_code.h"
 
-1591734082 c:\users\konstantin\downloads\space friendship-20200609t191753z-001\space friendship\space-friendship-master\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_keycode.h
+1591913361 c:\users\konstantin\downloads\space friendship-20200611t210711z-001\space friendship\space-friendship-master\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_keycode.h
 	"SDL_stdinc.h"
 	"SDL_scancode.h"
 
-1591734080 c:\users\konstantin\downloads\space friendship-20200609t191753z-001\space friendship\space-friendship-master\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_scancode.h
+1591913360 c:\users\konstantin\downloads\space friendship-20200611t210711z-001\space friendship\space-friendship-master\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_scancode.h
 	"SDL_stdinc.h"
 
-1591734082 c:\users\konstantin\downloads\space friendship-20200609t191753z-001\space friendship\space-friendship-master\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_mouse.h
+1591913360 c:\users\konstantin\downloads\space friendship-20200611t210711z-001\space friendship\space-friendship-master\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_mouse.h
 	"SDL_stdinc.h"
 	"SDL_error.h"
 	"SDL_video.h"
 	"begin_code.h"
 	"close_code.h"
 
-1591734081 c:\users\konstantin\downloads\space friendship-20200609t191753z-001\space friendship\space-friendship-master\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_joystick.h
+1591913351 c:\users\konstantin\downloads\space friendship-20200611t210711z-001\space friendship\space-friendship-master\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_joystick.h
 	"SDL_stdinc.h"
 	"SDL_error.h"
 	"begin_code.h"
 	"close_code.h"
 
-1591734078 c:\users\konstantin\downloads\space friendship-20200609t191753z-001\space friendship\space-friendship-master\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_gamecontroller.h
+1591913358 c:\users\konstantin\downloads\space friendship-20200611t210711z-001\space friendship\space-friendship-master\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_gamecontroller.h
 	"SDL_stdinc.h"
 	"SDL_error.h"
 	"SDL_rwops.h"
@@ -8482,11 +8482,11 @@
 	"begin_code.h"
 	"close_code.h"
 
-1591734081 c:\users\konstantin\downloads\space friendship-20200609t191753z-001\space friendship\space-friendship-master\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_quit.h
+1591913355 c:\users\konstantin\downloads\space friendship-20200611t210711z-001\space friendship\space-friendship-master\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_quit.h
 	"SDL_stdinc.h"
 	"SDL_error.h"
 
-1591734081 c:\users\konstantin\downloads\space friendship-20200609t191753z-001\space friendship\space-friendship-master\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_gesture.h
+1591913361 c:\users\konstantin\downloads\space friendship-20200611t210711z-001\space friendship\space-friendship-master\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_gesture.h
 	"SDL_stdinc.h"
 	"SDL_error.h"
 	"SDL_video.h"
@@ -8494,66 +8494,66 @@
 	"begin_code.h"
 	"close_code.h"
 
-1591734081 c:\users\konstantin\downloads\space friendship-20200609t191753z-001\space friendship\space-friendship-master\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_touch.h
+1591913359 c:\users\konstantin\downloads\space friendship-20200611t210711z-001\space friendship\space-friendship-master\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_touch.h
 	"SDL_stdinc.h"
 	"SDL_error.h"
 	"SDL_video.h"
 	"begin_code.h"
 	"close_code.h"
 
-1591734080 c:\users\konstantin\downloads\space friendship-20200609t191753z-001\space friendship\space-friendship-master\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_filesystem.h
+1591913354 c:\users\konstantin\downloads\space friendship-20200611t210711z-001\space friendship\space-friendship-master\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_filesystem.h
 	"SDL_stdinc.h"
 	"begin_code.h"
 	"close_code.h"
 
-1591734080 c:\users\konstantin\downloads\space friendship-20200609t191753z-001\space friendship\space-friendship-master\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_haptic.h
+1591913356 c:\users\konstantin\downloads\space friendship-20200611t210711z-001\space friendship\space-friendship-master\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_haptic.h
 	"SDL_stdinc.h"
 	"SDL_error.h"
 	"SDL_joystick.h"
 	"begin_code.h"
 	"close_code.h"
 
-1591734081 c:\users\konstantin\downloads\space friendship-20200609t191753z-001\space friendship\space-friendship-master\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_hints.h
+1591913360 c:\users\konstantin\downloads\space friendship-20200611t210711z-001\space friendship\space-friendship-master\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_hints.h
 	"SDL_stdinc.h"
 	"begin_code.h"
 	"close_code.h"
 
-1591734080 c:\users\konstantin\downloads\space friendship-20200609t191753z-001\space friendship\space-friendship-master\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_loadso.h
+1591913360 c:\users\konstantin\downloads\space friendship-20200611t210711z-001\space friendship\space-friendship-master\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_loadso.h
 	"SDL_stdinc.h"
 	"SDL_error.h"
 	"begin_code.h"
 	"close_code.h"
 
-1591734078 c:\users\konstantin\downloads\space friendship-20200609t191753z-001\space friendship\space-friendship-master\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_log.h
+1591913360 c:\users\konstantin\downloads\space friendship-20200611t210711z-001\space friendship\space-friendship-master\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_log.h
 	"SDL_stdinc.h"
 	"begin_code.h"
 	"close_code.h"
 
-1591734078 c:\users\konstantin\downloads\space friendship-20200609t191753z-001\space friendship\space-friendship-master\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_messagebox.h
+1591913361 c:\users\konstantin\downloads\space friendship-20200611t210711z-001\space friendship\space-friendship-master\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_messagebox.h
 	"SDL_stdinc.h"
 	"SDL_video.h"
 	"begin_code.h"
 	"close_code.h"
 
-1591734080 c:\users\konstantin\downloads\space friendship-20200609t191753z-001\space friendship\space-friendship-master\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_power.h
+1591913357 c:\users\konstantin\downloads\space friendship-20200611t210711z-001\space friendship\space-friendship-master\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_power.h
 	"SDL_stdinc.h"
 	"begin_code.h"
 	"close_code.h"
 
-1591734079 c:\users\konstantin\downloads\space friendship-20200609t191753z-001\space friendship\space-friendship-master\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_render.h
+1591913360 c:\users\konstantin\downloads\space friendship-20200611t210711z-001\space friendship\space-friendship-master\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_render.h
 	"SDL_stdinc.h"
 	"SDL_rect.h"
 	"SDL_video.h"
 	"begin_code.h"
 	"close_code.h"
 
-1591734082 c:\users\konstantin\downloads\space friendship-20200609t191753z-001\space friendship\space-friendship-master\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_sensor.h
+1591913362 c:\users\konstantin\downloads\space friendship-20200611t210711z-001\space friendship\space-friendship-master\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_sensor.h
 	"SDL_stdinc.h"
 	"SDL_error.h"
 	"begin_code.h"
 	"close_code.h"
 
-1591734081 c:\users\konstantin\downloads\space friendship-20200609t191753z-001\space friendship\space-friendship-master\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_shape.h
+1591913357 c:\users\konstantin\downloads\space friendship-20200611t210711z-001\space friendship\space-friendship-master\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_shape.h
 	"SDL_stdinc.h"
 	"SDL_pixels.h"
 	"SDL_rect.h"
@@ -8562,7 +8562,7 @@
 	"begin_code.h"
 	"close_code.h"
 
-1591734081 c:\users\konstantin\downloads\space friendship-20200609t191753z-001\space friendship\space-friendship-master\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_system.h
+1591913358 c:\users\konstantin\downloads\space friendship-20200611t210711z-001\space friendship\space-friendship-master\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_system.h
 	"SDL_stdinc.h"
 	"SDL_keyboard.h"
 	"SDL_render.h"
@@ -8570,18 +8570,18 @@
 	"begin_code.h"
 	"close_code.h"
 
-1591734082 c:\users\konstantin\downloads\space friendship-20200609t191753z-001\space friendship\space-friendship-master\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_timer.h
+1591913361 c:\users\konstantin\downloads\space friendship-20200611t210711z-001\space friendship\space-friendship-master\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_timer.h
 	"SDL_stdinc.h"
 	"SDL_error.h"
 	"begin_code.h"
 	"close_code.h"
 
-1591734082 c:\users\konstantin\downloads\space friendship-20200609t191753z-001\space friendship\space-friendship-master\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_version.h
+1591913359 c:\users\konstantin\downloads\space friendship-20200611t210711z-001\space friendship\space-friendship-master\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_version.h
 	"SDL_stdinc.h"
 	"begin_code.h"
 	"close_code.h"
 
-1591734076 c:\users\konstantin\downloads\space friendship-20200609t191753z-001\space friendship\space-friendship-master\space-friendship-master\space friendship\include\world.h
+1591913326 c:\users\konstantin\downloads\space friendship-20200611t210711z-001\space friendship\space-friendship-master\space-friendship-master\space friendship\include\world.h
 	<iostream>
 	<fstream>
 	<vector>
@@ -8609,16 +8609,16 @@
 	"Animation.h"
 	"Writer.h"
 
-1591734080 c:\users\konstantin\downloads\space friendship-20200609t191753z-001\space friendship\space-friendship-master\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_ttf.h
+1591913360 c:\users\konstantin\downloads\space friendship-20200611t210711z-001\space friendship\space-friendship-master\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_ttf.h
 	"SDL.h"
 	"begin_code.h"
 	"close_code.h"
 
-1591734077 c:\users\konstantin\downloads\space friendship-20200609t191753z-001\space friendship\space-friendship-master\space-friendship-master\space friendship\include\defines.h
+1591913327 c:\users\konstantin\downloads\space friendship-20200611t210711z-001\space friendship\space-friendship-master\space-friendship-master\space friendship\include\defines.h
 	<SDL2/SDL.h>
 	<cmath>
 
-1591734076 c:\users\konstantin\downloads\space friendship-20200609t191753z-001\space friendship\space-friendship-master\space-friendship-master\space friendship\include\player.h
+1591913326 c:\users\konstantin\downloads\space friendship-20200611t210711z-001\space friendship\space-friendship-master\space-friendship-master\space friendship\include\player.h
 	<iostream>
 	<fstream>
 	<vector>
@@ -8632,7 +8632,7 @@
 	"HealthBar.h"
 	"Gun.h"
 
-1591734076 c:\users\konstantin\downloads\space friendship-20200609t191753z-001\space friendship\space-friendship-master\space-friendship-master\space friendship\include\engine.h
+1591913327 c:\users\konstantin\downloads\space friendship-20200611t210711z-001\space friendship\space-friendship-master\space-friendship-master\space friendship\include\engine.h
 	<iostream>
 	<cmath>
 	<windows.h>
@@ -8641,24 +8641,24 @@
 	<iostream>
 	<SDL2/SDL.h>
 
-1591734076 c:\users\konstantin\downloads\space friendship-20200609t191753z-001\space friendship\space-friendship-master\space-friendship-master\space friendship\include\upgrademanager.h
+1591913327 c:\users\konstantin\downloads\space friendship-20200611t210711z-001\space friendship\space-friendship-master\space-friendship-master\space friendship\include\upgrademanager.h
 	<iostream>
 	<fstream>
 	<vector>
 
-1591734076 c:\users\konstantin\downloads\space friendship-20200609t191753z-001\space friendship\space-friendship-master\space-friendship-master\space friendship\include\healthbar.h
+1591913328 c:\users\konstantin\downloads\space friendship-20200611t210711z-001\space friendship\space-friendship-master\space-friendship-master\space friendship\include\healthbar.h
 	<SDL2/SDL.h>
 	<string>
 	<fstream>
 	<iostream>
 
-1591734076 c:\users\konstantin\downloads\space friendship-20200609t191753z-001\space friendship\space-friendship-master\space-friendship-master\space friendship\include\gun.h
+1591913326 c:\users\konstantin\downloads\space friendship-20200611t210711z-001\space friendship\space-friendship-master\space-friendship-master\space friendship\include\gun.h
 	<time.h>
 	<SDL2/Sdl.h>
 	<chrono>
 	"Engine.h"
 
-1591734075 c:\users\konstantin\downloads\space friendship-20200609t191753z-001\space friendship\space-friendship-master\space-friendship-master\space friendship\include\enemy.h
+1591913327 c:\users\konstantin\downloads\space friendship-20200611t210711z-001\space friendship\space-friendship-master\space-friendship-master\space friendship\include\enemy.h
 	<iostream>
 	<fstream>
 	<cstring>
@@ -8668,32 +8668,32 @@
 	"Engine.h"
 	"Gun.h"
 
-1591734076 c:\users\konstantin\downloads\space friendship-20200609t191753z-001\space friendship\space-friendship-master\space-friendship-master\space friendship\include\projectile.h
+1591913326 c:\users\konstantin\downloads\space friendship-20200611t210711z-001\space friendship\space-friendship-master\space-friendship-master\space friendship\include\projectile.h
 	<iostream>
 	<fstream>
 	<cstring>
 	<SDL2/SDL.h>
 	"Engine.h"
 
-1591734076 c:\users\konstantin\downloads\space friendship-20200609t191753z-001\space friendship\space-friendship-master\space-friendship-master\space friendship\include\artefact.h
+1591913326 c:\users\konstantin\downloads\space friendship-20200611t210711z-001\space friendship\space-friendship-master\space-friendship-master\space friendship\include\artefact.h
 	<SDL2/SDL.h>
 	<fstream>
 	<ctime>
 	"Engine.h"
 
-1591734076 c:\users\konstantin\downloads\space friendship-20200609t191753z-001\space friendship\space-friendship-master\space-friendship-master\space friendship\include\player_ai.h
+1591913328 c:\users\konstantin\downloads\space friendship-20200611t210711z-001\space friendship\space-friendship-master\space-friendship-master\space friendship\include\player_ai.h
 	<chrono>
 	"Player.h"
 	"SoundManager.h"
 
-1591734075 c:\users\konstantin\downloads\space friendship-20200609t191753z-001\space friendship\space-friendship-master\space-friendship-master\space friendship\include\soundmanager.h
+1591913326 c:\users\konstantin\downloads\space friendship-20200611t210711z-001\space friendship\space-friendship-master\space-friendship-master\space friendship\include\soundmanager.h
 	<SDL2/SDL_mixer.h>
 	<SDL2/SDL.h>
 	<fstream>
 	<string>
 	<iostream>
 
-1591734081 c:\users\konstantin\downloads\space friendship-20200609t191753z-001\space friendship\space-friendship-master\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_mixer.h
+1591913358 c:\users\konstantin\downloads\space friendship-20200611t210711z-001\space friendship\space-friendship-master\space-friendship-master\space friendship\dep_sdl\include\sdl2\sdl_mixer.h
 	"SDL_stdinc.h"
 	"SDL_rwops.h"
 	"SDL_audio.h"
@@ -8702,21 +8702,21 @@
 	"begin_code.h"
 	"close_code.h"
 
-1591734076 c:\users\konstantin\downloads\space friendship-20200609t191753z-001\space friendship\space-friendship-master\space-friendship-master\space friendship\include\rock.h
+1591913326 c:\users\konstantin\downloads\space friendship-20200611t210711z-001\space friendship\space-friendship-master\space-friendship-master\space friendship\include\rock.h
 	<fstream>
 	<cstring>
 	"Enemy.h"
 
-1591734076 c:\users\konstantin\downloads\space friendship-20200609t191753z-001\space friendship\space-friendship-master\space-friendship-master\space friendship\include\shooter.h
+1591913327 c:\users\konstantin\downloads\space friendship-20200611t210711z-001\space friendship\space-friendship-master\space-friendship-master\space friendship\include\shooter.h
 	"Enemy.h"
 
-1591734076 c:\users\konstantin\downloads\space friendship-20200609t191753z-001\space friendship\space-friendship-master\space-friendship-master\space friendship\include\zigzag.h
+1591913328 c:\users\konstantin\downloads\space friendship-20200611t210711z-001\space friendship\space-friendship-master\space-friendship-master\space friendship\include\zigzag.h
 	"Shooter.h"
 
-1591734076 c:\users\konstantin\downloads\space friendship-20200609t191753z-001\space friendship\space-friendship-master\space-friendship-master\space friendship\include\bullet.h
+1591913328 c:\users\konstantin\downloads\space friendship-20200611t210711z-001\space friendship\space-friendship-master\space-friendship-master\space friendship\include\bullet.h
 	"Projectile.h"
 
-1591734076 c:\users\konstantin\downloads\space friendship-20200609t191753z-001\space friendship\space-friendship-master\space-friendship-master\space friendship\include\spawner.h
+1591913327 c:\users\konstantin\downloads\space friendship-20200611t210711z-001\space friendship\space-friendship-master\space-friendship-master\space friendship\include\spawner.h
 	<stdlib.h>
 	<time.h>
 	<iostream>
@@ -8725,7 +8725,7 @@
 	<vector>
 	"Engine.h"
 
-1591734075 c:\users\konstantin\downloads\space friendship-20200609t191753z-001\space friendship\space-friendship-master\space-friendship-master\space friendship\include\dropper.h
+1591913327 c:\users\konstantin\downloads\space friendship-20200611t210711z-001\space friendship\space-friendship-master\space-friendship-master\space friendship\include\dropper.h
 	<stdlib.h>
 	<time.h>
 	<iostream>
@@ -8734,7 +8734,7 @@
 	<vector>
 	"Engine.h"
 
-1591734075 c:\users\konstantin\downloads\space friendship-20200609t191753z-001\space friendship\space-friendship-master\space-friendship-master\space friendship\include\configmanager.h
+1591913327 c:\users\konstantin\downloads\space friendship-20200611t210711z-001\space friendship\space-friendship-master\space-friendship-master\space friendship\include\configmanager.h
 	<SDL2/SDL.h>
 	"Enemy.h"
 	"Projectile.h"
@@ -8745,11 +8745,11 @@
 	"PlayerEnemy.h"
 	"Bullet.h"
 
-1591734075 c:\users\konstantin\downloads\space friendship-20200609t191753z-001\space friendship\space-friendship-master\space-friendship-master\space friendship\include\playerenemy.h
+1591913328 c:\users\konstantin\downloads\space friendship-20200611t210711z-001\space friendship\space-friendship-master\space-friendship-master\space friendship\include\playerenemy.h
 	"Shooter.h"
 	"Player.h"
 
-1591737749 c:\users\konstantin\downloads\space friendship-20200609t191753z-001\space friendship\space-friendship-master\space-friendship-master\space friendship\include\shop.h
+1591913326 c:\users\konstantin\downloads\space friendship-20200611t210711z-001\space friendship\space-friendship-master\space-friendship-master\space friendship\include\shop.h
 	<fstream>
 	<vector>
 	<string>
@@ -8758,7 +8758,7 @@
 	"ConfigManager.h"
 	"UpgradeManager.h"
 
-1591734076 c:\users\konstantin\downloads\space friendship-20200609t191753z-001\space friendship\space-friendship-master\space-friendship-master\space friendship\include\menu.h
+1591913328 c:\users\konstantin\downloads\space friendship-20200611t210711z-001\space friendship\space-friendship-master\space-friendship-master\space friendship\include\menu.h
 	<cstring>
 	<fstream>
 	<string>
@@ -8767,86 +8767,86 @@
 	"defines.h"
 	"Engine.h"
 
-1591734076 c:\users\konstantin\downloads\space friendship-20200609t191753z-001\space friendship\space-friendship-master\space-friendship-master\space friendship\include\animation.h
+1591913328 c:\users\konstantin\downloads\space friendship-20200611t210711z-001\space friendship\space-friendship-master\space-friendship-master\space friendship\include\animation.h
 	<SDL2/SDL.h>
 	<fstream>
 	<ctime>
 	"Engine.h"
 
-1591734076 c:\users\konstantin\downloads\space friendship-20200609t191753z-001\space friendship\space-friendship-master\space-friendship-master\space friendship\include\writer.h
+1591913327 c:\users\konstantin\downloads\space friendship-20200611t210711z-001\space friendship\space-friendship-master\space-friendship-master\space friendship\include\writer.h
 	<SDL2/SDL.h>
 	<string>
 	<fstream>
 	"Engine.h"
 
-1591734074 source:c:\users\konstantin\downloads\space friendship-20200609t191753z-001\space friendship\space-friendship-master\space-friendship-master\space friendship\src\animation.cpp
+1591913313 source:c:\users\konstantin\downloads\space friendship-20200611t210711z-001\space friendship\space-friendship-master\space-friendship-master\space friendship\src\animation.cpp
 	"Animation.h"
 
-1591734075 source:c:\users\konstantin\downloads\space friendship-20200609t191753z-001\space friendship\space-friendship-master\space-friendship-master\space friendship\src\artefact.cpp
+1591913312 source:c:\users\konstantin\downloads\space friendship-20200611t210711z-001\space friendship\space-friendship-master\space-friendship-master\space friendship\src\artefact.cpp
 	"Artefact.h"
 
-1591734074 source:c:\users\konstantin\downloads\space friendship-20200609t191753z-001\space friendship\space-friendship-master\space-friendship-master\space friendship\src\bullet.cpp
+1591913312 source:c:\users\konstantin\downloads\space friendship-20200611t210711z-001\space friendship\space-friendship-master\space-friendship-master\space friendship\src\bullet.cpp
 	"Bullet.h"
 
-1591734075 source:c:\users\konstantin\downloads\space friendship-20200609t191753z-001\space friendship\space-friendship-master\space-friendship-master\space friendship\src\configmanager.cpp
+1591913312 source:c:\users\konstantin\downloads\space friendship-20200611t210711z-001\space friendship\space-friendship-master\space-friendship-master\space friendship\src\configmanager.cpp
 	"ConfigManager.h"
 
-1591734075 source:c:\users\konstantin\downloads\space friendship-20200609t191753z-001\space friendship\space-friendship-master\space-friendship-master\space friendship\src\dropper.cpp
+1591913312 source:c:\users\konstantin\downloads\space friendship-20200611t210711z-001\space friendship\space-friendship-master\space-friendship-master\space friendship\src\dropper.cpp
 	"Dropper.h"
 
-1591734074 source:c:\users\konstantin\downloads\space friendship-20200609t191753z-001\space friendship\space-friendship-master\space-friendship-master\space friendship\src\enemy.cpp
+1591913311 source:c:\users\konstantin\downloads\space friendship-20200611t210711z-001\space friendship\space-friendship-master\space-friendship-master\space friendship\src\enemy.cpp
 	"Enemy.h"
 
-1591734074 source:c:\users\konstantin\downloads\space friendship-20200609t191753z-001\space friendship\space-friendship-master\space-friendship-master\space friendship\src\engine.cpp
+1591913313 source:c:\users\konstantin\downloads\space friendship-20200611t210711z-001\space friendship\space-friendship-master\space-friendship-master\space friendship\src\engine.cpp
 	"Engine.h"
 	<SDL2/SDL_ttf.h>
 
-1591734074 source:c:\users\konstantin\downloads\space friendship-20200609t191753z-001\space friendship\space-friendship-master\space-friendship-master\space friendship\src\gun.cpp
+1591913313 source:c:\users\konstantin\downloads\space friendship-20200611t210711z-001\space friendship\space-friendship-master\space-friendship-master\space friendship\src\gun.cpp
 	"Gun.h"
 
-1591734074 source:c:\users\konstantin\downloads\space friendship-20200609t191753z-001\space friendship\space-friendship-master\space-friendship-master\space friendship\src\healthbar.cpp
+1591913313 source:c:\users\konstantin\downloads\space friendship-20200611t210711z-001\space friendship\space-friendship-master\space-friendship-master\space friendship\src\healthbar.cpp
 	"HealthBar.h"
 
-1591734075 source:c:\users\konstantin\downloads\space friendship-20200609t191753z-001\space friendship\space-friendship-master\space-friendship-master\space friendship\src\menu.cpp
+1591913313 source:c:\users\konstantin\downloads\space friendship-20200611t210711z-001\space friendship\space-friendship-master\space-friendship-master\space friendship\src\menu.cpp
 	"Menu.h"
 
-1591734075 source:c:\users\konstantin\downloads\space friendship-20200609t191753z-001\space friendship\space-friendship-master\space-friendship-master\space friendship\src\player.cpp
+1591913313 source:c:\users\konstantin\downloads\space friendship-20200611t210711z-001\space friendship\space-friendship-master\space-friendship-master\space friendship\src\player.cpp
 	"Player.h"
 
-1591734075 source:c:\users\konstantin\downloads\space friendship-20200609t191753z-001\space friendship\space-friendship-master\space-friendship-master\space friendship\src\player_ai.cpp
+1591913312 source:c:\users\konstantin\downloads\space friendship-20200611t210711z-001\space friendship\space-friendship-master\space-friendship-master\space friendship\src\player_ai.cpp
 	"Player_AI.h"
 	"World.h"
 
-1591734074 source:c:\users\konstantin\downloads\space friendship-20200609t191753z-001\space friendship\space-friendship-master\space-friendship-master\space friendship\src\playerenemy.cpp
+1591913312 source:c:\users\konstantin\downloads\space friendship-20200611t210711z-001\space friendship\space-friendship-master\space-friendship-master\space friendship\src\playerenemy.cpp
 	"PlayerEnemy.h"
 
-1591734075 source:c:\users\konstantin\downloads\space friendship-20200609t191753z-001\space friendship\space-friendship-master\space-friendship-master\space friendship\src\projectile.cpp
+1591913312 source:c:\users\konstantin\downloads\space friendship-20200611t210711z-001\space friendship\space-friendship-master\space-friendship-master\space friendship\src\projectile.cpp
 	"Projectile.h"
 
-1591734074 source:c:\users\konstantin\downloads\space friendship-20200609t191753z-001\space friendship\space-friendship-master\space-friendship-master\space friendship\src\rock.cpp
+1591913312 source:c:\users\konstantin\downloads\space friendship-20200611t210711z-001\space friendship\space-friendship-master\space-friendship-master\space friendship\src\rock.cpp
 	"Rock.h"
 
-1591734075 source:c:\users\konstantin\downloads\space friendship-20200609t191753z-001\space friendship\space-friendship-master\space-friendship-master\space friendship\src\shooter.cpp
+1591913313 source:c:\users\konstantin\downloads\space friendship-20200611t210711z-001\space friendship\space-friendship-master\space-friendship-master\space friendship\src\shooter.cpp
 	"Shooter.h"
 
-1591738113 source:c:\users\konstantin\downloads\space friendship-20200609t191753z-001\space friendship\space-friendship-master\space-friendship-master\space friendship\src\shop.cpp
+1591913314 source:c:\users\konstantin\downloads\space friendship-20200611t210711z-001\space friendship\space-friendship-master\space-friendship-master\space friendship\src\shop.cpp
 	"Shop.h"
 
-1591734074 source:c:\users\konstantin\downloads\space friendship-20200609t191753z-001\space friendship\space-friendship-master\space-friendship-master\space friendship\src\soundmanager.cpp
+1591913314 source:c:\users\konstantin\downloads\space friendship-20200611t210711z-001\space friendship\space-friendship-master\space-friendship-master\space friendship\src\soundmanager.cpp
 	"SoundManager.h"
 
-1591734075 source:c:\users\konstantin\downloads\space friendship-20200609t191753z-001\space friendship\space-friendship-master\space-friendship-master\space friendship\src\spawner.cpp
+1591913311 source:c:\users\konstantin\downloads\space friendship-20200611t210711z-001\space friendship\space-friendship-master\space-friendship-master\space friendship\src\spawner.cpp
 	"Spawner.h"
 
-1591734075 source:c:\users\konstantin\downloads\space friendship-20200609t191753z-001\space friendship\space-friendship-master\space-friendship-master\space friendship\src\upgrademanager.cpp
+1591913314 source:c:\users\konstantin\downloads\space friendship-20200611t210711z-001\space friendship\space-friendship-master\space-friendship-master\space friendship\src\upgrademanager.cpp
 	"UpgradeManager.h"
 
-1591734075 source:c:\users\konstantin\downloads\space friendship-20200609t191753z-001\space friendship\space-friendship-master\space-friendship-master\space friendship\src\world.cpp
+1591913311 source:c:\users\konstantin\downloads\space friendship-20200611t210711z-001\space friendship\space-friendship-master\space-friendship-master\space friendship\src\world.cpp
 	"World.h"
 
-1591734074 source:c:\users\konstantin\downloads\space friendship-20200609t191753z-001\space friendship\space-friendship-master\space-friendship-master\space friendship\src\writer.cpp
+1591913312 source:c:\users\konstantin\downloads\space friendship-20200611t210711z-001\space friendship\space-friendship-master\space-friendship-master\space friendship\src\writer.cpp
 	"Writer.h"
 
-1591734075 source:c:\users\konstantin\downloads\space friendship-20200609t191753z-001\space friendship\space-friendship-master\space-friendship-master\space friendship\src\zigzag.cpp
+1591913313 source:c:\users\konstantin\downloads\space friendship-20200611t210711z-001\space friendship\space-friendship-master\space-friendship-master\space friendship\src\zigzag.cpp
 	"ZigZag.h"
 

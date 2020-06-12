@@ -1,0 +1,17 @@
+size: 50 52
+
+image: Sniper_Enemy.bmp
+
+health: 25
+
+collision_damage: 20
+
+attack_speed: 3250
+
+speed: 2
+
+bulletConfig: bullet_sniper.txt
+
+Give_Points: 50
+
+CenterX: 9

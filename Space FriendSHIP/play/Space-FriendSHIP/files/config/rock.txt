@@ -1,0 +1,20 @@
+size: 32 50
+
+image: rock.bmp
+
+health: 10
+
+collision_damage: 25
+
+attack_speed: 0
+
+speed: 1
+
+Give_Points: 10
+
+CenterX: 16
+
+
+
+
+

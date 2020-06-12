@@ -7,7 +7,7 @@ Shop::Shop()
 
 Shop::~Shop()
 {
-    //dtor
+
 }
 
 void Shop::init(string configFile, ConfigManager* configManager, SDL_Renderer* renderer, int* mouseX, int* mouseY, bool* mouseIsPressed, int *money, UpgradeManager* um, bool *quitScene, GAME_STATE *gameState)

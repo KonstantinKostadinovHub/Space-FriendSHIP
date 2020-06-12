@@ -66,7 +66,7 @@ void UpgradeManager::init(string configFile)
     {
         int pushBackBuff;
         stream >> pushBackBuff;
-       m_collisionDamageUpgrades.push_back(pushBackBuff);
+        m_collisionDamageUpgrades.push_back(pushBackBuff);
     }
 
     stream >> tmp >> buff;

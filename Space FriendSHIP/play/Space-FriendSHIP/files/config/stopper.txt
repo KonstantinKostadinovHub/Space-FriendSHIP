@@ -1,0 +1,9 @@
+size: 22 34
+
+image: Stopper.bmp
+
+speed: 1
+
+frameCounter: 4
+
+actionFX: 0

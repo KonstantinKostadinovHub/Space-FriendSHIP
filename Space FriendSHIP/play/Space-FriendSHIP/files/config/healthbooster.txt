@@ -1,0 +1,9 @@
+size: 22 36
+
+image: Health-Booster.bmp
+
+speed: 1
+
+frameCounter: 4
+
+actionFX: 40

@@ -1,0 +1,11 @@
+Health: 2
+
+Speed: 5
+
+Stop: 2
+
+Reverse: 5
+
+Coin: 3
+
+Shield: 2

@@ -8,10 +8,8 @@ World world;
 
 int main (int argc, char* argv[])
 {
-    const Uint8 *state = SDL_GetKeyboardState(NULL);
-    const Uint8 *state2 = SDL_GetKeyboardState(NULL);
-
     world.init("world.txt");
+    world.loadTitleScreen();
     world.m_gameState = MENU;
 
     while(true)
@@ -39,13 +37,7 @@ int main (int argc, char* argv[])
         }
         if(world.m_gameState == EXIT)
         {
-            while(!world.m_quitScene)
-            {
-                world.input();
-                world.destroy();
-                SDL_Delay(20);
-            }
-            world.m_quitScene = false;
+            world.destroy();
         }
         if(world.m_gameState == SHOP)
         {

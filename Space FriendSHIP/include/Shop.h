@@ -14,11 +14,16 @@
 struct abilityUpgradeStructure
 {
     SDL_Texture* abilityImg;
-    int level;
-    vector<int> prices;
+
     SDL_Rect frameRect;
     SDL_Rect imgRect;
+
+    int level;
+
+    vector<int> prices;
+
     coordinates textCoor;
+
     string name;
 };
 

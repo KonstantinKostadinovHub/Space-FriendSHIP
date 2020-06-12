@@ -1,0 +1,10 @@
+size: 15 12
+
+health: 1
+
+speed: 6
+
+collision_damage: 18
+
+image: bullet_red.bmp
+

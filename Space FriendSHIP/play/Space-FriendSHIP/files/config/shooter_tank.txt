@@ -1,0 +1,17 @@
+size: 32 46
+
+image: shooter_tank.bmp
+
+health: 200
+
+collision_damage: 30
+
+attack_speed: 1250
+
+speed: 1
+
+bulletConfig: bullet_tank.txt
+
+Give_Points: 50
+
+CenterX: 16

@@ -1,0 +1,17 @@
+size: 44 44
+
+image: shooter_smg.bmp
+
+health: 25
+
+collision_damage: 10
+
+attack_speed: 500
+
+speed: 2
+
+bulletConfig: bullet_smg.txt
+
+Give_Points: 25
+
+CenterX: 23

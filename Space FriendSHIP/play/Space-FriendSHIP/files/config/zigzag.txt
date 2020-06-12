@@ -1,0 +1,21 @@
+size: 40 61
+
+image: ZigZag.bmp
+
+health: 100
+
+collision_damage: 20
+
+attack_speed: 750
+
+speed: 2
+
+bullet_name: bullet_zigzag.txt
+
+maxRotation: 60
+
+rotationFactor: 3
+
+Give_Points: 50
+
+CenterX: 20

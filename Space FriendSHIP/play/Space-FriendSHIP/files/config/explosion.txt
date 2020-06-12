@@ -1,0 +1,7 @@
+Size: 96 96
+
+Image: ExplosionSpriteSheet.bmp
+
+frameCount: 11
+
+frameCooldown: 0

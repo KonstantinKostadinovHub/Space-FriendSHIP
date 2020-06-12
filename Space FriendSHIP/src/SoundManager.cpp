@@ -52,7 +52,7 @@ void SoundManager::play_sound(string sound)
 
     if (sound == General_Music_str)
     {
-        Mix_PlayChannel(1, General, -1);
+        Mix_PlayChannel(1, General, 1000);
         Mix_Volume(1, 7);
     }
     else if (sound == Explosion_str)

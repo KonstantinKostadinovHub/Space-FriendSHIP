@@ -37,6 +37,8 @@ void World::init(string configFile)
     stream >> tmp >> m_enemiesPerSpawn;
     stream >> tmp >> m_tutorialImg;
     stream >> tmp >> m_backButtonImg;
+    stream >> tmp >> m_titleScreen1;
+    stream >> tmp >> m_titleScreen2;
 
     stream.close();
 
@@ -83,7 +85,8 @@ void World::init(string configFile)
 
     m_endScreenImg = "img\\" + m_endScreenImg;
 
-
+    m_titleScreen1 = "img\\" + m_titleScreen1;
+    m_titleScreen2 = "img\\" + m_titleScreen2;
 
     SDL_Surface* loadingSurface1 = SDL_LoadBMP(m_bloodImg1.c_str());
     m_bloodTexture1 = SDL_CreateTextureFromSurface(m_main_renderer, loadingSurface1);
@@ -94,9 +97,17 @@ void World::init(string configFile)
     SDL_Surface* loadingSurface3 = SDL_LoadBMP(m_bloodImg3.c_str());
     m_bloodTexture3 = SDL_CreateTextureFromSurface(m_main_renderer, loadingSurface3);
 
+    SDL_Surface* loadingSurface4 = SDL_LoadBMP(m_titleScreen1.c_str());
+    m_titleImg1 = SDL_CreateTextureFromSurface(m_main_renderer, loadingSurface4);
+
+    SDL_Surface* loadingSurface5 = SDL_LoadBMP(m_titleScreen2.c_str());
+    m_titleImg2 = SDL_CreateTextureFromSurface(m_main_renderer, loadingSurface5);
+
     SDL_FreeSurface(loadingSurface1);
     SDL_FreeSurface(loadingSurface2);
     SDL_FreeSurface(loadingSurface3);
+    SDL_FreeSurface(loadingSurface4);
+    SDL_FreeSurface(loadingSurface5);
 
     m_tutorialTexture = LoadTexture(m_tutorialImg, m_main_renderer);
     m_backButtonTexture = LoadTexture(m_backButtonImg, m_main_renderer);
@@ -209,27 +220,28 @@ void World::draw()
         (*it) -> draw(m_main_renderer);
     }
 
-    for(int i = 0; i < m_players.size(); i++)
-    {
-        /* if(m_players[i] -> m_health <= 50)
-         {
-             SDL_RenderCopy(m_main_renderer, m_bloodTexture1, NULL, NULL);
-         }*/
-        if(m_players[i] -> m_health <= 30)
-        {
-            SDL_RenderCopy(m_main_renderer, m_bloodTexture2, NULL, NULL);
-        }
-        /* if(m_players[i] -> m_health <= 15)
-         {
-             SDL_RenderCopy(m_main_renderer, m_bloodTexture3, NULL, NULL);
-         }*/
-    }
     m_writer->WriteScore();
     m_writer->WritePlayer1();
 
     if (m_gameState == GAME_MULTIPLAYER)
     {
         m_writer->WritePlayer2();
+    }
+
+    for(int i = 0; i < m_players.size(); i++)
+    {
+        if(m_players[i] -> m_health <= 50)
+        {
+            SDL_RenderCopy(m_main_renderer, m_bloodTexture1, NULL, NULL);
+        }
+        if(m_players[i] -> m_health <= 30)
+        {
+            SDL_RenderCopy(m_main_renderer, m_bloodTexture2, NULL, NULL);
+        }
+        if(m_players[i] -> m_health <= 15)
+        {
+            SDL_RenderCopy(m_main_renderer, m_bloodTexture3, NULL, NULL);
+        }
     }
 
     SDL_RenderPresent(m_main_renderer);
@@ -257,6 +269,7 @@ void World::input()
     {
         m_mouseIsPressed = true;
     }
+    ///cout << mouseX << " " << mouseY << endl;
 }
 
 void World::addPlayer(SDL_Renderer* renderer, string configFile)
@@ -741,4 +754,15 @@ void World::tutorial()
     }
 
     SDL_RenderPresent(m_main_renderer);
+}
+
+void World::loadTitleScreen()
+{
+    SDL_RenderCopy(m_main_renderer, m_titleImg1, NULL, NULL);
+    SDL_RenderPresent(m_main_renderer);
+    SDL_Delay(3000);
+
+    SDL_RenderCopy(m_main_renderer, m_titleImg2, NULL, NULL);
+    SDL_RenderPresent(m_main_renderer);
+    SDL_Delay(3000);
 }

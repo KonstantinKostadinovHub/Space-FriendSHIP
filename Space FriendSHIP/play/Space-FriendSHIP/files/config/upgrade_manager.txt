@@ -1,0 +1,23 @@
+Numbers_Of_Health_Upgrades: 9
+
+Levels_Of_Health_Upgrades: 0 6 12 18 24 30 36 43 50 
+
+Number_Of_Bullets_Damage_Upgrades: 9
+
+Levels_Of_Bullets_Damage_Upgrade: 0 4 8 12 16 20 24 28 32
+
+Number_Of_Coins_Upgrades: 9
+
+Levels_Of_Coins_Upgrade: 0 5 10 15 20 25 30 35 40 
+
+Number_Of_Dash_Upgrades: 9
+
+Levels_Of_Dash_Upgrade: 0 12 25 38  50 62 75 87 100
+
+Number_Of_Collision_Damage_Upgrades: 9
+
+Levels_Of_Collision_Damage_Upgrade: 0 5 10 15 20 25 30 35 40
+
+Number_Of_Health_Booster_Upgrades: 9
+
+Levels_Of_Health_Booster_Upgrade: 0 7 14 22 29 36 44 52 60

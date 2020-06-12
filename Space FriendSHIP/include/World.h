@@ -43,12 +43,15 @@ public:
 
     SDL_Window* m_main_window = NULL;
     SDL_Renderer* m_main_renderer = NULL;
+
     SDL_Texture* m_backgroundTexture;
     SDL_Texture* m_bloodTexture1;
     SDL_Texture* m_bloodTexture2;
     SDL_Texture* m_bloodTexture3;
     SDL_Texture* m_tutorialTexture;
     SDL_Texture* m_backButtonTexture;
+    SDL_Texture* m_titleImg1;
+    SDL_Texture* m_titleImg2;
 
     SDL_Rect m_ScreenR;
     SDL_Rect m_ScreenMenu;
@@ -72,6 +75,8 @@ public:
     string m_bloodImg3;
     string m_tutorialImg;
     string m_backButtonImg;
+    string m_titleScreen1;
+    string m_titleScreen2;
 
     int m_points;
     int m_highScore = 0;
@@ -130,6 +135,7 @@ public:
     void destroySession();
     void initSession();
     void tutorial();
+    void loadTitleScreen();
 };
 
 #endif

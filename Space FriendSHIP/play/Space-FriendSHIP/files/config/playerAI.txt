@@ -1,0 +1,9 @@
+Player_Size: 72 72
+
+Image: Player_AI.bmp
+
+Spawn_Point: 250 500
+
+Speed: 4
+
+Shoot_Cooldown: 500
