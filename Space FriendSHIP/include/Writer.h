@@ -18,7 +18,7 @@ public:
     int CoorScoreX, CoorScoreY;
     int CoorScoreTextX, CoorScoreTextY;
     int CoorPlayer2X, CoorPlayer2Y;
-    int CoorHighScoreX, CoorHighScoreY;
+    coordinates m_coorHighScore;
     int *m_points;
     int *m_highScore;
 

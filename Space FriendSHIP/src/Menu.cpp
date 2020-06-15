@@ -10,7 +10,7 @@ Menu::~Menu()
 
 }
 
-void Menu::load(string configFile, SDL_Renderer* renderer,int *mouseX, int *mouseY, bool *mouseIsPressed, bool *quit, GAME_STATE* gameState)
+void Menu::load(string configFile, SDL_Renderer* renderer,int *mouseX, int *mouseY, bool *mouseIsPressed, bool *quit, GAME_STATE* gameState, SDL_Texture* backgroundTexture)
 {
     configFile = "config\\" + configFile;
     fstream stream;
@@ -22,6 +22,7 @@ void Menu::load(string configFile, SDL_Renderer* renderer,int *mouseX, int *mous
     m_mouseY = mouseY;
     m_quitScene = quit;
     m_gameState = gameState;
+    m_backgroundTexture = backgroundTexture;
 
     stream.open(configFile.c_str());
     stream >> tmp >> backgroundImg;
@@ -32,7 +33,7 @@ void Menu::load(string configFile, SDL_Renderer* renderer,int *mouseX, int *mous
     stream >> tmp >> m_ExitButton.x >> m_ExitButton.y >> m_ExitButton.w >> m_ExitButton.h;
     stream.close();
 
-    m_backgroundTexture = LoadTexture(backgroundImg, m_renderer);
+    m_menuTexture = LoadTexture(backgroundImg, m_renderer);
 }
 
 void Menu::update()
@@ -70,6 +71,7 @@ void Menu::update()
 void Menu::draw()
 {
     SDL_RenderCopy(m_renderer, m_backgroundTexture, NULL, NULL);
+    SDL_RenderCopy(m_renderer, m_menuTexture, NULL, NULL);
 
     SDL_RenderPresent(m_renderer);
 }

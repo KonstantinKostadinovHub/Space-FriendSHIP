@@ -51,19 +51,19 @@ void World::init(string configFile)
     m_main_window = SDL_CreateWindow("Space FriendSHIP", SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, m_SCREEN_WIDTH, m_SCREEN_HEIGHT, 0);
     m_main_renderer = SDL_CreateRenderer(m_main_window, -1, SDL_RENDERER_ACCELERATED);
 
+    SDL_Surface* loadingSurface = SDL_LoadBMP("img\\background.bmp");
+    m_backgroundTexture = SDL_CreateTextureFromSurface(m_main_renderer, loadingSurface);
+    SDL_FreeSurface(loadingSurface);
+
     m_spawnManager -> init("spawner.txt");
     m_dropper -> init("dropper.txt");
     m_upgradeManager -> init("upgrade_manager.txt");
     loadProgress();
     m_configManager -> init("config_manager.txt", m_main_renderer);
     m_shop -> init("shop.txt", m_configManager, m_main_renderer, &mouseX, &mouseY, &m_mouseIsPressed, &m_wallet, m_upgradeManager, &m_quitScene, &m_gameState);
-    m_menu -> load("menu.txt", m_main_renderer, &mouseX, &mouseY, &m_mouseIsPressed, &m_quitScene, &m_gameState);
+    m_menu -> load("menu.txt", m_main_renderer, &mouseX, &mouseY, &m_mouseIsPressed, &m_quitScene, &m_gameState, m_backgroundTexture);
     m_soundManager -> init("SoundManager.txt");
     m_writer -> init("writer.txt", m_main_renderer, &m_points, &m_highScore);
-
-    SDL_Surface* loadingSurface = SDL_LoadBMP("img\\background.bmp");
-    m_backgroundTexture = SDL_CreateTextureFromSurface(m_main_renderer, loadingSurface);
-    SDL_FreeSurface(loadingSurface);
 
     m_ScreenR.x = 0;
     m_ScreenR.y = 0;
@@ -538,7 +538,7 @@ void World::endgameScreen()
     SDL_Texture* m_EndTx;
     SDL_Surface* loadingEndGame = SDL_LoadBMP(m_endScreenImg.c_str());
     m_EndTx = SDL_CreateTextureFromSurface(m_main_renderer, loadingEndGame);
-    SDL_RenderCopy(m_main_renderer, m_EndTx, &m_ScreenR, NULL);
+    SDL_RenderCopy(m_main_renderer, m_EndTx, NULL, NULL);
     SDL_FreeSurface(loadingEndGame);
 
     m_writer->WriteHighScore();
@@ -644,6 +644,8 @@ void World::saveProgress()
     SaveInFile("moneyUpgrade.txt", "Level:", m_upgradeManager->m_CurrentLevelCoinsMultiplierUpgrade);
     SaveInFile("healthUpgrade.txt", "Level:", m_upgradeManager->m_CurrentLevelHealthUpgrade);
     SaveInFile("healthBoosterUpgrade.txt", "Level:", m_upgradeManager->m_CurrentLevelHealthBoosterUpgrade);
+    m_wallet += m_coins;
+    m_coins = 0;
     SaveInFile("wallet.txt", "Money_in_wallet:", m_wallet);
     SaveInFile("highscore.txt", "HighScore:", m_highScore);
 }
@@ -674,7 +676,7 @@ void World::AddPoints(Enemy* enemy)
 
 void World::AddCoins(Enemy* enemy)
 {
-    m_coins += enemy -> m_pointsGiven + m_upgradeManager->m_CurrentCoinsMultiplierUpgrade;
+    m_coins += (enemy -> m_pointsGiven / 10) + m_upgradeManager->m_CurrentCoinsMultiplierUpgrade;
 }
 
 void World::chooseGameMode()

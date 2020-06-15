@@ -63,8 +63,8 @@ int main (int argc, char* argv[])
                 world.cleaner();
                 SDL_Delay(17);
             }
-            world.m_quitScene = false;
             world.saveProgress();
+            world.m_quitScene = false;
         }
         if(world.m_gameState == DIED)
         {

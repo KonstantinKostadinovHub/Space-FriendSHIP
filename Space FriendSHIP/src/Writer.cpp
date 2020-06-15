@@ -22,7 +22,7 @@ void Writer::init(string configFile, SDL_Renderer* renderer, int *points, int *h
     stream >> tmp >> CoorScoreTextX >> CoorScoreTextY;
     stream >> tmp >> CoorPlayer1X >> CoorPlayer1Y;
     stream >> tmp >> CoorPlayer2X >> CoorPlayer2Y;
-    stream >> tmp >> CoorHighScoreX >> CoorHighScoreY;
+    stream >> tmp >> m_coorHighScore.x >> m_coorHighScore.y;
     stream.close();
 
     m_points = points;
@@ -67,10 +67,5 @@ void Writer::WritePlayer2()
 
 void Writer::WriteHighScore()
 {
-    coordinates CoorHighScore;
-
-    CoorHighScore.x = CoorHighScoreX;
-    CoorHighScore.y = CoorHighScoreY;
-
-    write("High Score: " + to_string(*m_highScore), CoorHighScore, m_renderer, 35);
+    write("High Score: " + to_string(*m_highScore), m_coorHighScore, m_renderer, 30);
 }

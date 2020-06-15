@@ -19,6 +19,7 @@ public:
     virtual ~Menu();
 
     SDL_Texture* m_backgroundTexture;
+    SDL_Texture* m_menuTexture;
 
     SDL_Rect m_SingleplayerButton;
     SDL_Rect m_MultiplayerButton;
@@ -34,7 +35,7 @@ public:
 
     GAME_STATE *m_gameState;
 
-    void load(string configFile, SDL_Renderer* renderer,int *mouseX, int *mouseY, bool *mouseIsPressed, bool *quit, GAME_STATE* gameState);
+    void load(string configFile, SDL_Renderer* renderer,int *mouseX, int *mouseY, bool *mouseIsPressed, bool *quit, GAME_STATE* gameState, SDL_Texture* backgroundTexture);
     void update();
     void draw();
 };

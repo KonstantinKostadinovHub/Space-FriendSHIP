@@ -6,4 +6,4 @@ CoorPlayer1: 145 700
 
 CoolPlayer2: 895 700
 
-CoorHighScore: 693 730
+CoorHighScore: 785 725
